@@ -3236,7 +3236,7 @@ if(typeof(mobileGetId) == 'undefined'){
                                 if (deviceChk == 'M') {
                                     //console.log(e.content.buttons[0]);
                                     if (e.content.buttons[0].type == 'openUrl' && e.content.buttons[0].value == '') {
-                                        e.content.buttons[0].title = '상세내용은 PC챗봇에게';
+                                        e.content.buttons[0].title = '상세내용은 PC챗봇에게 문의주세요';
                                     }
                                 } else {
                                     if (e.content.buttons[0].type == 'openUrl' && e.content.buttons[0].value == '') {
