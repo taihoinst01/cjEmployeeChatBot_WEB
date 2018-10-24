@@ -65,8 +65,8 @@ $(function () {
             "<div class='gestureHeader'>" +
                 "<span id='gestureTitle' class='gestureTitle'></span>" +
             "</div>" +
-            "<div id='animationDiv' style='width:250px;height:488px;background:#000'>" +
-            "</div>" +
+            //"<div id='animationDiv' style='width:250px;height:488px;background:#000'>" +
+            //"</div>" +
         "</div>").appendTo("#bot");
 
     //챗봇창 상단 생성
@@ -106,7 +106,7 @@ $(function () {
         $('.wc-chatview-panel').animate({ "height": "38px" }, "fast");
         $('.gestureArea').animate({ "height": "38px" }, "fast");
         $('.wc-console, wc-message-pane').hide();
-        $('#animationDiv').hide();
+        //$('#animationDiv').hide();
         $('.btnMin').css({ 'display': 'none' });
         $('.btnLayer').removeClass('btnLayerFull').addClass('btnLayerMid');
         $('.btnLayer > button').removeClass('topIcon02').addClass('topIcon02-1');
@@ -117,7 +117,7 @@ $(function () {
             $('.popupArea').animate({ 'bottom': '174px' }, "fast");
             $('.gestureArea').animate({ "height": "528px" }, "fast");
             $('.wc-console, wc-message-pane').show();
-            $('#animationDiv').show();
+            //$('#animationDiv').show();
             $('.btnLayer').removeClass('btnLayerMid').addClass('btnLayerFull');
             $('.btnLayer > button').css({ 'display': 'inline-block' }).removeClass('topIcon02-1').addClass('topIcon02');
             $('.btnMin').css({ 'right': '58px', 'display': 'inline-block' });
