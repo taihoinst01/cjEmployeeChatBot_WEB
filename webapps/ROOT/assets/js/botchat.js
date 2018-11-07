@@ -7775,10 +7775,10 @@
                     //    d: "M19.96 4.79m-2 0a2 2 0 0 1 4 0 2 2 0 0 1-4 0zM8.32 4.19L2.5 15.53 22.45 15.53 17.46 8.56 14.42 11.18 8.32 4.19ZM1.04 1L1.04 17 24.96 17 24.96 1 1.04 1ZM1.03 0L24.96 0C25.54 0 26 0.45 26 0.99L26 17.01C26 17.55 25.53 18 24.96 18L1.03 18C0.46 18 0 17.55 0 17.01L0 0.99C0 0.45 0.47 0 1.03 0Z"
                     //    }))),
                         o.createElement("div", {
-                            className: "wc-menu"
+                            className: "wc-sap"
                         }, o.createElement("div", {
-                            className: "menuIcon"
-                            }, 'menu')),
+                            className: "sapIcon"
+                            }, 'SAP')),
                         o.createElement("div", {
                             className: "wc-textbox"
                         },
@@ -7810,6 +7810,12 @@
                             if ((t.props.inputText === 'return home') && (t.textInput.value == '') && (e.key == 'Enter')) {
                                 t.props.inputText = '';
                             }
+
+                            //KSO (sap 체크 여부 판단)
+                            if ($('.sapBtn').hasClass("on") && (e.key == 'Enter')) {
+                                console.log("SAP search : " + t.props.inputText);
+                            }
+
                             return t.onKeyPress(e)
                         },
                         onFocus: function () {
@@ -7844,6 +7850,12 @@
                             if ((t.props.inputText === '' || t.props.inputText === 'return home') && (t.textInput.value !== '')) {
                                 t.props.inputText = t.textInput.value;
                             }
+
+                            //KSO (sap 체크 여부 판단)
+                            if ($('.sapBtn').hasClass("on")) {
+                                console.log("SAP search : " + t.props.inputText);
+                            }
+
                             return t.onClickSend()
                         }
                     }, 

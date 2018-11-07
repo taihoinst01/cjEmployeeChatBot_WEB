@@ -15,6 +15,28 @@
 		$(".banner").remove();
 	}
 
+
+
+    //ex) Sample
+    //$.ajax({
+    //    botName: 'cjEmployeeChatBot',
+    //    url: '/jsLang',
+    //    dataType: 'json',
+    //    type: 'POST',
+    //    success: function (data) {
+    //        language = data.lang;
+    //        console.log(language);
+    //        "dog": [
+    //          "웰시코기",
+    //          "포메라니안",
+    //          "푸들"
+    //          "background-color: #000000",
+    //          "color: blue"
+    //        ]
+    //    }
+    //});
+
+    //$('.wc-message-groups').css({ 'background-color': '#000'});
 });
 
 function isMobile() {

@@ -80,15 +80,15 @@ $(function () {
         "<div class='topGestureOff'>OFF</div><div class='topGestureOn'>ON</div> <div class='topGestureIcon'></div>  " +
         "</span>").appendTo(".wc-header");
 
-    //챗봇 메뉴창 생성
+    //챗봇 SAP Btn 생성
     $(".wc-chatview-panel > div").add(
-        "<div class='menuBox off'>" +
-            "<p class='menuReStartBtn'><span> Menu </span></p>" +
-            "<ul>" +
+        "<div class='sapBtn off'>" +
+            //"<p class='menuReStartBtn'><span> Menu </span></p>" +
+            //"<ul>" +
             //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu('Accident analysis')'> Accident analysis </span></a></li>" +
             //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu('Accident trends')'> Accident trends </span></a></li>" +
-            "<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
-            "</ul>" +
+            //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
+            //"</ul>" +
         "</div > ").appendTo(".wc-chatview-panel");
 
     //챗봇 마이크 생성
@@ -130,13 +130,13 @@ $(function () {
     });
 
     //챗봇 메뉴 버튼 동작
-    $('.menuIcon').click(function (){
-        if ($('.menuBox').hasClass("off")) {
-            $('.menuBox').removeClass('off').addClass('on');
-            $('.menuBox').css({ 'display': 'block' });
+    $('.sapIcon').click(function () {
+        if ($('.sapBtn').hasClass("off")) {
+            $('.sapBtn').removeClass('off').addClass('on');
+            $('.sapIcon').css({ 'background-color': '#00aad2' });
         } else {
-            $('.menuBox').removeClass('on').addClass('off');
-            $('.menuBox').css({ 'display': 'none' });
+            $('.sapBtn').removeClass('on').addClass('off');
+            $('.sapIcon').css({ 'background-color': '#C3C6CD' });
         }
     });
     
