@@ -13464,6 +13464,8 @@
                             d.appendChild(this._element, o), n++
                         }
                     }
+                //개행추가 20181113
+                this._element.innerHTML = this._element.innerHTML.replace("/n", "</br>");
                 return this._element
             }, e.prototype.getBackgroundColor = function() {
                 return null
