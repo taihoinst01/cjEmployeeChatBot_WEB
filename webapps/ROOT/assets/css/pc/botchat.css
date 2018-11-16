@@ -413,7 +413,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   display: none; }
 
 .wc-message-from-bot svg.wc-message-callout {
-  background: url("../image/chatbotStyle/ico_profi.png") no-repeat;
+  background: url("../../image/chatbotStyle/ico_profi.png") no-repeat;
   width: 30px;
   height: 30px;
   display: inline-block;
