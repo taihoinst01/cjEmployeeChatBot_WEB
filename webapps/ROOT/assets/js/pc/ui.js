@@ -60,25 +60,26 @@ $(function () {
         "</div>").appendTo("#bot");
 
     //제스처 케릭터 영역 생성
-    $("#bot > div").add(
-        "<div class='gesture-wrapper gestureArea'>" +
-            "<div class='gestureHeader'>" +
-                "<span id='gestureTitle' class='gestureTitle'></span>" +
-            "</div>" +
-            "<div id='animationDiv' style='width:250px;height:488px;background:#000'>" +
-            "</div>" +
-        "</div>").appendTo("#bot");
+    //$("#bot > div").add(
+    //    "<div class='gesture-wrapper gestureArea'>" +
+    //        "<div class='gestureHeader'>" +
+    //            "<span id='gestureTitle' class='gestureTitle'></span>" +
+    //        "</div>" +
+    //        "<div id='animationDiv' style='width:250px;height:488px;background:#000'>" +
+    //        "</div>" +
+    //    "</div>").appendTo("#bot");
 
     //챗봇창 상단 생성
     $(".wc-header > span").add(
-        "<span class='chatTitle'></span>" +
-        "<span class='chatTitleText'><strong>TIIZ</strong> ChatBot V3</span>" +
-        "<span class='topIcon btnClose'><button class='topIcon03'></button></span>" +
-        "<span class='topIcon btnLayer btnLayerFull'><button class='topIcon02'></button></span>" +
-        "<span class='topIcon btnMin'><button class='topIcon01'></button></span>" +
-        "<span class='topGestureArea'>" +
-        "<div class='topGestureOff'>OFF</div><div class='topGestureOn'>ON</div> <div class='topGestureIcon'></div>  " +
-        "</span>").appendTo(".wc-header");
+        //"<span class='chatTitle'></span>" +
+        "<span class='chatTitleText'><strong>업무지원 ChatBot</strong></span>"
+        //"<span class='topIcon btnClose'><button class='topIcon03'></button></span>" +
+        //"<span class='topIcon btnLayer btnLayerFull'><button class='topIcon02'></button></span>" +
+        //"<span class='topIcon btnMin'><button class='topIcon01'></button></span>" +
+        //"<span class='topGestureArea'>" +
+        //"<div class='topGestureOff'>OFF</div><div class='topGestureOn'>ON</div> <div class='topGestureIcon'></div>  " +
+        //"</span>"
+    ).appendTo(".wc-header");
 
     //챗봇 SAP Btn 생성
     $(".wc-chatview-panel > div").add(
@@ -92,8 +93,8 @@ $(function () {
         "</div > ").appendTo(".wc-chatview-panel");
 
     //챗봇 마이크 생성
-    $(".wc-console > div").add(
-        "<div class='ttsMic ttsMicBlack' onclick='startButton(event)'>&nbsp</div > ").appendTo(".wc-console");
+    //$(".wc-console > div").add(
+    //    "<div class='ttsMic ttsMicBlack' onclick='startButton(event)'>&nbsp</div > ").appendTo(".wc-console");
 
     //챗봇창 버튼 동작
     $('.btnClose').click(function () {
@@ -136,7 +137,7 @@ $(function () {
             $('.sapIcon').css({ 'background-color': '#00aad2' });
         } else {
             $('.sapBtn').removeClass('on').addClass('off');
-            $('.sapIcon').css({ 'background-color': '#C3C6CD' });
+            $('.sapIcon').css({ 'background-color': '#302f35' });
         }
     });
     

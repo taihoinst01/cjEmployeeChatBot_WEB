@@ -37,14 +37,16 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 1; }
+  z-index: 1; 
+  text-align:center
+}
 
 .wc-time {
   color: #999999;
   margin-bottom: 10px; }
 
 .wc-message-groups {
-  bottom: 50px;
+  bottom: 70px;
   left: 0;
   transform: translateY(0);
   overflow-x: hidden;
@@ -124,18 +126,19 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 
 .wc-console {
   /*border: 5px solid #dbdee1;*/
-  background-color:#fff;
-  bottom: 0;
+  background-color:#d1d1d1;
+  bottom: 10px;
   box-sizing: border-box;
   height: 50px;
-  left: 0;
+  left: 10px;
   position: absolute;
-  right: 0; }
+  right: 10px; 
+  border-radius:20px }
 
 /* views */
 .wc-chatview-panel {
-  width:380px;
-  height:528px;
+  width:100%;
+  height:100%;
   overflow: hidden;
   position: absolute;
   right: 0;
@@ -431,8 +434,9 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   cursor: pointer;
   display: inline-block;
   height: 50px;
-  width: 60px;
-  background-color:#fff
+  width: 50px;
+  background-color:#d1d1d1;
+  border-radius:20px
 }
 
 .wc-console svg {
@@ -445,7 +449,10 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   outline: none;
   padding: 0;
   resize: none;
-  width: 100%; }
+  width: 100%; 
+  background-color:#d1d1d1; /*input 색상 변경*/
+  margin-left:10px
+}
 
 .wc-send svg {
   height: 18px;

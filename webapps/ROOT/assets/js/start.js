@@ -57,12 +57,28 @@ if (isMobile()) {   //모바일 환경
 } else {    // 웹 환경
 
     // 1. 처음 로딩시 표출
-    $('.wc-chatview-panel').css('bottom', 0).show();
-    $('.bot-wrap').show();
+    //$('.wc-chatview-panel').css('bottom', 0).show();
+    //$('.bot-wrap').show();
 
     // 2. 클릭시 챗봇 표출 (사용하려면 위에 숨기기 부분 주석 제거 해줘야함)
     //$(document).on('click', '#botChatBtn', function () {
-	//	$('.wc-chatview-panel').css('bottom', 0).show();
-    //  $('.bot-wrap').show();
-	//});
+    //    $('.wc-chatview-panel').css('bottom', 0).show();
+    //    $('.bot-wrap').show();
+    //});
+
+    // 3. 클릭시 챗봇 팝업 표출
+    //스크린크기
+    var fullWidth = screen.availWidth;
+    var fullHeight = screen.availHeight;
+    //팝업크기
+    var popWidth = 768;
+    var popHeight = 768;
+    //팝업위치
+    var popLeft = (fullWidth - popWidth) / 2;
+    var popTop = (fullHeight - popHeight) / 2;
+
+    var popupOption = "width = " + popWidth + ", height = " + popHeight + ", top = " + popTop+", left = " + popLeft+", resizable = yes, fullscreen = no, toolbar = no, menubar = no, channelmode = no, scrollbars = no, location = no";
+    $(document).on('click', '#botChatBtn', function () {
+        window.open('chatbot.html', '', popupOption);
+    });
 }

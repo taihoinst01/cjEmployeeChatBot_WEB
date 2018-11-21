@@ -3195,7 +3195,7 @@
                             if (!e.content) return null;
                             var r = new i.AdaptiveCardBuilder;
                             //TTS 적용 
-                            lfn_speakTTS(e.content.text);
+                            //lfn_speakTTS(e.content.text);
                             // KSO 2018.06.21 gesture loading 여부 확인 후 해당 gesture 번호 실행, gesture 로딩 이후에 실행 됨
                             // gesture num( 0 ~ 19 ) 까지 있음
                             if ($('#animationDiv').hasClass('gOn')) {
@@ -7864,7 +7864,7 @@
                         //}))
                         o.createElement("div", {
                             className: "sendIcon"
-                        }, 'send')
+                        }/*, 'send'*/)
                         ), o.createElement("label", {
                         className: s,
                         onClick: function() {
@@ -7952,7 +7952,7 @@
                 messageFailed: "couldn't send",
                 messageSending: "sending",
                 timeSent: " at %1",
-                consolePlaceholder: "Please enter your message.",
+                consolePlaceholder: "궁금한 것을 물어보세요!",
                 listeningIndicator: "Listening..."
             },
             ja: {
