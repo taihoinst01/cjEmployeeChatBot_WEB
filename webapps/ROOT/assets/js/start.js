@@ -77,7 +77,7 @@ if (isMobile()) {   //모바일 환경
     var popLeft = (fullWidth - popWidth) / 2;
     var popTop = (fullHeight - popHeight) / 2;
 
-    var popupOption = "width = " + popWidth + ", height = " + popHeight + ", top = " + popTop+", left = " + popLeft+", resizable = yes, fullscreen = no, toolbar = no, menubar = no, channelmode = no, scrollbars = no, location = no";
+    var popupOption = "width = " + popWidth + ", height = " + popHeight + ", top = " + popTop+", left = " + popLeft+", resizable = no, fullscreen = no, toolbar = no, menubar = no, channelmode = no, scrollbars = no, location = no";
     $(document).on('click', '#botChatBtn', function () {
         window.open('chatbot.html', '', popupOption);
     });

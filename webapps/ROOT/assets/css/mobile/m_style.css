@@ -6,7 +6,7 @@
 
 /* chat TOP */
 .chatTitle{background: url("../../image/chatbotStyle/ico_top.png") no-repeat; height:16px;width:16px; display: inline-block;top: 12px; position: absolute; }
-.chatTitleText{font-size:13px;color:#FFF;top: 10px;left:30px; position: absolute;}
+.chatTitleText{font-size:13px;color:#FFF;/*top: 10px;left:30px; position: absolute;*/}
 .topIcon01{background: url("../../image/chatbotStyle/btn_down.png") no-repeat;  width:14px;height:13px;display: inline-block;top: 14px; right: 58px;position: absolute} 
 .topIcon02{background: url("../../image/chatbotStyle/btn_fsize.png") no-repeat;  width:12px;height:12px;display: inline-block;top: 14px; right: 34px;position: absolute;}
 .topIcon02-1{background: url("../../image/chatbotStyle/btn_fsize_02.png") no-repeat;  width:12px;height:12px;display: inline-block;top: 14px; right: 34px;position: absolute;}
@@ -26,9 +26,9 @@
 .ac-container{padding:6px 6px 6px 12px !important; border-radius:5px; max-width:312px}
 
 /* chat input */
-.wc-sap{cursor: pointer;display: inline-block;width:60px;height: 50px;background-color: #fff;}
-.sapIcon{width:42px;height:23px;background-color:#C3C6CD;color:#fff;text-align:center;position:relative;top:13.5px;left:9px;border-radius:5px}
-.sendIcon{width:42px;height:23px;background-color:#C3C6CD;color:#fff;text-align:center;position:relative;top:13.5px;left:9px;border-radius:5px}
+.wc-sap{cursor: pointer;display: inline-block;width:60px;height: 50px;background-color: #d1d1d1;border-top-left-radius:20px;border-bottom-left-radius:20px}
+.sapIcon{width:42px;height:23px;background-color:#302f35;color:#fff;text-align:center;position:relative;top:15px;left:15px;border-radius:5px}
+.sendIcon{background: url("../../image/chatbotStyle/m_btn.png") no-repeat; width:32px;height:32px;margin:9px} /*이미지용*/
 /*.menuBox{background-color:#fff;width:250px;height:62px;position:absolute;bottom:53px;display:none;text-align:center;box-shadow: 0 1px 10px 0 rgba(0,0,0,0.30);border: 1px solid #CCC; border-radius: 4px;}
 .menuReStartBtn{color:#fff;background-color:#302f35;height:30px;font-size:12px}
 .menuReStartBtn > span {position:relative; top:5px}

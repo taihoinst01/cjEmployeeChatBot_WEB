@@ -72,7 +72,7 @@ $(function () {
     //챗봇창 상단 생성
     $(".wc-header > span").add(
         //"<span class='chatTitle'></span>" +
-        "<span class='chatTitleText'><strong>업무지원 ChatBot</strong></span>"
+        "<span class='chatTitleText'><strong>업무도우미 ChatBot</strong></span>"
         //"<span class='topIcon btnClose'><button class='topIcon03'></button></span>" +
         //"<span class='topIcon btnLayer btnLayerFull'><button class='topIcon02'></button></span>" +
         //"<span class='topIcon btnMin'><button class='topIcon01'></button></span>" +
