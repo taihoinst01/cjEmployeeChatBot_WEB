@@ -26,6 +26,8 @@
 .ac-container{padding:6px 6px 6px 12px !important; border-radius:5px; max-width:312px; background-color:#4d9adc !important}
 .ac-container > div {color:#fff !important}
 .ac-image{min-height:150px;}
+.wc-carousel-item > .wc-card > .ac-container{background-color:#49c5f3 !important}
+.wc-carousel-item > .wc-card > .ac-container > .ac-container{background-color:#49c5f3 !important}
 
 /* chat input */
 .wc-sap{cursor: pointer;display: inline-block;width:60px;height: 50px/*;background-color: #fff;*/}
