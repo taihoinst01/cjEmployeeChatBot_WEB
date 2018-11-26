@@ -217,18 +217,22 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   .wc-card .non-adaptive-content {
     margin: 8px 8px 0 8px; }
   .wc-card button {
-    background-color: transparent;
-    color: #3a96dd;
+    /*background-color: transparent;
+    color: #3a96dd;*/
+    background-color: #0070c0;
+    color: #fff;
     min-height: 32px;
     width: 100%;
     padding: 0 16px; }
   .wc-card button:hover {
-    background-color: transparent;
-    border-color: #3a96dd;
-    color: #3a96dd; }
+    /*background-color: transparent;
+    border-color: #3a96dd;*/
+    background-color: #0365ab;
+    border-color: #0365ab;
+    color: #fff; }
   .wc-card button:active {
-    background-color: #3a96dd;
-    border-color: #3a96dd;
+    background-color: #0365ab;
+    border-color: #0365ab;
     color: #ffffff; }
   .wc-card.receipt table {
     border-collapse: collapse;
@@ -367,7 +371,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   .wc-carousel button.scroll.previous {
     left: 0 }
   .wc-carousel button.scroll.next {
-    right: 24px; }
+    right: 0; }
   .wc-carousel .wc-hscroll > ul {
     margin-left: -4px; }
   .wc-carousel .wc-hscroll > ul > li {
