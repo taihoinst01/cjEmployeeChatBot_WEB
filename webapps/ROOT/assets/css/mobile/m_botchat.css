@@ -25,10 +25,10 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   visibility: hidden; }
 
 .wc-header {
-  background-color: #302f35;
+  /*background-color: #302f35;
   box-shadow: 0 1px rgba(0, 0, 0, 0.2);
   box-sizing: content-box;
-  color: #ffffff;
+  color: #ffffff;*/
   font-weight: 500;
   height: 30px;
   left: 0;
@@ -56,7 +56,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   right: 0;
   top: 38px;
   transition: transform 0.2s cubic-bezier(0, 0, 0.5, 1); 
-  background-color:#F2F3F7
+  /*background-color:#F2F3F7*/
 }
   .wc-message-groups.no-header {
     top: 0; }
@@ -125,7 +125,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   height: 40px; }
 
 .wc-console {
-    background-color: #fff;
+    background-color: #e0e0e0;
     bottom: 10px;
     box-sizing: border-box;
     height: 50px;
@@ -138,14 +138,16 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 /* views */
 .wc-chatview-panel {
     overflow: hidden;
-    background: #34373c;
+    /*background: #34373c;*/
     width: 100%;
     max-width: 380px;
     height: 100%;
     position: inherit;
-    border: 0px;
+    /*border: 0px;
     z-index: 9;
-    display: table;
+    display: table;*/
+    background: url("../../image/chatbotStyle/bg.png") no-repeat;
+    /*background-position: center;*/
 }  
 
 /* messages */
@@ -402,7 +404,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   right: -6px; }
 
 .wc-message-from-me .wc-message-content span{font-size:14px;color:#fff;line-height:15px;}
-.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;background:#00aad2;border-radius:5px;}
+.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;background:#f4878b;border-radius:5px;}
 
 /* from bot */
 .wc-message-from-bot {
@@ -439,7 +441,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     display: inline-block;
     height: 50px;
     width: 60px;
-    background-color: #d1d1d1;
+    background-color: #e0e0e0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px
 }
@@ -455,7 +457,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     padding: 0;
     resize: none;
     width: 100%;
-    background-color: #d1d1d1; /*input 색상 변경*/
+    background-color: #e0e0e0; /*input 색상 변경*/
     padding-left:10px
 }
 

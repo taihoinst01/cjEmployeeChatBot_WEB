@@ -1,5 +1,6 @@
 $(function () {
-    $('#wrapper').css({ 'height': ($(document).height()) + 'px'});
+    $('#wrapper').css({ 'height': ($(document).height()) + 'px' });
+    $('.wc-chatview-panel').css({ 'height': ($(document).height()) + 'px' });
     $(window).resize(function () {
         //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
     });

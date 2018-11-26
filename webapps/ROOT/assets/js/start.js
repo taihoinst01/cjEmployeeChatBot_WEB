@@ -71,8 +71,8 @@ if (isMobile()) {   //모바일 환경
     var fullWidth = screen.availWidth;
     var fullHeight = screen.availHeight;
     //팝업크기
-    var popWidth = 768;
-    var popHeight = 768;
+    var popWidth = 480;
+    var popHeight = 660;
     //팝업위치
     var popLeft = (fullWidth - popWidth) / 2;
     var popTop = (fullHeight - popHeight) / 2;
