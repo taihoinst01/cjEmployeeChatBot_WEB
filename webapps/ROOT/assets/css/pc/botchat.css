@@ -373,7 +373,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   .wc-carousel .wc-hscroll > ul > li {
     padding: 0 4px; }
   .wc-carousel .wc-hscroll > ul > li:last-child {
-    padding-right: 0; }
+    /*padding-right: 0;*/ }
   .wc-carousel li p {
     min-height: 4em;
     white-space: normal; }
@@ -401,7 +401,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   right: -6px; }
 
 .wc-message-from-me .wc-message-content span{font-size:14px;color:#fff;line-height:15px;}
-.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;background:#f4878b;border-radius:5px;}
+.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;background:#f4878b;border-radius:5px;box-shadow: 3px 3px 5px 0px #424242;}
 
 /* from bot */
 .wc-message-from-bot {
@@ -454,7 +454,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   resize: none;
   width: 100%; 
   background-color:#e0e0e0; /*input 색상 변경*/
-  margin-left:10px
+  /*margin-left:10px*/
 }
 
 .wc-send svg {
@@ -470,7 +470,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 
 .wc-textbox {
   bottom: 0;
-  left: 60px;
+  /*left: 60px;*/
+  left:40px;
   right: 70px; }
 
 .wc-send {

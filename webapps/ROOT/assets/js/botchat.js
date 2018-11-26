@@ -2201,7 +2201,8 @@
             i = n(188),
             s = n(39),
             a = n(29);
-        e.sendMessage = function(t, e, n) {
+        e.sendMessage = function (t, e, n) {
+            appendLoadingDiv(); // 17.06.20 수정 -- 로딩 div 생성
             return {
                 type: "Send_Message",
                 activity: {
@@ -7774,11 +7775,11 @@
                     //}, o.createElement("svg", null, o.createElement("path", {
                     //    d: "M19.96 4.79m-2 0a2 2 0 0 1 4 0 2 2 0 0 1-4 0zM8.32 4.19L2.5 15.53 22.45 15.53 17.46 8.56 14.42 11.18 8.32 4.19ZM1.04 1L1.04 17 24.96 17 24.96 1 1.04 1ZM1.03 0L24.96 0C25.54 0 26 0.45 26 0.99L26 17.01C26 17.55 25.53 18 24.96 18L1.03 18C0.46 18 0 17.55 0 17.01L0 0.99C0 0.45 0.47 0 1.03 0Z"
                     //    }))),
-                        o.createElement("div", {
-                            className: "wc-sap"
-                        }, o.createElement("div", {
-                            className: "sapIcon"
-                            }, 'SAP')),
+                        //o.createElement("div", {
+                        //    className: "wc-sap"
+                        //}, o.createElement("div", {
+                        //    className: "sapIcon"
+                        //    }, 'SAP')),
                         o.createElement("div", {
                             className: "wc-textbox"
                         },
@@ -15863,6 +15864,7 @@
                     case "option":
                         t.getReactMountReady().enqueue(u, this)
                 }
+                removeLoadingDiv(f);// 17.06.20 수정 -- 로딩 div 제거
                 return f
             },
             _createOpenTagMarkupAndPutListeners: function(t, e) {
@@ -20738,3 +20740,81 @@
         e.Any = n(171), e.Cc = n(169), e.Cf = n(444), e.P = n(86), e.Z = n(170)
     }])
 });
+
+//17.06.20 수정 START
+function appendLoadingDiv() {
+    //console.log('로딩 시작[메시지 보냄..]');
+    if ($('#loading').length == 0) {
+        $('.wc-message-group-content').append('<div id="loading" class="wc-message-wrapper list">'
+            + '<div class="wc-message wc-message-from-bot">'
+            + '<div class="wc-message-content">'
+            + '<svg class="wc-message-callout">'
+            /*+ '<path class="point-left" d="m0,6 l6 6 v-12 z"></path>'
+            + '<path class="point-right" d="m6,6 l-6 6 v-12 z"></path>'*/
+            + '</svg>'
+            + '<div>'
+            + '<div class="format-markdown">'
+            + '<p class="ac-container" style="box-shadow: 3px 3px 5px 0px #424242;"><img src="assets/image/chatbotStyle/loading.gif" width="50px;" /></p>'
+            + '</div>'
+            + '</div>'
+            + '<div class="wc-list">'
+            + '</div>'
+            + '</div>'
+            + '</div>'
+            + '<div class="wc-message-from wc-message-from-bot">'
+            + '<span>&nbsp;</span>'
+            + '</div>'
+            + '</div>');
+
+        $(".wc-message-groups").scrollTop($(".wc-message-groups")[0].scrollHeight);
+    }
+}
+
+function removeLoadingDiv(f) {
+    var divCnt = $(".wc-message-group-content > div").length;
+
+    //죄송해요 무슨 말인지 잘 모르겠어요. 처리
+    if (f.node.className === 'wc-message-wrapper list') {
+        var htmlElement = f.node.innerHTML;
+        if (htmlElement.match('wc-message wc-message-from-me') !== null && htmlElement.match('<img') !== null) {
+            f.node.innerHTML = htmlElement.replace('wc-message-content', '');
+        }
+
+        try {
+            childClassName = f.children[0].node.className;
+        } catch (err) {
+            childClassName = f.node.childNodes[0].className;
+        }
+        if (childClassName == 'wc-message wc-message-from-bot') {
+            var parent = document.getElementsByClassName('wc-message-group-content')[0];
+            var removeElement = document.getElementById('loading');
+            if (removeElement != null) {
+                parent.removeChild(removeElement);
+            }
+        }
+    }
+    if (f.node.className !== '') {
+        if (f.node.className.toString() === 'wc-message-wrapper carousel') {
+            var childClassName;
+
+            if (f.children[0] !== undefined) { // ie
+                childClassName = f.children[0].node.className;
+            } else { // chrome
+                childClassName = f.node.childNodes[0].className;
+            }
+
+            if (f.children[0] !== '' && childClassName === 'wc-message wc-message-from-bot') {
+                //console.log('로딩 끝');
+
+
+                if (document.getElementById('loading') != null) {
+                    var parent = document.getElementsByClassName('wc-message-group-content')[0];
+                    var removeElement = document.getElementById('loading');
+                    //focus
+                    parent.focus();
+                    parent.removeChild(removeElement);
+                }
+            }
+        }
+    }
+}
