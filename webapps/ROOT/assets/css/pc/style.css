@@ -32,6 +32,7 @@
 .sapIcon{width:42px;height:23px;background-color:#302f35;color:#fff;text-align:center;position:relative;top:15px;left:15px;border-radius:5px}
 /*.sendIcon{width:42px;height:23px;background-color:#C3C6CD;color:#fff;text-align:center;position:relative;top:13.5px;left:9px;border-radius:5px}*/ /* 글자용 */
 .sendIcon{background: url("../../image/chatbotStyle/btn.png") no-repeat; width:35px;height:35px;margin:8px} /*이미지용*/
+.sendIcon:hover{background: url("../../image/chatbotStyle/btn-h.png") no-repeat; width:35px;height:35px;margin:8px} /*이미지용*/
 /*.menuBox{background-color:#fff;width:250px;height:62px;position:absolute;bottom:53px;display:none;text-align:center;box-shadow: 0 1px 10px 0 rgba(0,0,0,0.30);border: 1px solid #CCC; border-radius: 4px;}
 .menuReStartBtn{color:#fff;background-color:#302f35;height:30px;font-size:12px}
 .menuReStartBtn > span {position:relative; top:5px}
