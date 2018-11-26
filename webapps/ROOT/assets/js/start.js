@@ -19,23 +19,23 @@
 
     
     //ex) Sample
-    $.ajax({
-        botName: 'cjEmployeeChatBot',
-        url: 'http://52.90.211.109:3000/apiServer/getChatTemplate?chat_name=TIIZChatBotV3',
-        dataType: 'json',
-        type: 'POST',
-        success: function (data) {
-            //mngData = data.lang;
-            console.log(data);
-            //"dog": [
-            //  "웰시코기",
-            //  "포메라니안",
-            //  "푸들"
-            //  "background-color: #000000",
-            //  "color: blue"
-            //]
-        }
-    });
+    //$.ajax({
+    //    botName: 'cjEmployeeChatBot',
+    //    url: 'http://52.90.211.109:3000/apiServer/getChatTemplate?chat_name=TIIZChatBotV3',
+    //    dataType: 'json',
+    //    type: 'POST',
+    //    success: function (data) {
+    //        //mngData = data.lang;
+    //        console.log(data);
+    //        //"dog": [
+    //        //  "웰시코기",
+    //        //  "포메라니안",
+    //        //  "푸들"
+    //        //  "background-color: #000000",
+    //        //  "color: blue"
+    //        //]
+    //    }
+    //});
 
     //$('.wc-message-groups').css({ 'background-color': '#000'});
 });
