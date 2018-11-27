@@ -3203,40 +3203,22 @@
                             }
 
                             
-                            
+                            //임시
                             if (e.content.buttons[0] != null) { //openUrl 없을때 처리
-                                if (e.content.buttons[0].value == '?') {
-                                    return e.content.images && e.content.images.forEach(function (t) {
-                                        return r.addImage(t.url)
-                                    }), r.addCommon(e.content), o.createElement(s.AdaptiveCardContainer, {
-                                        className: "hero notUrl",
-                                        card: r.card,
-                                        onImageLoad: t.onImageLoad,
-                                        onCardAction: t.onCardAction,
-                                        onClick: n(e.content.tap)
-                                    });
+                                if (e.content.buttons[0].value == '#') {
+                                    e.content.buttons[0].title = 'URL 준비중입니다.';
                                 }
-                            } else {    //기본로직
-                                return e.content.images && e.content.images.forEach(function (t) {
-                                    return r.addImage(t.url)
-                                }), r.addCommon(e.content), o.createElement(s.AdaptiveCardContainer, {
-                                    className: "hero",
-                                    card: r.card,
-                                    onImageLoad: t.onImageLoad,
-                                    onCardAction: t.onCardAction,
-                                    onClick: n(e.content.tap)
-                                });
                             }
 
-                            //return e.content.images && e.content.images.forEach(function (t) {
-                            //    return r.addImage(t.url)
-                            //}), r.addCommon(e.content), o.createElement(s.AdaptiveCardContainer, {
-                            //    className: "hero",
-                            //    card: r.card,
-                            //    onImageLoad: t.onImageLoad,
-                            //    onCardAction: t.onCardAction,
-                            //    onClick: n(e.content.tap)
-                            //});
+                            return e.content.images && e.content.images.forEach(function (t) {
+                                return r.addImage(t.url)
+                            }), r.addCommon(e.content), o.createElement(s.AdaptiveCardContainer, {
+                                className: "hero",
+                                card: r.card,
+                                onImageLoad: t.onImageLoad,
+                                onCardAction: t.onCardAction,
+                                onClick: n(e.content.tap)
+                            });
                         }
 
 
