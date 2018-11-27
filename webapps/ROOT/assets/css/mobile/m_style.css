@@ -1,8 +1,8 @@
 ﻿/* chatbot BG */
 /*.mainBG{background:url(../../image/chatbotStyle/psa_bg2.png) no-repeat center 10%; background-attachment:fixed; width:100%}*/
 .botBtnPosition{position:absolute;top:360px;left:25%}
-.banner{background:url(../../image/chatbotStyle/btn_chatlink.png) no-repeat; width:170px;height:47px;position:relative;top:340px;left:23.5%;transform: translateX(-50%) translateY(-10%);}
-.banner:hover{background:url(../../image/chatbotStyle/btn_chatlink_hover.png) no-repeat; width:170px;height:47px;position:relative;top:340px;left:23.5%;transform: translateX(-50%) translateY(-10%);cursor:pointer}
+/*.banner{background:url(../../image/chatbotStyle/btn_chatlink.png) no-repeat; width:170px;height:47px;position:relative;top:340px;left:23.5%;transform: translateX(-50%) translateY(-10%);}
+.banner:hover{background:url(../../image/chatbotStyle/btn_chatlink_hover.png) no-repeat; width:170px;height:47px;position:relative;top:340px;left:23.5%;transform: translateX(-50%) translateY(-10%);cursor:pointer}*/
 
 /* chat TOP */
 .chatTitle{background: url("../../image/chatbotStyle/topbar_title.png") no-repeat; height:18px;width:199px; display: inline-block;}
@@ -30,6 +30,7 @@
 .wc-carousel-item > .wc-card{background-color:#49c5f3 !important;border-color:#49c5f3 !important}
 .wc-carousel-item > .wc-card > .ac-container{background-color:#49c5f3 !important}
 .wc-carousel-item > .wc-card > .ac-container > .ac-container{background-color:#49c5f3 !important}
+.wc-carousel-item > .wc-adaptive-card{max-width:200px}
 
 /* chat input */
 .wc-sap{cursor: pointer;display: inline-block;width:60px;height: 50px;border-top-left-radius:20px;border-bottom-left-radius:20px}
