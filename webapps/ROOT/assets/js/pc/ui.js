@@ -299,6 +299,10 @@ $(function () {
             $('.ttsMic').addClass('ttsMicBlack');
         }
     });
+
+    $(document).on('click', '.notUrl', function () {
+        alert('URL 준비중입니다.');
+    });
 });
 
 //챗봇 메뉴 처음으로 돌아가기

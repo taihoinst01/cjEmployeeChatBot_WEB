@@ -3192,7 +3192,6 @@
                                 , o.createElement("div", { className: "hidden", alt: e.content.title })
                                 , o.createElement("div", { className: "hidden", alt: e.content.card_value }))
                         } else {
-                            console.log("제스너 no : " + e.content.gesture);
                             if (!e.content) return null;
                             var r = new i.AdaptiveCardBuilder;
                             //TTS 적용 
@@ -3203,15 +3202,41 @@
                                 playAction(e.content.gesture);
                             }
 
-                            return e.content.images && e.content.images.forEach(function (t) {
-                                return r.addImage(t.url)
-                            }), r.addCommon(e.content), o.createElement(s.AdaptiveCardContainer, {
-                                className: "hero",
-                                card: r.card,
-                                onImageLoad: t.onImageLoad,
-                                onCardAction: t.onCardAction,
-                                onClick: n(e.content.tap)
-                            });
+                            
+                            
+                            if (e.content.buttons[0] != null) { //openUrl 없을때 처리
+                                if (e.content.buttons[0].value == '?') {
+                                    return e.content.images && e.content.images.forEach(function (t) {
+                                        return r.addImage(t.url)
+                                    }), r.addCommon(e.content), o.createElement(s.AdaptiveCardContainer, {
+                                        className: "hero notUrl",
+                                        card: r.card,
+                                        onImageLoad: t.onImageLoad,
+                                        onCardAction: t.onCardAction,
+                                        onClick: n(e.content.tap)
+                                    });
+                                }
+                            } else {    //기본로직
+                                return e.content.images && e.content.images.forEach(function (t) {
+                                    return r.addImage(t.url)
+                                }), r.addCommon(e.content), o.createElement(s.AdaptiveCardContainer, {
+                                    className: "hero",
+                                    card: r.card,
+                                    onImageLoad: t.onImageLoad,
+                                    onCardAction: t.onCardAction,
+                                    onClick: n(e.content.tap)
+                                });
+                            }
+
+                            //return e.content.images && e.content.images.forEach(function (t) {
+                            //    return r.addImage(t.url)
+                            //}), r.addCommon(e.content), o.createElement(s.AdaptiveCardContainer, {
+                            //    className: "hero",
+                            //    card: r.card,
+                            //    onImageLoad: t.onImageLoad,
+                            //    onCardAction: t.onCardAction,
+                            //    onClick: n(e.content.tap)
+                            //});
                         }
 
 
