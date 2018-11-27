@@ -20,12 +20,14 @@
 
 /* chat view */
 /*.wc-list{background-color: #f1f3f6}*/
-.wc-card{margin-bottom:18px;box-shadow: 3px 3px 5px 0px #424242;background-color:#49c5f3 !important;border-color:#49c5f3 !important}
+.wc-card{margin-bottom:18px;box-shadow: 3px 3px 5px 0px #424242}
 .timeStampBot{font-size: 12px; color: #868a8f;line-height: 15px; text-align: left; /*background: #f1f3f6;*/padding-top: 3px !important; position:absolute; bottom:-5px; left:0}
 .timeStampUser{font-size: 12px;color: #868a8f;line-height: 15px;text-align: right;padding-top:3px !important}
 .ac-container{padding:6px 6px 6px 12px !important; border-radius:5px; max-width:312px; background-color:#4d9adc !important}
 .ac-container > div {color:#fff !important}
 .ac-image{min-height:150px;}
+.wc-list > .wc-card{background-color:#4d9adc !important;border-color:#4d9adc !important}
+.wc-carousel-item > .wc-card{background-color:#49c5f3 !important;border-color:#49c5f3 !important}
 .wc-carousel-item > .wc-card > .ac-container{background-color:#49c5f3 !important}
 .wc-carousel-item > .wc-card > .ac-container > .ac-container{background-color:#49c5f3 !important}
 
