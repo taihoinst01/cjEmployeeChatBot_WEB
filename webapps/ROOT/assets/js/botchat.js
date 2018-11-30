@@ -3582,6 +3582,18 @@
                 }, t.prototype.catchPostError = function(t) {
                     if (403 === t.status) this.expiredToken();
                     else if (t.status >= 400 && t.status < 500) return i.Observable.throw(t);
+                    //KSO
+                    //else if (502 === t.status) {
+                    //    return i.Observable.ajax({
+                    //        method: "POST",
+                    //        url: t.request.url,
+                    //        body: JSON.parse(t.request.body),
+                    //        timeout: 2e4,
+                    //        headers: t.request.headers
+                    //    }).catch(function (t) {
+                    //        $('#loading').remove();
+                    //    });
+                    //}
                     return i.Observable.of("retry")
                 }, t.prototype.catchExpiredToken = function(t) {
                     return t === a ? i.Observable.of("retry") : i.Observable.throw(t)
@@ -7174,7 +7186,6 @@
                         return e.div = t
                     },
                     onClick: function (t) {
-                        console.log(t);
                         return e.onClick(t)
                     }
                 }, t, timeDiv)
