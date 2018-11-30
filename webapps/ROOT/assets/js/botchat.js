@@ -13485,7 +13485,7 @@
                         }
                     }
                 //개행추가 20181113
-                this._element.innerHTML = this._element.innerHTML.replace('/n', "</br>").replace('/n', "</br>");
+                this._element.innerHTML = this._element.innerHTML.split("/n").join("</br>");
                 return this._element
             }, e.prototype.getBackgroundColor = function() {
                 return null
