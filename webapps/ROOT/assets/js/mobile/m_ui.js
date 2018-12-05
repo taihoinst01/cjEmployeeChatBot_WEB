@@ -11,21 +11,21 @@ $(function () {
 	});
 
     //360 팝업창 생성(cardDivision : reel)
-    $("#bot > div").add(
-        "<div class='reel-wrapper popupArea'>" +
-            "<div class='popHeader'>" +
-                "<span id='reelTitle' class='popupTitle'></span>" +
-                "<button class='btnTopClose'></button>" +
-            "</div>" +
-            "<div id='reelArea' class='popBody'>" +
-                "<div class='imgBox' id='phantom black'>" +
-                    "<img src='assets/image/car/00001.jpg' alt='' class='reel' id='image' data-images='assets/image/car/000##.jpg' data-frames='60' data-cw='true' />" +
-                "</div>" +
-                "<div class='popTxt'>" +
-                    "<span>좌우로 드래그하여 돌려보세요.</span>" +
-                "</div>" +
-            "</div>" +
-        "</div>").appendTo("#bot");
+    //$("#bot > div").add(
+    //    "<div class='reel-wrapper popupArea'>" +
+    //        "<div class='popHeader'>" +
+    //            "<span id='reelTitle' class='popupTitle'></span>" +
+    //            "<button class='btnTopClose'></button>" +
+    //        "</div>" +
+    //        "<div id='reelArea' class='popBody'>" +
+    //            "<div class='imgBox' id='phantom black'>" +
+    //                "<img src='assets/image/car/00001.jpg' alt='' class='reel' id='image' data-images='assets/image/car/000##.jpg' data-frames='60' data-cw='true' />" +
+    //            "</div>" +
+    //            "<div class='popTxt'>" +
+    //                "<span>좌우로 드래그하여 돌려보세요.</span>" +
+    //            "</div>" +
+    //        "</div>" +
+    //    "</div>").appendTo("#bot");
     //동영상 팝업창 생성(cardDivision : play)
     $("#bot > div").add(
         "<div class='mov-wrapper popupArea'>" +
