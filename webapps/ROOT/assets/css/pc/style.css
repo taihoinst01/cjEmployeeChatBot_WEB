@@ -24,21 +24,22 @@
 .wc-card{margin-bottom:18px;/*box-shadow: 3px 3px 5px 0px #424242;*/}
 .timeStampBot{font-size: 12px; color: #868a8f;line-height: 15px; text-align: left; /*background: #f1f3f6;*/padding-top: 3px !important; position:absolute; bottom:-5px; left:0}
 .timeStampUser{font-size: 12px;color: #868a8f;line-height: 15px;text-align: right;padding-top:7px !important}
-.ac-container{padding:6px 6px 6px 6px !important; max-width:312px; /*border-radius:5px; background-color:#F8FFFF !important*/}
-.ac-container > div {color:#000 !important}
+.ac-container{padding:0 !important; max-width:312px;/*border-radius:5px; background-color:#F8FFFF !important*/}
+.ac-container > div {color:#555 !important}
 .ac-image{min-height:150px;}
-.wc-list > .wc-card{background-color:#F8FFFF !important;/*border-color:#F8FFFF !important*/ border:1px solid black}
-.wc-carousel-item > .wc-card{background-color:#F8FFFF !important;max-width:200px; /*border-color:#F8FFFF !important;*/ border:1px solid black}
+.wc-list > .wc-card{background-color:#fff !important;/*border-color:#F8FFFF !important*/ border:1px solid #555}
+.wc-carousel-item > .wc-card{background-color:#fff !important;max-width:200px; /*border-color:#F8FFFF !important;*/ border:1px solid #555}
 /*.wc-carousel-item > .wc-card > .ac-container{background-color:#F8FFFF !important}
 .wc-carousel-item > .wc-card > .ac-container > .ac-container{background-color:#F8FFFF !important}*/
 .wc-carousel-item > .wc-adaptive-card{max-width:200px}
+.ac-container > div > p {padding:10px !important}
 
 /* chat input */
 .wc-sap{cursor: pointer;display: inline-block;width:60px;height: 50px/*;background-color: #fff;*/}
 .sapIcon{width:42px;height:23px;background-color:#302f35;color:#fff;text-align:center;position:relative;top:15px;left:15px;border-radius:5px}
 /*.sendIcon{width:42px;height:23px;background-color:#C3C6CD;color:#fff;text-align:center;position:relative;top:13.5px;left:9px;border-radius:5px}*/ /* 글자용 */
-.sendIcon{background: url("../../image/chatbotStyle/btn.png") no-repeat; width:35px;height:35px;margin:8px} /*이미지용*/
-.sendIcon:hover{background: url("../../image/chatbotStyle/btn-h.png") no-repeat; width:35px;height:35px;margin:8px} /*이미지용*/
+.sendIcon{background: url("../../image/chatbotStyle/btn_send.png") no-repeat; width:35px;height:35px;margin:8px} /*이미지용*/
+.sendIcon:hover{background: url("../../image/chatbotStyle/btn_send_h.png") no-repeat; width:35px;height:35px;margin:8px} /*이미지용*/
 /*.menuBox{background-color:#fff;width:250px;height:62px;position:absolute;bottom:53px;display:none;text-align:center;box-shadow: 0 1px 10px 0 rgba(0,0,0,0.30);border: 1px solid #CCC; border-radius: 4px;}
 .menuReStartBtn{color:#fff;background-color:#302f35;height:30px;font-size:12px}
 .menuReStartBtn > span {position:relative; top:5px}

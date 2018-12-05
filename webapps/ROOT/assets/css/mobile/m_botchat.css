@@ -8,8 +8,10 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-app button {
   /*background-color: #0063b1;*/
   /*border: none;*/
-  border : 1px solid #3a96dd;
-  border-radius: 1px;
+  background-color:#555;
+  border:none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   color: #ffffff;
   cursor: pointer;
   outline: none;
@@ -222,22 +224,22 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   .wc-card .non-adaptive-content {
     margin: 8px 8px 0 8px; }
   .wc-card button {
-    background-color: transparent;
-    color: #3a96dd;
-    /*background-color: #0070c0;
-    color: #fff;*/
+    /*background-color: transparent;
+    color: #3a96dd;*/
+    background-color: #555;
+    color: #fff;
     min-height: 32px;
     width: 100%;
     padding: 0 16px; }
   .wc-card button:hover {
-    background-color: transparent;
-    border-color: #3a96dd;
-    /*background-color: #0365ab;
-    border-color: #0365ab;*/
+    /*background-color: transparent;
+    border-color: #3a96dd;*/
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    background-color: #000;
     color: #fff; }
   .wc-card button:active {
-    /*background-color: #0365ab;
-    border-color: #0365ab;*/
+    background-color: #555;
     color: #ffffff; }
   .wc-card.receipt table {
     border-collapse: collapse;
