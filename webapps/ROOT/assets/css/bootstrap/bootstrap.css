@@ -117,7 +117,7 @@ select,
 textarea {
   margin: 0;
   /*font: inherit;*/
-  font: CJONLYONENEWbodyRegular; /*KSO CJ Font*/
+  font: 'CJONLYONENEWbodyRegular'; /*KSO CJ Font*/
   color: inherit;
 }
 button {
