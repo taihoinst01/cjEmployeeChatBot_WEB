@@ -8,6 +8,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-app button {
   /*background-color: #0063b1;
   border: none;*/
+  border : 1px solid #3a96dd;
   border-radius: 1px;
   color: #000;
   cursor: pointer;
@@ -378,7 +379,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   .wc-carousel .wc-hscroll > ul > li:last-child {
     /*padding-right: 0;*/ }
   .wc-carousel li p {
-    min-height: 4em;
+    /*min-height: 4em;*/
     white-space: normal; }
   .wc-carousel li .wc-adaptive-card p {
     min-height: initial; }
