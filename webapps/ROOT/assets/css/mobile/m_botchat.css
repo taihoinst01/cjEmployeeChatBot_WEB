@@ -7,7 +7,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 
 .wc-app button {
   /*background-color: #0063b1;*/
-  border: none;
+  /*border: none;*/
   border-radius: 1px;
   color: #ffffff;
   cursor: pointer;
@@ -147,7 +147,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     /*border: 0px;
     z-index: 9;
     display: table;*/
-    background: url("../../image/chatbotStyle/bg.png") no-repeat;
+    /*background: url("../../image/chatbotStyle/bg.png") no-repeat;*/
     /*background-position: center;*/
 }  
 
@@ -221,22 +221,22 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   .wc-card .non-adaptive-content {
     margin: 8px 8px 0 8px; }
   .wc-card button {
-    /*background-color: transparent;
-    color: #3a96dd;*/
-    background-color: #0070c0;
-    color: #fff;
+    background-color: transparent;
+    color: #3a96dd;
+    /*background-color: #0070c0;
+    color: #fff;*/
     min-height: 32px;
     width: 100%;
     padding: 0 16px; }
   .wc-card button:hover {
-    /*background-color: transparent;
-    border-color: #3a96dd;*/
-    background-color: #0365ab;
-    border-color: #0365ab;
+    background-color: transparent;
+    border-color: #3a96dd;
+    /*background-color: #0365ab;
+    border-color: #0365ab;*/
     color: #fff; }
   .wc-card button:active {
-    background-color: #0365ab;
-    border-color: #0365ab;
+    /*background-color: #0365ab;
+    border-color: #0365ab;*/
     color: #ffffff; }
   .wc-card.receipt table {
     border-collapse: collapse;
@@ -408,8 +408,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-message-from-me svg.wc-message-callout {
   right: -6px; }
 
-.wc-message-from-me .wc-message-content span{font-size:14px;color:#fff;line-height:15px;}
-.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;background:#f4878b;border-radius:5px;box-shadow: 3px 3px 5px 0px #424242;}
+.wc-message-from-me .wc-message-content span{font-size:14px;color:#000;line-height:15px;}
+.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;border-radius:5px;border:1px solid black;/*background:#f4878b;box-shadow: 3px 3px 5px 0px #424242;*/}
 
 /* from bot */
 .wc-message-from-bot {

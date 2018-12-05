@@ -20779,7 +20779,7 @@ function appendLoadingDiv() {
             + '</svg>'
             + '<div>'
             + '<div class="format-markdown">'
-            + '<p class="ac-container" style="box-shadow: 3px 3px 5px 0px #424242;"><img src="assets/image/chatbotStyle/loading.gif" width="50px;" /></p>'
+            + '<p class="ac-container" style="border:1px solid black;border-radius:5px"><img src="assets/image/chatbotStyle/loading.gif" width="50px;" /></p>'
             + '</div>'
             + '</div>'
             + '<div class="wc-list">'
