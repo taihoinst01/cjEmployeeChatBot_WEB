@@ -34,15 +34,16 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   box-sizing: content-box;
   color: #ffffff;*/
   font-weight: 500;
-  height: 30px;
+  height: 50px;
   left: 0;
   letter-spacing: 0.5px;
-  padding: 8px 8px 0 8px;
+  padding: 16px 8px 0 8px;
   position: absolute;
   right: 0;
   top: 0;
   z-index: 1; 
-  text-align:center
+  text-align:center;
+  border-bottom:4px solid #ddd
 }
 
 .wc-time {
@@ -50,7 +51,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   margin-bottom: 10px; }
 
 .wc-message-groups {
-  bottom: 70px;
+  bottom: 60px;
   left: 0;
   transform: translateY(0);
   overflow-x: hidden;
@@ -58,7 +59,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   padding: 10px;
   position: absolute;
   right: 0;
-  top: 38px;
+  top: 50px;
   transition: transform 0.2s cubic-bezier(0, 0, 0.5, 1); 
   /*background-color:#F2F3F7*/
 }

@@ -7027,7 +7027,7 @@
                 function e(e) {
                     return t.call(this, e) || this
                 }
-                return r.__extends(e, t), e.prototype.shouldComponentUpdate = function(t) {
+                return r.__extends(e, t), e.prototype.shouldComponentUpdate = function (t) {
                     return this.props.activity !== t.activity || this.props.format !== t.format || "message" === this.props.activity.type && "carousel" === this.props.activity.attachmentLayout && this.props.size !== t.size
                 }, e.prototype.render = function() {
                     var t = this.props,
@@ -7161,6 +7161,7 @@
             }, e.prototype.render = function() {
                 var t, e = this,
                     n = this.state && this.state.errors && this.state.errors.length > 0;
+
                 /*KSO*/
                 var msgMinutes = new Date().getMinutes();
                 var tempMinutes = msgMinutes;
@@ -7175,7 +7176,10 @@
                 }
                 var writeTime = ampm + " " + getHour + ":" + tempMinutes;
                 var timeDiv = "";
-                timeDiv = s.createElement("p", { className: "timeStampBot" }, writeTime);
+
+                if (this.props.card.actions.length == 0) {
+                    timeDiv = s.createElement("p", { className: "timeStampBot" }, writeTime);
+                }
 
                 return t = n ? s.createElement("div", null, s.createElement("svg", {
                     className: "error-icon",
@@ -7300,6 +7304,7 @@
         Object.defineProperty(e, "__esModule", {
             value: !0
         });
+
         var r = n(11),
             o = n(9),
             i = n(52),
@@ -7319,6 +7324,24 @@
                     this.updateContentWidth()
                 }, e.prototype.render = function() {
                     var t = this;
+
+                    /*KSO carousel 부분*/
+                    var msgMinutes = new Date().getMinutes();
+                    var tempMinutes = msgMinutes;
+                    if (msgMinutes < 10) {
+                        tempMinutes = "0" + tempMinutes.toString();
+                    }
+                    var getHour = new Date().getHours();
+                    var ampm = '오전';
+                    if (getHour > 12) {
+                        getHour = getHour - 12
+                        ampm = '오후';
+                    }
+                    var writeTime = ampm + " " + getHour + ":" + tempMinutes;
+                    var timeDiv = "";
+
+                    timeDiv = o.createElement("p", { className: "timeStampBot" }, writeTime);
+
                     return o.createElement("div", {
                         className: "wc-carousel",
                         ref: function(e) {
@@ -7331,7 +7354,7 @@
                         prevSvgPathData: "M 16.5 22 L 19 19.5 L 13.5 14 L 19 8.5 L 16.5 6 L 8.5 14 L 16.5 22 Z",
                         nextSvgPathData: "M 12.5 22 L 10 19.5 L 15.5 14 L 10 8.5 L 12.5 6 L 20.5 14 L 12.5 22 Z",
                         scrollUnit: "item"
-                    }, o.createElement(u, r.__assign({}, this.props))))
+                    }, o.createElement(u, r.__assign({}, this.props))), timeDiv)
                 }, e
             }(o.PureComponent);
         e.Carousel = c;

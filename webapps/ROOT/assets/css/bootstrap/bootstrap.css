@@ -275,7 +275,7 @@ th {
 @font-face {
     font-family: 'CJONLYONENEWbodyRegular';
     src: url(../../font/CJONLYONENEWbodyRegular_2350.eot);
-    src: url(../../font/CJONLYONENEWbodyRegular_2350?#iefix) format('embedded-opentype'), 
+    src: url(../../font/CJONLYONENEWbodyRegular_2350.eot?#iefix) format('embedded-opentype'), 
         url(../../font/CJONLYONENEWbodyRegular_2350.woff) format('woff'), 
         url(../../font/CJONLYONENEWbodyRegular_2350.ttf) format('truetype');
 }
