@@ -116,7 +116,8 @@ optgroup,
 select,
 textarea {
   margin: 0;
-  font: inherit;
+  /*font: inherit;*/
+  font: CJONLYONENEWbodyRegular; /*KSO CJ Font*/
   color: inherit;
 }
 button {
