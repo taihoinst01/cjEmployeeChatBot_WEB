@@ -269,15 +269,20 @@ th {
   font-family: 'Glyphicons Halflings';
 
   src: url('../../fonts/glyphicons-halflings-regular.eot');
-  src: url('../../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+      url('../../fonts/glyphicons-halflings-regular.woff2') format('woff2'), 
+      url('../../fonts/glyphicons-halflings-regular.woff') format('woff'), 
+      url('../../fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
+      url('../../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 /*KSO CK Font*/
 @font-face {
     font-family: 'CJONLYONENEWbodyRegular';
-    src: url(../../font/CJONLYONENEWbodyRegular_2350.eot);
-    src: url(../../font/CJONLYONENEWbodyRegular_2350.eot?#iefix) format('embedded-opentype'), 
-        url(../../font/CJONLYONENEWbodyRegular_2350.woff) format('woff'), 
-        url(../../font/CJONLYONENEWbodyRegular_2350.ttf) format('truetype');
+    src: url('../../font/CJONLYONENEWbodyRegular_2350.eot');
+    src: url('../../font/CJONLYONENEWbodyRegular_2350.eot?#iefix') format('embedded-opentype'), 
+        url('../../font/CJONLYONENEWbodyRegular_2350.woff2') format('woff2'), 
+        url('../../font/CJONLYONENEWbodyRegular_2350.woff') format('woff'), 
+        url('../../font/CJONLYONENEWbodyRegular_2350.ttf') format('truetype');
 }
 .glyphicon {
   position: relative;
