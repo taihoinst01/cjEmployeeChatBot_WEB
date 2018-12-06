@@ -7828,6 +7828,11 @@
                         //}, o.createElement("div", {
                         //    className: "sapIcon"
                         //    }, 'SAP')),
+                        //o.createElement("div", {
+                        //    className: "wc-menu"
+                        //}, o.createElement("div", {
+                        //    className: "menuIcon"
+                        //    }, 'menu')),
                         o.createElement("div", {
                             className: "wc-textbox"
                         },
@@ -7895,7 +7900,7 @@
                                 t.textInput.value = '';
                                 $('.sttText').attr('value', '');
                             }
-                            //KSO (menu부분 현재 사용x)
+                            //KSO (menu 부분 현재 사용x)
                             if ((t.props.inputText === '' || t.props.inputText === 'return home') && (t.textInput.value !== '')) {
                                 t.props.inputText = t.textInput.value;
                             }

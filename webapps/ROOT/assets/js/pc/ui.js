@@ -92,6 +92,17 @@ $(function () {
             //"</ul>" +
         "</div > ").appendTo(".wc-chatview-panel");
 
+    //챗봇 MENU BTN
+    //$(".wc-chatview-panel > div").add(
+    //    "<div class='menuBox off'>" +
+    //        "<p class='menuReStartBtn'><span> Menu </span></p>" +
+    //        "<ul>" +
+    //        //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu('Accident analysis')'> Accident analysis </span></a></li>" +
+    //        //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu('Accident trends')'> Accident trends </span></a></li>" +
+    //        "<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
+    //        "</ul>" +
+    //    "</div > ").appendTo(".wc-chatview-panel");
+
     //챗봇 마이크 생성
     //$(".wc-console > div").add(
     //    "<div class='ttsMic ttsMicBlack' onclick='startButton(event)'>&nbsp</div > ").appendTo(".wc-console");
@@ -140,6 +151,15 @@ $(function () {
             $('.sapIcon').css({ 'background-color': '#302f35' });
         }
     });
+    //$('.menuIcon').click(function () {
+    //    if ($('.menuBox').hasClass("off")) {
+    //        $('.menuBox').removeClass('off').addClass('on');
+    //        $('.menuBox').css({ 'display': 'block' });
+    //    } else {
+    //        $('.menuBox').removeClass('on').addClass('off');
+    //        $('.menuBox').css({ 'display': 'none' });
+    //    }
+    //});
     
     //챗봇 제스처 동작
     var startGesture = 0;
@@ -302,15 +322,15 @@ $(function () {
 });
 
 //챗봇 메뉴 처음으로 돌아가기
-//function viewMenu() {
-//    var returnText = "return home";     // 처음으로 돌아가는 텍스트
-//    $('div.wc-console').addClass('has-text');
-//    $('input[type="text"].wc-shellinput').attr('value', returnText);
-//    $('input[type="text"].wc-shellinput').val(returnText);
-//    $('label.wc-send').trigger('click');
-//    $('input[type="text"].wc-shellinput').attr('value', '');
-//    $('input[type="text"].wc-shellinput').val('');
-//    $('.wc-console').removeClass('has-text');
-//    $('.menuBox').removeClass('on').addClass('off');
-//    $('.menuBox').css({ 'display': 'none' });
-//}
+function viewMenu() {
+    var returnText = "return home";     // 처음으로 돌아가는 텍스트
+    $('div.wc-console').addClass('has-text');
+    $('input[type="text"].wc-shellinput').attr('value', returnText);
+    $('input[type="text"].wc-shellinput').val(returnText);
+    $('label.wc-send').trigger('click');
+    $('input[type="text"].wc-shellinput').attr('value', '');
+    $('input[type="text"].wc-shellinput').val('');
+    $('.wc-console').removeClass('has-text');
+    $('.menuBox').removeClass('on').addClass('off');
+    $('.menuBox').css({ 'display': 'none' });
+}
