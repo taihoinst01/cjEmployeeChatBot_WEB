@@ -20794,6 +20794,19 @@
     }])
 });
 
+//Mobile Check
+function isMobile() {
+    var UserAgent = navigator.userAgent;
+
+    if (UserAgent.match(/iPhone|iPad|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
+        deviceChk = 'M';
+        return true;
+    } else {
+        deviceChk = 'P';
+        return false;
+    }
+}
+
 //17.06.20 수정 START
 function appendLoadingDiv() {
     //console.log('로딩 시작[메시지 보냄..]');
@@ -20807,7 +20820,7 @@ function appendLoadingDiv() {
             + '</svg>'
             + '<div>'
             + '<div class="format-markdown">'
-            + '<p class="ac-container" style="border:1px solid #555;border-radius:5px"><img src="assets/image/chatbotStyle/loading.gif" style="width:50px;padding:10px" /></p>'
+            + '<p class="ac-container" style="border:1px solid #555;border-radius:7px"><img src="assets/image/chatbotStyle/loading.gif" style="width:80px;padding:10px" /></p>'
             + '</div>'
             + '</div>'
             + '<div class="wc-list">'
@@ -20820,19 +20833,6 @@ function appendLoadingDiv() {
             + '</div>');
 
         $(".wc-message-groups").scrollTop($(".wc-message-groups")[0].scrollHeight);
-    }
-}
-
-//Mobile Check
-function isMobile() {
-    var UserAgent = navigator.userAgent;
-
-    if (UserAgent.match(/iPhone|iPad|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
-        deviceChk = 'M';
-        return true;
-    } else {
-        deviceChk = 'P';
-        return false;
     }
 }
 

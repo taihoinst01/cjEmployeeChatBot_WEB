@@ -428,9 +428,9 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   display: none; }
 
 .wc-message-from-bot svg.wc-message-callout {
-  background: url("../../image/chatbotStyle/ico_profi.png") no-repeat;
-  width: 30px;
-  height: 30px;
+  background: url("../../image/chatbotStyle/ico_profi_36.png") no-repeat;
+  width: 36px;
+  height: 36px;
   display: inline-block;
   /*position: fixed;*/
   margin: -10px 0 0 -40px
