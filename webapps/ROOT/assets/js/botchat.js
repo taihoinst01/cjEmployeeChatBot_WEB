@@ -7675,9 +7675,13 @@
                             }
                         }, o.createElement("div", {
                             className: s
-                        }, o.createElement("svg", {
-                            className: "wc-message-callout"
+                        },
+                            o.createElement("img", {
+                                src: "assets/image/chatbotStyle/ico_profi_80.png", className:"wc-message-callout"
                         }
+                        //    o.createElement("svg", {
+                        //    className: "wc-message-callout"
+                        //}
                             //                o.createElement("path", {
                             //    className: "point-left",
                             //    d: "m0,6 l6 6 v-12 z"
