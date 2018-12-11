@@ -438,12 +438,12 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   position: fixed;
   margin: -10px 0 0 -40px
 }*/
-.wc-message-from-bot div .wc-message-callout {
+.wc-message-from-bot div img.wc-message-callout {
   /*background: url("../../image/chatbotStyle/ico_profi_36.png") no-repeat;*/
   width: 36px;
   height: 36px;
   display: inline-block;
-  position: fixed;
+  position: absolute;
   margin: 0 0 0 -40px
 }
 

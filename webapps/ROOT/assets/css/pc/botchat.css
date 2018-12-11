@@ -440,7 +440,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   width: 36px;
   height: 36px;
   display: inline-block;
-  position: fixed;
+  position: absolute;
   margin: 0 0 0 -40px
 }
 
