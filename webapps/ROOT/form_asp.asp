@@ -4,5 +4,5 @@
 %>
 
 <script>
-	location.href = "index.html?"+request.form("name1")+"?"+request.form("name2")
+	location.href = "index.html?"+<%=request.form("name1")%>+"&"+<%=request.form("name2")%>;
 </script>
