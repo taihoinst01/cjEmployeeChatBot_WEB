@@ -33,9 +33,9 @@
     <script type="text/javascript" src="assets/js/stt.js"></script>
     <script type="text/javascript" src="assets/js/tts.js"></script>-->
     <script>
-		document.write("------------------1");
+		document.write("------------------");
         document.write(document.referrer);
-		document.write("------------------2");
+		document.write("------------------");
     </script>
     <title>CJ Employee</title>
 </head>
