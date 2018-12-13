@@ -20942,19 +20942,34 @@ function ssoConnection() {
     //        alert("error1");
     //    }
     //});
+
+    //var settings = {
+    //    "async": true,
+    //    "crossDomain": true,
+    //    "url": "https://directline.botframework.com/api/conversations/" + $('#conversationId').val() +"/messages",
+    //    "method": "POST",
+    //    "headers": {
+    //        "Authorization": "Bearer jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0",
+    //        "Content-Type": "application/json",
+    //    },
+    //    "processData": false,
+    //    "data": "{\n    \"text\": \""+pos+"\",\n    \"from\": \"cjEmployeeChatBot\"\n}"
+    //}
+
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://directline.botframework.com/api/conversations/" + $('#conversationId').val() +"/messages",
+        "url": "https://directline.botframework.com/v3/directline/conversations/" + $('#conversationId').val() +"/activities",
         "method": "POST",
         "headers": {
-            "Authorization": "Bearer jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0",
             "Content-Type": "application/json",
+            "Authorization": "Bearer jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0"
         },
         "processData": false,
-        "data": "{\n    \"text\": \""+pos+"\",\n    \"from\": \"cjEmployeeChatBot\"\n}"
+        "data": "{\n    \"type\": \"message\",\n    \"from\": {\n        \"id\": \"cjEmployeeChatBot\"\n    },\n    \"text\": \"" + pos +"\"\n}"
     }
+
     $.ajax(settings).done(function (response) {
-        console.log(response);
+        //console.log(response);
     });
 }
