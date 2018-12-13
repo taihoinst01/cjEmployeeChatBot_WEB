@@ -31,7 +31,7 @@
 //    });
 //});
 
-$(document).on('change', '#conversationId', function () {
+$(document).on('change', $('#conversationId').val(), function () {
     console.log($("#key").val());
     console.log($('#conversationId').val());
 });
