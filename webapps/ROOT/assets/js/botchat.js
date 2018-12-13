@@ -20922,9 +20922,8 @@ function ssoConnection() {
     var dataValue = { 'key': pos.key, 'cjworldId': pos.cjworld_id, 'lang': pos.lang };
     $.ajax({
         //type: "POST",
-        type: "GET",
         url: directLineUrl + "/v3/directline/conversations/" + $('#conversationId').val() + "/activities",
-        dataType : "json",
+        type: "GET",
         data: dataValue,
         headers: {
             "Authorization": "Bearer " + secretKey,
