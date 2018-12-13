@@ -1,4 +1,7 @@
-! function(t, e) {
+//초기 한번 Flag
+var startFlag = 0;
+
+! function (t, e) {
     "object" == typeof exports && "object" == typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define([], e) : "object" == typeof exports ? exports.BotChat = e() : t.BotChat = e()
 }(this, function() {
     return function(t) {
@@ -1326,6 +1329,8 @@
                     //KSO :: DeviceChk(P-PC, M-Mobile)
                     //isMobile();
                     //console.log(deviceChk);
+
+
 
                     return "detect" === this.props.resize && (r = i.createElement(g, {
                         onresize: this.resizeListener
@@ -3458,9 +3463,10 @@
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
-                        //if (typeof (e.conversationId) == 'string' ) {
-                        //    ssoConnection();
-                        //}
+                        if (typeof (e.conversationId) == 'string' && startFlag == 0 ) {
+                            ssoConnection();
+                            startFlag = 1;
+                        }
                         return t === s.Uninitialized ? (e.connectionStatus$.next(s.Connecting), e.token && e.streamUrl ? (e.connectionStatus$.next(s.Online), i.Observable.of(t)) : e.startConversation().do(function(t) {
                             e.conversationId = t.conversationId, e.token = e.secret || t.token, e.streamUrl = t.streamUrl, e.referenceGrammarId = t.referenceGrammarId, e.secret || e.refreshTokenLoop(), e.connectionStatus$.next(s.Online)
                         }, function(t) {
