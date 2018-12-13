@@ -30,8 +30,11 @@
 //        }
 //    });
 //});
-
-$(document).on('change', $('#conversationId').val(), function () {
+function updateInput(value) {
     console.log($("#key").val());
     console.log($('#conversationId').val());
-});
+}  
+//$(document).on('change', $('#conversationId').val(), function () {
+//    console.log($("#key").val());
+//    console.log($('#conversationId').val());
+//});

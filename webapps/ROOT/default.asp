@@ -35,7 +35,7 @@
     <title>CJ Employee(Asp)</title>
 </head>
 <body>
-    <input type="hidden" id="conversationId" />
+    <input type="hidden" id="conversationId" onchange="updateInput(value)" />
     <input type="hidden" id="key"  value="<%=request.form("key") %>"/>
     <input type="hidden" id="cjworld_id" value="<%=request.form("cjworld_id") %>"/>
     <input type="hidden" id="lang"  value="<%=request.form("lang") %>"/>
