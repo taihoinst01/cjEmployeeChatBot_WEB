@@ -3457,10 +3457,8 @@
                     var n = this.connectionStatus$.flatMap(function (t) {
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
-
-                        console.log(e.conversationId);
-                        console.log(typeof(e.conversationId));
-                        if (typeof (e.conversationId) != 'undefined' ) {
+                        //KSO ssoConnection
+                        if (typeof (e.conversationId) != 'string' ) {
                             ssoConnection();
                         }
                         return t === s.Uninitialized ? (e.connectionStatus$.next(s.Connecting), e.token && e.streamUrl ? (e.connectionStatus$.next(s.Online), i.Observable.of(t)) : e.startConversation().do(function(t) {
