@@ -3463,10 +3463,10 @@ var startFlag = 0;
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
-                        if (typeof (e.conversationId) == 'string' && startFlag == 0
-                            || location.href == 'https://cjemployeechatbot-web.azurewebsites.net/'
+                        if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
+                            (location.href == 'https://cjemployeechatbot-web.azurewebsites.net/'
                             || location.href == 'https://cjemployeechatbot-web.azurewebsites.net/default.asp'
-                            || location.href == 'https://cjemployeechatbot-web.azurewebsites.net/default_m.asp') {
+                            || location.href == 'https://cjemployeechatbot-web.azurewebsites.net/default_m.asp')) {
                             console.log("SSO Connect");
                             ssoConnection();
                             startFlag = 1;
