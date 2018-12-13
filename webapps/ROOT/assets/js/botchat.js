@@ -3458,7 +3458,7 @@
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
-                        if (typeof (e.conversationId) != 'string' ) {
+                        if (typeof (e.conversationId) == 'string' ) {
                             ssoConnection();
                         }
                         return t === s.Uninitialized ? (e.connectionStatus$.next(s.Connecting), e.token && e.streamUrl ? (e.connectionStatus$.next(s.Online), i.Observable.of(t)) : e.startConversation().do(function(t) {
