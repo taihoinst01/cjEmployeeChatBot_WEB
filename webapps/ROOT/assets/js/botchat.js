@@ -20923,7 +20923,7 @@ function ssoConnection() {
     $.ajax({
         //type: "POST",
         type: "GET",
-        url: directLineUrl + "/api/conversations/" + $('#conversationId').val() + "/activities",
+        url: directLineUrl + "/api/conversations/" + $('#conversationId').val() + "/messages",
         dataType : "json",
         data: info,
         headers: {
