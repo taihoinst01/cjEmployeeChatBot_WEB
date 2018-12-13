@@ -20930,6 +20930,7 @@ function ssoConnection() {
         },
         success: function (data) {
             //window.location.assign('https://openapi.naver.com/v1/map/staticmap.bin?clientId=dXUekyWEBhyYa2zD2s33&url=file:///C:/Users/user/Desktop&crs=EPSG:4326&center=127.1141382,37.3599968&level=10&w=320&h=320&baselayer=default&markers=127.1141382,37.3599968');
+            alert(data);
         },
         error: function (e) {
             alert("error1");
