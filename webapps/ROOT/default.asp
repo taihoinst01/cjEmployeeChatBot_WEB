@@ -50,7 +50,6 @@
         <div class="bot-wrap chatOn">
             <div id="bot" />
             <script src="assets/js/botchat.js"></script>
-            <script src="assets/js/connection.js"></script>
             <script>
                 BotChat.App({
                     directLine: {
@@ -62,6 +61,7 @@
                     resize: 'detect'
                 }, document.getElementById("bot"));
             </script>
+            <script src="assets/js/connection.js"></script>
         </div>
         <!-- ³¡ -->
     </div>
