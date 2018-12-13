@@ -20914,7 +20914,7 @@ function ssoConnection() {
     var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
 
     var info = JSON.stringify({
-        type: 'message',
+        //type: 'message',
         text: 'sso:' + pos.key + ':' + pos.cjworld_id + ':' + pos.lang,
         from: { id: 'userid' },
     });
