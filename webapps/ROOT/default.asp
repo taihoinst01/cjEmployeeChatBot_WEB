@@ -1,6 +1,7 @@
 <%
-	response.write("name1" + request.form("name1") + "<br>")
-    response.write("name2" + request.form("name2"))
+	response.write("key" + request.form("key") + "<br>")
+    response.write("cjworld_id" + request.form("cjworld_id")
+    response.write("lang" + request.form("lang"))
 %>
 
 <!DOCTYPE html>
@@ -37,14 +38,13 @@
     <!--<script type="text/javascript" src="assets/js/B_tLKTzaqVzw=90All.js"></script>
     <script type="text/javascript" src="assets/js/stt.js"></script>
     <script type="text/javascript" src="assets/js/tts.js"></script>-->
-    <script>
-        //테스트중
-        console.log(location.href);
-    </script>
-    <title>CJ Employee</title>
+    <title>CJ Employee(Asp)</title>
 </head>
 <body>
-    <input type="hidden" id="conversationId">
+    <input type="hidden" id="conversationId" />
+    <input type="hidden" id="key" value="<%=request.form("key") %>" />
+    <input type="hidden" id="cjworld_id" value="<%=request.form("cjworld_id") %>" />
+    <input type="hidden" id="lang" value="<%=request.form("lang") %>" />
     <div class="mainBG">
         <!--<img src="assets/image/chatbotStyle/psa_background.png" />-->
         <!--<div id="wrapper">
