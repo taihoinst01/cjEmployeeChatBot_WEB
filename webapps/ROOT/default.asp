@@ -18,7 +18,6 @@
     <!--<script type="text/javascript" src="assets/js/reel/jquery.reel-min.js"></script>-->
     <script type="text/javascript" src="assets/js/start_sso.js"></script>
     <script type="text/javascript" src="assets/js/pc/ui.js"></script>
-    <script type="text/javascript" src="assets/js/connection.js"></script>
     <!--<script type="text/javascript" src="assets/js/pc/autocompleteword.js"></script>-->
 
     <!-- gesture script -->
@@ -36,7 +35,7 @@
     <title>CJ Employee(Asp)</title>
 </head>
 <body>
-    <input type="hidden" id="conversationId" onchange="updateInput(value)" />
+    <input type="hidden" id="conversationId" />
     <input type="hidden" id="key"  value="<%=request.form("key") %>"/>
     <input type="hidden" id="cjworld_id" value="<%=request.form("cjworld_id") %>"/>
     <input type="hidden" id="lang"  value="<%=request.form("lang") %>"/>
