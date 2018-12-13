@@ -1,6 +1,7 @@
 $(function () {
     //sso form °ª
     console.log($("#key").val());
+    console.log($('#conversationId').val());
     var pos = { key: $("#key").val(), cjworld_id: $("#cjworld_id").val(), lang: $("#lang").val() };
 
     var directLineUrl = "https://directline.botframework.com";
