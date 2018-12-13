@@ -3463,10 +3463,11 @@ var startFlag = 0;
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
-                        if (typeof (e.conversationId) == 'string' && startFlag == 0 ) {
-                            ssoConnection();
-                            startFlag = 1;
-                        }
+                        console.log(location.href);
+                        //if (typeof (e.conversationId) == 'string' && startFlag == 0 ) {
+                        //    ssoConnection();
+                        //    startFlag = 1;
+                        //}
                         return t === s.Uninitialized ? (e.connectionStatus$.next(s.Connecting), e.token && e.streamUrl ? (e.connectionStatus$.next(s.Online), i.Observable.of(t)) : e.startConversation().do(function(t) {
                             e.conversationId = t.conversationId, e.token = e.secret || t.token, e.streamUrl = t.streamUrl, e.referenceGrammarId = t.referenceGrammarId, e.secret || e.refreshTokenLoop(), e.connectionStatus$.next(s.Online)
                         }, function(t) {
