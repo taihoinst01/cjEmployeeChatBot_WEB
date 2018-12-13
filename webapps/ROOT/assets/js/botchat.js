@@ -20913,19 +20913,19 @@ function ssoConnection() {
     var directLineUrl = "https://directline.botframework.com";
     var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
 
-    //var info = JSON.stringify({
-    //    type: 'message',
-    //    text: 'sso:' + pos.key + ':' + pos.cjworld_id + ':' + pos.lang,
-    //    from: { id: 'userid' },
-    //});
+    var info = JSON.stringify({
+        type: 'message',
+        text: 'sso:' + pos.key + ':' + pos.cjworld_id + ':' + pos.lang,
+        from: { id: 'userid' },
+    });
 
-    var dataValue = { 'key': pos.key, 'cjworldId': pos.cjworld_id, 'lang': pos.lang };
+    //var dataValue = { 'key': pos.key, 'cjworldId': pos.cjworld_id, 'lang': pos.lang };
     $.ajax({
         //type: "POST",
         type: "GET",
         url: directLineUrl + "/api/conversations/" + $('#conversationId').val() + "/activities",
         dataType : "json",
-        data: dataValue,
+        data: info,
         headers: {
             "Authorization": "Bearer " + secretKey,
             'Content-Type': 'application/json'
