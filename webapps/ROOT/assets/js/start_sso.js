@@ -16,6 +16,7 @@
 	}
 
     //sso form 값
+    console.log($("#key").val());
     var pos = { key: $("#key").val(), cjworld_id: $("#cjworld_id").val(), lang: $("#lang").val() };
 
     var directLineUrl = "https://directline.botframework.com";
