@@ -28,7 +28,8 @@
         from: { id: 'userid' },
     });
     $.ajax({
-        type: "POST",
+        //type: "POST",
+        type: "GET",
         url: directLineUrl + "/v3/directline/conversations/" + $('#conversationId').val() + "/activities",
         data: info,
         //dataType : "json",
