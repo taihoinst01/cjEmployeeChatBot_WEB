@@ -1,9 +1,3 @@
-<%
-	response.write("key" + request.form("key") + "<br>")
-    response.write("cjworld_id" + request.form("cjworld_id"))
-    response.write("lang" + request.form("lang"))
-%>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
