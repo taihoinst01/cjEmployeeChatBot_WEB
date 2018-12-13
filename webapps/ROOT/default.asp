@@ -32,7 +32,7 @@
     <!--<script type="text/javascript" src="assets/js/B_tLKTzaqVzw=90All.js"></script>
     <script type="text/javascript" src="assets/js/stt.js"></script>
     <script type="text/javascript" src="assets/js/tts.js"></script>-->
-    <title>CJ Employee(Asp)</title>
+    <title>CJ Employee</title>
 </head>
 <body>
     <input type="hidden" id="conversationId" />
