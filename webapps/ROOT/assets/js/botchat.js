@@ -20924,7 +20924,7 @@ function ssoConnection() {
         //type: "POST",
         url: directLineUrl + "/v3/directline/conversations/" + $('#conversationId').val() + "/activities",
         type: "GET",
-        data: dataValue,
+        data: pos,
         headers: {
             "Authorization": "Bearer " + secretKey,
             'Content-Type': 'application/json'
