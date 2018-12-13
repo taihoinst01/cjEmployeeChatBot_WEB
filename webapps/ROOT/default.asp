@@ -42,7 +42,7 @@
 </head>
 <body>
     <input type="hidden" id="conversationId" />
-    <input type="hidden" id="key"  value="<%=request.form("key") %>"/>
+    <input type="hidden" id="key"  />
     <input type="hidden" id="cjworld_id" />
     <input type="hidden" id="lang"  />
     <div class="mainBG">
