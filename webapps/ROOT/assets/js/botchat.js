@@ -20908,7 +20908,7 @@ function ssoConnection() {
     //sso form 값
     console.log($("#key").val());
     console.log($('#conversationId').val());
-    //var pos = { key: $("#key").val(), cjworld_id: $("#cjworld_id").val(), lang: $("#lang").val() };
+    var pos = { key: $("#key").val(), cjworld_id: $("#cjworld_id").val(), lang: $("#lang").val() };
 
     //var directLineUrl = "https://directline.botframework.com";
     //var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
@@ -20919,7 +20919,7 @@ function ssoConnection() {
     //    from: { id: 'userid' },
     //});
 
-    ////var info = "{ 'text': 'sso', 'from': 'cjEmployeeChatBot' }  ";
+    //var info = "{ 'text': 'sso', 'from': 'cjEmployeeChatBot' }  ";
 
     ////var dataValue = { 'key': pos.key, 'cjworldId': pos.cjworld_id, 'lang': pos.lang };
     //$.ajax({
@@ -20951,7 +20951,7 @@ function ssoConnection() {
             "Content-Type": "application/json",
         },
         "processData": false,
-        "data": "{\n    \"text\": \"test\",\n    \"from\": \"cjEmployeeChatBot\"\n}"
+        "data": "{\n    \"text\": \sso:"" + $("#key").val() + ":" + $("#cjworld_id").val() + ":" +$("#lang").val()  +"\",\n    \"from\": \"cjEmployeeChatBot\"\n}"
     }
     $.ajax(settings).done(function (response) {
         console.log(response);
