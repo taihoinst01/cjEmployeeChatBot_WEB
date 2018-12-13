@@ -20923,11 +20923,12 @@ function ssoConnection() {
 
     //var dataValue = { 'key': pos.key, 'cjworldId': pos.cjworld_id, 'lang': pos.lang };
     $.ajax({
-        //type: "POST",
-        type: "GET",
+        type: "POST",
+        //type: "GET",
         url: directLineUrl + "/api/conversations/" + $('#conversationId').val() + "/messages",
         dataType : "json",
-        data: info,
+        //data: info,
+        body: info,
         headers: {
             "Authorization": "Bearer " + secretKey,
             'Content-Type': 'application/json'
