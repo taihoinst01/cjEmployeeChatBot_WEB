@@ -3458,7 +3458,8 @@
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
 
-                        if (e.conversationId != "") {
+                        console.log(e.conversationId);
+                        if (e.conversationId != null ) {
                             ssoConnection();
                         }
                         return t === s.Uninitialized ? (e.connectionStatus$.next(s.Connecting), e.token && e.streamUrl ? (e.connectionStatus$.next(s.Online), i.Observable.of(t)) : e.startConversation().do(function(t) {
