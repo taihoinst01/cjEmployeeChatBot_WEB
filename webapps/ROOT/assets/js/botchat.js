@@ -20952,7 +20952,7 @@ function ssoConnection() {
             "Content-Type": "application/json",
         },
         "processData": false,
-        "data": "{\n    \"text\": \"'+pos+'\",\n    \"from\": \"cjEmployeeChatBot\"\n}"
+        "data": "{\n    \"text\": \""+pos+"\",\n    \"from\": \"cjEmployeeChatBot\"\n}"
     }
     $.ajax(settings).done(function (response) {
         console.log(response);
