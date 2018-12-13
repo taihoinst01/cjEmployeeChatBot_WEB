@@ -18,6 +18,7 @@
     <!--<script type="text/javascript" src="assets/js/reel/jquery.reel-min.js"></script>-->
     <script type="text/javascript" src="assets/js/start_sso.js"></script>
     <script type="text/javascript" src="assets/js/pc/ui.js"></script>
+    <script type="text/javascript" src="assets/js/connection.js"></script>
     <!--<script type="text/javascript" src="assets/js/pc/autocompleteword.js"></script>-->
 
     <!-- gesture script -->
@@ -61,7 +62,6 @@
                     resize: 'detect'
                 }, document.getElementById("bot"));
             </script>
-            <script src="assets/js/connection.js"></script>
         </div>
         <!-- ³¡ -->
     </div>
