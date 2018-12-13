@@ -20909,7 +20909,8 @@ function ssoConnection() {
     console.log($("#key").val());
     console.log($('#conversationId').val());
     //var pos = { key: $("#key").val(), cjworld_id: $("#cjworld_id").val(), lang: $("#lang").val() };
-    var pos = "sso:" + $("#key").val() + ":" + $("#cjworld_id").val() + ":" + $("#lang").val();
+    //var pos = "sso:" + $("#key").val() + ":" + $("#cjworld_id").val() + ":" + $("#lang").val();
+    var pos = "SSO 테스트 중입니다.";
 
     //var directLineUrl = "https://directline.botframework.com";
     //var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
@@ -20920,7 +20921,7 @@ function ssoConnection() {
     //    from: { id: 'userid' },
     //});
 
-    var info = "{ 'text': 'sso', 'from': 'cjEmployeeChatBot' }  ";
+    //var info = "{ 'text': 'sso', 'from': 'cjEmployeeChatBot' }  ";
 
     ////var dataValue = { 'key': pos.key, 'cjworldId': pos.cjworld_id, 'lang': pos.lang };
     //$.ajax({
