@@ -9,7 +9,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
 ! function (t, e) {
     "object" == typeof exports && "object" == typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define([], e) : "object" == typeof exports ? exports.BotChat = e() : t.BotChat = e()
 }(this, function() {
-    return function(t) {
+    return function (t) {
         function e(r) {
             if (n[r]) return n[r].exports;
             var o = n[r] = {
@@ -20,53 +20,53 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             return t[r].call(o.exports, o, o.exports, e), o.l = !0, o.exports
         }
         var n = {};
-        return e.m = t, e.c = n, e.i = function(t) {
+        return e.m = t, e.c = n, e.i = function (t) {
             return t
-        }, e.d = function(t, n, r) {
+        }, e.d = function (t, n, r) {
             e.o(t, n) || Object.defineProperty(t, n, {
                 configurable: !1,
                 enumerable: !0,
                 get: r
             })
-        }, e.n = function(t) {
-            var n = t && t.__esModule ? function() {
+        }, e.n = function (t) {
+            var n = t && t.__esModule ? function () {
                 return t.default
-            } : function() {
+            } : function () {
                 return t
             };
             return e.d(n, "a", n), n
-        }, e.o = function(t, e) {
+        }, e.o = function (t, e) {
             return Object.prototype.hasOwnProperty.call(t, e)
         }, e.p = "", e(e.s = 181)
-    }([function(t, e, n) {
+    }([function (t, e, n) {
         "use strict";
         var r = n(16),
             o = n(440),
             i = n(83),
-            s = function() {
+            s = function () {
                 function t(t) {
                     this._isScalar = !1, t && (this._subscribe = t)
                 }
-                return t.prototype.lift = function(e) {
+                return t.prototype.lift = function (e) {
                     var n = new t;
                     return n.source = this, n.operator = e, n
-                }, t.prototype.subscribe = function(t, e, n) {
+                }, t.prototype.subscribe = function (t, e, n) {
                     var r = this.operator,
                         i = o.toSubscriber(t, e, n);
                     if (r ? r.call(i, this.source) : i.add(this._trySubscribe(i)), i.syncErrorThrowable && (i.syncErrorThrowable = !1, i.syncErrorThrown)) throw i.syncErrorValue;
                     return i
-                }, t.prototype._trySubscribe = function(t) {
+                }, t.prototype._trySubscribe = function (t) {
                     try {
                         return this._subscribe(t)
                     } catch (e) {
                         t.syncErrorThrown = !0, t.syncErrorValue = e, t.error(e)
                     }
-                }, t.prototype.forEach = function(t, e) {
+                }, t.prototype.forEach = function (t, e) {
                     var n = this;
                     if (e || (r.root.Rx && r.root.Rx.config && r.root.Rx.config.Promise ? e = r.root.Rx.config.Promise : r.root.Promise && (e = r.root.Promise)), !e) throw new Error("no Promise impl found");
-                    return new e(function(e, r) {
+                    return new e(function (e, r) {
                         var o;
-                        o = n.subscribe(function(e) {
+                        o = n.subscribe(function (e) {
                             if (o) try {
                                 t(e)
                             } catch (t) {
@@ -74,16 +74,16 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             } else t(e)
                         }, r, e)
                     })
-                }, t.prototype._subscribe = function(t) {
+                }, t.prototype._subscribe = function (t) {
                     return this.source.subscribe(t)
-                }, t.prototype[i.observable] = function() {
+                }, t.prototype[i.observable] = function () {
                     return this
-                }, t.create = function(e) {
+                }, t.create = function (e) {
                     return new t(e)
                 }, t
             }();
         e.Observable = s
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e, n, r, i, s, a, c) {
@@ -93,16 +93,16 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 else {
                     var l = [n, r, i, s, a, c],
                         p = 0;
-                    u = new Error(e.replace(/%s/g, function() {
+                    u = new Error(e.replace(/%s/g, function () {
                         return l[p++]
                     })), u.name = "Invariant Violation"
                 }
                 throw u.framesToPop = 1, u
             }
         }
-        var o = function(t) {};
+        var o = function (t) { };
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -118,10 +118,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
 
         function s(t) {
-            return Array.prototype.slice.call(arguments, 1).forEach(function(e) {
+            return Array.prototype.slice.call(arguments, 1).forEach(function (e) {
                 if (e) {
                     if ("object" != typeof e) throw new TypeError(e + "must be object");
-                    Object.keys(e).forEach(function(n) {
+                    Object.keys(e).forEach(function (n) {
                         t[n] = e[n]
                     })
                 }
@@ -156,7 +156,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
 
         function h(t) {
-            return t.indexOf("\\") < 0 && t.indexOf("&") < 0 ? t : t.replace(k, function(t, e, n) {
+            return t.indexOf("\\") < 0 && t.indexOf("&") < 0 ? t : t.replace(k, function (t, e, n) {
                 return e || l(t, n)
             })
         }
@@ -265,12 +265,12 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             P = /[.?*+^$[\]\\(){}|-]/g,
             I = n(86);
         e.lib = {}, e.lib.mdurl = n(105), e.lib.ucmicro = n(445), e.assign = s, e.isString = o, e.has = i, e.unescapeMd = p, e.unescapeAll = h, e.isValidEntityCode = c, e.fromCodePoint = u, e.escapeHtml = d, e.arrayReplaceAt = a, e.isSpace = v, e.isWhiteSpace = g, e.isMdAsciiPunct = b, e.isPunctChar = y, e.escapeRE = m, e.normalizeReference = _
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(10),
             o = r;
         t.exports = o
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -280,7 +280,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             throw o.name = "Invariant Violation", o.framesToPop = 1, o
         }
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -295,23 +295,23 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         var o = Object.getOwnPropertySymbols,
             i = Object.prototype.hasOwnProperty,
             s = Object.prototype.propertyIsEnumerable;
-        t.exports = function() {
+        t.exports = function () {
             try {
                 if (!Object.assign) return !1;
                 var t = new String("abc");
                 if (t[5] = "de", "5" === Object.getOwnPropertyNames(t)[0]) return !1;
                 for (var e = {}, n = 0; n < 10; n++) e["_" + String.fromCharCode(n)] = n;
-                if ("0123456789" !== Object.getOwnPropertyNames(e).map(function(t) {
-                        return e[t]
-                    }).join("")) return !1;
+                if ("0123456789" !== Object.getOwnPropertyNames(e).map(function (t) {
+                    return e[t]
+                }).join("")) return !1;
                 var r = {};
-                return "abcdefghijklmnopqrst".split("").forEach(function(t) {
+                return "abcdefghijklmnopqrst".split("").forEach(function (t) {
                     r[t] = t
                 }), "abcdefghijklmnopqrst" === Object.keys(Object.assign({}, r)).join("")
             } catch (t) {
                 return !1
             }
-        }() ? Object.assign : function(t, e) {
+        }() ? Object.assign : function (t, e) {
             for (var n, a, c = r(t), u = 1; u < arguments.length; u++) {
                 n = Object(arguments[u]);
                 for (var l in n) i.call(n, l) && (c[l] = n[l]);
@@ -322,7 +322,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             }
             return c
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
@@ -401,7 +401,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 uncacheNode: s
             };
         t.exports = g
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = !("undefined" == typeof window || !window.document || !window.document.createElement),
             o = {
@@ -412,20 +412,20 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 isInWorker: !r
             };
         t.exports = o
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        var r = this && this.__extends || function(t, e) {
-                function n() {
-                    this.constructor = t
-                }
-                for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
-                t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
-            },
+        var r = this && this.__extends || function (t, e) {
+            function n() {
+                this.constructor = t
+            }
+            for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
+            t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        },
             o = n(85),
             i = n(19),
             s = n(149),
             a = n(84),
-            c = function(t) {
+            c = function (t) {
                 function e(n, r, o) {
                     switch (t.call(this), this.syncErrorValue = null, this.syncErrorThrown = !1, this.syncErrorThrowable = !1, this.isStopped = !1, arguments.length) {
                         case 0:
@@ -444,26 +444,26 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             this.syncErrorThrowable = !0, this.destination = new u(this, n, r, o)
                     }
                 }
-                return r(e, t), e.prototype[a.rxSubscriber] = function() {
+                return r(e, t), e.prototype[a.rxSubscriber] = function () {
                     return this
-                }, e.create = function(t, n, r) {
+                }, e.create = function (t, n, r) {
                     var o = new e(t, n, r);
                     return o.syncErrorThrowable = !1, o
-                }, e.prototype.next = function(t) {
+                }, e.prototype.next = function (t) {
                     this.isStopped || this._next(t)
-                }, e.prototype.error = function(t) {
+                }, e.prototype.error = function (t) {
                     this.isStopped || (this.isStopped = !0, this._error(t))
-                }, e.prototype.complete = function() {
+                }, e.prototype.complete = function () {
                     this.isStopped || (this.isStopped = !0, this._complete())
-                }, e.prototype.unsubscribe = function() {
+                }, e.prototype.unsubscribe = function () {
                     this.closed || (this.isStopped = !0, t.prototype.unsubscribe.call(this))
-                }, e.prototype._next = function(t) {
+                }, e.prototype._next = function (t) {
                     this.destination.next(t)
-                }, e.prototype._error = function(t) {
+                }, e.prototype._error = function (t) {
                     this.destination.error(t), this.unsubscribe()
-                }, e.prototype._complete = function() {
+                }, e.prototype._complete = function () {
                     this.destination.complete(), this.unsubscribe()
-                }, e.prototype._unsubscribeAndRecycle = function() {
+                }, e.prototype._unsubscribeAndRecycle = function () {
                     var t = this,
                         e = t._parent,
                         n = t._parents;
@@ -471,18 +471,18 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }, e
             }(i.Subscription);
         e.Subscriber = c;
-        var u = function(t) {
+        var u = function (t) {
             function e(e, n, r, i) {
                 t.call(this), this._parentSubscriber = e;
                 var a, c = this;
                 o.isFunction(n) ? a = n : n && (a = n.next, r = n.error, i = n.complete, n !== s.empty && (c = Object.create(n), o.isFunction(c.unsubscribe) && this.add(c.unsubscribe.bind(c)), c.unsubscribe = this.unsubscribe.bind(this))), this._context = c, this._next = a, this._error = r, this._complete = i
             }
-            return r(e, t), e.prototype.next = function(t) {
+            return r(e, t), e.prototype.next = function (t) {
                 if (!this.isStopped && this._next) {
                     var e = this._parentSubscriber;
                     e.syncErrorThrowable ? this.__tryOrSetError(e, this._next, t) && this.unsubscribe() : this.__tryOrUnsub(this._next, t)
                 }
-            }, e.prototype.error = function(t) {
+            }, e.prototype.error = function (t) {
                 if (!this.isStopped) {
                     var e = this._parentSubscriber;
                     if (this._error) e.syncErrorThrowable ? (this.__tryOrSetError(e, this._error, t), this.unsubscribe()) : (this.__tryOrUnsub(this._error, t), this.unsubscribe());
@@ -491,53 +491,53 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         e.syncErrorValue = t, e.syncErrorThrown = !0, this.unsubscribe()
                     }
                 }
-            }, e.prototype.complete = function() {
+            }, e.prototype.complete = function () {
                 var t = this;
                 if (!this.isStopped) {
                     var e = this._parentSubscriber;
                     if (this._complete) {
-                        var n = function() {
+                        var n = function () {
                             return t._complete.call(t._context)
                         };
                         e.syncErrorThrowable ? (this.__tryOrSetError(e, n), this.unsubscribe()) : (this.__tryOrUnsub(n), this.unsubscribe())
                     } else this.unsubscribe()
                 }
-            }, e.prototype.__tryOrUnsub = function(t, e) {
+            }, e.prototype.__tryOrUnsub = function (t, e) {
                 try {
                     t.call(this._context, e)
                 } catch (t) {
                     throw this.unsubscribe(), t
                 }
-            }, e.prototype.__tryOrSetError = function(t, e, n) {
+            }, e.prototype.__tryOrSetError = function (t, e, n) {
                 try {
                     e.call(this._context, n)
                 } catch (e) {
                     return t.syncErrorValue = e, t.syncErrorThrown = !0, !0
                 }
                 return !1
-            }, e.prototype._unsubscribe = function() {
+            }, e.prototype._unsubscribe = function () {
                 var t = this._parentSubscriber;
                 this._context = null, this._parentSubscriber = null, t.unsubscribe()
             }, e
         }(c)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         t.exports = n(25)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
-            return function() {
+            return function () {
                 return t
             }
         }
-        var o = function() {};
-        o.thatReturns = r, o.thatReturnsFalse = r(!1), o.thatReturnsTrue = r(!0), o.thatReturnsNull = r(null), o.thatReturnsThis = function() {
+        var o = function () { };
+        o.thatReturns = r, o.thatReturnsFalse = r(!1), o.thatReturnsTrue = r(!0), o.thatReturnsNull = r(null), o.thatReturnsThis = function () {
             return this
-        }, o.thatReturnsArgument = function(t) {
+        }, o.thatReturnsArgument = function (t) {
             return t
         }, t.exports = o
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
@@ -565,7 +565,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
 
         function s(t, e) {
-            return function(n, r) {
+            return function (n, r) {
                 e(n, r, t)
             }
         }
@@ -575,7 +575,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
 
         function c(t, e, n, r) {
-            return new(n || (n = Promise))(function(o, i) {
+            return new (n || (n = Promise))(function (o, i) {
                 function s(t) {
                     try {
                         c(r.next(t))
@@ -593,7 +593,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
 
                 function c(t) {
-                    t.done ? o(t.value) : new n(function(e) {
+                    t.done ? o(t.value) : new n(function (e) {
                         e(t.value)
                     }).then(s, a)
                 }
@@ -603,7 +603,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
 
         function u(t, e) {
             function n(t) {
-                return function(e) {
+                return function (e) {
                     return r([t, e])
                 }
             }
@@ -618,12 +618,12 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             s = n;
                             break;
                         case 4:
-                            return c.label++, {
+                            return c.label++ , {
                                 value: n[1],
                                 done: !1
                             };
                         case 5:
-                            c.label++, i = n[1], n = [0];
+                            c.label++ , i = n[1], n = [0];
                             continue;
                         case 7:
                             n = c.ops.pop(), c.trys.pop();
@@ -652,8 +652,8 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 } catch (t) {
                     n = [6, t], i = 0
                 } finally {
-                    o = s = 0
-                }
+                        o = s = 0
+                    }
                 if (5 & n[0]) throw n[1];
                 return {
                     value: n[0] ? n[1] : void 0,
@@ -662,7 +662,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             }
             var o, i, s, a, c = {
                 label: 0,
-                sent: function() {
+                sent: function () {
                     if (1 & s[0]) throw s[1];
                     return s[1]
                 },
@@ -673,7 +673,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 next: n(0),
                 throw: n(1),
                 return: n(2)
-            }, "function" == typeof Symbol && (a[Symbol.iterator] = function() {
+            }, "function" == typeof Symbol && (a[Symbol.iterator] = function () {
                 return this
             }), a
         }
@@ -686,7 +686,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             var e = "function" == typeof Symbol && t[Symbol.iterator],
                 n = 0;
             return e ? e.call(t) : {
-                next: function() {
+                next: function () {
                     return t && n >= t.length && (t = void 0), {
                         value: t && t[n++],
                         done: !t
@@ -728,8 +728,8 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
 
         function m(t, e, n) {
             function r(t) {
-                l[t] && (u[t] = function(e) {
-                    return new Promise(function(n, r) {
+                l[t] && (u[t] = function (e) {
+                    return new Promise(function (n, r) {
                         p.push([t, e, n, r]) > 1 || o(t, e)
                     })
                 })
@@ -761,14 +761,14 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
             var u, l = n.apply(t, e || []),
                 p = [];
-            return u = {}, r("next"), r("throw"), r("return"), u[Symbol.asyncIterator] = function() {
+            return u = {}, r("next"), r("throw"), r("return"), u[Symbol.asyncIterator] = function () {
                 return this
             }, u
         }
 
         function v(t) {
             function e(e, o) {
-                t[e] && (n[e] = function(n) {
+                t[e] && (n[e] = function (n) {
                     return (r = !r) ? {
                         value: d(t[e](n)),
                         done: "return" === e
@@ -776,9 +776,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 })
             }
             var n, r;
-            return n = {}, e("next"), e("throw", function(t) {
+            return n = {}, e("next"), e("throw", function (t) {
                 throw t
-            }), e("return"), n[Symbol.iterator] = function() {
+            }), e("return"), n[Symbol.iterator] = function () {
                 return this
             }, n
         }
@@ -790,7 +790,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
         Object.defineProperty(e, "__esModule", {
             value: !0
-        }), e.__extends = r, n.d(e, "__assign", function() {
+        }), e.__extends = r, n.d(e, "__assign", function () {
             return b
         }), e.__rest = o, e.__decorate = i, e.__param = s, e.__metadata = a, e.__awaiter = c, e.__generator = u, e.__exportStar = l, e.__values = p, e.__read = h, e.__spread = f, e.__await = d, e.__asyncGenerator = m, e.__asyncDelegator = v, e.__asyncValues = g;
         /*! *****************************************************************************
@@ -810,24 +810,24 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         var y = Object.setPrototypeOf || {
             __proto__: []
         }
-        instanceof Array && function(t, e) {
-            t.__proto__ = e
-        } || function(t, e) {
-            for (var n in e) e.hasOwnProperty(n) && (t[n] = e[n])
-        }, b = Object.assign || function(t) {
-            for (var e, n = 1, r = arguments.length; n < r; n++) {
-                e = arguments[n];
-                for (var o in e) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o])
+            instanceof Array && function (t, e) {
+                t.__proto__ = e
+            } || function (t, e) {
+                for (var n in e) e.hasOwnProperty(n) && (t[n] = e[n])
+            }, b = Object.assign || function (t) {
+                for (var e, n = 1, r = arguments.length; n < r; n++) {
+                    e = arguments[n];
+                    for (var o in e) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o])
+                }
+                return t
             }
-            return t
-        }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = null;
         t.exports = {
             debugTool: r
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r() {
@@ -884,51 +884,51 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             _ = !1,
             C = null,
             w = {
-                initialize: function() {
+                initialize: function () {
                     this.dirtyComponentsLength = g.length
                 },
-                close: function() {
+                close: function () {
                     this.dirtyComponentsLength !== g.length ? (g.splice(0, this.dirtyComponentsLength), S()) : g.length = 0
                 }
             },
             x = {
-                initialize: function() {
+                initialize: function () {
                     this.callbackQueue.reset()
                 },
-                close: function() {
+                close: function () {
                     this.callbackQueue.notifyAll()
                 }
             },
             k = [w, x];
         p(o.prototype, v, {
-            getTransactionWrappers: function() {
+            getTransactionWrappers: function () {
                 return k
             },
-            destructor: function() {
+            destructor: function () {
                 this.dirtyComponentsLength = null, h.release(this.callbackQueue), this.callbackQueue = null, A.ReactReconcileTransaction.release(this.reconcileTransaction), this.reconcileTransaction = null
             },
-            perform: function(t, e, n) {
+            perform: function (t, e, n) {
                 return v.perform.call(this, this.reconcileTransaction.perform, this.reconcileTransaction, t, e, n)
             }
         }), f.addPoolingTo(o);
-        var S = function() {
-                for (; g.length || _;) {
-                    if (g.length) {
-                        var t = o.getPooled();
-                        t.perform(a, null, t), o.release(t)
-                    }
-                    if (_) {
-                        _ = !1;
-                        var e = b;
-                        b = h.getPooled(), e.notifyAll(), h.release(e)
-                    }
+        var S = function () {
+            for (; g.length || _;) {
+                if (g.length) {
+                    var t = o.getPooled();
+                    t.perform(a, null, t), o.release(t)
                 }
-            },
+                if (_) {
+                    _ = !1;
+                    var e = b;
+                    b = h.getPooled(), e.notifyAll(), h.release(e)
+                }
+            }
+        },
             E = {
-                injectReconcileTransaction: function(t) {
+                injectReconcileTransaction: function (t) {
                     t || l("126"), A.ReactReconcileTransaction = t
                 },
-                injectBatchingStrategy: function(t) {
+                injectBatchingStrategy: function (t) {
                     t || l("127"), "function" != typeof t.batchedUpdates && l("128"), "boolean" != typeof t.isBatchingUpdates && l("129"), C = t
                 }
             },
@@ -941,7 +941,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 asap: u
             };
         t.exports = A
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e, n, r) {
@@ -966,60 +966,60 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 eventPhase: null,
                 bubbles: null,
                 cancelable: null,
-                timeStamp: function(t) {
+                timeStamp: function (t) {
                     return t.timeStamp || Date.now()
                 },
                 defaultPrevented: null,
                 isTrusted: null
             };
         o(r.prototype, {
-            preventDefault: function() {
+            preventDefault: function () {
                 this.defaultPrevented = !0;
                 var t = this.nativeEvent;
                 t && (t.preventDefault ? t.preventDefault() : "unknown" != typeof t.returnValue && (t.returnValue = !1), this.isDefaultPrevented = s.thatReturnsTrue)
             },
-            stopPropagation: function() {
+            stopPropagation: function () {
                 var t = this.nativeEvent;
                 t && (t.stopPropagation ? t.stopPropagation() : "unknown" != typeof t.cancelBubble && (t.cancelBubble = !0), this.isPropagationStopped = s.thatReturnsTrue)
             },
-            persist: function() {
+            persist: function () {
                 this.isPersistent = s.thatReturnsTrue
             },
             isPersistent: s.thatReturnsFalse,
-            destructor: function() {
+            destructor: function () {
                 var t = this.constructor.Interface;
                 for (var e in t) this[e] = null;
                 for (var n = 0; n < a.length; n++) this[a[n]] = null
             }
-        }), r.Interface = c, r.augmentClass = function(t, e) {
+        }), r.Interface = c, r.augmentClass = function (t, e) {
             var n = this,
-                r = function() {};
+                r = function () { };
             r.prototype = n.prototype;
             var s = new r;
             o(s, t.prototype), t.prototype = s, t.prototype.constructor = t, t.Interface = o({}, n.Interface, e), t.augmentClass = n.augmentClass, i.addPoolingTo(t, i.fourArgumentPooler)
         }, i.addPoolingTo(r, i.fourArgumentPooler), t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = {
             current: null
         };
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        (function(t) {
+        (function (t) {
             var n = "undefined" != typeof window && window,
                 r = "undefined" != typeof self && "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope && self,
                 o = void 0 !== t && t,
                 i = n || o || r;
             e.root = i,
-                function() {
+                function () {
                     if (!i) throw new Error("RxJS could not find any global context (window, self, global)")
                 }()
         }).call(e, n(38))
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(4),
-            o = (n(1), function(t) {
+            o = (n(1), function (t) {
                 var e = this;
                 if (e.instancePool.length) {
                     var n = e.instancePool.pop();
@@ -1027,7 +1027,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
                 return new e(t)
             }),
-            i = function(t, e) {
+            i = function (t, e) {
                 var n = this;
                 if (n.instancePool.length) {
                     var r = n.instancePool.pop();
@@ -1035,7 +1035,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
                 return new n(t, e)
             },
-            s = function(t, e, n) {
+            s = function (t, e, n) {
                 var r = this;
                 if (r.instancePool.length) {
                     var o = r.instancePool.pop();
@@ -1043,7 +1043,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
                 return new r(t, e, n)
             },
-            a = function(t, e, n, r) {
+            a = function (t, e, n, r) {
                 var o = this;
                 if (o.instancePool.length) {
                     var i = o.instancePool.pop();
@@ -1051,12 +1051,12 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
                 return new o(t, e, n, r)
             },
-            c = function(t) {
+            c = function (t) {
                 var e = this;
                 t instanceof e || r("25"), t.destructor(), e.instancePool.length < e.poolSize && e.instancePool.push(t)
             },
             u = o,
-            l = function(t, e) {
+            l = function (t, e) {
                 var n = t;
                 return n.instancePool = [], n.getPooled = e || u, n.poolSize || (n.poolSize = 10), n.release = c, n
             },
@@ -1068,34 +1068,34 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 fourArgumentPooler: a
             };
         t.exports = p
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        var r = this && this.__extends || function(t, e) {
-                function n() {
-                    this.constructor = t
-                }
-                for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
-                t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
-            },
+        var r = this && this.__extends || function (t, e) {
+            function n() {
+                this.constructor = t
+            }
+            for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
+            t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        },
             o = n(8),
-            i = function(t) {
+            i = function (t) {
                 function e() {
                     t.apply(this, arguments)
                 }
-                return r(e, t), e.prototype.notifyNext = function(t, e, n, r, o) {
+                return r(e, t), e.prototype.notifyNext = function (t, e, n, r, o) {
                     this.destination.next(e)
-                }, e.prototype.notifyError = function(t, e) {
+                }, e.prototype.notifyError = function (t, e) {
                     this.destination.error(t)
-                }, e.prototype.notifyComplete = function(t) {
+                }, e.prototype.notifyComplete = function (t) {
                     this.destination.complete()
                 }, e
             }(o.Subscriber);
         e.OuterSubscriber = i
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
-            return t.reduce(function(t, e) {
+            return t.reduce(function (t, e) {
                 return t.concat(e instanceof u.UnsubscriptionError ? e.errors : e)
             }, [])
         }
@@ -1105,11 +1105,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             a = n(37),
             c = n(28),
             u = n(437),
-            l = function() {
+            l = function () {
                 function t(t) {
                     this.closed = !1, this._parent = null, this._parents = null, this._subscriptions = null, t && (this._unsubscribe = t)
                 }
-                return t.prototype.unsubscribe = function() {
+                return t.prototype.unsubscribe = function () {
                     var t, e = !1;
                     if (!this.closed) {
                         var n = this,
@@ -1137,7 +1137,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             }
                         if (e) throw new u.UnsubscriptionError(t)
                     }
-                }, t.prototype.add = function(e) {
+                }, t.prototype.add = function (e) {
                     if (!e || e === t.EMPTY) return t.EMPTY;
                     if (e === this) return this;
                     var n = e;
@@ -1156,22 +1156,22 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             throw new Error("unrecognized teardown " + e + " added to Subscription.")
                     }
                     return (this._subscriptions || (this._subscriptions = [])).push(n), n._addParent(this), n
-                }, t.prototype.remove = function(t) {
+                }, t.prototype.remove = function (t) {
                     var e = this._subscriptions;
                     if (e) {
                         var n = e.indexOf(t); - 1 !== n && e.splice(n, 1)
                     }
-                }, t.prototype._addParent = function(t) {
+                }, t.prototype._addParent = function (t) {
                     var e = this,
                         n = e._parent,
                         r = e._parents;
                     n && n !== t ? r ? -1 === r.indexOf(t) && r.push(t) : this._parents = [t] : this._parent = t
-                }, t.EMPTY = function(t) {
+                }, t.EMPTY = function (t) {
                     return t.closed = !0, t
                 }(new t), t
             }();
         e.Subscription = l
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e, n, r) {
@@ -1182,17 +1182,17 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 for (var f = 0, d = e.length; f < d && !h.closed; f++) h.next(e[f]);
                 h.closed || h.complete()
             } else {
-                if (s.isPromise(e)) return e.then(function(t) {
+                if (s.isPromise(e)) return e.then(function (t) {
                     h.closed || (h.next(t), h.complete())
-                }, function(t) {
+                }, function (t) {
                     return h.error(t)
-                }).then(null, function(t) {
-                    o.root.setTimeout(function() {
+                }).then(null, function (t) {
+                    o.root.setTimeout(function () {
                         throw t
                     })
                 }), h;
                 if (e && "function" == typeof e[u.iterator])
-                    for (var m = e[u.iterator]();;) {
+                    for (var m = e[u.iterator](); ;) {
                         var v = m.next();
                         if (v.done) {
                             h.complete();
@@ -1204,10 +1204,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         if ("function" == typeof g.subscribe) return g.subscribe(new l.InnerSubscriber(t, n, r));
                         h.error(new TypeError("Provided object does not correctly implement Symbol.observable"))
                     } else {
-                        var y = a.isObject(e) ? "an invalid object" : "'" + e + "'",
-                            b = "You provided " + y + " where a stream was expected. You can provide an Observable, Promise, Array, or Iterable.";
-                        h.error(new TypeError(b))
-                    }
+                    var y = a.isObject(e) ? "an invalid object" : "'" + e + "'",
+                        b = "You provided " + y + " where a stream was expected. You can provide an Observable, Promise, Array, or Iterable.";
+                    h.error(new TypeError(b))
+                }
             }
             return null
         }
@@ -1220,7 +1220,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             l = n(384),
             p = n(83);
         e.subscribeToResult = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -1241,10 +1241,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             f = n(185),
             d = n(186),
             m = n(187),
-            v = function(t) {
+            v = function (t) {
                 function e(e) {
                     var n = t.call(this, e) || this;
-                    return n.store = c.createStore(), n.resizeListener = function() {
+                    return n.store = c.createStore(), n.resizeListener = function () {
                         return n.setSize()
                     }, n._handleKeyDownCapture = n.handleKeyDownCapture.bind(n), n._saveShellRef = n.saveShellRef.bind(n), p.log("BotChat.Chat props", e), n.store.dispatch({
                         type: "Set_Locale",
@@ -1257,7 +1257,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         sendTyping: e.sendTyping
                     }), e.speechOptions && (l.Speech.SpeechRecognizer.setSpeechRecognizer(e.speechOptions.speechRecognizer), l.Speech.SpeechSynthesizer.setSpeechSynthesizer(e.speechOptions.speechSynthesizer)), n
                 }
-                return o.__extends(e, t), e.prototype.handleIncomingActivity = function(t) {
+                return o.__extends(e, t), e.prototype.handleIncomingActivity = function (t) {
                     var e = this.store.getState();
                     switch (t.type) {
                         case "message":
@@ -1272,13 +1272,13 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                                 activity: t
                             })
                     }
-                }, e.prototype.setSize = function() {
+                }, e.prototype.setSize = function () {
                     this.store.dispatch({
                         type: "Set_Size",
                         width: this.chatviewPanel.offsetWidth,
                         height: this.chatviewPanel.offsetHeight
                     })
-                }, e.prototype.handleKeyDownCapture = function(t) {
+                }, e.prototype.handleKeyDownCapture = function (t) {
                     var e = t.target,
                         n = h.getTabIndex(e);
                     if (e === s.findDOMNode(this.chatviewPanel) || "number" != typeof n || n < 0) {
@@ -1286,9 +1286,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         var o = void 0;
                         /(^|\s)Edge\/16\./.test(navigator.userAgent) && (o = r(t.key)), this.shellRef.focus(o)
                     }
-                }, e.prototype.saveShellRef = function(t) {
+                }, e.prototype.saveShellRef = function (t) {
                     this.shellRef = t.getWrappedInstance()
-                }, e.prototype.componentDidMount = function() {
+                }, e.prototype.componentDidMount = function () {
                     var t = this;
                     this.setSize();
                     var e = this.props.directLine ? this.botConnection = new a.DirectLine(this.props.directLine) : this.props.botConnection;
@@ -1298,7 +1298,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         bot: this.props.bot,
                         botConnection: e,
                         selectedActivity: this.props.selectedActivity
-                    }), this.connectionStatusSubscription = e.connectionStatus$.subscribe(function(n) {
+                    }), this.connectionStatusSubscription = e.connectionStatus$.subscribe(function (n) {
                         if (t.props.speechOptions && t.props.speechOptions.speechRecognizer) {
                             var r = e.referenceGrammarId;
                             r && (t.props.speechOptions.speechRecognizer.referenceGrammarId = r)
@@ -1307,21 +1307,21 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             type: "Connection_Change",
                             connectionStatus: n
                         })
-                    }), this.activitySubscription = e.activity$.subscribe(function(e) {
+                    }), this.activitySubscription = e.activity$.subscribe(function (e) {
                         return t.handleIncomingActivity(e)
-                    }, function(t) {
+                    }, function (t) {
                         return p.log("activity$ error", t)
-                    }), this.props.selectedActivity && (this.selectedActivitySubscription = this.props.selectedActivity.subscribe(function(e) {
+                    }), this.props.selectedActivity && (this.selectedActivitySubscription = this.props.selectedActivity.subscribe(function (e) {
                         t.store.dispatch({
                             type: "Select_Activity",
-                            selectedActivity: e.activity || t.store.getState().history.activities.find(function(t) {
+                            selectedActivity: e.activity || t.store.getState().history.activities.find(function (t) {
                                 return t.id === e.id
                             })
                         })
                     }))
-                }, e.prototype.componentWillUnmount = function() {
+                }, e.prototype.componentWillUnmount = function () {
                     this.connectionStatusSubscription.unsubscribe(), this.activitySubscription.unsubscribe(), this.selectedActivitySubscription && this.selectedActivitySubscription.unsubscribe(), this.botConnection && this.botConnection.end(), window.removeEventListener("resize", this.resizeListener)
-                }, e.prototype.render = function() {
+                }, e.prototype.render = function () {
                     var t = this,
                         e = this.store.getState();
                     p.log("BotChat.Chat state", e);
@@ -1344,7 +1344,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     }, i.createElement("div", {
                         className: "wc-chatview-panel",
                         onKeyDownCapture: this._handleKeyDownCapture,
-                        ref: function(e) {
+                        ref: function (e) {
                             return t.chatviewPanel = e
                         },
                         tabIndex: 0
@@ -1353,8 +1353,8 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     }), r))
                 }, e
             }(i.Component);
-        e.Chat = v, e.doCardAction = function(t, n, r, o) {
-            return function(i, s) {
+        e.Chat = v, e.doCardAction = function (t, n, r, o) {
+            return function (i, s) {
                 var a = "string" == typeof s ? s : void 0,
                     c = "object" == typeof s ? s : void 0;
                 switch (i) {
@@ -1377,43 +1377,43 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         p.log("unknown button type", i)
                 }
             }
-        }, e.sendPostBack = function(t, e, n, r, o) {
+        }, e.sendPostBack = function (t, e, n, r, o) {
             t.postActivity({
                 type: "message",
                 text: e,
                 value: n,
                 from: r,
                 locale: o
-            }).subscribe(function(t) {
+            }).subscribe(function (t) {
                 p.log("success sending postBack", t)
-            }, function(t) {
+            }, function (t) {
                 p.log("failed to send postBack", t)
             })
-        }, e.renderIfNonempty = function(t, e) {
+        }, e.renderIfNonempty = function (t, e) {
             if (void 0 !== t && null !== t && ("string" != typeof t || t.length > 0)) return e(t)
-        }, e.classList = function() {
+        }, e.classList = function () {
             for (var t = [], e = 0; e < arguments.length; e++) t[e] = arguments[e];
             return t.filter(Boolean).join(" ")
         };
-        var g = function(t) {
-                return i.createElement("iframe", {
-                    style: {
-                        position: "absolute",
-                        left: "0",
-                        top: "-100%",
-                        width: "100%",
-                        height: "100%",
-                        margin: "1px 0 0",
-                        border: "none",
-                        opacity: 0,
-                        visibility: "hidden",
-                        pointerEvents: "none"
-                    },
-                    ref: function(e) {
-                        e && (e.contentWindow.onresize = t.onresize)
-                    }
-                })
-            },
+        var g = function (t) {
+            return i.createElement("iframe", {
+                style: {
+                    position: "absolute",
+                    left: "0",
+                    top: "-100%",
+                    width: "100%",
+                    height: "100%",
+                    margin: "1px 0 0",
+                    border: "none",
+                    opacity: 0,
+                    visibility: "hidden",
+                    pointerEvents: "none"
+                },
+                ref: function (e) {
+                    e && (e.contentWindow.onresize = t.onresize)
+                }
+            })
+        },
             y = {
                 Add: "+",
                 Decimal: ".",
@@ -1421,7 +1421,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 Multiply: "*",
                 Subtract: "-"
             }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -1468,11 +1468,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             h = n(71),
             f = n(132),
             d = "undefined" != typeof document && "number" == typeof document.documentMode || "undefined" != typeof navigator && "string" == typeof navigator.userAgent && /\bEdge\/\d/.test(navigator.userAgent),
-            m = h(function(t, e, n) {
+            m = h(function (t, e, n) {
                 11 === e.node.nodeType || 1 === e.node.nodeType && "object" === e.node.nodeName.toLowerCase() && (null == e.node.namespaceURI || e.node.namespaceURI === l.html) ? (r(e), t.insertBefore(e.node, n)) : (t.insertBefore(e.node, n), r(e))
             });
         u.insertTreeBefore = m, u.replaceChildWithTree = o, u.queueChild = i, u.queueHTML = s, u.queueText = a, t.exports = u
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
@@ -1485,7 +1485,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 HAS_NUMERIC_VALUE: 8,
                 HAS_POSITIVE_NUMERIC_VALUE: 24,
                 HAS_OVERLOADED_BOOLEAN_VALUE: 32,
-                injectDOMPropertyConfig: function(t) {
+                injectDOMPropertyConfig: function (t) {
                     var e = i,
                         n = t.Properties || {},
                         s = t.DOMAttributeNamespaces || {},
@@ -1525,7 +1525,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 properties: {},
                 getPossibleStandardName: null,
                 _isCustomAttributeFunctions: [],
-                isCustomAttribute: function(t) {
+                isCustomAttribute: function (t) {
                     for (var e = 0; e < a._isCustomAttributeFunctions.length; e++) {
                         if ((0, a._isCustomAttributeFunctions[e])(t)) return !0
                     }
@@ -1534,7 +1534,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 injection: i
             };
         t.exports = a
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r() {
@@ -1542,29 +1542,29 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
         var o = n(328),
             i = (n(12), n(3), {
-                mountComponent: function(t, e, n, o, i, s) {
+                mountComponent: function (t, e, n, o, i, s) {
                     var a = t.mountComponent(e, n, o, i, s);
                     return t._currentElement && null != t._currentElement.ref && e.getReactMountReady().enqueue(r, t), a
                 },
-                getHostNode: function(t) {
+                getHostNode: function (t) {
                     return t.getHostNode()
                 },
-                unmountComponent: function(t, e) {
+                unmountComponent: function (t, e) {
                     o.detachRefs(t, t._currentElement), t.unmountComponent(e)
                 },
-                receiveComponent: function(t, e, n, i) {
+                receiveComponent: function (t, e, n, i) {
                     var s = t._currentElement;
                     if (e !== s || i !== t._context) {
                         var a = o.shouldUpdateRefs(s, e);
                         a && o.detachRefs(t, s), t.receiveComponent(e, n, i), a && t._currentElement && null != t._currentElement.ref && n.getReactMountReady().enqueue(r, t)
                     }
                 },
-                performUpdateIfNecessary: function(t, e, n) {
+                performUpdateIfNecessary: function (t, e, n) {
                     t._updateBatchNumber === n && t.performUpdateIfNecessary(e)
                 }
             });
         t.exports = i
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(5),
             o = n(138),
@@ -1579,7 +1579,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             f = a.createFactory,
             d = a.cloneElement,
             m = r,
-            v = function(t) {
+            v = function (t) {
                 return t
             },
             g = {
@@ -1604,7 +1604,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 __spread: m
             };
         t.exports = g
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -1624,7 +1624,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 __self: !0,
                 __source: !0
             },
-            l = function(t, e, n, r, o, i, s) {
+            l = function (t, e, n, r, o, i, s) {
                 var a = {
                     $$typeof: c,
                     type: t,
@@ -1635,7 +1635,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 };
                 return a
             };
-        l.createElement = function(t, e, n) {
+        l.createElement = function (t, e, n) {
             var i, c = {},
                 p = null,
                 h = null;
@@ -1654,12 +1654,12 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 for (i in v) void 0 === c[i] && (c[i] = v[i])
             }
             return l(t, p, h, 0, 0, s.current, c)
-        }, l.createFactory = function(t) {
+        }, l.createFactory = function (t) {
             var e = l.createElement.bind(null, t);
             return e.type = t, e
-        }, l.cloneAndReplaceKey = function(t, e) {
+        }, l.cloneAndReplaceKey = function (t, e) {
             return l(t.type, e, t.ref, t._self, t._source, t._owner, t.props)
-        }, l.cloneElement = function(t, e, n) {
+        }, l.cloneElement = function (t, e, n) {
             var c, p = i({}, t.props),
                 h = t.key,
                 f = t.ref,
@@ -1677,109 +1677,109 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 p.children = g
             }
             return l(t.type, h, f, 0, 0, d, p)
-        }, l.isValidElement = function(t) {
+        }, l.isValidElement = function (t) {
             return "object" == typeof t && null !== t && t.$$typeof === c
         }, t.exports = l
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        var r = this && this.__extends || function(t, e) {
-                function n() {
-                    this.constructor = t
-                }
-                for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
-                t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
-            },
+        var r = this && this.__extends || function (t, e) {
+            function n() {
+                this.constructor = t
+            }
+            for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
+            t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        },
             o = n(0),
             i = n(8),
             s = n(19),
             a = n(164),
             c = n(386),
             u = n(84),
-            l = function(t) {
+            l = function (t) {
                 function e(e) {
                     t.call(this, e), this.destination = e
                 }
                 return r(e, t), e
             }(i.Subscriber);
         e.SubjectSubscriber = l;
-        var p = function(t) {
+        var p = function (t) {
             function e() {
                 t.call(this), this.observers = [], this.closed = !1, this.isStopped = !1, this.hasError = !1, this.thrownError = null
             }
-            return r(e, t), e.prototype[u.rxSubscriber] = function() {
+            return r(e, t), e.prototype[u.rxSubscriber] = function () {
                 return new l(this)
-            }, e.prototype.lift = function(t) {
+            }, e.prototype.lift = function (t) {
                 var e = new h(this, this);
                 return e.operator = t, e
-            }, e.prototype.next = function(t) {
+            }, e.prototype.next = function (t) {
                 if (this.closed) throw new a.ObjectUnsubscribedError;
                 if (!this.isStopped)
                     for (var e = this.observers, n = e.length, r = e.slice(), o = 0; o < n; o++) r[o].next(t)
-            }, e.prototype.error = function(t) {
+            }, e.prototype.error = function (t) {
                 if (this.closed) throw new a.ObjectUnsubscribedError;
                 this.hasError = !0, this.thrownError = t, this.isStopped = !0;
                 for (var e = this.observers, n = e.length, r = e.slice(), o = 0; o < n; o++) r[o].error(t);
                 this.observers.length = 0
-            }, e.prototype.complete = function() {
+            }, e.prototype.complete = function () {
                 if (this.closed) throw new a.ObjectUnsubscribedError;
                 this.isStopped = !0;
                 for (var t = this.observers, e = t.length, n = t.slice(), r = 0; r < e; r++) n[r].complete();
                 this.observers.length = 0
-            }, e.prototype.unsubscribe = function() {
+            }, e.prototype.unsubscribe = function () {
                 this.isStopped = !0, this.closed = !0, this.observers = null
-            }, e.prototype._trySubscribe = function(e) {
+            }, e.prototype._trySubscribe = function (e) {
                 if (this.closed) throw new a.ObjectUnsubscribedError;
                 return t.prototype._trySubscribe.call(this, e)
-            }, e.prototype._subscribe = function(t) {
+            }, e.prototype._subscribe = function (t) {
                 if (this.closed) throw new a.ObjectUnsubscribedError;
                 return this.hasError ? (t.error(this.thrownError), s.Subscription.EMPTY) : this.isStopped ? (t.complete(), s.Subscription.EMPTY) : (this.observers.push(t), new c.SubjectSubscription(this, t))
-            }, e.prototype.asObservable = function() {
+            }, e.prototype.asObservable = function () {
                 var t = new o.Observable;
                 return t.source = this, t
-            }, e.create = function(t, e) {
+            }, e.create = function (t, e) {
                 return new h(t, e)
             }, e
         }(o.Observable);
         e.Subject = p;
-        var h = function(t) {
+        var h = function (t) {
             function e(e, n) {
                 t.call(this), this.destination = e, this.source = n
             }
-            return r(e, t), e.prototype.next = function(t) {
+            return r(e, t), e.prototype.next = function (t) {
                 var e = this.destination;
                 e && e.next && e.next(t)
-            }, e.prototype.error = function(t) {
+            }, e.prototype.error = function (t) {
                 var e = this.destination;
                 e && e.error && this.destination.error(t)
-            }, e.prototype.complete = function() {
+            }, e.prototype.complete = function () {
                 var t = this.destination;
                 t && t.complete && this.destination.complete()
-            }, e.prototype._subscribe = function(t) {
+            }, e.prototype._subscribe = function (t) {
                 return this.source ? this.source.subscribe(t) : s.Subscription.EMPTY
             }, e
         }(p);
         e.AnonymousSubject = h
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         e.errorObject = {
             e: {}
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
-        }), e.log = function(t) {
+        }), e.log = function (t) {
             for (var e = [], n = 1; n < arguments.length; n++) e[n - 1] = arguments[n];
             "undefined" != typeof window && window.botchatDebug && t && console.log.apply(console, [t].concat(e))
         }
-    }, function(t, e) {
+    }, function (t, e) {
         var n = t.exports = "undefined" != typeof window && window.Math == Math ? window : "undefined" != typeof self && self.Math == Math ? self : Function("return this")();
         "number" == typeof __g && (__g = n)
-    }, function(t, e) {
-        t.exports = function(t) {
+    }, function (t, e) {
+        t.exports = function (t) {
             return "object" == typeof t ? null !== t : "function" == typeof t
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -1811,16 +1811,16 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             l = n(126),
             p = (n(1), {}),
             h = null,
-            f = function(t, e) {
+            f = function (t, e) {
                 t && (a.executeDispatchesInOrder(t, e), t.isPersistent() || t.constructor.release(t))
             },
-            d = function(t) {
+            d = function (t) {
                 return f(t, !0)
             },
-            m = function(t) {
+            m = function (t) {
                 return f(t, !1)
             },
-            v = function(t) {
+            v = function (t) {
                 return "." + t._rootNodeID
             },
             g = {
@@ -1828,20 +1828,20 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     injectEventPluginOrder: s.injectEventPluginOrder,
                     injectEventPluginsByName: s.injectEventPluginsByName
                 },
-                putListener: function(t, e, n) {
+                putListener: function (t, e, n) {
                     "function" != typeof n && i("94", e, typeof n);
                     var r = v(t);
                     (p[e] || (p[e] = {}))[r] = n;
                     var o = s.registrationNameModules[e];
                     o && o.didPutListener && o.didPutListener(t, e, n)
                 },
-                getListener: function(t, e) {
+                getListener: function (t, e) {
                     var n = p[e];
                     if (o(e, t._currentElement.type, t._currentElement.props)) return null;
                     var r = v(t);
                     return n && n[r]
                 },
-                deleteListener: function(t, e) {
+                deleteListener: function (t, e) {
                     var n = s.registrationNameModules[e];
                     n && n.willDeleteListener && n.willDeleteListener(t, e);
                     var r = p[e];
@@ -1849,7 +1849,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         delete r[v(t)]
                     }
                 },
-                deleteAllListeners: function(t) {
+                deleteAllListeners: function (t) {
                     var e = v(t);
                     for (var n in p)
                         if (p.hasOwnProperty(n) && p[n][e]) {
@@ -1857,7 +1857,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             r && r.willDeleteListener && r.willDeleteListener(t, n), delete p[n][e]
                         }
                 },
-                extractEvents: function(t, e, n, r) {
+                extractEvents: function (t, e, n, r) {
                     for (var o, i = s.plugins, a = 0; a < i.length; a++) {
                         var c = i[a];
                         if (c) {
@@ -1867,22 +1867,22 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     }
                     return o
                 },
-                enqueueEvents: function(t) {
+                enqueueEvents: function (t) {
                     t && (h = u(h, t))
                 },
-                processEventQueue: function(t) {
+                processEventQueue: function (t) {
                     var e = h;
                     h = null, t ? l(e, d) : l(e, m), h && i("95"), c.rethrowCaughtError()
                 },
-                __purge: function() {
+                __purge: function () {
                     p = {}
                 },
-                __getListenerBank: function() {
+                __getListenerBank: function () {
                     return p
                 }
             };
         t.exports = g
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e, n) {
@@ -1946,24 +1946,24 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 accumulateEnterLeaveDispatches: p
             };
         t.exports = y
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = {
-            remove: function(t) {
+            remove: function (t) {
                 t._reactInternalInstance = void 0
             },
-            get: function(t) {
+            get: function (t) {
                 return t._reactInternalInstance
             },
-            has: function(t) {
+            has: function (t) {
                 return void 0 !== t._reactInternalInstance
             },
-            set: function(t, e) {
+            set: function (t, e) {
                 t._reactInternalInstance = e
             }
         };
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e, n, r) {
@@ -1972,19 +1972,19 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         var o = n(14),
             i = n(74),
             s = {
-                view: function(t) {
+                view: function (t) {
                     if (t.view) return t.view;
                     var e = i(t);
                     if (e.window === e) return e;
                     var n = e.ownerDocument;
                     return n ? n.defaultView || n.parentWindow : window
                 },
-                detail: function(t) {
+                detail: function (t) {
                     return t.detail || 0
                 }
             };
         o.augmentClass(r, s), t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -1994,7 +1994,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             throw o.name = "Invariant Violation", o.framesToPop = 1, o
         }
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r() {
@@ -2010,9 +2010,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
         var i, s = n(28);
         e.tryCatch = o
-    }, function(t, e) {
+    }, function (t, e) {
         var n;
-        n = function() {
+        n = function () {
             return this
         }();
         try {
@@ -2021,47 +2021,47 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             "object" == typeof window && (n = window)
         }
         t.exports = n
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
         });
-        ! function(t) {
-            var e = function() {
-                function t() {}
-                return t.setSpeechRecognizer = function(e) {
+        ! function (t) {
+            var e = function () {
+                function t() { }
+                return t.setSpeechRecognizer = function (e) {
                     t.instance = e
-                }, t.startRecognizing = function(e, n, r, o, i) {
+                }, t.startRecognizing = function (e, n, r, o, i) {
                     void 0 === e && (e = "en-US"), void 0 === n && (n = null), void 0 === r && (r = null), void 0 === o && (o = null), void 0 === i && (i = null), t.speechIsAvailable() && (e && t.instance.locale !== e && (t.instance.stopRecognizing(), t.instance.locale = e), t.alreadyRecognizing() && t.stopRecognizing(), t.instance.onIntermediateResult = n, t.instance.onFinalResult = r, t.instance.onAudioStreamingToService = o, t.instance.onRecognitionFailed = i, t.instance.startRecognizing())
-                }, t.stopRecognizing = function() {
+                }, t.stopRecognizing = function () {
                     t.speechIsAvailable() && t.instance.stopRecognizing()
-                }, t.warmup = function() {
+                }, t.warmup = function () {
                     t.speechIsAvailable() && t.instance.warmup()
-                }, t.speechIsAvailable = function() {
+                }, t.speechIsAvailable = function () {
                     return null != t.instance && t.instance.speechIsAvailable()
-                }, t.alreadyRecognizing = function() {
+                }, t.alreadyRecognizing = function () {
                     return !!t.instance && t.instance.isStreamingToService
                 }, t
             }();
             e.instance = null, t.SpeechRecognizer = e;
-            var n = function() {
-                function t() {}
-                return t.setSpeechSynthesizer = function(e) {
+            var n = function () {
+                function t() { }
+                return t.setSpeechSynthesizer = function (e) {
                     t.instance = e
-                }, t.speak = function(e, n, r, o) {
+                }, t.speak = function (e, n, r, o) {
                     void 0 === r && (r = null), void 0 === o && (o = null), null != t.instance && t.instance.speak(e, n, r, o)
-                }, t.stopSpeaking = function() {
+                }, t.stopSpeaking = function () {
                     null != t.instance && t.instance.stopSpeaking()
                 }, t
             }();
             n.instance = null, t.SpeechSynthesizer = n;
-            var r = function() {
+            var r = function () {
                 function t() {
                     var t = this;
                     if (this.locale = null, this.isStreamingToService = !1, this.onIntermediateResult = null, this.onFinalResult = null, this.onAudioStreamingToService = null, this.onRecognitionFailed = null, this.recognizer = null, !window.webkitSpeechRecognition) return void console.error("This browser does not support speech recognition");
-                    this.recognizer = new window.webkitSpeechRecognition, this.recognizer.lang = "en-US", this.recognizer.interimResults = !0, this.recognizer.onaudiostart = function() {
+                    this.recognizer = new window.webkitSpeechRecognition, this.recognizer.lang = "en-US", this.recognizer.interimResults = !0, this.recognizer.onaudiostart = function () {
                         t.onAudioStreamingToService && t.onAudioStreamingToService()
-                    }, this.recognizer.onresult = function(e) {
+                    }, this.recognizer.onresult = function (e) {
                         if (null != e.results && 0 != e.length) {
                             var n = e.results[0];
                             if (!0 === n.isFinal && null != t.onFinalResult) t.onFinalResult(n[0].transcript);
@@ -2070,24 +2070,24 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                                 t.onIntermediateResult(r)
                             }
                         }
-                    }, this.recognizer.onerror = function(e) {
+                    }, this.recognizer.onerror = function (e) {
                         throw t.onRecognitionFailed && t.onRecognitionFailed(), e
                     }
                 }
-                return t.prototype.speechIsAvailable = function() {
+                return t.prototype.speechIsAvailable = function () {
                     return null != this.recognizer
-                }, t.prototype.warmup = function() {}, t.prototype.startRecognizing = function() {
+                }, t.prototype.warmup = function () { }, t.prototype.startRecognizing = function () {
                     this.recognizer.start()
-                }, t.prototype.stopRecognizing = function() {
+                }, t.prototype.stopRecognizing = function () {
                     this.recognizer.stop()
                 }, t
             }();
             t.BrowserSpeechRecognizer = r;
-            var o = function() {
+            var o = function () {
                 function t() {
                     this.lastOperation = null, this.audioElement = null, this.speakRequests = []
                 }
-                return t.prototype.speak = function(t, e, n, r) {
+                return t.prototype.speak = function (t, e, n, r) {
                     var o = this;
                     if (void 0 === n && (n = null), void 0 === r && (r = null), "SpeechSynthesisUtterance" in window && t) {
                         if (null === this.audioElement) {
@@ -2102,25 +2102,25 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                                 l = u.documentElement.childNodes;
                             this.processNodes(l, a)
                         } else a.push(t);
-                        var p = function() {
-                                null !== r && r(), o.speakRequests.length && (o.speakRequests[0].completed(), o.speakRequests.splice(0, 1)), o.speakRequests.length && o.playNextTTS(o.speakRequests[0], 0)
-                            },
-                            h = new i(a, e, function(t) {
+                        var p = function () {
+                            null !== r && r(), o.speakRequests.length && (o.speakRequests[0].completed(), o.speakRequests.splice(0, 1)), o.speakRequests.length && o.playNextTTS(o.speakRequests[0], 0)
+                        },
+                            h = new i(a, e, function (t) {
                                 o.lastOperation = t
                             }, n, p);
                         0 === this.speakRequests.length ? (this.speakRequests = [h], this.playNextTTS(this.speakRequests[0], 0)) : this.speakRequests.push(h)
                     }
-                }, t.prototype.stopSpeaking = function() {
+                }, t.prototype.stopSpeaking = function () {
                     if ("SpeechSynthesisUtterance" in window != !1 && this.speakRequests.length) {
-                        this.audioElement && this.audioElement.pause(), this.speakRequests.forEach(function(t) {
+                        this.audioElement && this.audioElement.pause(), this.speakRequests.forEach(function (t) {
                             t.abandon()
                         }), this.speakRequests = [];
                         var t = window.speechSynthesis;
                         (t.speaking || t.pending) && (this.lastOperation && (this.lastOperation.onend = null), t.cancel())
                     }
-                }, t.prototype.playNextTTS = function(t, e) {
+                }, t.prototype.playNextTTS = function (t, e) {
                     var n = this,
-                        r = function() {
+                        r = function () {
                             n.playNextTTS(t, e + 1)
                         };
                     if (e < t.speakChunks.length) {
@@ -2134,7 +2134,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             s.text = o, s.lang = t.lang, s.onstart = 0 === e ? t.onSpeakingStarted : null, s.onend = r, s.onerror = r, t.onSpeakQueued && t.onSpeakQueued(s), window.speechSynthesis.speak(s)
                         }
                     } else t.onSpeakingFinished && t.onSpeakingFinished()
-                }, t.prototype.processNodes = function(t, e) {
+                }, t.prototype.processNodes = function (t, e) {
                     for (var n = 0; n < t.length; n++) {
                         var r = t[n];
                         switch (r.nodeName) {
@@ -2165,40 +2165,40 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }, t
             }();
             t.BrowserSpeechSynthesizer = o;
-            var i = function() {
+            var i = function () {
                 function t(t, e, n, r, o) {
                     void 0 === n && (n = null), void 0 === r && (r = null), void 0 === o && (o = null), this._onSpeakQueued = null, this._onSpeakingStarted = null, this._onSpeakingFinished = null, this._speakChunks = [], this._lang = null, this._onSpeakQueued = n, this._onSpeakingStarted = r, this._onSpeakingFinished = o, this._speakChunks = t, this._lang = e
                 }
-                return t.prototype.abandon = function() {
+                return t.prototype.abandon = function () {
                     this._speakChunks = []
-                }, t.prototype.completed = function() {
+                }, t.prototype.completed = function () {
                     this._speakChunks = []
                 }, Object.defineProperty(t.prototype, "onSpeakQueued", {
-                    get: function() {
+                    get: function () {
                         return this._onSpeakQueued
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "onSpeakingStarted", {
-                    get: function() {
+                    get: function () {
                         return this._onSpeakingStarted
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "onSpeakingFinished", {
-                    get: function() {
+                    get: function () {
                         return this._onSpeakingFinished
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "speakChunks", {
-                    get: function() {
+                    get: function () {
                         return this._speakChunks
                     },
                     enumerable: !0,
                     configurable: !0
                 }), Object.defineProperty(t.prototype, "lang", {
-                    get: function() {
+                    get: function () {
                         return this._lang
                     },
                     enumerable: !0,
@@ -2206,7 +2206,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }), t
             }()
         }(e.Speech || (e.Speech = {}))
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
@@ -2229,7 +2229,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     timestamp: (new Date).toISOString()
                 }
             }
-        }, e.sendFiles = function(t, e, n) {
+        }, e.sendFiles = function (t, e, n) {
             return {
                 type: "Send_Message",
                 activity: {
@@ -2240,7 +2240,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             }
         };
-        var c = function(t) {
+        var c = function (t) {
             for (var e = [], n = 0, r = t.length; n < r; n++) {
                 var o = t[n];
                 e.push({
@@ -2251,7 +2251,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             }
             return e
         };
-        e.shell = function(t, e) {
+        e.shell = function (t, e) {
             switch (void 0 === t && (t = {
                 input: "",
                 sendTyping: !1,
@@ -2287,7 +2287,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 case "Listening_Starting":
                     return t
             }
-        }, e.format = function(t, e) {
+        }, e.format = function (t, e) {
             switch (void 0 === t && (t = {
                 locale: "en-us",
                 options: {
@@ -2312,7 +2312,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 default:
                     return t
             }
-        }, e.size = function(t, e) {
+        }, e.size = function (t, e) {
             switch (void 0 === t && (t = {
                 width: void 0,
                 height: void 0
@@ -2325,7 +2325,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 default:
                     return t
             }
-        }, e.connection = function(t, e) {
+        }, e.connection = function (t, e) {
             switch (void 0 === t && (t = {
                 connectionStatus: o.ConnectionStatus.Uninitialized,
                 botConnection: void 0,
@@ -2348,10 +2348,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     return t
             }
         };
-        var u = function(t, e, n) {
+        var u = function (t, e, n) {
             return t.slice(0, e).concat([n], t.slice(e + 1))
         };
-        e.history = function(t, e) {
+        e.history = function (t, e) {
             switch (void 0 === t && (t = {
                 activities: [],
                 clientActivityBase: Date.now().toString() + Math.random().toString().substr(1) + ".",
@@ -2360,7 +2360,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             }), a.log("history action", e), e.type) {
                 case "Receive_Sent_Message":
                     if (!e.activity.channelData || !e.activity.channelData.clientActivityId) return t;
-                    var n = t.activities.findIndex(function(t) {
+                    var n = t.activities.findIndex(function (t) {
                         return t.channelData && t.channelData.clientActivityId === e.activity.channelData.clientActivityId
                     });
                     if (-1 !== n) {
@@ -2371,47 +2371,47 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         })
                     }
                 case "Receive_Message":
-                    return t.activities.find(function(t) {
+                    return t.activities.find(function (t) {
                         return t.id === e.activity.id
                     }) ? t : r.__assign({}, t, {
-                        activities: t.activities.filter(function(t) {
+                        activities: t.activities.filter(function (t) {
                             return "typing" !== t.type
-                        }).concat([e.activity], t.activities.filter(function(t) {
+                        }).concat([e.activity], t.activities.filter(function (t) {
                             return t.from.id !== e.activity.from.id && "typing" === t.type
                         }))
                     });
                 case "Send_Message":
                     return r.__assign({}, t, {
-                        activities: t.activities.filter(function(t) {
+                        activities: t.activities.filter(function (t) {
                             return "typing" !== t.type
                         }).concat([r.__assign({}, e.activity, {
                             timestamp: (new Date).toISOString(),
                             channelData: {
                                 clientActivityId: t.clientActivityBase + t.clientActivityCounter
                             }
-                        })], t.activities.filter(function(t) {
+                        })], t.activities.filter(function (t) {
                             return "typing" === t.type
                         })),
                         clientActivityCounter: t.clientActivityCounter + 1
                     });
                 case "Send_Message_Retry":
-                    var i = t.activities.find(function(t) {
-                            return t.channelData && t.channelData.clientActivityId === e.clientActivityId
-                        }),
+                    var i = t.activities.find(function (t) {
+                        return t.channelData && t.channelData.clientActivityId === e.clientActivityId
+                    }),
                         s = void 0 === i.id ? i : r.__assign({}, i, {
                             id: void 0
                         });
                     return r.__assign({}, t, {
-                        activities: t.activities.filter(function(t) {
+                        activities: t.activities.filter(function (t) {
                             return "typing" !== t.type && t !== i
-                        }).concat([s], t.activities.filter(function(t) {
+                        }).concat([s], t.activities.filter(function (t) {
                             return "typing" === t.type
                         })),
                         selectedActivity: t.selectedActivity === i ? s : t.selectedActivity
                     });
                 case "Send_Message_Succeed":
                 case "Send_Message_Fail":
-                    var c = t.activities.findIndex(function(t) {
+                    var c = t.activities.findIndex(function (t) {
                         return t.channelData && t.channelData.clientActivityId === e.clientActivityId
                     });
                     if (-1 === c) return t;
@@ -2427,15 +2427,15 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     });
                 case "Show_Typing":
                     return r.__assign({}, t, {
-                        activities: t.activities.filter(function(t) {
+                        activities: t.activities.filter(function (t) {
                             return "typing" !== t.type
-                        }).concat(t.activities.filter(function(t) {
+                        }).concat(t.activities.filter(function (t) {
                             return t.from.id !== e.activity.from.id && "typing" === t.type
                         }), [e.activity])
                     });
                 case "Clear_Typing":
                     return r.__assign({}, t, {
-                        activities: t.activities.filter(function(t) {
+                        activities: t.activities.filter(function (t) {
                             return t.id !== e.id
                         }),
                         selectedActivity: t.selectedActivity && t.selectedActivity.id === e.id ? null : t.selectedActivity
@@ -2445,9 +2445,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         selectedActivity: e.selectedActivity
                     });
                 case "Take_SuggestedAction":
-                    var h = t.activities.findIndex(function(t) {
-                            return t === e.message
-                        }),
+                    var h = t.activities.findIndex(function (t) {
+                        return t === e.message
+                    }),
                         f = t.activities[h],
                         d = r.__assign({}, f, {
                             suggestedActions: void 0
@@ -2461,9 +2461,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             }
         };
         var l = {
-                type: null
-            },
-            p = function(t, e) {
+            type: null
+        },
+            p = function (t, e) {
                 var n = t.speak;
                 if ((!n && null == t.textFormat || "plain" == t.textFormat) && (n = t.text), !n && t.channelData && t.channelData.speechOutput && t.channelData.speechOutput.speakText && (n = t.channelData.speechOutput.speakText), !n && t.attachments && t.attachments.length > 0)
                     for (var r = 0; r < t.attachments.length; r++) {
@@ -2483,20 +2483,20 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             h = n(79),
             f = n(0);
         n(152), n(153), n(154), n(155), n(156), n(396), n(157), n(401), n(400), n(387), n(150), n(151);
-        var d = function(t, e) {
-                return t.ofType("Send_Message").map(function(t) {
-                    var n = e.getState();
-                    return {
-                        type: "Send_Message_Try",
-                        clientActivityId: n.history.clientActivityBase + (n.history.clientActivityCounter - 1)
-                    }
-                })
-            },
-            m = function(t, e) {
-                return t.ofType("Send_Message_Try").flatMap(function(t) {
+        var d = function (t, e) {
+            return t.ofType("Send_Message").map(function (t) {
+                var n = e.getState();
+                return {
+                    type: "Send_Message_Try",
+                    clientActivityId: n.history.clientActivityBase + (n.history.clientActivityCounter - 1)
+                }
+            })
+        },
+            m = function (t, e) {
+                return t.ofType("Send_Message_Try").flatMap(function (t) {
                     var n = e.getState(),
                         r = t.clientActivityId,
-                        o = n.history.activities.find(function(t) {
+                        o = n.history.activities.find(function (t) {
                             return t.channelData && t.channelData.clientActivityId === r
                         });
                     if (!o) return a.log("trySendMessage: activity not found"), f.Observable.empty();
@@ -2509,13 +2509,13 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         };
                         o.entities = null == o.entities ? [i] : o.entities.concat([i])
                     }
-                    return n.connection.botConnection.postActivity(o).map(function(t) {
+                    return n.connection.botConnection.postActivity(o).map(function (t) {
                         return {
                             type: "Send_Message_Succeed",
                             clientActivityId: r,
                             id: t
                         }
-                    }).catch(function(t) {
+                    }).catch(function (t) {
                         return f.Observable.of({
                             type: "Send_Message_Fail",
                             clientActivityId: r
@@ -2524,129 +2524,129 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 })
             },
             v = f.Observable.bindCallback(s.Speech.SpeechSynthesizer.speak),
-            g = function(t, e) {
-                return t.ofType("Speak_SSML").filter(function(t) {
+            g = function (t, e) {
+                return t.ofType("Speak_SSML").filter(function (t) {
                     return t.ssml
-                }).mergeMap(function(t) {
+                }).mergeMap(function (t) {
                     var e = null,
-                        n = function() {
+                        n = function () {
                             return l
                         };
-                    return t.autoListenAfterSpeak && (e = function() {
+                    return t.autoListenAfterSpeak && (e = function () {
                         return s.Speech.SpeechRecognizer.warmup()
-                    }, n = function() {
+                    }, n = function () {
                         return {
                             type: "Listening_Starting"
                         }
-                    }), v(t.ssml, t.locale, e).map(n).catch(function(t) {
+                    }), v(t.ssml, t.locale, e).map(n).catch(function (t) {
                         return f.Observable.of(l)
                     })
-                }).merge(t.ofType("Speak_SSML").map(function(t) {
+                }).merge(t.ofType("Speak_SSML").map(function (t) {
                     return {
                         type: "Listening_Stop"
                     }
                 }))
             },
-            y = function(t, e) {
-                return t.ofType("Receive_Message").filter(function(t) {
+            y = function (t, e) {
+                return t.ofType("Receive_Message").filter(function (t) {
                     return t.activity && e.getState().shell.lastInputViaSpeech
-                }).map(function(t) {
+                }).map(function (t) {
                     return p(t.activity, e.getState().format.locale)
                 })
             },
-            b = function(t) {
-                return t.ofType("Update_Input", "Listening_Starting", "Send_Message", "Card_Action_Clicked", "Stop_Speaking").do(s.Speech.SpeechSynthesizer.stopSpeaking).map(function(t) {
+            b = function (t) {
+                return t.ofType("Update_Input", "Listening_Starting", "Send_Message", "Card_Action_Clicked", "Stop_Speaking").do(s.Speech.SpeechSynthesizer.stopSpeaking).map(function (t) {
                     return l
                 })
             },
-            _ = function(t) {
-                return t.ofType("Listening_Stop", "Card_Action_Clicked").do(s.Speech.SpeechRecognizer.stopRecognizing).map(function(t) {
+            _ = function (t) {
+                return t.ofType("Listening_Stop", "Card_Action_Clicked").do(s.Speech.SpeechRecognizer.stopRecognizing).map(function (t) {
                     return l
                 })
             },
-            C = function(t, n) {
-                return t.ofType("Listening_Starting").do(function(t) {
+            C = function (t, n) {
+                return t.ofType("Listening_Starting").do(function (t) {
                     var r = n.getState().format.locale,
-                        o = function(t) {
+                        o = function (t) {
                             n.dispatch({
                                 type: "Update_Input",
                                 input: t,
                                 source: "speech"
                             })
                         },
-                        i = function(t) {
+                        i = function (t) {
                             t = t.replace(/^[.\s]+|[.\s]+$/g, ""), o(t), n.dispatch({
                                 type: "Listening_Stop"
                             }), n.dispatch(e.sendMessage(t, n.getState().connection.user, r))
                         },
-                        a = function() {
+                        a = function () {
                             n.dispatch({
                                 type: "Listening_Start"
                             })
                         },
-                        c = function() {
+                        c = function () {
                             n.dispatch({
                                 type: "Listening_Stop"
                             })
                         };
                     s.Speech.SpeechRecognizer.startRecognizing(r, o, i, a, c)
-                }).map(function(t) {
+                }).map(function (t) {
                     return l
                 })
             },
-            w = function(t, e) {
+            w = function (t, e) {
                 var n = t.ofType("Update_Input", "Listening_Stop");
-                return t.ofType("Listening_Start").mergeMap(function(t) {
+                return t.ofType("Listening_Start").mergeMap(function (t) {
                     return f.Observable.of({
                         type: "Listening_Stop"
                     }).delay(5e3).takeUntil(n)
                 })
             },
-            x = function(t) {
-                return t.ofType("Send_Message_Retry").map(function(t) {
+            x = function (t) {
+                return t.ofType("Send_Message_Retry").map(function (t) {
                     return {
                         type: "Send_Message_Try",
                         clientActivityId: t.clientActivityId
                     }
                 })
             },
-            k = function(t, e) {
-                return t.ofType("Send_Message_Succeed", "Send_Message_Fail", "Show_Typing", "Clear_Typing").map(function(t) {
+            k = function (t, e) {
+                return t.ofType("Send_Message_Succeed", "Send_Message_Fail", "Show_Typing", "Clear_Typing").map(function (t) {
                     var n = e.getState();
                     return n.connection.selectedActivity && n.connection.selectedActivity.next({
                         activity: n.history.selectedActivity
                     }), l
                 })
             },
-            S = function(t) {
-                return t.ofType("Show_Typing").delay(3e3).map(function(t) {
+            S = function (t) {
+                return t.ofType("Show_Typing").delay(3e3).map(function (t) {
                     return {
                         type: "Clear_Typing",
                         id: t.activity.id
                     }
                 })
             },
-            E = function(t, e) {
-                return t.ofType("Update_Input").map(function(t) {
+            E = function (t, e) {
+                return t.ofType("Update_Input").map(function (t) {
                     return e.getState()
-                }).filter(function(t) {
+                }).filter(function (t) {
                     return t.shell.sendTyping
-                }).throttleTime(3e3).do(function(t) {
+                }).throttleTime(3e3).do(function (t) {
                     return a.log("sending typing")
-                }).flatMap(function(t) {
+                }).flatMap(function (t) {
                     return t.connection.botConnection.postActivity({
                         type: "typing",
                         from: t.connection.user
-                    }).map(function(t) {
+                    }).map(function (t) {
                         return l
-                    }).catch(function(t) {
+                    }).catch(function (t) {
                         return f.Observable.of(l)
                     })
                 })
             },
             A = n(79),
             T = n(378);
-        e.createStore = function() {
+        e.createStore = function () {
             return A.createStore(A.combineReducers({
                 shell: e.shell,
                 format: e.format,
@@ -2655,23 +2655,23 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 history: e.history
             }), h.applyMiddleware(T.createEpicMiddleware(T.combineEpics(k, d, m, x, S, E, g, y, C, _, b, w))))
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         var r = n(204)("wks"),
             o = n(95),
             i = n(30).Symbol,
             s = "function" == typeof i;
-        (t.exports = function(t) {
+        (t.exports = function (t) {
             return r[t] || (r[t] = s && i[t] || (s ? i : o)("Symbol." + t))
         }).store = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = {};
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
-            return Object.prototype.hasOwnProperty.call(t, m) || (t[m] = f++, p[t[m]] = {}), p[t[m]]
+            return Object.prototype.hasOwnProperty.call(t, m) || (t[m] = f++ , p[t[m]] = {}), p[t[m]]
         }
         var o, i = n(5),
             s = n(64),
@@ -2752,34 +2752,34 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             v = i({}, a, {
                 ReactEventListener: null,
                 injection: {
-                    injectReactEventListener: function(t) {
+                    injectReactEventListener: function (t) {
                         t.setHandleTopLevel(v.handleTopLevel), v.ReactEventListener = t
                     }
                 },
-                setEnabled: function(t) {
+                setEnabled: function (t) {
                     v.ReactEventListener && v.ReactEventListener.setEnabled(t)
                 },
-                isEnabled: function() {
+                isEnabled: function () {
                     return !(!v.ReactEventListener || !v.ReactEventListener.isEnabled())
                 },
-                listenTo: function(t, e) {
+                listenTo: function (t, e) {
                     for (var n = e, o = r(n), i = s.registrationNameDependencies[t], a = 0; a < i.length; a++) {
                         var c = i[a];
                         o.hasOwnProperty(c) && o[c] || ("topWheel" === c ? l("wheel") ? v.ReactEventListener.trapBubbledEvent("topWheel", "wheel", n) : l("mousewheel") ? v.ReactEventListener.trapBubbledEvent("topWheel", "mousewheel", n) : v.ReactEventListener.trapBubbledEvent("topWheel", "DOMMouseScroll", n) : "topScroll" === c ? l("scroll", !0) ? v.ReactEventListener.trapCapturedEvent("topScroll", "scroll", n) : v.ReactEventListener.trapBubbledEvent("topScroll", "scroll", v.ReactEventListener.WINDOW_HANDLE) : "topFocus" === c || "topBlur" === c ? (l("focus", !0) ? (v.ReactEventListener.trapCapturedEvent("topFocus", "focus", n), v.ReactEventListener.trapCapturedEvent("topBlur", "blur", n)) : l("focusin") && (v.ReactEventListener.trapBubbledEvent("topFocus", "focusin", n), v.ReactEventListener.trapBubbledEvent("topBlur", "focusout", n)), o.topBlur = !0, o.topFocus = !0) : d.hasOwnProperty(c) && v.ReactEventListener.trapBubbledEvent(c, d[c], n), o[c] = !0)
                     }
                 },
-                trapBubbledEvent: function(t, e, n) {
+                trapBubbledEvent: function (t, e, n) {
                     return v.ReactEventListener.trapBubbledEvent(t, e, n)
                 },
-                trapCapturedEvent: function(t, e, n) {
+                trapCapturedEvent: function (t, e, n) {
                     return v.ReactEventListener.trapCapturedEvent(t, e, n)
                 },
-                supportsEventPageXY: function() {
+                supportsEventPageXY: function () {
                     if (!document.createEvent) return !1;
                     var t = document.createEvent("MouseEvent");
                     return null != t && "pageX" in t
                 },
-                ensureScrollValueMonitoring: function() {
+                ensureScrollValueMonitoring: function () {
                     if (void 0 === o && (o = v.supportsEventPageXY()), !o && !h) {
                         var t = c.refreshScrollValues;
                         v.ReactEventListener.monitorScrollValue(t), h = !0
@@ -2787,7 +2787,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             });
         t.exports = v
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e, n, r) {
@@ -2806,36 +2806,36 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 altKey: null,
                 metaKey: null,
                 getModifierState: s,
-                button: function(t) {
+                button: function (t) {
                     var e = t.button;
                     return "which" in t ? e : 2 === e ? 2 : 4 === e ? 1 : 0
                 },
                 buttons: null,
-                relatedTarget: function(t) {
+                relatedTarget: function (t) {
                     return t.relatedTarget || (t.fromElement === t.srcElement ? t.toElement : t.fromElement)
                 },
-                pageX: function(t) {
+                pageX: function (t) {
                     return "pageX" in t ? t.pageX : t.clientX + i.currentScrollLeft
                 },
-                pageY: function(t) {
+                pageY: function (t) {
                     return "pageY" in t ? t.pageY : t.clientY + i.currentScrollTop
                 }
             };
         o.augmentClass(r, a), t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(4),
             o = (n(1), {}),
             i = {
-                reinitializeTransaction: function() {
+                reinitializeTransaction: function () {
                     this.transactionWrappers = this.getTransactionWrappers(), this.wrapperInitData ? this.wrapperInitData.length = 0 : this.wrapperInitData = [], this._isInTransaction = !1
                 },
                 _isInTransaction: !1,
                 getTransactionWrappers: null,
-                isInTransaction: function() {
+                isInTransaction: function () {
                     return !!this._isInTransaction
                 },
-                perform: function(t, e, n, o, i, s, a, c) {
+                perform: function (t, e, n, o, i, s, a, c) {
                     this.isInTransaction() && r("27");
                     var u, l;
                     try {
@@ -2844,14 +2844,14 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         try {
                             if (u) try {
                                 this.closeAll(0)
-                            } catch (t) {} else this.closeAll(0)
+                            } catch (t) { } else this.closeAll(0)
                         } finally {
                             this._isInTransaction = !1
                         }
                     }
                     return l
                 },
-                initializeAll: function(t) {
+                initializeAll: function (t) {
                     for (var e = this.transactionWrappers, n = t; n < e.length; n++) {
                         var r = e[n];
                         try {
@@ -2859,11 +2859,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         } finally {
                             if (this.wrapperInitData[n] === o) try {
                                 this.initializeAll(n + 1)
-                            } catch (t) {}
+                            } catch (t) { }
                         }
                     }
                 },
-                closeAll: function(t) {
+                closeAll: function (t) {
                     this.isInTransaction() || r("28");
                     for (var e = this.transactionWrappers, n = t; n < e.length; n++) {
                         var i, s = e[n],
@@ -2873,14 +2873,14 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         } finally {
                             if (i) try {
                                 this.closeAll(n + 1)
-                            } catch (t) {}
+                            } catch (t) { }
                         }
                     }
                     this.wrapperInitData.length = 0
                 }
             };
         t.exports = i
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -2920,14 +2920,14 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
         var i = /["'&<>]/;
         t.exports = o
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r, o = n(7),
             i = n(63),
             s = /^[ \r\n\t\f]/,
             a = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/,
             c = n(71),
-            u = c(function(t, e) {
+            u = c(function (t, e) {
                 if (t.namespaceURI !== i.svg || "innerHTML" in t) t.innerHTML = e;
                 else {
                     r = r || document.createElement("div"), r.innerHTML = "<svg>" + e + "</svg>";
@@ -2936,7 +2936,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             });
         if (o.canUseDOM) {
             var l = document.createElement("div");
-            l.innerHTML = " ", "" === l.innerHTML && (u = function(t, e) {
+            l.innerHTML = " ", "" === l.innerHTML && (u = function (t, e) {
                 if (t.parentNode && t.parentNode.replaceChild(t, t), s.test(e) || "<" === e[0] && a.test(e)) {
                     t.innerHTML = String.fromCharCode(65279) + e;
                     var n = t.firstChild;
@@ -2945,7 +2945,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             }), l = null
         }
         t.exports = u
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
@@ -2953,48 +2953,48 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         var r = n(355),
             o = n(134),
             i = n(356);
-        n.d(e, "Provider", function() {
+        n.d(e, "Provider", function () {
             return r.a
-        }), n.d(e, "createProvider", function() {
+        }), n.d(e, "createProvider", function () {
             return r.b
-        }), n.d(e, "connectAdvanced", function() {
+        }), n.d(e, "connectAdvanced", function () {
             return o.a
-        }), n.d(e, "connect", function() {
+        }), n.d(e, "connect", function () {
             return i.a
         })
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        var r = this && this.__extends || function(t, e) {
-                function n() {
-                    this.constructor = t
-                }
-                for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
-                t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
-            },
+        var r = this && this.__extends || function (t, e) {
+            function n() {
+                this.constructor = t
+            }
+            for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
+            t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        },
             o = n(0),
             i = n(158),
             s = n(50),
             a = n(168),
-            c = function(t) {
+            c = function (t) {
                 function e(e, n) {
                     t.call(this), this.array = e, this.scheduler = n, n || 1 !== e.length || (this._isScalar = !0, this.value = e[0])
                 }
-                return r(e, t), e.create = function(t, n) {
+                return r(e, t), e.create = function (t, n) {
                     return new e(t, n)
-                }, e.of = function() {
+                }, e.of = function () {
                     for (var t = [], n = 0; n < arguments.length; n++) t[n - 0] = arguments[n];
                     var r = t[t.length - 1];
                     a.isScheduler(r) ? t.pop() : r = null;
                     var o = t.length;
                     return o > 1 ? new e(t, r) : 1 === o ? new i.ScalarObservable(t[0], r) : new s.EmptyObservable(r)
-                }, e.dispatch = function(t) {
+                }, e.dispatch = function (t) {
                     var e = t.array,
                         n = t.index,
                         r = t.count,
                         o = t.subscriber;
                     if (n >= r) return void o.complete();
                     o.next(e[n]), o.closed || (t.index = n + 1, this.schedule(t))
-                }, e.prototype._subscribe = function(t) {
+                }, e.prototype._subscribe = function (t) {
                     var n = this.array,
                         r = n.length,
                         o = this.scheduler;
@@ -3009,25 +3009,25 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }, e
             }(o.Observable);
         e.ArrayObservable = c
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        var r = this && this.__extends || function(t, e) {
-                function n() {
-                    this.constructor = t
-                }
-                for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
-                t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
-            },
+        var r = this && this.__extends || function (t, e) {
+            function n() {
+                this.constructor = t
+            }
+            for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
+            t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        },
             o = n(0),
-            i = function(t) {
+            i = function (t) {
                 function e(e) {
                     t.call(this), this.scheduler = e
                 }
-                return r(e, t), e.create = function(t) {
+                return r(e, t), e.create = function (t) {
                     return new e(t)
-                }, e.dispatch = function(t) {
+                }, e.dispatch = function (t) {
                     t.subscriber.complete()
-                }, e.prototype._subscribe = function(t) {
+                }, e.prototype._subscribe = function (t) {
                     var n = this.scheduler;
                     if (n) return n.schedule(e.dispatch, 0, {
                         subscriber: t
@@ -3036,12 +3036,12 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }, e
             }(o.Observable);
         e.EmptyObservable = i
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        e.isArray = Array.isArray || function(t) {
+        e.isArray = Array.isArray || function (t) {
             return t && "number" == typeof t.length
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
@@ -3051,21 +3051,21 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             i = n(182),
             s = n(180),
             a = /\^application\/vnd\.microsoft\.card\./i;
-        e.queryParams = function(t) {
-            return t.substr(1).split("&").reduce(function(t, e) {
+        e.queryParams = function (t) {
+            return t.substr(1).split("&").reduce(function (t, e) {
                 var n = e.split("=");
                 return t[decodeURIComponent(n[0])] = decodeURIComponent(n[1]), t
             }, {})
         };
-        var c = function(t) {
-                return Object.keys(t).map(function(e) {
-                    return encodeURIComponent(e) + "=" + encodeURIComponent(t[e].toString())
-                }).join("&")
-            },
-            u = function(t) {
+        var c = function (t) {
+            return Object.keys(t).map(function (e) {
+                return encodeURIComponent(e) + "=" + encodeURIComponent(t[e].toString())
+            }).join("&")
+        },
+            u = function (t) {
                 return null != t && void 0 !== t
             },
-            l = function(t) {
+            l = function (t) {
                 return o.createElement("iframe", {
                     src: "https://youtube.com/embed/" + t.embedId + "?" + c({
                         modestbranding: "1",
@@ -3074,7 +3074,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     })
                 })
             },
-            p = function(t) {
+            p = function (t) {
                 return o.createElement("iframe", {
                     src: "https://player.vimeo.com/video/" + t.embedId + "?" + c({
                         title: "0",
@@ -3086,7 +3086,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     })
                 })
             },
-            h = function(t) {
+            h = function (t) {
                 var n = document.createElement("a");
                 n.href = t.src;
                 var i = e.queryParams(n.search),
@@ -3114,7 +3114,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         }, t))
                 }
             },
-            f = function(t) {
+            f = function (t) {
                 switch (t.type) {
                     case "video":
                         return o.createElement(h, r.__assign({}, t));
@@ -3133,18 +3133,18 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     target: "_blank"
                 }, t.name || t.format.strings.unknownFile.replace("%1", t.contentType))) : o.createElement("span", null, t.format.strings.unknownFile.replace("%1", t.contentType))
             },
-            m = function(t) {
+            m = function (t) {
                 return "gif" == t.slice(2 + (t.lastIndexOf(".") - 1 >>> 0)).toLowerCase() ? "image" : "video"
             };
-        e.AttachmentView = function(t) {
+        e.AttachmentView = function (t) {
             if (t.attachment) {
                 var e = t.attachment,
-                    n = function(e) {
-                        return e && function(n) {
+                    n = function (e) {
+                        return e && function (n) {
                             t.onCardAction(e.type, e.value), n.stopPropagation()
                         }
                     };
-                switch (e.contentType) {                    
+                switch (e.contentType) {
                     case "application/vnd.microsoft.card.hero":
                         //KSO CUSTER AREA
                         if (e.content.card_division == "play") {
@@ -3217,7 +3217,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                                 playAction(e.content.gesture);
                             }
 
-                            
+
                             //임시
                             if (e.content.buttons[0] != null) { //openUrl 없을때 처리
                                 if (e.content.buttons[0].value == '#') {
@@ -3237,7 +3237,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         }
 
 
-                        
+
                     case "application/vnd.microsoft.card.thumbnail":
                         if (!e.content) return null;
                         var a = new i.AdaptiveCardBuilder;
@@ -3311,40 +3311,40 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             weight: "bolder"
                         });
                         var p = l.addColumnSet([75, 25]);
-                        if (e.content.facts && e.content.facts.map(function(t, e) {
-                                l.addTextBlock(t.key, {
+                        if (e.content.facts && e.content.facts.map(function (t, e) {
+                            l.addTextBlock(t.key, {
+                                color: "default",
+                                size: "medium"
+                            }, p[0]), l.addTextBlock(t.value, {
+                                color: "default",
+                                size: "medium",
+                                horizontalAlignment: "right"
+                            }, p[1])
+                        }), e.content.items && e.content.items.map(function (t, e) {
+                            if (t.image) {
+                                var n = l.addColumnSet([15, 75, 10]);
+                                l.addImage(t.image.url, n[0]), l.addTextBlock(t.title, {
+                                    size: "medium",
+                                    weight: "bolder"
+                                }, n[1]), l.addTextBlock(t.subtitle, {
                                     color: "default",
                                     size: "medium"
-                                }, p[0]), l.addTextBlock(t.value, {
-                                    color: "default",
-                                    size: "medium",
+                                }, n[1]), l.addTextBlock(t.price, {
                                     horizontalAlignment: "right"
-                                }, p[1])
-                            }), e.content.items && e.content.items.map(function(t, e) {
-                                if (t.image) {
-                                    var n = l.addColumnSet([15, 75, 10]);
-                                    l.addImage(t.image.url, n[0]), l.addTextBlock(t.title, {
-                                        size: "medium",
-                                        weight: "bolder"
-                                    }, n[1]), l.addTextBlock(t.subtitle, {
-                                        color: "default",
-                                        size: "medium"
-                                    }, n[1]), l.addTextBlock(t.price, {
-                                        horizontalAlignment: "right"
-                                    }, n[2])
-                                } else {
-                                    var r = l.addColumnSet([75, 25]);
-                                    l.addTextBlock(t.title, {
-                                        size: "medium",
-                                        weight: "bolder"
-                                    }, r[0]), l.addTextBlock(t.subtitle, {
-                                        color: "default",
-                                        size: "medium"
-                                    }, r[0]), l.addTextBlock(t.price, {
-                                        horizontalAlignment: "right"
-                                    }, r[1])
-                                }
-                            }), u(e.content.vat)) {
+                                }, n[2])
+                            } else {
+                                var r = l.addColumnSet([75, 25]);
+                                l.addTextBlock(t.title, {
+                                    size: "medium",
+                                    weight: "bolder"
+                                }, r[0]), l.addTextBlock(t.subtitle, {
+                                    color: "default",
+                                    size: "medium"
+                                }, r[0]), l.addTextBlock(t.price, {
+                                    horizontalAlignment: "right"
+                                }, r[1])
+                            }
+                        }), u(e.content.vat)) {
                             var h = l.addColumnSet([75, 25]);
                             l.addTextBlock(t.format.strings.receiptVat, {
                                 size: "medium",
@@ -3390,7 +3390,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             className: "flex",
                             card: i.buildCommonCard(e.content),
                             onCardAction: t.onCardAction
-                        }, function(e) {
+                        }, function (e) {
                             return e && e.length > 0 && o.createElement(f, {
                                 src: e[0].url,
                                 onLoad: t.onImageLoad,
@@ -3429,9 +3429,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             }
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        var r = this && this.__rest || function(t, e) {
+        var r = this && this.__rest || function (t, e) {
             var n = {};
             for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && e.indexOf(r) < 0 && (n[r] = t[r]);
             if (null != t && "function" == typeof Object.getOwnPropertySymbols)
@@ -3445,23 +3445,23 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             i = n(0);
         n(152), n(394), n(395), n(153), n(154), n(155), n(156), n(157), n(397), n(398), n(399), n(388), n(150), n(389), n(391), n(151), n(393);
         var s;
-        ! function(t) {
+        ! function (t) {
             t[t.Uninitialized = 0] = "Uninitialized", t[t.Connecting = 1] = "Connecting", t[t.Online = 2] = "Online", t[t.ExpiredToken = 3] = "ExpiredToken", t[t.FailedToConnect = 4] = "FailedToConnect", t[t.Ended = 5] = "Ended"
         }(s = e.ConnectionStatus || (e.ConnectionStatus = {}));
         var a = new Error("expired token"),
             c = new Error("conversation ended"),
             u = new Error("failed to connect"),
             l = {
-                log: function(t) {
+                log: function (t) {
                     for (var e = [], n = 1; n < arguments.length; n++) e[n - 1] = arguments[n];
                     "undefined" != typeof window && window.botchatDebug && t && console.log.apply(console, [t].concat(e))
                 }
             },
-            p = function() {
+            p = function () {
                 function t(t) {
                     this.connectionStatus$ = new o.BehaviorSubject(s.Uninitialized), this.domain = "https://directline.botframework.com/v3/directline", this.watermark = "", this.pollingInterval = 1e3, this.secret = t.secret, this.token = t.secret || t.token, this.webSocket = (void 0 === t.webSocket || t.webSocket) && "undefined" != typeof WebSocket && void 0 !== WebSocket, t.domain && (this.domain = t.domain), t.conversationId && (this.conversationId = t.conversationId), t.watermark && (this.webSocket ? console.warn("Watermark was ignored: it is not supported using websockets at the moment") : this.watermark = t.watermark), t.streamUrl && (t.token && t.conversationId ? this.streamUrl = t.streamUrl : console.warn("streamUrl was ignored: you need to provide a token and a conversationid")), void 0 !== t.pollingInterval && (this.pollingInterval = t.pollingInterval), this.activity$ = (this.webSocket ? this.webSocketActivity$() : this.pollingGetActivity$()).share()
                 }
-                return t.prototype.checkConnection = function(t) {
+                return t.prototype.checkConnection = function (t) {
                     var e = this;
                     void 0 === t && (t = !1);
                     var n = this.connectionStatus$.flatMap(function (t) {
@@ -3470,22 +3470,22 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         //KSO ssoConnection
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
-                            || location.href == defaultUrl_pc
-                            || location.href == defaultUrl_m)) {
+                                || location.href == defaultUrl_pc
+                                || location.href == defaultUrl_m)) {
                             console.log("SSO Connect");
                             ssoConnection();
                             startFlag = 1;
                         }
-                        return t === s.Uninitialized ? (e.connectionStatus$.next(s.Connecting), e.token && e.streamUrl ? (e.connectionStatus$.next(s.Online), i.Observable.of(t)) : e.startConversation().do(function(t) {
+                        return t === s.Uninitialized ? (e.connectionStatus$.next(s.Connecting), e.token && e.streamUrl ? (e.connectionStatus$.next(s.Online), i.Observable.of(t)) : e.startConversation().do(function (t) {
                             e.conversationId = t.conversationId, e.token = e.secret || t.token, e.streamUrl = t.streamUrl, e.referenceGrammarId = t.referenceGrammarId, e.secret || e.refreshTokenLoop(), e.connectionStatus$.next(s.Online)
-                        }, function(t) {
+                        }, function (t) {
                             e.connectionStatus$.next(s.FailedToConnect)
-                        }).map(function(e) {
+                        }).map(function (e) {
                             return t
                         })) : i.Observable.of(t)
-                    }).filter(function(t) {
+                    }).filter(function (t) {
                         return t != s.Uninitialized && t != s.Connecting
-                    }).flatMap(function(t) {
+                    }).flatMap(function (t) {
                         switch (t) {
                             case s.Ended:
                                 return i.Observable.throw(c);
@@ -3498,10 +3498,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         }
                     });
                     return t ? n.take(1) : n
-                }, t.prototype.expiredToken = function() {
+                }, t.prototype.expiredToken = function () {
                     var t = this.connectionStatus$.getValue();
                     t != s.Ended && t != s.FailedToConnect && this.connectionStatus$.next(s.ExpiredToken)
-                }, t.prototype.startConversation = function() {
+                }, t.prototype.startConversation = function () {
                     var t = this.conversationId ? this.domain + "/conversations/" + this.conversationId + "?watermark=" + this.watermark : this.domain + "/conversations",
                         e = this.conversationId ? "GET" : "POST";
                     return i.Observable.ajax({
@@ -3512,23 +3512,23 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             Accept: "application/json",
                             Authorization: "Bearer " + this.token
                         }
-                    }).map(function(t) {
+                    }).map(function (t) {
                         return t.response
-                    }).retryWhen(function(t) {
-                        return t.mergeMap(function(t) {
+                    }).retryWhen(function (t) {
+                        return t.mergeMap(function (t) {
                             return t.status >= 400 && t.status < 600 ? i.Observable.throw(t) : i.Observable.of(t)
                         }).delay(2e4).take(45)
                     })
-                }, t.prototype.refreshTokenLoop = function() {
+                }, t.prototype.refreshTokenLoop = function () {
                     var t = this;
-                    this.tokenRefreshSubscription = i.Observable.interval(9e5).flatMap(function(e) {
+                    this.tokenRefreshSubscription = i.Observable.interval(9e5).flatMap(function (e) {
                         return t.refreshToken()
-                    }).subscribe(function(e) {
+                    }).subscribe(function (e) {
                         l.log("refreshing token", e, "at", new Date), t.token = e
                     })
-                }, t.prototype.refreshToken = function() {
+                }, t.prototype.refreshToken = function () {
                     var t = this;
-                    return this.checkConnection(!0).flatMap(function(e) {
+                    return this.checkConnection(!0).flatMap(function (e) {
                         return i.Observable.ajax({
                             method: "POST",
                             url: t.domain + "/tokens/refresh",
@@ -3536,21 +3536,21 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             headers: {
                                 Authorization: "Bearer " + t.token
                             }
-                        }).map(function(t) {
+                        }).map(function (t) {
                             return t.response.token
-                        }).retryWhen(function(e) {
-                            return e.mergeMap(function(e) {
+                        }).retryWhen(function (e) {
+                            return e.mergeMap(function (e) {
                                 return 403 === e.status ? (t.expiredToken(), i.Observable.throw(e)) : i.Observable.of(e)
                             }).delay(2e4).take(45)
                         })
                     })
-                }, t.prototype.reconnect = function(t) {
+                }, t.prototype.reconnect = function (t) {
                     this.token = t.token, this.streamUrl = t.streamUrl, this.connectionStatus$.getValue() === s.ExpiredToken && this.connectionStatus$.next(s.Online)
-                }, t.prototype.end = function() {
+                }, t.prototype.end = function () {
                     this.tokenRefreshSubscription && this.tokenRefreshSubscription.unsubscribe(), this.connectionStatus$.next(s.Ended)
-                }, t.prototype.postActivity = function(t) {
+                }, t.prototype.postActivity = function (t) {
                     var e = this;
-                    return "message" === t.type && t.attachments && t.attachments.length > 0 ? this.postMessageWithAttachments(t) : (l.log("postActivity", t), this.checkConnection(!0).flatMap(function(n) {
+                    return "message" === t.type && t.attachments && t.attachments.length > 0 ? this.postMessageWithAttachments(t) : (l.log("postActivity", t), this.checkConnection(!0).flatMap(function (n) {
                         return i.Observable.ajax({
                             method: "POST",
                             url: e.domain + "/conversations/" + e.conversationId + "/activities",
@@ -3560,33 +3560,33 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                                 "Content-Type": "application/json",
                                 Authorization: "Bearer " + e.token
                             }
-                        }).map(function(t) {
+                        }).map(function (t) {
                             return t.response.id
-                        }).catch(function(t) {
+                        }).catch(function (t) {
                             return e.catchPostError(t)
                         })
-                    }).catch(function(t) {
+                    }).catch(function (t) {
                         return e.catchExpiredToken(t)
                     }))
-                }, t.prototype.postMessageWithAttachments = function(t) {
+                }, t.prototype.postMessageWithAttachments = function (t) {
                     var e, n = this,
                         o = t.attachments,
                         s = r(t, ["attachments"]);
-                    return this.checkConnection(!0).flatMap(function(t) {
+                    return this.checkConnection(!0).flatMap(function (t) {
                         return e = new FormData, e.append("activity", new Blob([JSON.stringify(s)], {
                             type: "application/vnd.microsoft.activity"
-                        })), i.Observable.from(o || []).flatMap(function(t) {
+                        })), i.Observable.from(o || []).flatMap(function (t) {
                             return i.Observable.ajax({
                                 method: "GET",
                                 url: t.contentUrl,
                                 responseType: "arraybuffer"
-                            }).do(function(n) {
+                            }).do(function (n) {
                                 return e.append("file", new Blob([n.response], {
                                     type: t.contentType
                                 }), t.name)
                             })
                         }).count()
-                    }).flatMap(function(t) {
+                    }).flatMap(function (t) {
                         return i.Observable.ajax({
                             method: "POST",
                             url: n.domain + "/conversations/" + n.conversationId + "/upload?userId=" + s.from.id,
@@ -3595,15 +3595,15 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             headers: {
                                 Authorization: "Bearer " + n.token
                             }
-                        }).map(function(t) {
+                        }).map(function (t) {
                             return t.response.id
-                        }).catch(function(t) {
+                        }).catch(function (t) {
                             return n.catchPostError(t)
                         })
-                    }).catch(function(t) {
+                    }).catch(function (t) {
                         return n.catchPostError(t)
                     })
-                }, t.prototype.catchPostError = function(t) {
+                }, t.prototype.catchPostError = function (t) {
                     if (403 === t.status) this.expiredToken();
                     else if (t.status >= 400 && t.status < 500) return i.Observable.throw(t);
                     //KSO
@@ -3619,11 +3619,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     //    });
                     //}
                     return i.Observable.of("retry")
-                }, t.prototype.catchExpiredToken = function(t) {
+                }, t.prototype.catchExpiredToken = function (t) {
                     return t === a ? i.Observable.of("retry") : i.Observable.throw(t)
-                }, t.prototype.pollingGetActivity$ = function() {
+                }, t.prototype.pollingGetActivity$ = function () {
                     var t = this;
-                    return i.Observable.interval(this.pollingInterval).combineLatest(this.checkConnection()).flatMap(function(e) {
+                    return i.Observable.interval(this.pollingInterval).combineLatest(this.checkConnection()).flatMap(function (e) {
                         return i.Observable.ajax({
                             method: "GET",
                             url: t.domain + "/conversations/" + t.conversationId + "/activities?watermark=" + t.watermark,
@@ -3632,50 +3632,50 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                                 Accept: "application/json",
                                 Authorization: "Bearer " + t.token
                             }
-                        }).catch(function(e) {
+                        }).catch(function (e) {
                             return 403 === e.status && t.expiredToken(), i.Observable.empty()
-                        }).map(function(t) {
+                        }).map(function (t) {
                             return t.response
-                        }).flatMap(function(e) {
+                        }).flatMap(function (e) {
                             return t.observableFromActivityGroup(e)
                         })
-                    }).catch(function(t) {
+                    }).catch(function (t) {
                         return i.Observable.empty()
                     })
-                }, t.prototype.observableFromActivityGroup = function(t) {
+                }, t.prototype.observableFromActivityGroup = function (t) {
                     return t.watermark && (this.watermark = t.watermark), i.Observable.from(t.activities)
-                }, t.prototype.webSocketActivity$ = function() {
+                }, t.prototype.webSocketActivity$ = function () {
                     var t = this;
-                    return this.checkConnection().flatMap(function(e) {
-                        return t.observableWebSocket().retryWhen(function(e) {
-                            return e.mergeMap(function(e) {
+                    return this.checkConnection().flatMap(function (e) {
+                        return t.observableWebSocket().retryWhen(function (e) {
+                            return e.mergeMap(function (e) {
                                 return t.reconnectToConversation()
                             })
                         })
-                    }).flatMap(function(e) {
+                    }).flatMap(function (e) {
                         return t.observableFromActivityGroup(e)
                     })
-                }, t.prototype.observableWebSocket = function() {
+                }, t.prototype.observableWebSocket = function () {
                     var t = this;
-                    return i.Observable.create(function(e) {
+                    return i.Observable.create(function (e) {
                         l.log("creating WebSocket", t.streamUrl);
                         var n, r = new WebSocket(t.streamUrl);
-                        return r.onopen = function(t) {
-                                l.log("WebSocket open", t), n = i.Observable.interval(2e4).subscribe(function(t) {
-                                    return r.send(null)
-                                })
-                            }, r.onclose = function(t) {
-                                l.log("WebSocket close", t), n && n.unsubscribe(), e.error(t)
-                            }, r.onmessage = function(t) {
-                                return t.data && e.next(JSON.parse(t.data))
-                            },
-                            function() {
+                        return r.onopen = function (t) {
+                            l.log("WebSocket open", t), n = i.Observable.interval(2e4).subscribe(function (t) {
+                                return r.send(null)
+                            })
+                        }, r.onclose = function (t) {
+                            l.log("WebSocket close", t), n && n.unsubscribe(), e.error(t)
+                        }, r.onmessage = function (t) {
+                            return t.data && e.next(JSON.parse(t.data))
+                        },
+                            function () {
                                 0 !== r.readyState && 1 !== r.readyState || r.close()
                             }
                     })
-                }, t.prototype.reconnectToConversation = function() {
+                }, t.prototype.reconnectToConversation = function () {
                     var t = this;
-                    return this.checkConnection(!0).flatMap(function(e) {
+                    return this.checkConnection(!0).flatMap(function (e) {
                         return i.Observable.ajax({
                             method: "GET",
                             url: t.domain + "/conversations/" + t.conversationId + "?watermark=" + t.watermark,
@@ -3684,12 +3684,12 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                                 Accept: "application/json",
                                 Authorization: "Bearer " + t.token
                             }
-                        }).do(function(e) {
+                        }).do(function (e) {
                             t.secret || (t.token = e.response.token), t.streamUrl = e.response.streamUrl
-                        }).map(function(t) {
+                        }).map(function (t) {
                             return null
-                        }).retryWhen(function(e) {
-                            return e.mergeMap(function(e) {
+                        }).retryWhen(function (e) {
+                            return e.mergeMap(function (e) {
                                 return 403 === e.status && t.expiredToken(), i.Observable.of(e)
                             }).delay(2e4).take(45)
                         })
@@ -3697,26 +3697,26 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }, t
             }();
         e.DirectLine = p
-    }, function(t, e) {
+    }, function (t, e) {
         var n = {}.toString;
-        t.exports = function(t) {
+        t.exports = function (t) {
             return n.call(t).slice(8, -1)
         }
-    }, function(t, e, n) {
-        t.exports = !n(93)(function() {
+    }, function (t, e, n) {
+        t.exports = !n(93)(function () {
             return 7 != Object.defineProperty({}, "a", {
-                get: function() {
+                get: function () {
                     return 7
                 }
             }).a
         })
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         var r = n(30),
             o = n(90),
             i = n(57),
             s = n(203),
             a = n(91),
-            c = function(t, e, n) {
+            c = function (t, e, n) {
                 var u, l, p, h, f = t & c.F,
                     d = t & c.G,
                     m = t & c.S,
@@ -3729,15 +3729,15 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 for (u in n) l = !f && y && void 0 !== y[u], p = (l ? y : n)[u], h = g && l ? a(p, r) : v && "function" == typeof p ? a(Function.call, p) : p, y && s(y, u, p, t & c.U), b[u] != p && i(b, u, h), v && _[u] != p && (_[u] = p)
             };
         r.core = o, c.F = 1, c.G = 2, c.S = 4, c.P = 8, c.B = 16, c.W = 32, c.U = 64, c.R = 128, t.exports = c
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         var r = n(201),
             o = n(202);
-        t.exports = n(55) ? function(t, e, n) {
+        t.exports = n(55) ? function (t, e, n) {
             return r.f(t, e, o(1, n))
-        } : function(t, e, n) {
+        } : function (t, e, n) {
             return t[e] = n, t
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
@@ -3756,7 +3756,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
         var i = Object.prototype.hasOwnProperty;
         t.exports = o
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -3776,34 +3776,34 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             p = u.hasOwnProperty,
             h = l.call(Object);
         e.a = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r() {
             this.__rules__ = [], this.__cache__ = null
         }
-        r.prototype.__find__ = function(t) {
+        r.prototype.__find__ = function (t) {
             for (var e = 0; e < this.__rules__.length; e++)
                 if (this.__rules__[e].name === t) return e;
             return -1
-        }, r.prototype.__compile__ = function() {
+        }, r.prototype.__compile__ = function () {
             var t = this,
                 e = [""];
-            t.__rules__.forEach(function(t) {
-                t.enabled && t.alt.forEach(function(t) {
+            t.__rules__.forEach(function (t) {
+                t.enabled && t.alt.forEach(function (t) {
                     e.indexOf(t) < 0 && e.push(t)
                 })
-            }), t.__cache__ = {}, e.forEach(function(e) {
-                t.__cache__[e] = [], t.__rules__.forEach(function(n) {
+            }), t.__cache__ = {}, e.forEach(function (e) {
+                t.__cache__[e] = [], t.__rules__.forEach(function (n) {
                     n.enabled && (e && n.alt.indexOf(e) < 0 || t.__cache__[e].push(n.fn))
                 })
             })
-        }, r.prototype.at = function(t, e, n) {
+        }, r.prototype.at = function (t, e, n) {
             var r = this.__find__(t),
                 o = n || {};
             if (-1 === r) throw new Error("Parser rule not found: " + t);
             this.__rules__[r].fn = e, this.__rules__[r].alt = o.alt || [], this.__cache__ = null
-        }, r.prototype.before = function(t, e, n, r) {
+        }, r.prototype.before = function (t, e, n, r) {
             var o = this.__find__(t),
                 i = r || {};
             if (-1 === o) throw new Error("Parser rule not found: " + t);
@@ -3813,7 +3813,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 fn: n,
                 alt: i.alt || []
             }), this.__cache__ = null
-        }, r.prototype.after = function(t, e, n, r) {
+        }, r.prototype.after = function (t, e, n, r) {
             var o = this.__find__(t),
                 i = r || {};
             if (-1 === o) throw new Error("Parser rule not found: " + t);
@@ -3823,7 +3823,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 fn: n,
                 alt: i.alt || []
             }), this.__cache__ = null
-        }, r.prototype.push = function(t, e, n) {
+        }, r.prototype.push = function (t, e, n) {
             var r = n || {};
             this.__rules__.push({
                 name: t,
@@ -3831,10 +3831,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 fn: e,
                 alt: r.alt || []
             }), this.__cache__ = null
-        }, r.prototype.enable = function(t, e) {
+        }, r.prototype.enable = function (t, e) {
             Array.isArray(t) || (t = [t]);
             var n = [];
-            return t.forEach(function(t) {
+            return t.forEach(function (t) {
                 var r = this.__find__(t);
                 if (r < 0) {
                     if (e) return;
@@ -3842,14 +3842,14 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
                 this.__rules__[r].enabled = !0, n.push(t)
             }, this), this.__cache__ = null, n
-        }, r.prototype.enableOnly = function(t, e) {
-            Array.isArray(t) || (t = [t]), this.__rules__.forEach(function(t) {
+        }, r.prototype.enableOnly = function (t, e) {
+            Array.isArray(t) || (t = [t]), this.__rules__.forEach(function (t) {
                 t.enabled = !1
             }), this.enable(t, e)
-        }, r.prototype.disable = function(t, e) {
+        }, r.prototype.disable = function (t, e) {
             Array.isArray(t) || (t = [t]);
             var n = [];
-            return t.forEach(function(t) {
+            return t.forEach(function (t) {
                 var r = this.__find__(t);
                 if (r < 0) {
                     if (e) return;
@@ -3857,36 +3857,36 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
                 this.__rules__[r].enabled = !1, n.push(t)
             }, this), this.__cache__ = null, n
-        }, r.prototype.getRules = function(t) {
+        }, r.prototype.getRules = function (t) {
             return null === this.__cache__ && this.__compile__(), this.__cache__[t] || []
         }, t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e, n) {
             this.type = t, this.tag = e, this.attrs = null, this.map = null, this.nesting = n, this.level = 0, this.children = null, this.content = "", this.markup = "", this.info = "", this.meta = null, this.block = !1, this.hidden = !1
         }
-        r.prototype.attrIndex = function(t) {
+        r.prototype.attrIndex = function (t) {
             var e, n, r;
             if (!this.attrs) return -1;
             for (e = this.attrs, n = 0, r = e.length; n < r; n++)
                 if (e[n][0] === t) return n;
             return -1
-        }, r.prototype.attrPush = function(t) {
+        }, r.prototype.attrPush = function (t) {
             this.attrs ? this.attrs.push(t) : this.attrs = [t]
-        }, r.prototype.attrSet = function(t, e) {
+        }, r.prototype.attrSet = function (t, e) {
             var n = this.attrIndex(t),
                 r = [t, e];
             n < 0 ? this.attrPush(r) : this.attrs[n] = r
-        }, r.prototype.attrGet = function(t) {
+        }, r.prototype.attrGet = function (t) {
             var e = this.attrIndex(t),
                 n = null;
             return e >= 0 && (n = this.attrs[e][1]), n
-        }, r.prototype.attrJoin = function(t, e) {
+        }, r.prototype.attrJoin = function (t, e) {
             var n = this.attrIndex(t);
             n < 0 ? this.attrPush([t, e]) : this.attrs[n][1] = this.attrs[n][1] + " " + e
         }, t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
@@ -3910,7 +3910,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
 
         function a(t, e, n, r) {
-            for (var o = e;;) {
+            for (var o = e; ;) {
                 var i = o.nextSibling;
                 if (m(t, o, r), o === n) break;
                 o = i
@@ -3918,7 +3918,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
 
         function c(t, e, n) {
-            for (;;) {
+            for (; ;) {
                 var r = e.nextSibling;
                 if (r === n) break;
                 t.removeChild(r)
@@ -3935,14 +3935,14 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             h = (n(6), n(12), n(71)),
             f = n(47),
             d = n(132),
-            m = h(function(t, e, n) {
+            m = h(function (t, e, n) {
                 t.insertBefore(e, n)
             }),
             v = p.dangerouslyReplaceNodeWithMarkup,
             g = {
                 dangerouslyReplaceNodeWithMarkup: v,
                 replaceDelimitedText: u,
-                processUpdates: function(t, e) {
+                processUpdates: function (t, e) {
                     for (var n = 0; n < e.length; n++) {
                         var a = e[n];
                         switch (a.type) {
@@ -3965,7 +3965,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             };
         t.exports = g
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = {
             html: "http://www.w3.org/1999/xhtml",
@@ -3973,7 +3973,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             svg: "http://www.w3.org/2000/svg"
         };
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r() {
@@ -4015,10 +4015,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 registrationNameModules: {},
                 registrationNameDependencies: {},
                 possibleRegistrationNames: null,
-                injectEventPluginOrder: function(t) {
+                injectEventPluginOrder: function (t) {
                     a && s("101"), a = Array.prototype.slice.call(t), r()
                 },
-                injectEventPluginsByName: function(t) {
+                injectEventPluginsByName: function (t) {
                     var e = !1;
                     for (var n in t)
                         if (t.hasOwnProperty(n)) {
@@ -4027,7 +4027,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         }
                     e && r()
                 },
-                getPluginModuleForEvent: function(t) {
+                getPluginModuleForEvent: function (t) {
                     var e = t.dispatchConfig;
                     if (e.registrationName) return u.registrationNameModules[e.registrationName] || null;
                     if (void 0 !== e.phasedRegistrationNames) {
@@ -4040,7 +4040,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     }
                     return null
                 },
-                _resetEventPlugins: function() {
+                _resetEventPlugins: function () {
                     a = null;
                     for (var t in c) c.hasOwnProperty(t) && delete c[t];
                     u.plugins.length = 0;
@@ -4051,7 +4051,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             };
         t.exports = u
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -4109,10 +4109,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         var h, f, d = n(4),
             m = n(69),
             v = (n(1), n(3), {
-                injectComponentTree: function(t) {
+                injectComponentTree: function (t) {
                     h = t
                 },
-                injectTreeTraversal: function(t) {
+                injectTreeTraversal: function (t) {
                     f = t
                 }
             }),
@@ -4124,31 +4124,31 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 executeDispatchesInOrder: a,
                 executeDispatchesInOrderStopAtTrue: u,
                 hasDispatches: p,
-                getInstanceFromNode: function(t) {
+                getInstanceFromNode: function (t) {
                     return h.getInstanceFromNode(t)
                 },
-                getNodeFromInstance: function(t) {
+                getNodeFromInstance: function (t) {
                     return h.getNodeFromInstance(t)
                 },
-                isAncestor: function(t, e) {
+                isAncestor: function (t, e) {
                     return f.isAncestor(t, e)
                 },
-                getLowestCommonAncestor: function(t, e) {
+                getLowestCommonAncestor: function (t, e) {
                     return f.getLowestCommonAncestor(t, e)
                 },
-                getParentInstance: function(t) {
+                getParentInstance: function (t) {
                     return f.getParentInstance(t)
                 },
-                traverseTwoPhase: function(t, e, n) {
+                traverseTwoPhase: function (t, e, n) {
                     return f.traverseTwoPhase(t, e, n)
                 },
-                traverseEnterLeave: function(t, e, n, r, o) {
+                traverseEnterLeave: function (t, e, n, r, o) {
                     return f.traverseEnterLeave(t, e, n, r, o)
                 },
                 injection: v
             };
         t.exports = g
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -4156,7 +4156,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 "=": "=0",
                 ":": "=2"
             };
-            return "$" + ("" + t).replace(/[=:]/g, function(t) {
+            return "$" + ("" + t).replace(/[=:]/g, function (t) {
                 return e[t]
             })
         }
@@ -4167,7 +4167,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     "=0": "=",
                     "=2": ":"
                 };
-            return ("" + ("." === t[0] && "$" === t[1] ? t.substring(2) : t.substring(1))).replace(e, function(t) {
+            return ("" + ("." === t[0] && "$" === t[1] ? t.substring(2) : t.substring(1))).replace(e, function (t) {
                 return n[t]
             })
         }
@@ -4176,7 +4176,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             unescape: o
         };
         t.exports = i
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -4213,17 +4213,17 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 submit: !0
             }),
             f = {
-                value: function(t, e, n) {
+                value: function (t, e, n) {
                     return !t[e] || h[t.type] || t.onChange || t.readOnly || t.disabled ? null : new Error("You provided a `value` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultValue`. Otherwise, set either `onChange` or `readOnly`.")
                 },
-                checked: function(t, e, n) {
+                checked: function (t, e, n) {
                     return !t[e] || t.onChange || t.readOnly || t.disabled ? null : new Error("You provided a `checked` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultChecked`. Otherwise, set either `onChange` or `readOnly`.")
                 },
                 onChange: p.func
             },
             d = {},
             m = {
-                checkPropTypes: function(t, e, n) {
+                checkPropTypes: function (t, e, n) {
                     for (var r in f) {
                         if (f.hasOwnProperty(r)) var o = f[r](e, r, t, "prop", null, c);
                         if (o instanceof Error && !(o.message in d)) {
@@ -4232,18 +4232,18 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         }
                     }
                 },
-                getValue: function(t) {
+                getValue: function (t) {
                     return t.valueLink ? (o(t), t.valueLink.value) : t.value
                 },
-                getChecked: function(t) {
+                getChecked: function (t) {
                     return t.checkedLink ? (i(t), t.checkedLink.value) : t.checked
                 },
-                executeOnChange: function(t, e) {
+                executeOnChange: function (t, e) {
                     return t.valueLink ? (o(t), t.valueLink.requestChange(e.target.value)) : t.checkedLink ? (i(t), t.checkedLink.requestChange(e.target.checked)) : t.onChange ? t.onChange.call(void 0, e) : void 0
                 }
             };
         t.exports = m
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(4),
             o = (n(1), !1),
@@ -4251,13 +4251,13 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 replaceNodeWithMarkup: null,
                 processChildrenUpdates: null,
                 injection: {
-                    injectEnvironment: function(t) {
+                    injectEnvironment: function (t) {
                         o && r("104"), i.replaceNodeWithMarkup = t.replaceNodeWithMarkup, i.processChildrenUpdates = t.processChildrenUpdates, o = !0
                     }
                 }
             };
         t.exports = i
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e, n) {
@@ -4271,7 +4271,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             i = {
                 invokeGuardedCallback: r,
                 invokeGuardedCallbackWithCatch: r,
-                rethrowCaughtError: function() {
+                rethrowCaughtError: function () {
                     if (o) {
                         var t = o;
                         throw o = null, t
@@ -4279,7 +4279,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             };
         t.exports = i
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -4305,52 +4305,52 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             a = (n(15), n(34)),
             c = (n(12), n(13)),
             u = (n(1), n(3), {
-                isMounted: function(t) {
+                isMounted: function (t) {
                     var e = a.get(t);
                     return !!e && !!e._renderedComponent
                 },
-                enqueueCallback: function(t, e, n) {
+                enqueueCallback: function (t, e, n) {
                     u.validateCallback(e, n);
                     var o = i(t);
                     if (!o) return null;
                     o._pendingCallbacks ? o._pendingCallbacks.push(e) : o._pendingCallbacks = [e], r(o)
                 },
-                enqueueCallbackInternal: function(t, e) {
+                enqueueCallbackInternal: function (t, e) {
                     t._pendingCallbacks ? t._pendingCallbacks.push(e) : t._pendingCallbacks = [e], r(t)
                 },
-                enqueueForceUpdate: function(t) {
+                enqueueForceUpdate: function (t) {
                     var e = i(t, "forceUpdate");
                     e && (e._pendingForceUpdate = !0, r(e))
                 },
-                enqueueReplaceState: function(t, e, n) {
+                enqueueReplaceState: function (t, e, n) {
                     var o = i(t, "replaceState");
                     o && (o._pendingStateQueue = [e], o._pendingReplaceState = !0, void 0 !== n && null !== n && (u.validateCallback(n, "replaceState"), o._pendingCallbacks ? o._pendingCallbacks.push(n) : o._pendingCallbacks = [n]), r(o))
                 },
-                enqueueSetState: function(t, e) {
+                enqueueSetState: function (t, e) {
                     var n = i(t, "setState");
                     if (n) {
                         (n._pendingStateQueue || (n._pendingStateQueue = [])).push(e), r(n)
                     }
                 },
-                enqueueElementInternal: function(t, e, n) {
+                enqueueElementInternal: function (t, e, n) {
                     t._pendingElement = e, t._context = n, r(t)
                 },
-                validateCallback: function(t, e) {
+                validateCallback: function (t, e) {
                     t && "function" != typeof t && s("122", e, o(t))
                 }
             });
         t.exports = u
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        var r = function(t) {
-            return "undefined" != typeof MSApp && MSApp.execUnsafeLocalFunction ? function(e, n, r, o) {
-                MSApp.execUnsafeLocalFunction(function() {
+        var r = function (t) {
+            return "undefined" != typeof MSApp && MSApp.execUnsafeLocalFunction ? function (e, n, r, o) {
+                MSApp.execUnsafeLocalFunction(function () {
                     return t(e, n, r, o)
                 })
             } : t
         };
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -4358,7 +4358,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             return "charCode" in t ? 0 === (e = t.charCode) && 13 === n && (e = 13) : e = n, e >= 32 || 13 === e ? e : 0
         }
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -4379,7 +4379,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             Shift: "shiftKey"
         };
         t.exports = o
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -4387,7 +4387,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             return e.correspondingUseElement && (e = e.correspondingUseElement), 3 === e.nodeType ? e.parentNode : e
         }
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         /**
          * Checks if an event is supported in the current execution environment.
@@ -4415,7 +4415,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
         var o, i = n(7);
         i.canUseDOM && (o = document.implementation && document.implementation.hasFeature && !0 !== document.implementation.hasFeature("", "")), t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
@@ -4427,22 +4427,22 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             return "string" === o || "number" === o ? "string" === i || "number" === i : "object" === i && t.type === e.type && t.key === e.key
         }
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = (n(5), n(10)),
             o = (n(3), r);
         t.exports = o
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
             "undefined" != typeof console && "function" == typeof console.error && console.error(t);
             try {
                 throw new Error(t)
-            } catch (t) {}
+            } catch (t) { }
         }
         e.a = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
@@ -4453,47 +4453,47 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             s = n(379),
             a = n(145);
         n(147);
-        n.d(e, "createStore", function() {
+        n.d(e, "createStore", function () {
             return r.b
-        }), n.d(e, "combineReducers", function() {
+        }), n.d(e, "combineReducers", function () {
             return o.a
-        }), n.d(e, "bindActionCreators", function() {
+        }), n.d(e, "bindActionCreators", function () {
             return i.a
-        }), n.d(e, "applyMiddleware", function() {
+        }), n.d(e, "applyMiddleware", function () {
             return s.a
-        }), n.d(e, "compose", function() {
+        }), n.d(e, "compose", function () {
             return a.a
         })
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
             if ("function" != typeof t) throw new TypeError("argument is not a function. Are you looking for `mapTo()`?");
             return this.lift(new s(t, e))
         }
-        var o = this && this.__extends || function(t, e) {
-                function n() {
-                    this.constructor = t
-                }
-                for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
-                t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
-            },
+        var o = this && this.__extends || function (t, e) {
+            function n() {
+                this.constructor = t
+            }
+            for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
+            t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        },
             i = n(8);
         e.map = r;
-        var s = function() {
+        var s = function () {
             function t(t, e) {
                 this.project = t, this.thisArg = e
             }
-            return t.prototype.call = function(t, e) {
+            return t.prototype.call = function (t, e) {
                 return e.subscribe(new a(t, this.project, this.thisArg))
             }, t
         }();
         e.MapOperator = s;
-        var a = function(t) {
+        var a = function (t) {
             function e(e, n, r) {
                 t.call(this, e), this.project = n, this.count = 0, this.thisArg = r || this
             }
-            return o(e, t), e.prototype._next = function(t) {
+            return o(e, t), e.prototype._next = function (t) {
                 var e;
                 try {
                     e = this.project.call(this.thisArg, t, this.count++)
@@ -4503,19 +4503,19 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 this.destination.next(e)
             }, e
         }(i.Subscriber)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(434),
             o = n(435);
         e.async = new o.AsyncScheduler(r.AsyncAction)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
             var e = t.Symbol;
             if ("function" == typeof e) return e.iterator || (e.iterator = e("iterator polyfill")), e.iterator;
             var n = t.Set;
-            if (n && "function" == typeof(new n)["@@iterator"]) return "@@iterator";
+            if (n && "function" == typeof (new n)["@@iterator"]) return "@@iterator";
             var r = t.Map;
             if (r)
                 for (var o = Object.getOwnPropertyNames(r.prototype), i = 0; i < o.length; ++i) {
@@ -4526,7 +4526,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
         var o = n(16);
         e.symbolIteratorPonyfill = r, e.iterator = r(o.root), e.$$iterator = e.iterator
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -4535,21 +4535,21 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
         var o = n(16);
         e.getSymbolObservable = r, e.observable = r(o.root), e.$$observable = e.observable
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(16),
             o = r.root.Symbol;
         e.rxSubscriber = "function" == typeof o && "function" == typeof o.for ? o.for("rxSubscriber") : "@@rxSubscriber", e.$$rxSubscriber = e.rxSubscriber
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
             return "function" == typeof t
         }
         e.isFunction = r
-    }, function(t, e) {
+    }, function (t, e) {
         t.exports = /[!-#%-\*,-\/:;\?@\[-\]_\{\}\xA1\xA7\xAB\xB6\xB7\xBB\xBF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u0AF0\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166D\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2308-\u230B\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E44\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA8FC\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]|\uD800[\uDD00-\uDD02\uDF9F\uDFD0]|\uD801\uDD6F|\uD802[\uDC57\uDD1F\uDD3F\uDE50-\uDE58\uDE7F\uDEF0-\uDEF6\uDF39-\uDF3F\uDF99-\uDF9C]|\uD804[\uDC47-\uDC4D\uDCBB\uDCBC\uDCBE-\uDCC1\uDD40-\uDD43\uDD74\uDD75\uDDC5-\uDDC9\uDDCD\uDDDB\uDDDD-\uDDDF\uDE38-\uDE3D\uDEA9]|\uD805[\uDC4B-\uDC4F\uDC5B\uDC5D\uDCC6\uDDC1-\uDDD7\uDE41-\uDE43\uDE60-\uDE6C\uDF3C-\uDF3E]|\uD807[\uDC41-\uDC45\uDC70\uDC71]|\uD809[\uDC70-\uDC74]|\uD81A[\uDE6E\uDE6F\uDEF5\uDF37-\uDF3B\uDF44]|\uD82F\uDC9F|\uD836[\uDE87-\uDE8B]|\uD83A[\uDD5E\uDD5F]/
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
@@ -4558,56 +4558,56 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             o = n(9),
             i = n(0);
         n(390), n(392);
-        var s = function(t) {
+        var s = function (t) {
             function e(e) {
                 return t.call(this, e) || this
             }
-            return r.__extends(e, t), e.prototype.clearScrollTimers = function() {
+            return r.__extends(e, t), e.prototype.clearScrollTimers = function () {
                 clearInterval(this.scrollStartTimer), clearInterval(this.scrollSyncTimer), clearTimeout(this.scrollDurationTimer), document.body.removeChild(this.animateDiv), this.animateDiv = null, this.scrollStartTimer = null, this.scrollSyncTimer = null, this.scrollDurationTimer = null
-            }, e.prototype.updateScrollButtons = function() {
+            }, e.prototype.updateScrollButtons = function () {
                 this.prevButton.disabled = !this.scrollDiv || Math.round(this.scrollDiv.scrollLeft) <= 0, this.nextButton.disabled = !this.scrollDiv || Math.round(this.scrollDiv.scrollLeft) >= Math.round(this.scrollDiv.scrollWidth - this.scrollDiv.offsetWidth)
-            }, e.prototype.componentDidMount = function() {
+            }, e.prototype.componentDidMount = function () {
                 var t = this;
-                this.scrollDiv.style.marginBottom = -(this.scrollDiv.offsetHeight - this.scrollDiv.clientHeight) + "px", this.scrollSubscription = i.Observable.fromEvent(this.scrollDiv, "scroll").subscribe(function(e) {
+                this.scrollDiv.style.marginBottom = -(this.scrollDiv.offsetHeight - this.scrollDiv.clientHeight) + "px", this.scrollSubscription = i.Observable.fromEvent(this.scrollDiv, "scroll").subscribe(function (e) {
                     t.updateScrollButtons()
-                }), this.clickSubscription = i.Observable.merge(i.Observable.fromEvent(this.prevButton, "click").map(function(t) {
+                }), this.clickSubscription = i.Observable.merge(i.Observable.fromEvent(this.prevButton, "click").map(function (t) {
                     return -1
-                }), i.Observable.fromEvent(this.nextButton, "click").map(function(t) {
+                }), i.Observable.fromEvent(this.nextButton, "click").map(function (t) {
                     return 1
-                })).subscribe(function(e) {
+                })).subscribe(function (e) {
                     t.scrollBy(e)
                 }), this.updateScrollButtons()
-            }, e.prototype.componentDidUpdate = function() {
+            }, e.prototype.componentDidUpdate = function () {
                 this.scrollDiv.scrollLeft = 0, this.updateScrollButtons()
-            }, e.prototype.componentWillUnmount = function() {
+            }, e.prototype.componentWillUnmount = function () {
                 this.scrollSubscription.unsubscribe(), this.clickSubscription.unsubscribe()
-            }, e.prototype.scrollAmount = function(t) {
+            }, e.prototype.scrollAmount = function (t) {
                 if ("item" == this.props.scrollUnit) {
                     var e = this.scrollDiv.querySelector("ul > li");
                     return e ? t * e.offsetWidth : 0
                 }
                 return t * (this.scrollDiv.offsetWidth - 70)
-            }, e.prototype.scrollBy = function(t) {
+            }, e.prototype.scrollBy = function (t) {
                 var e = this,
                     n = "wc-animate-scroll";
                 this.animateDiv && (n = "wc-animate-scroll-rapid", this.clearScrollTimers());
                 var r = this.scrollAmount(t),
                     o = this.scrollDiv.scrollLeft,
                     i = o + r;
-                i = Math.max(i, 0), i = Math.min(i, this.scrollDiv.scrollWidth - this.scrollDiv.offsetWidth), o != i && (Math.abs(i - o) < 60 && (n = "wc-animate-scroll-near"), this.animateDiv = document.createElement("div"), this.animateDiv.className = n, this.animateDiv.style.left = o + "px", document.body.appendChild(this.animateDiv), this.scrollSyncTimer = window.setInterval(function() {
+                i = Math.max(i, 0), i = Math.min(i, this.scrollDiv.scrollWidth - this.scrollDiv.offsetWidth), o != i && (Math.abs(i - o) < 60 && (n = "wc-animate-scroll-near"), this.animateDiv = document.createElement("div"), this.animateDiv.className = n, this.animateDiv.style.left = o + "px", document.body.appendChild(this.animateDiv), this.scrollSyncTimer = window.setInterval(function () {
                     var t = parseFloat(getComputedStyle(e.animateDiv).left);
                     e.scrollDiv.scrollLeft = t
-                }, 1), this.scrollStartTimer = window.setTimeout(function() {
+                }, 1), this.scrollStartTimer = window.setTimeout(function () {
                     e.animateDiv.style.left = i + "px";
                     var t = 1e3 * parseFloat(getComputedStyle(e.animateDiv).transitionDuration);
-                    t ? (t += 50, e.scrollDurationTimer = window.setTimeout(function() {
+                    t ? (t += 50, e.scrollDurationTimer = window.setTimeout(function () {
                         return e.clearScrollTimers()
                     }, t)) : e.clearScrollTimers()
                 }, 1))
-            }, e.prototype.render = function() {
+            }, e.prototype.render = function () {
                 var t = this;
                 return o.createElement("div", null, o.createElement("button", {
-                    ref: function(e) {
+                    ref: function (e) {
                         return t.prevButton = e
                     },
                     className: "scroll previous",
@@ -4618,11 +4618,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     className: "wc-hscroll-outer"
                 }, o.createElement("div", {
                     className: "wc-hscroll",
-                    ref: function(e) {
+                    ref: function (e) {
                         return t.scrollDiv = e
                     }
                 }, this.props.children)), o.createElement("button", {
-                    ref: function(e) {
+                    ref: function (e) {
                         return t.nextButton = e
                     },
                     className: "scroll next",
@@ -4633,19 +4633,19 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             }, e
         }(o.Component);
         e.HScroll = s
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         var r = n(41)("unscopables"),
             o = Array.prototype;
-        void 0 == o[r] && n(57)(o, r, {}), t.exports = function(t) {
+        void 0 == o[r] && n(57)(o, r, {}), t.exports = function (t) {
             o[r][t] = !0
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         var r = n(91),
             o = n(198),
             i = n(207),
             s = n(94),
             a = n(193);
-        t.exports = function(t, e) {
+        t.exports = function (t, e) {
             var n = 1 == t,
                 c = 2 == t,
                 u = 3 == t,
@@ -4653,112 +4653,112 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 p = 6 == t,
                 h = 5 == t || p,
                 f = e || a;
-            return function(e, a, d) {
+            return function (e, a, d) {
                 for (var m, v, g = i(e), y = o(g), b = r(a, d, 3), _ = s(y.length), C = 0, w = n ? f(e, _) : c ? f(e, 0) : void 0; _ > C; C++)
                     if ((h || C in y) && (m = y[C], v = b(m, C, g), t))
                         if (n) w[C] = v;
                         else if (v) switch (t) {
-                    case 3:
-                        return !0;
-                    case 5:
-                        return m;
-                    case 6:
-                        return C;
-                    case 2:
-                        w.push(m)
-                } else if (l) return !1;
+                            case 3:
+                                return !0;
+                            case 5:
+                                return m;
+                            case 6:
+                                return C;
+                            case 2:
+                                w.push(m)
+                        } else if (l) return !1;
                 return p ? -1 : u || l ? l : w
             }
         }
-    }, function(t, e) {
+    }, function (t, e) {
         var n = t.exports = {
             version: "2.4.0"
         };
         "number" == typeof __e && (__e = n)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         var r = n(190);
-        t.exports = function(t, e, n) {
+        t.exports = function (t, e, n) {
             if (r(t), void 0 === e) return t;
             switch (n) {
                 case 1:
-                    return function(n) {
+                    return function (n) {
                         return t.call(e, n)
                     };
                 case 2:
-                    return function(n, r) {
+                    return function (n, r) {
                         return t.call(e, n, r)
                     };
                 case 3:
-                    return function(n, r, o) {
+                    return function (n, r, o) {
                         return t.call(e, n, r, o)
                     }
             }
-            return function() {
+            return function () {
                 return t.apply(e, arguments)
             }
         }
-    }, function(t, e) {
-        t.exports = function(t) {
+    }, function (t, e) {
+        t.exports = function (t) {
             if (void 0 == t) throw TypeError("Can't call method on  " + t);
             return t
         }
-    }, function(t, e) {
-        t.exports = function(t) {
+    }, function (t, e) {
+        t.exports = function (t) {
             try {
                 return !!t()
             } catch (t) {
                 return !0
             }
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         var r = n(206),
             o = Math.min;
-        t.exports = function(t) {
+        t.exports = function (t) {
             return t > 0 ? o(r(t), 9007199254740991) : 0
         }
-    }, function(t, e) {
+    }, function (t, e) {
         var n = 0,
             r = Math.random();
-        t.exports = function(t) {
+        t.exports = function (t) {
             return "Symbol(".concat(void 0 === t ? "" : t, ")_", (++n + r).toString(36))
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(10),
             o = {
-                listen: function(t, e, n) {
+                listen: function (t, e, n) {
                     return t.addEventListener ? (t.addEventListener(e, n, !1), {
-                        remove: function() {
+                        remove: function () {
                             t.removeEventListener(e, n, !1)
                         }
                     }) : t.attachEvent ? (t.attachEvent("on" + e, n), {
-                        remove: function() {
+                        remove: function () {
                             t.detachEvent("on" + e, n)
                         }
                     }) : void 0
                 },
-                capture: function(t, e, n) {
+                capture: function (t, e, n) {
                     return t.addEventListener ? (t.addEventListener(e, n, !0), {
-                        remove: function() {
+                        remove: function () {
                             t.removeEventListener(e, n, !0)
                         }
                     }) : {
-                        remove: r
-                    }
+                            remove: r
+                        }
                 },
-                registerDefault: function() {}
+                registerDefault: function () { }
             };
         t.exports = o
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
             try {
                 t.focus()
-            } catch (t) {}
+            } catch (t) { }
         }
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -4770,27 +4770,27 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             }
         }
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(234),
             o = r.a.Symbol;
         e.a = o
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         t.exports = n(241)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         t.exports = n(210)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = "<[A-Za-z][A-Za-z0-9\\-]*(?:\\s+[a-zA-Z_:][a-zA-Z0-9:._-]*(?:\\s*=\\s*(?:[^\"'=<>`\\x00-\\x20]+|'[^']*'|\"[^\"]*\"))?)*\\s*\\/?>",
             o = "<\\/[A-Za-z][A-Za-z0-9\\-]*\\s*>",
             i = new RegExp("^(?:" + r + "|" + o + "|\x3c!----\x3e|\x3c!--(?:-?[^>-])(?:-?[^-])*--\x3e|<[?].*?[?]>|<![A-Z]+\\s+[^>]*>|<!\\[CDATA\\[[\\s\\S]*?\\]\\]>)"),
             s = new RegExp("^(?:" + r + "|" + o + ")");
         t.exports.HTML_TAG_RE = i, t.exports.HTML_OPEN_CLOSE_TAG_RE = s
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        t.exports.tokenize = function(t, e) {
+        t.exports.tokenize = function (t, e) {
             var n, r, o, i = t.pos,
                 s = t.src.charCodeAt(i);
             if (e) return !1;
@@ -4806,14 +4806,14 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 close: r.can_close
             });
             return t.pos += r.length, !0
-        }, t.exports.postProcess = function(t) {
+        }, t.exports.postProcess = function (t) {
             var e, n, r, o, i, s, a = t.delimiters,
                 c = t.delimiters.length;
             for (e = 0; e < c; e++) n = a[e], 95 !== n.marker && 42 !== n.marker || -1 !== n.end && (r = a[n.end], s = e + 1 < c && a[e + 1].end === n.end - 1 && a[e + 1].token === n.token + 1 && a[n.end - 1].token === r.token - 1 && a[e + 1].marker === n.marker, i = String.fromCharCode(n.marker), o = t.tokens[n.token], o.type = s ? "strong_open" : "em_open", o.tag = s ? "strong" : "em", o.nesting = 1, o.markup = s ? i + i : i, o.content = "", o = t.tokens[r.token], o.type = s ? "strong_close" : "em_close", o.tag = s ? "strong" : "em", o.nesting = -1, o.markup = s ? i + i : i, o.content = "", s && (t.tokens[a[e + 1].token].content = "", t.tokens[a[n.end - 1].token].content = "", e++))
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        t.exports.tokenize = function(t, e) {
+        t.exports.tokenize = function (t, e) {
             var n, r, o, i, s, a = t.pos,
                 c = t.src.charCodeAt(a);
             if (e) return !1;
@@ -4829,28 +4829,28 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 close: r.can_close
             });
             return t.pos += r.length, !0
-        }, t.exports.postProcess = function(t) {
+        }, t.exports.postProcess = function (t) {
             var e, n, r, o, i, s = [],
                 a = t.delimiters,
                 c = t.delimiters.length;
             for (e = 0; e < c; e++) r = a[e], 126 === r.marker && -1 !== r.end && (o = a[r.end], i = t.tokens[r.token], i.type = "s_open", i.tag = "s", i.nesting = 1, i.markup = "~~", i.content = "", i = t.tokens[o.token], i.type = "s_close", i.tag = "s", i.nesting = -1, i.markup = "~~", i.content = "", "text" === t.tokens[o.token - 1].type && "~" === t.tokens[o.token - 1].content && s.push(o.token - 1));
             for (; s.length;) {
                 for (e = s.pop(), n = e + 1; n < t.tokens.length && "s_close" === t.tokens[n].type;) n++;
-                n--, e !== n && (i = t.tokens[n], t.tokens[n] = t.tokens[e], t.tokens[e] = i)
+                n-- , e !== n && (i = t.tokens[n], t.tokens[n] = t.tokens[e], t.tokens[e] = i)
             }
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         t.exports.encode = n(281), t.exports.decode = n(280), t.exports.format = n(282), t.exports.parse = n(283)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
         });
-        ! function(t) {
+        ! function (t) {
             t[t.ActionTypeNotAllowed = 0] = "ActionTypeNotAllowed", t[t.CollectionCantBeEmpty = 1] = "CollectionCantBeEmpty", t[t.ElementTypeNotAllowed = 2] = "ElementTypeNotAllowed", t[t.InteractivityNotAllowed = 3] = "InteractivityNotAllowed", t[t.InvalidPropertyValue = 4] = "InvalidPropertyValue", t[t.MissingCardType = 5] = "MissingCardType", t[t.PropertyCantBeNull = 6] = "PropertyCantBeNull", t[t.TooManyActions = 7] = "TooManyActions", t[t.UnknownActionType = 8] = "UnknownActionType", t[t.UnknownElementType = 9] = "UnknownElementType", t[t.UnsupportedCardVersion = 10] = "UnsupportedCardVersion"
         }(e.ValidationError || (e.ValidationError = {}))
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -4889,11 +4889,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         var u = n(100),
             l = new u;
         e.processMarkdown = r, e.getValueOrDefault = o, e.isNullOrEmpty = i, e.appendChild = s, e.renderSeparation = a, e.stringToCssColor = c;
-        var p = function() {
+        var p = function () {
             function t() {
                 this._isProcessed = !1, this._original = null, this._processed = null
             }
-            return t.prototype.substituteInputValues = function(t) {
+            return t.prototype.substituteInputValues = function (t) {
                 this._processed = this._original;
                 for (var e, n = /\{{2}([a-z0-9_$@]+).value\}{2}/gi; null != (e = n.exec(this._original));) {
                     for (var r = null, o = 0; o < t.length; o++)
@@ -4904,14 +4904,14 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     r && (this._processed = this._processed.replace(e[0], r.value ? r.value : ""))
                 }
                 this._isProcessed = !0
-            }, t.prototype.get = function() {
+            }, t.prototype.get = function () {
                 return this._isProcessed ? this._processed : this._original
-            }, t.prototype.set = function(t) {
+            }, t.prototype.set = function (t) {
                 this._original = t, this._isProcessed = !1
             }, t
         }();
         e.StringWithSubstitutions = p
-    }, function(t, e) {
+    }, function (t, e) {
         function n() {
             throw new Error("setTimeout has not been defined")
         }
@@ -4968,9 +4968,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             this.fun = t, this.array = e
         }
 
-        function u() {}
+        function u() { }
         var l, p, h = t.exports = {};
-        ! function() {
+        ! function () {
             try {
                 l = "function" == typeof setTimeout ? setTimeout : n
             } catch (t) {
@@ -4985,150 +4985,150 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         var f, d = [],
             m = !1,
             v = -1;
-        h.nextTick = function(t) {
+        h.nextTick = function (t) {
             var e = new Array(arguments.length - 1);
             if (arguments.length > 1)
                 for (var n = 1; n < arguments.length; n++) e[n - 1] = arguments[n];
             d.push(new c(t, e)), 1 !== d.length || m || o(a)
-        }, c.prototype.run = function() {
+        }, c.prototype.run = function () {
             this.fun.apply(null, this.array)
-        }, h.title = "browser", h.browser = !0, h.env = {}, h.argv = [], h.version = "", h.versions = {}, h.on = u, h.addListener = u, h.once = u, h.off = u, h.removeListener = u, h.removeAllListeners = u, h.emit = u, h.prependListener = u, h.prependOnceListener = u, h.listeners = function(t) {
+        }, h.title = "browser", h.browser = !0, h.env = {}, h.argv = [], h.version = "", h.versions = {}, h.on = u, h.addListener = u, h.once = u, h.off = u, h.removeListener = u, h.removeAllListeners = u, h.emit = u, h.prependListener = u, h.prependOnceListener = u, h.listeners = function (t) {
             return []
-        }, h.binding = function(t) {
+        }, h.binding = function (t) {
             throw new Error("process.binding is not supported")
-        }, h.cwd = function() {
+        }, h.cwd = function () {
             return "/"
-        }, h.chdir = function(t) {
+        }, h.chdir = function (t) {
             throw new Error("process.chdir is not supported")
-        }, h.umask = function() {
+        }, h.umask = function () {
             return 0
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(290);
-        t.exports = function(t) {
+        t.exports = function (t) {
             return r(t, !1)
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         t.exports = n(289)()
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         t.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         t.exports = n(305)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
             return t + e.charAt(0).toUpperCase() + e.substring(1)
         }
         var o = {
-                animationIterationCount: !0,
-                borderImageOutset: !0,
-                borderImageSlice: !0,
-                borderImageWidth: !0,
-                boxFlex: !0,
-                boxFlexGroup: !0,
-                boxOrdinalGroup: !0,
-                columnCount: !0,
-                flex: !0,
-                flexGrow: !0,
-                flexPositive: !0,
-                flexShrink: !0,
-                flexNegative: !0,
-                flexOrder: !0,
-                gridRow: !0,
-                gridRowEnd: !0,
-                gridRowSpan: !0,
-                gridRowStart: !0,
-                gridColumn: !0,
-                gridColumnEnd: !0,
-                gridColumnSpan: !0,
-                gridColumnStart: !0,
-                fontWeight: !0,
-                lineClamp: !0,
-                lineHeight: !0,
-                opacity: !0,
-                order: !0,
-                orphans: !0,
-                tabSize: !0,
-                widows: !0,
-                zIndex: !0,
-                zoom: !0,
-                fillOpacity: !0,
-                floodOpacity: !0,
-                stopOpacity: !0,
-                strokeDasharray: !0,
-                strokeDashoffset: !0,
-                strokeMiterlimit: !0,
-                strokeOpacity: !0,
-                strokeWidth: !0
-            },
+            animationIterationCount: !0,
+            borderImageOutset: !0,
+            borderImageSlice: !0,
+            borderImageWidth: !0,
+            boxFlex: !0,
+            boxFlexGroup: !0,
+            boxOrdinalGroup: !0,
+            columnCount: !0,
+            flex: !0,
+            flexGrow: !0,
+            flexPositive: !0,
+            flexShrink: !0,
+            flexNegative: !0,
+            flexOrder: !0,
+            gridRow: !0,
+            gridRowEnd: !0,
+            gridRowSpan: !0,
+            gridRowStart: !0,
+            gridColumn: !0,
+            gridColumnEnd: !0,
+            gridColumnSpan: !0,
+            gridColumnStart: !0,
+            fontWeight: !0,
+            lineClamp: !0,
+            lineHeight: !0,
+            opacity: !0,
+            order: !0,
+            orphans: !0,
+            tabSize: !0,
+            widows: !0,
+            zIndex: !0,
+            zoom: !0,
+            fillOpacity: !0,
+            floodOpacity: !0,
+            stopOpacity: !0,
+            strokeDasharray: !0,
+            strokeDashoffset: !0,
+            strokeMiterlimit: !0,
+            strokeOpacity: !0,
+            strokeWidth: !0
+        },
             i = ["Webkit", "ms", "Moz", "O"];
-        Object.keys(o).forEach(function(t) {
-            i.forEach(function(e) {
+        Object.keys(o).forEach(function (t) {
+            i.forEach(function (e) {
                 o[r(e, t)] = o[t]
             })
         });
         var s = {
-                background: {
-                    backgroundAttachment: !0,
-                    backgroundColor: !0,
-                    backgroundImage: !0,
-                    backgroundPositionX: !0,
-                    backgroundPositionY: !0,
-                    backgroundRepeat: !0
-                },
-                backgroundPosition: {
-                    backgroundPositionX: !0,
-                    backgroundPositionY: !0
-                },
-                border: {
-                    borderWidth: !0,
-                    borderStyle: !0,
-                    borderColor: !0
-                },
-                borderBottom: {
-                    borderBottomWidth: !0,
-                    borderBottomStyle: !0,
-                    borderBottomColor: !0
-                },
-                borderLeft: {
-                    borderLeftWidth: !0,
-                    borderLeftStyle: !0,
-                    borderLeftColor: !0
-                },
-                borderRight: {
-                    borderRightWidth: !0,
-                    borderRightStyle: !0,
-                    borderRightColor: !0
-                },
-                borderTop: {
-                    borderTopWidth: !0,
-                    borderTopStyle: !0,
-                    borderTopColor: !0
-                },
-                font: {
-                    fontStyle: !0,
-                    fontVariant: !0,
-                    fontWeight: !0,
-                    fontSize: !0,
-                    lineHeight: !0,
-                    fontFamily: !0
-                },
-                outline: {
-                    outlineWidth: !0,
-                    outlineStyle: !0,
-                    outlineColor: !0
-                }
+            background: {
+                backgroundAttachment: !0,
+                backgroundColor: !0,
+                backgroundImage: !0,
+                backgroundPositionX: !0,
+                backgroundPositionY: !0,
+                backgroundRepeat: !0
             },
+            backgroundPosition: {
+                backgroundPositionX: !0,
+                backgroundPositionY: !0
+            },
+            border: {
+                borderWidth: !0,
+                borderStyle: !0,
+                borderColor: !0
+            },
+            borderBottom: {
+                borderBottomWidth: !0,
+                borderBottomStyle: !0,
+                borderBottomColor: !0
+            },
+            borderLeft: {
+                borderLeftWidth: !0,
+                borderLeftStyle: !0,
+                borderLeftColor: !0
+            },
+            borderRight: {
+                borderRightWidth: !0,
+                borderRightStyle: !0,
+                borderRightColor: !0
+            },
+            borderTop: {
+                borderTopWidth: !0,
+                borderTopStyle: !0,
+                borderTopColor: !0
+            },
+            font: {
+                fontStyle: !0,
+                fontVariant: !0,
+                fontWeight: !0,
+                fontSize: !0,
+                lineHeight: !0,
+                fontFamily: !0
+            },
+            outline: {
+                outlineWidth: !0,
+                outlineStyle: !0,
+                outlineColor: !0
+            }
+        },
             a = {
                 isUnitlessNumber: o,
                 shorthandPropertyExpansions: s
             };
         t.exports = a
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
@@ -5136,13 +5136,13 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
         var o = n(4),
             i = n(17),
-            s = (n(1), function() {
+            s = (n(1), function () {
                 function t(e) {
                     r(this, t), this._callbacks = null, this._contexts = null, this._arg = e
                 }
-                return t.prototype.enqueue = function(t, e) {
+                return t.prototype.enqueue = function (t, e) {
                     this._callbacks = this._callbacks || [], this._callbacks.push(t), this._contexts = this._contexts || [], this._contexts.push(e)
-                }, t.prototype.notifyAll = function() {
+                }, t.prototype.notifyAll = function () {
                     var t = this._callbacks,
                         e = this._contexts,
                         n = this._arg;
@@ -5151,18 +5151,18 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         for (var r = 0; r < t.length; r++) t[r].call(e[r], n);
                         t.length = 0, e.length = 0
                     }
-                }, t.prototype.checkpoint = function() {
+                }, t.prototype.checkpoint = function () {
                     return this._callbacks ? this._callbacks.length : 0
-                }, t.prototype.rollback = function(t) {
+                }, t.prototype.rollback = function (t) {
                     this._callbacks && this._contexts && (this._callbacks.length = t, this._contexts.length = t)
-                }, t.prototype.reset = function() {
+                }, t.prototype.reset = function () {
                     this._callbacks = null, this._contexts = null
-                }, t.prototype.destructor = function() {
+                }, t.prototype.destructor = function () {
                     this.reset()
                 }, t
             }());
         t.exports = i.addPoolingTo(s)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -5178,19 +5178,19 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             c = {},
             u = {},
             l = {
-                createMarkupForID: function(t) {
+                createMarkupForID: function (t) {
                     return i.ID_ATTRIBUTE_NAME + "=" + s(t)
                 },
-                setAttributeForID: function(t, e) {
+                setAttributeForID: function (t, e) {
                     t.setAttribute(i.ID_ATTRIBUTE_NAME, e)
                 },
-                createMarkupForRoot: function() {
+                createMarkupForRoot: function () {
                     return i.ROOT_ATTRIBUTE_NAME + '=""'
                 },
-                setAttributeForRoot: function(t) {
+                setAttributeForRoot: function (t) {
                     t.setAttribute(i.ROOT_ATTRIBUTE_NAME, "")
                 },
-                createMarkupForProperty: function(t, e) {
+                createMarkupForProperty: function (t, e) {
                     var n = i.properties.hasOwnProperty(t) ? i.properties[t] : null;
                     if (n) {
                         if (o(n, e)) return "";
@@ -5199,10 +5199,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     }
                     return i.isCustomAttribute(t) ? null == e ? "" : t + "=" + s(e) : null
                 },
-                createMarkupForCustomAttribute: function(t, e) {
+                createMarkupForCustomAttribute: function (t, e) {
                     return r(t) && null != e ? t + "=" + s(e) : ""
                 },
-                setValueForProperty: function(t, e, n) {
+                setValueForProperty: function (t, e, n) {
                     var r = i.properties.hasOwnProperty(e) ? i.properties[e] : null;
                     if (r) {
                         var s = r.mutationMethod;
@@ -5218,15 +5218,15 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         }
                     } else if (i.isCustomAttribute(e)) return void l.setValueForAttribute(t, e, n)
                 },
-                setValueForAttribute: function(t, e, n) {
+                setValueForAttribute: function (t, e, n) {
                     if (r(e)) {
                         null == n ? t.removeAttribute(e) : t.setAttribute(e, "" + n)
                     }
                 },
-                deleteValueForAttribute: function(t, e) {
+                deleteValueForAttribute: function (t, e) {
                     t.removeAttribute(e)
                 },
-                deleteValueForProperty: function(t, e) {
+                deleteValueForProperty: function (t, e) {
                     var n = i.properties.hasOwnProperty(e) ? i.properties[e] : null;
                     if (n) {
                         var r = n.mutationMethod;
@@ -5239,13 +5239,13 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             };
         t.exports = l
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = {
             hasCachedChildNodes: 1
         };
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r() {
@@ -5267,7 +5267,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             } else {
                 for (r = "" + n, o = 0; o < i.length; o++)
-                    if (i[o].value === r) return void(i[o].selected = !0);
+                    if (i[o].value === r) return void (i[o].selected = !0);
                 i.length && (i[0].selected = !0)
             }
         }
@@ -5283,13 +5283,13 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             u = n(13),
             l = (n(3), !1),
             p = {
-                getHostProps: function(t, e) {
+                getHostProps: function (t, e) {
                     return s({}, e, {
                         onChange: t._wrapperState.onChange,
                         value: void 0
                     })
                 },
-                mountWrapper: function(t, e) {
+                mountWrapper: function (t, e) {
                     var n = a.getValue(e);
                     t._wrapperState = {
                         pendingUpdate: !1,
@@ -5299,10 +5299,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         wasMultiple: Boolean(e.multiple)
                     }, void 0 === e.value || void 0 === e.defaultValue || l || (l = !0)
                 },
-                getSelectValueContext: function(t) {
+                getSelectValueContext: function (t) {
                     return t._wrapperState.initialValue
                 },
-                postUpdateWrapper: function(t) {
+                postUpdateWrapper: function (t) {
                     var e = t._currentElement.props;
                     t._wrapperState.initialValue = void 0;
                     var n = t._wrapperState.wasMultiple;
@@ -5312,26 +5312,26 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             };
         t.exports = p
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r, o = {
-                injectEmptyComponentFactory: function(t) {
-                    r = t
-                }
-            },
+            injectEmptyComponentFactory: function (t) {
+                r = t
+            }
+        },
             i = {
-                create: function(t) {
+                create: function (t) {
                     return r(t)
                 }
             };
         i.injection = o, t.exports = i
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = {
             logTopLevelRenders: !1
         };
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -5349,10 +5349,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             a = (n(1), null),
             c = null,
             u = {
-                injectGenericComponentClass: function(t) {
+                injectGenericComponentClass: function (t) {
                     a = t
                 },
-                injectTextComponentClass: function(t) {
+                injectTextComponentClass: function (t) {
                     c = t
                 }
             },
@@ -5363,7 +5363,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 injection: u
             };
         t.exports = l
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -5374,24 +5374,24 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             s = n(97),
             a = n(98),
             c = {
-                hasSelectionCapabilities: function(t) {
+                hasSelectionCapabilities: function (t) {
                     var e = t && t.nodeName && t.nodeName.toLowerCase();
                     return e && ("input" === e && "text" === t.type || "textarea" === e || "true" === t.contentEditable)
                 },
-                getSelectionInformation: function() {
+                getSelectionInformation: function () {
                     var t = a();
                     return {
                         focusedElem: t,
                         selectionRange: c.hasSelectionCapabilities(t) ? c.getSelection(t) : null
                     }
                 },
-                restoreSelection: function(t) {
+                restoreSelection: function (t) {
                     var e = a(),
                         n = t.focusedElem,
                         o = t.selectionRange;
                     e !== n && r(n) && (c.hasSelectionCapabilities(n) && c.setSelection(n, o), s(n))
                 },
-                getSelection: function(t) {
+                getSelection: function (t) {
                     var e;
                     if ("selectionStart" in t) e = {
                         start: t.selectionStart,
@@ -5409,7 +5409,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         end: 0
                     }
                 },
-                setSelection: function(t, e) {
+                setSelection: function (t, e) {
                     var n = e.start,
                         r = e.end;
                     if (void 0 === r && (r = n), "selectionStart" in t) t.selectionStart = n, t.selectionEnd = Math.min(r, t.value.length);
@@ -5420,7 +5420,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             };
         t.exports = c
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
@@ -5504,34 +5504,34 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             R = 11,
             L = {},
             j = 1,
-            F = function() {
+            F = function () {
                 this.rootID = j++
             };
-        F.prototype.isReactComponent = {}, F.prototype.render = function() {
+        F.prototype.isReactComponent = {}, F.prototype.render = function () {
             return this.props.child
         }, F.isReactTopLevelWrapper = !0;
         var z = {
             TopLevelWrapper: F,
             _instancesByReactRootID: L,
-            scrollMonitor: function(t, e) {
+            scrollMonitor: function (t, e) {
                 e()
             },
-            _updateRootComponent: function(t, e, n, r, o) {
-                return z.scrollMonitor(r, function() {
+            _updateRootComponent: function (t, e, n, r, o) {
+                return z.scrollMonitor(r, function () {
                     S.enqueueElementInternal(t, e, n), o && S.enqueueCallbackInternal(t, o)
                 }), t
             },
-            _renderNewRootComponent: function(t, e, n, r) {
+            _renderNewRootComponent: function (t, e, n, r) {
                 l(e) || f("37"), g.ensureScrollValueMonitoring();
                 var o = T(t, !1);
                 E.batchedUpdates(a, o, e, n, r);
                 var i = o._instance.rootID;
                 return L[i] = o, o
             },
-            renderSubtreeIntoContainer: function(t, e, n, r) {
+            renderSubtreeIntoContainer: function (t, e, n, r) {
                 return null != t && w.has(t) || f("38"), z._renderSubtreeIntoContainer(t, e, n, r)
             },
-            _renderSubtreeIntoContainer: function(t, e, n, r) {
+            _renderSubtreeIntoContainer: function (t, e, n, r) {
                 S.validateCallback(r, "ReactDOM.render"), v.isValidElement(e) || f("39", "string" == typeof e ? " Instead of passing a string like 'div', pass React.createElement('div') or <div />." : "function" == typeof e ? " Instead of passing a class like Foo, pass React.createElement(Foo) or <Foo />." : null != e && void 0 !== e.props ? " This may be caused by unintentionally loading two independent copies of React." : "");
                 var s, a = v.createElement(F, {
                     child: e
@@ -5546,7 +5546,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         d = p.props.child;
                     if (P(d, e)) {
                         var m = l._renderedComponent.getPublicInstance(),
-                            g = r && function() {
+                            g = r && function () {
                                 r.call(m)
                             };
                         return z._updateRootComponent(l, a, s, n, g), m
@@ -5560,10 +5560,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     x = z._renderNewRootComponent(a, n, C, s)._renderedComponent.getPublicInstance();
                 return r && r.call(x), x
             },
-            render: function(t, e, n) {
+            render: function (t, e, n) {
                 return z._renderSubtreeIntoContainer(null, t, e, n)
             },
-            unmountComponentAtNode: function(t) {
+            unmountComponentAtNode: function (t) {
                 l(t) || f("40");
                 var e = h(t);
                 if (!e) {
@@ -5572,7 +5572,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
                 return delete L[e._instance.rootID], E.batchedUpdates(c, e, t, !1), !0
             },
-            _mountImageIntoNode: function(t, e, n, i, s) {
+            _mountImageIntoNode: function (t, e, n, i, s) {
                 if (l(e) || f("41"), i) {
                     var a = o(e);
                     if (x.canReuseMarkup(t, a)) return void y.precacheNode(n, a);
@@ -5592,7 +5592,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             }
         };
         t.exports = z
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(4),
             o = n(25),
@@ -5600,22 +5600,22 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 HOST: 0,
                 COMPOSITE: 1,
                 EMPTY: 2,
-                getType: function(t) {
+                getType: function (t) {
                     return null === t || !1 === t ? i.EMPTY : o.isValidElement(t) ? "function" == typeof t.type ? i.COMPOSITE : i.HOST : void r("26", t)
                 }
             });
         t.exports = i
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = {
             currentScrollLeft: 0,
             currentScrollTop: 0,
-            refreshScrollValues: function(t) {
+            refreshScrollValues: function (t) {
                 r.currentScrollLeft = t.x, r.currentScrollTop = t.y
             }
         };
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
@@ -5624,14 +5624,14 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         var o = n(4);
         n(1);
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e, n) {
             Array.isArray(t) ? t.forEach(e, n) : t && e.call(n, t)
         }
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -5641,7 +5641,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
         var o = n(123);
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r() {
@@ -5650,7 +5650,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         var o = n(7),
             i = null;
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -5677,10 +5677,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
         var c = n(6),
             u = {
-                _getTrackerFromNode: function(t) {
+                _getTrackerFromNode: function (t) {
                     return o(c.getInstanceFromNode(t))
                 },
-                track: function(t) {
+                track: function (t) {
                     if (!o(t)) {
                         var e = c.getNodeFromInstance(t),
                             n = r(e) ? "checked" : "value",
@@ -5689,26 +5689,26 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         e.hasOwnProperty(n) || "function" != typeof a.get || "function" != typeof a.set || (Object.defineProperty(e, n, {
                             enumerable: a.enumerable,
                             configurable: !0,
-                            get: function() {
+                            get: function () {
                                 return a.get.call(this)
                             },
-                            set: function(t) {
+                            set: function (t) {
                                 u = "" + t, a.set.call(this, t)
                             }
                         }), i(t, {
-                            getValue: function() {
+                            getValue: function () {
                                 return u
                             },
-                            setValue: function(t) {
+                            setValue: function (t) {
                                 u = "" + t
                             },
-                            stopTracking: function() {
+                            stopTracking: function () {
                                 s(t), delete e[n]
                             }
                         }))
                     }
                 },
-                updateValueIfChanged: function(t) {
+                updateValueIfChanged: function (t) {
                     if (!t) return !1;
                     var e = o(t);
                     if (!e) return u.track(t), !0;
@@ -5716,13 +5716,13 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         r = a(c.getNodeFromInstance(t));
                     return r !== n && (e.setValue(r), !0)
                 },
-                stopTracking: function(t) {
+                stopTracking: function (t) {
                     var e = o(t);
                     e && e.stopTracking()
                 }
             };
         t.exports = u
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -5756,13 +5756,13 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             c = n(304),
             u = n(118),
             l = n(120),
-            p = (n(372), n(1), n(3), function(t) {
+            p = (n(372), n(1), n(3), function (t) {
                 this.construct(t)
             });
         a(p.prototype, c, {
             _instantiateReactComponent: i
         }), t.exports = i
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -5787,23 +5787,23 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             week: !0
         };
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(7),
             o = n(46),
             i = n(47),
-            s = function(t, e) {
+            s = function (t, e) {
                 if (e) {
                     var n = t.firstChild;
-                    if (n && n === t.lastChild && 3 === n.nodeType) return void(n.nodeValue = e)
+                    if (n && n === t.lastChild && 3 === n.nodeType) return void (n.nodeValue = e)
                 }
                 t.textContent = e
             };
-        r.canUseDOM && ("textContent" in document.documentElement || (s = function(t, e) {
-            if (3 === t.nodeType) return void(t.nodeValue = e);
+        r.canUseDOM && ("textContent" in document.documentElement || (s = function (t, e) {
+            if (3 === t.nodeType) return void (t.nodeValue = e);
             i(t, o(e))
         })), t.exports = s
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
@@ -5847,7 +5847,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             l = (n(3), "."),
             p = ":";
         t.exports = i
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
@@ -5877,11 +5877,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             return n
         }
 
-        function a() {}
+        function a() { }
 
         function c(t, e) {
             var n = {
-                run: function(r) {
+                run: function (r) {
                     try {
                         var o = t(e.getState(), r);
                         (o !== n.props || n.error) && (n.shouldComponentUpdate = !0, n.props = o, n.error = null)
@@ -5896,7 +5896,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         function u(t) {
             var e, u, l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 h = l.getDisplayName,
-                _ = void 0 === h ? function(t) {
+                _ = void 0 === h ? function (t) {
                     return "ConnectAdvanced(" + t + ")"
                 } : h,
                 C = l.methodName,
@@ -5914,7 +5914,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 M = y++,
                 N = (e = {}, e[T] = v.a, e[D] = v.b, e),
                 R = (u = {}, u[D] = v.b, u);
-            return function(e) {
+            return function (e) {
                 f()("function" == typeof e, "You must pass a component to the function returned by connect. Instead received " + JSON.stringify(e));
                 var s = e.displayName || e.name || "Component",
                     u = _(s),
@@ -5929,46 +5929,46 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         wrappedComponentName: s,
                         WrappedComponent: e
                     }),
-                    h = function(s) {
+                    h = function (s) {
                         function p(t, e) {
                             r(this, p);
                             var n = o(this, s.call(this, t, e));
                             return n.version = M, n.state = {}, n.renderCount = 0, n.store = t[T] || e[T], n.propsMode = Boolean(t[T]), n.setWrappedInstance = n.setWrappedInstance.bind(n), f()(n.store, 'Could not find "' + T + '" in either the context or props of "' + u + '". Either wrap the root component in a <Provider>, or explicitly pass "' + T + '" as a prop to "' + u + '".'), n.initSelector(), n.initSubscription(), n
                         }
-                        return i(p, s), p.prototype.getChildContext = function() {
+                        return i(p, s), p.prototype.getChildContext = function () {
                             var t, e = this.propsMode ? null : this.subscription;
                             return t = {}, t[D] = e || this.context[D], t
-                        }, p.prototype.componentDidMount = function() {
+                        }, p.prototype.componentDidMount = function () {
                             E && (this.subscription.trySubscribe(), this.selector.run(this.props), this.selector.shouldComponentUpdate && this.forceUpdate())
-                        }, p.prototype.componentWillReceiveProps = function(t) {
+                        }, p.prototype.componentWillReceiveProps = function (t) {
                             this.selector.run(t)
-                        }, p.prototype.shouldComponentUpdate = function() {
+                        }, p.prototype.shouldComponentUpdate = function () {
                             return this.selector.shouldComponentUpdate
-                        }, p.prototype.componentWillUnmount = function() {
+                        }, p.prototype.componentWillUnmount = function () {
                             this.subscription && this.subscription.tryUnsubscribe(), this.subscription = null, this.notifyNestedSubs = a, this.store = null, this.selector.run = a, this.selector.shouldComponentUpdate = !1
-                        }, p.prototype.getWrappedInstance = function() {
+                        }, p.prototype.getWrappedInstance = function () {
                             return f()(P, "To access the wrapped instance, you need to specify { withRef: true } in the options argument of the " + w + "() call."), this.wrappedInstance
-                        }, p.prototype.setWrappedInstance = function(t) {
+                        }, p.prototype.setWrappedInstance = function (t) {
                             this.wrappedInstance = t
-                        }, p.prototype.initSelector = function() {
+                        }, p.prototype.initSelector = function () {
                             var e = t(this.store.dispatch, l);
                             this.selector = c(e, this.store), this.selector.run(this.props)
-                        }, p.prototype.initSubscription = function() {
+                        }, p.prototype.initSubscription = function () {
                             if (E) {
                                 var t = (this.propsMode ? this.props : this.context)[D];
                                 this.subscription = new m.a(this.store, t, this.onStateChange.bind(this)), this.notifyNestedSubs = this.subscription.notifyNestedSubs.bind(this.subscription)
                             }
-                        }, p.prototype.onStateChange = function() {
+                        }, p.prototype.onStateChange = function () {
                             this.selector.run(this.props), this.selector.shouldComponentUpdate ? (this.componentDidUpdate = this.notifyNestedSubsOnComponentDidUpdate, this.setState(b)) : this.notifyNestedSubs()
-                        }, p.prototype.notifyNestedSubsOnComponentDidUpdate = function() {
+                        }, p.prototype.notifyNestedSubsOnComponentDidUpdate = function () {
                             this.componentDidUpdate = void 0, this.notifyNestedSubs()
-                        }, p.prototype.isSubscribed = function() {
+                        }, p.prototype.isSubscribed = function () {
                             return Boolean(this.subscription) && this.subscription.isSubscribed()
-                        }, p.prototype.addExtraProps = function(t) {
+                        }, p.prototype.addExtraProps = function (t) {
                             if (!(P || k || this.propsMode && this.subscription)) return t;
                             var e = g({}, t);
                             return P && (e.ref = this.setWrappedInstance), k && (e[k] = this.renderCount++), this.propsMode && this.subscription && (e[D] = this.subscription), e
-                        }, p.prototype.render = function() {
+                        }, p.prototype.render = function () {
                             var t = this.selector;
                             if (t.shouldComponentUpdate = !1, t.error) throw t.error;
                             return n.i(d.createElement)(e, this.addExtraProps(t.props))
@@ -5985,7 +5985,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             d = n(9),
             m = (n.n(d), n(362)),
             v = n(136),
-            g = Object.assign || function(t) {
+            g = Object.assign || function (t) {
                 for (var e = 1; e < arguments.length; e++) {
                     var n = arguments[e];
                     for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (t[r] = n[r])
@@ -5994,11 +5994,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             },
             y = 0,
             b = {}
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
-            return function(e, n) {
+            return function (e, n) {
                 function r() {
                     return o
                 }
@@ -6012,11 +6012,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
 
         function i(t, e) {
-            return function(e, n) {
-                var r = (n.displayName, function(t, e) {
+            return function (e, n) {
+                var r = (n.displayName, function (t, e) {
                     return r.dependsOnOwnProps ? r.mapToProps(t, e) : r.mapToProps(t)
                 });
-                return r.dependsOnOwnProps = !0, r.mapToProps = function(e, n) {
+                return r.dependsOnOwnProps = !0, r.mapToProps = function (e, n) {
                     r.mapToProps = t, r.dependsOnOwnProps = o(t);
                     var i = r(e, n);
                     return "function" == typeof i && (r.mapToProps = i, r.dependsOnOwnProps = o(i), i = r(e, n)), i
@@ -6025,11 +6025,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         }
         e.b = r, e.a = i;
         n(137)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        n.d(e, "b", function() {
+        n.d(e, "b", function () {
             return i
-        }), n.d(e, "a", function() {
+        }), n.d(e, "a", function () {
             return s
         });
         var r = n(110),
@@ -6045,10 +6045,10 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 dispatch: o.a.func.isRequired,
                 getState: o.a.func.isRequired
             })
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         n(59), n(78)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e, n) {
@@ -6059,22 +6059,22 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             this.props = t, this.context = e, this.refs = u, this.updater = n || c
         }
 
-        function i() {}
+        function i() { }
         var s = n(36),
             a = n(5),
             c = n(141),
             u = (n(142), n(42));
         n(1), n(373);
-        r.prototype.isReactComponent = {}, r.prototype.setState = function(t, e) {
+        r.prototype.isReactComponent = {}, r.prototype.setState = function (t, e) {
             "object" != typeof t && "function" != typeof t && null != t && s("85"), this.updater.enqueueSetState(this, t), e && this.updater.enqueueCallback(this, e, "setState")
-        }, r.prototype.forceUpdate = function(t) {
+        }, r.prototype.forceUpdate = function (t) {
             this.updater.enqueueForceUpdate(this), t && this.updater.enqueueCallback(this, t, "forceUpdate")
         };
         i.prototype = r.prototype, o.prototype = new i, o.prototype.constructor = o, a(o.prototype, r.prototype), o.prototype.isPureReactComponent = !0, t.exports = {
             Component: r,
             PureComponent: o
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -6117,54 +6117,54 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         if (g) {
             var y = new Map,
                 b = new Set;
-            c = function(t, e) {
+            c = function (t, e) {
                 y.set(t, e)
-            }, u = function(t) {
+            }, u = function (t) {
                 return y.get(t)
-            }, l = function(t) {
+            }, l = function (t) {
                 y.delete(t)
-            }, p = function() {
+            }, p = function () {
                 return Array.from(y.keys())
-            }, h = function(t) {
+            }, h = function (t) {
                 b.add(t)
-            }, f = function(t) {
+            }, f = function (t) {
                 b.delete(t)
-            }, d = function() {
+            }, d = function () {
                 return Array.from(b.keys())
             }
         } else {
             var _ = {},
                 C = {},
-                w = function(t) {
+                w = function (t) {
                     return "." + t
                 },
-                x = function(t) {
+                x = function (t) {
                     return parseInt(t.substr(1), 10)
                 };
-            c = function(t, e) {
+            c = function (t, e) {
                 var n = w(t);
                 _[n] = e
-            }, u = function(t) {
+            }, u = function (t) {
                 var e = w(t);
                 return _[e]
-            }, l = function(t) {
+            }, l = function (t) {
                 var e = w(t);
                 delete _[e]
-            }, p = function() {
+            }, p = function () {
                 return Object.keys(_).map(x)
-            }, h = function(t) {
+            }, h = function (t) {
                 var e = w(t);
                 C[e] = !0
-            }, f = function(t) {
+            }, f = function (t) {
                 var e = w(t);
                 delete C[e]
-            }, d = function() {
+            }, d = function () {
                 return Object.keys(C).map(x)
             }
         }
         var k = [],
             S = {
-                onSetChildren: function(t, e) {
+                onSetChildren: function (t, e) {
                     var n = u(t);
                     n || m("144"), n.childIDs = e;
                     for (var r = 0; r < e.length; r++) {
@@ -6173,7 +6173,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         i || m("140"), null == i.childIDs && "object" == typeof i.element && null != i.element && m("141"), i.isMounted || m("71"), null == i.parentID && (i.parentID = t), i.parentID !== t && m("142", o, i.parentID, t)
                     }
                 },
-                onBeforeMountComponent: function(t, e, n) {
+                onBeforeMountComponent: function (t, e, n) {
                     c(t, {
                         element: e,
                         parentID: n,
@@ -6183,19 +6183,19 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         updateCount: 0
                     })
                 },
-                onBeforeUpdateComponent: function(t, e) {
+                onBeforeUpdateComponent: function (t, e) {
                     var n = u(t);
                     n && n.isMounted && (n.element = e)
                 },
-                onMountComponent: function(t) {
+                onMountComponent: function (t) {
                     var e = u(t);
                     e || m("144"), e.isMounted = !0, 0 === e.parentID && h(t)
                 },
-                onUpdateComponent: function(t) {
+                onUpdateComponent: function (t) {
                     var e = u(t);
                     e && e.isMounted && e.updateCount++
                 },
-                onUnmountComponent: function(t) {
+                onUnmountComponent: function (t) {
                     var e = u(t);
                     if (e) {
                         e.isMounted = !1;
@@ -6203,7 +6203,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     }
                     k.push(t)
                 },
-                purgeUnmountedComponents: function() {
+                purgeUnmountedComponents: function () {
                     if (!S._preventPurging) {
                         for (var t = 0; t < k.length; t++) {
                             o(k[t])
@@ -6211,11 +6211,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         k.length = 0
                     }
                 },
-                isMounted: function(t) {
+                isMounted: function (t) {
                     var e = u(t);
                     return !!e && e.isMounted
                 },
-                getCurrentStackAddendum: function(t) {
+                getCurrentStackAddendum: function (t) {
                     var e = "";
                     if (t) {
                         var n = s(t),
@@ -6226,56 +6226,56 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         a = o && o._debugID;
                     return e += S.getStackAddendumByID(a)
                 },
-                getStackAddendumByID: function(t) {
+                getStackAddendumByID: function (t) {
                     for (var e = ""; t;) e += a(t), t = S.getParentID(t);
                     return e
                 },
-                getChildIDs: function(t) {
+                getChildIDs: function (t) {
                     var e = u(t);
                     return e ? e.childIDs : []
                 },
-                getDisplayName: function(t) {
+                getDisplayName: function (t) {
                     var e = S.getElement(t);
                     return e ? s(e) : null
                 },
-                getElement: function(t) {
+                getElement: function (t) {
                     var e = u(t);
                     return e ? e.element : null
                 },
-                getOwnerID: function(t) {
+                getOwnerID: function (t) {
                     var e = S.getElement(t);
                     return e && e._owner ? e._owner._debugID : null
                 },
-                getParentID: function(t) {
+                getParentID: function (t) {
                     var e = u(t);
                     return e ? e.parentID : null
                 },
-                getSource: function(t) {
+                getSource: function (t) {
                     var e = u(t),
                         n = e ? e.element : null;
                     return null != n ? n._source : null
                 },
-                getText: function(t) {
+                getText: function (t) {
                     var e = S.getElement(t);
                     return "string" == typeof e ? e : "number" == typeof e ? "" + e : null
                 },
-                getUpdateCount: function(t) {
+                getUpdateCount: function (t) {
                     var e = u(t);
                     return e ? e.updateCount : 0
                 },
                 getRootIDs: d,
                 getRegisteredIDs: p,
-                pushNonStandardWarningStack: function(t, e) {
+                pushNonStandardWarningStack: function (t, e) {
                     if ("function" == typeof console.reactStack) {
                         var n = [],
                             r = v.current,
                             o = r && r._debugID;
                         try {
                             for (t && n.push({
-                                    name: o ? S.getDisplayName(o) : null,
-                                    fileName: e ? e.fileName : null,
-                                    lineNumber: e ? e.lineNumber : null
-                                }); o;) {
+                                name: o ? S.getDisplayName(o) : null,
+                                fileName: e ? e.fileName : null,
+                                lineNumber: e ? e.lineNumber : null
+                            }); o;) {
                                 var i = S.getElement(o),
                                     s = S.getParentID(o),
                                     a = S.getOwnerID(o),
@@ -6287,36 +6287,36 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                                     lineNumber: u ? u.lineNumber : null
                                 }), o = s
                             }
-                        } catch (t) {}
+                        } catch (t) { }
                         console.reactStack(n)
                     }
                 },
-                popNonStandardWarningStack: function() {
+                popNonStandardWarningStack: function () {
                     "function" == typeof console.reactStackEnd && console.reactStackEnd()
                 }
             };
         t.exports = S
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = "function" == typeof Symbol && Symbol.for && Symbol.for("react.element") || 60103;
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = (n(3), {
-            isMounted: function(t) {
+            isMounted: function (t) {
                 return !1
             },
-            enqueueCallback: function(t, e) {},
-            enqueueForceUpdate: function(t) {},
-            enqueueReplaceState: function(t, e) {},
-            enqueueSetState: function(t, e) {}
+            enqueueCallback: function (t, e) { },
+            enqueueForceUpdate: function (t) { },
+            enqueueReplaceState: function (t, e) { },
+            enqueueSetState: function (t, e) { }
         });
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = !1;
         t.exports = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
@@ -6342,22 +6342,22 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         Object.defineProperty(e, "__esModule", {
             value: !0
         }), e.ActionsObservable = void 0;
-        var s = function() {
-                function t(t, e) {
-                    for (var n = 0; n < e.length; n++) {
-                        var r = e[n];
-                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(t, r.key, r)
-                    }
+        var s = function () {
+            function t(t, e) {
+                for (var n = 0; n < e.length; n++) {
+                    var r = e[n];
+                    r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(t, r.key, r)
                 }
-                return function(e, n, r) {
-                    return n && t(e.prototype, n), r && t(e, r), e
-                }
-            }(),
+            }
+            return function (e, n, r) {
+                return n && t(e.prototype, n), r && t(e, r), e
+            }
+        }(),
             a = n(0),
             c = n(161),
             u = n(159),
             l = n(162);
-        e.ActionsObservable = function(t) {
+        e.ActionsObservable = function (t) {
             function e(t) {
                 r(this, e);
                 var n = o(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this));
@@ -6365,25 +6365,25 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             }
             return i(e, t), s(e, null, [{
                 key: "of",
-                value: function() {
+                value: function () {
                     return new this(c.of.apply(void 0, arguments))
                 }
             }, {
                 key: "from",
-                value: function(t, e) {
+                value: function (t, e) {
                     return new this((0, u.from)(t, e))
                 }
             }]), s(e, [{
                 key: "lift",
-                value: function(t) {
+                value: function (t) {
                     var n = new e(this);
                     return n.operator = t, n
                 }
             }, {
                 key: "ofType",
-                value: function() {
+                value: function () {
                     for (var t = arguments.length, e = Array(t), n = 0; n < t; n++) e[n] = arguments[n];
-                    return l.filter.call(this, function(t) {
+                    return l.filter.call(this, function (t) {
                         var n = t.type,
                             r = e.length;
                         if (1 === r) return n === e[0];
@@ -6394,27 +6394,27 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             }]), e
         }(a.Observable)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
         });
         e.EPIC_END = "@@redux-observable/EPIC_END"
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r() {
             for (var t = arguments.length, e = Array(t), n = 0; n < t; n++) e[n] = arguments[n];
-            return 0 === e.length ? function(t) {
+            return 0 === e.length ? function (t) {
                 return t
-            } : 1 === e.length ? e[0] : e.reduce(function(t, e) {
-                return function() {
+            } : 1 === e.length ? e[0] : e.reduce(function (t, e) {
+                return function () {
                     return t(e.apply(void 0, arguments))
                 }
             })
         }
         e.a = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e, i) {
@@ -6430,7 +6430,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 if ("function" != typeof t) throw new Error("Expected listener to be a function.");
                 var e = !0;
                 return c(), y.push(t),
-                    function() {
+                    function () {
                         if (e) {
                             e = !1, c();
                             var n = y.indexOf(t);
@@ -6464,7 +6464,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             function f() {
                 var t, e = l;
                 return t = {
-                    subscribe: function(t) {
+                    subscribe: function (t) {
                         function n() {
                             t.next && t.next(u())
                         }
@@ -6473,7 +6473,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             unsubscribe: e(n)
                         }
                     }
-                }, t[s.a] = function() {
+                }, t[s.a] = function () {
                     return this
                 }, t
             }
@@ -6497,7 +6497,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 replaceReducer: h
             }, d[s.a] = f, d
         }
-        n.d(e, "a", function() {
+        n.d(e, "a", function () {
             return a
         }), e.b = r;
         var o = n(59),
@@ -6506,16 +6506,16 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             a = {
                 INIT: "@@redux/INIT"
             }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict"
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(0),
-            o = function() {
+            o = function () {
                 function t(t, e, n) {
                     this.kind = t, this.value = e, this.error = n, this.hasValue = "N" === t
                 }
-                return t.prototype.observe = function(t) {
+                return t.prototype.observe = function (t) {
                     switch (this.kind) {
                         case "N":
                             return t.next && t.next(this.value);
@@ -6524,7 +6524,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         case "C":
                             return t.complete && t.complete()
                     }
-                }, t.prototype.do = function(t, e, n) {
+                }, t.prototype.do = function (t, e, n) {
                     switch (this.kind) {
                         case "N":
                             return t && t(this.value);
@@ -6533,9 +6533,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         case "C":
                             return n && n()
                     }
-                }, t.prototype.accept = function(t, e, n) {
+                }, t.prototype.accept = function (t, e, n) {
                     return t && "function" == typeof t.next ? this.observe(t) : this.do(t, e, n)
-                }, t.prototype.toObservable = function() {
+                }, t.prototype.toObservable = function () {
                     switch (this.kind) {
                         case "N":
                             return r.Observable.of(this.value);
@@ -6545,88 +6545,88 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             return r.Observable.empty()
                     }
                     throw new Error("unexpected notification kind value")
-                }, t.createNext = function(e) {
+                }, t.createNext = function (e) {
                     return void 0 !== e ? new t("N", e) : this.undefinedValueNotification
-                }, t.createError = function(e) {
+                }, t.createError = function (e) {
                     return new t("E", void 0, e)
-                }, t.createComplete = function() {
+                }, t.createComplete = function () {
                     return this.completeNotification
                 }, t.completeNotification = new t("C"), t.undefinedValueNotification = new t("N", void 0), t
             }();
         e.Notification = o
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         e.empty = {
             closed: !0,
-            next: function(t) {},
-            error: function(t) {
+            next: function (t) { },
+            error: function (t) {
                 throw t
             },
-            complete: function() {}
+            complete: function () { }
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(0),
             o = n(414);
         r.Observable.empty = o.empty
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(0),
             o = n(161);
         r.Observable.of = o.of
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(0),
             o = n(418);
         r.Observable.prototype.catch = o._catch, r.Observable.prototype._catch = o._catch
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(0),
             o = n(421);
         r.Observable.prototype.delay = o.delay
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(0),
             o = n(422);
         r.Observable.prototype.do = o._do, r.Observable.prototype._do = o._do
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(0),
             o = n(162);
         r.Observable.prototype.filter = o.filter
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(0),
             o = n(80);
         r.Observable.prototype.map = o.map
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(0),
             o = n(424);
         r.Observable.prototype.mergeMap = o.mergeMap, r.Observable.prototype.flatMap = o.mergeMap
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        var r = this && this.__extends || function(t, e) {
-                function n() {
-                    this.constructor = t
-                }
-                for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
-                t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
-            },
+        var r = this && this.__extends || function (t, e) {
+            function n() {
+                this.constructor = t
+            }
+            for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
+            t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        },
             o = n(0),
-            i = function(t) {
+            i = function (t) {
                 function e(e, n) {
                     t.call(this), this.value = e, this.scheduler = n, this._isScalar = !0, n && (this._isScalar = !1)
                 }
-                return r(e, t), e.create = function(t, n) {
+                return r(e, t), e.create = function (t, n) {
                     return new e(t, n)
-                }, e.dispatch = function(t) {
+                }, e.dispatch = function (t) {
                     var e = t.done,
                         n = t.value,
                         r = t.subscriber;
                     if (e) return void r.complete();
                     r.next(n), r.closed || (t.done = !0, this.schedule(t))
-                }, e.prototype._subscribe = function(t) {
+                }, e.prototype._subscribe = function (t) {
                     var n = this.value,
                         r = this.scheduler;
                     if (r) return r.schedule(e.dispatch, 0, {
@@ -6638,46 +6638,46 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }, e
             }(o.Observable);
         e.ScalarObservable = i
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(407);
         e.from = r.FromObservable.create
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(163);
         e.merge = r.mergeStatic
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(49);
         e.of = r.ArrayObservable.of
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t, e) {
             return this.lift(new s(t, e))
         }
-        var o = this && this.__extends || function(t, e) {
-                function n() {
-                    this.constructor = t
-                }
-                for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
-                t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
-            },
+        var o = this && this.__extends || function (t, e) {
+            function n() {
+                this.constructor = t
+            }
+            for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
+            t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        },
             i = n(8);
         e.filter = r;
-        var s = function() {
-                function t(t, e) {
-                    this.predicate = t, this.thisArg = e
-                }
-                return t.prototype.call = function(t, e) {
-                    return e.subscribe(new a(t, this.predicate, this.thisArg))
-                }, t
-            }(),
-            a = function(t) {
+        var s = function () {
+            function t(t, e) {
+                this.predicate = t, this.thisArg = e
+            }
+            return t.prototype.call = function (t, e) {
+                return e.subscribe(new a(t, this.predicate, this.thisArg))
+            }, t
+        }(),
+            a = function (t) {
                 function e(e, n, r) {
                     t.call(this, e), this.predicate = n, this.thisArg = r, this.count = 0, this.predicate = n
                 }
-                return o(e, t), e.prototype._next = function(t) {
+                return o(e, t), e.prototype._next = function (t) {
                     var e;
                     try {
                         e = this.predicate.call(this.thisArg, t, this.count++)
@@ -6687,7 +6687,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     e && this.destination.next(t)
                 }, e
             }(i.Subscriber)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r() {
@@ -6707,16 +6707,16 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             a = n(423),
             c = n(168);
         e.merge = r, e.mergeStatic = o
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        var r = this && this.__extends || function(t, e) {
-                function n() {
-                    this.constructor = t
-                }
-                for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
-                t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
-            },
-            o = function(t) {
+        var r = this && this.__extends || function (t, e) {
+            function n() {
+                this.constructor = t
+            }
+            for (var r in e) e.hasOwnProperty(r) && (t[r] = e[r]);
+            t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+        },
+            o = function (t) {
                 function e() {
                     var e = t.call(this, "object unsubscribed");
                     this.name = e.name = "ObjectUnsubscribedError", this.stack = e.stack, this.message = e.message
@@ -6724,53 +6724,53 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 return r(e, t), e
             }(Error);
         e.ObjectUnsubscribedError = o
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
-        e.isArrayLike = function(t) {
+        e.isArrayLike = function (t) {
             return t && "number" == typeof t.length
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
             return null != t && "object" == typeof t
         }
         e.isObject = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
             return t && "function" != typeof t.subscribe && "function" == typeof t.then
         }
         e.isPromise = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
             return t && "function" == typeof t.schedule
         }
         e.isScheduler = r
-    }, function(t, e) {
+    }, function (t, e) {
         t.exports = /[\0-\x1F\x7F-\x9F]/
-    }, function(t, e) {
+    }, function (t, e) {
         t.exports = /[ \xA0\u1680\u2000-\u200A\u202F\u205F\u3000]/
-    }, function(t, e) {
+    }, function (t, e) {
         t.exports = /[\0-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/
-    }, function(t, e) {
-        t.exports = function(t) {
-            return t.webpackPolyfill || (t.deprecate = function() {}, t.paths = [], t.children || (t.children = []), Object.defineProperty(t, "loaded", {
+    }, function (t, e) {
+        t.exports = function (t) {
+            return t.webpackPolyfill || (t.deprecate = function () { }, t.paths = [], t.children || (t.children = []), Object.defineProperty(t, "loaded", {
                 enumerable: !0,
-                get: function() {
+                get: function () {
                     return t.l
                 }
             }), Object.defineProperty(t, "id", {
                 enumerable: !0,
-                get: function() {
+                get: function () {
                     return t.i
                 }
             }), t.webpackPolyfill = 1), t
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
@@ -6780,64 +6780,64 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             i = n(112),
             s = n(21),
             a = n(29);
-        e.App = function(t, e) {
+        e.App = function (t, e) {
             a.log("BotChat.App props", t), i.render(o.createElement(c, t), e)
         };
-        var c = function(t) {
+        var c = function (t) {
             return o.createElement("div", {
                 className: "wc-app"
             }, o.createElement(s.Chat, r.__assign({}, t)))
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
         });
-        var r = function() {
-            function t() {}
+        var r = function () {
+            function t() { }
             return t
         }();
         e.SpeechOptions = r
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(56),
             o = n(89)(6),
             i = "findIndex",
             s = !0;
-        i in [] && Array(1)[i](function() {
+        i in [] && Array(1)[i](function () {
             s = !1
         }), r(r.P + r.F * s, "Array", {
-            findIndex: function(t) {
+            findIndex: function (t) {
                 return o(this, t, arguments.length > 1 ? arguments[1] : void 0)
             }
         }), n(88)(i)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(56),
             o = n(89)(5),
             i = !0;
-        "find" in [] && Array(1).find(function() {
+        "find" in [] && Array(1).find(function () {
             i = !1
         }), r(r.P + r.F * i, "Array", {
-            find: function(t) {
+            find: function (t) {
                 return o(this, t, arguments.length > 1 ? arguments[1] : void 0)
             }
         }), n(88)("find")
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         var r = n(56),
             o = n(94),
             i = n(205),
             s = "".startsWith;
         r(r.P + r.F * n(195)("startsWith"), "String", {
-            startsWith: function(t) {
+            startsWith: function (t) {
                 var e = i(this, t, "startsWith"),
                     n = o(Math.min(arguments.length > 1 ? arguments[1] : void 0, e.length)),
                     r = String(t);
                 return s ? s.call(e, r, n) : e.slice(n, n + r.length) === r
             }
         })
-    }, function(t, e) {
+    }, function (t, e) {
         t.exports = {
             supportsInteractivity: !0,
             strongSeparation: {
@@ -7014,7 +7014,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             }
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
@@ -7024,7 +7024,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             i = n(52),
             s = n(183),
             a = n(184),
-            c = function(t) {
+            c = function (t) {
                 var e = t.attachments,
                     n = t.attachmentLayout,
                     a = r.__rest(t, ["attachments", "attachmentLayout"]);
@@ -7032,7 +7032,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     attachments: e
                 }, a)) : o.createElement("div", {
                     className: "wc-list"
-                }, e.map(function(e, n) {
+                }, e.map(function (e, n) {
                     return o.createElement(i.AttachmentView, {
                         key: n,
                         attachment: e,
@@ -7042,13 +7042,13 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     })
                 })) : null
             },
-            u = function(t) {
+            u = function (t) {
                 function e(e) {
                     return t.call(this, e) || this
                 }
                 return r.__extends(e, t), e.prototype.shouldComponentUpdate = function (t) {
                     return this.props.activity !== t.activity || this.props.format !== t.format || "message" === this.props.activity.type && "carousel" === this.props.activity.attachmentLayout && this.props.size !== t.size
-                }, e.prototype.render = function() {
+                }, e.prototype.render = function () {
                     var t = this.props,
                         e = t.activity,
                         n = r.__rest(t, ["activity"]);
@@ -7074,7 +7074,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }, e
             }(o.Component);
         e.ActivityView = u
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
 
         function r(t) {
@@ -7085,7 +7085,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         function o(t) {
             if (!t.actions) return t;
             var e = [];
-            return t.actions.forEach(function(t) {
+            return t.actions.forEach(function (t) {
                 if ("Action.Http" !== t.type) {
                     if ("Action.ShowCard" === t.type) {
                         var n = t;
@@ -7105,14 +7105,14 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             a = n(211),
             c = n(21),
             u = n(178),
-            l = function(t) {
+            l = function (t) {
                 function e(e) {
                     var n = t.call(this) || this;
                     return n.adaptiveCardContainer = e, n
                 }
                 return i.__extends(e, t), e
             }(a.AdaptiveCard);
-        a.AdaptiveCard.onExecuteAction = function(t) {
+        a.AdaptiveCard.onExecuteAction = function (t) {
             if (t instanceof a.OpenUrlAction) window.open(t.url);
             else if (t instanceof a.SubmitAction) {
                 var e = r(t);
@@ -7123,14 +7123,14 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     } else e.adaptiveCardContainer.onCardAction("string" == typeof t.data ? "imBack" : "postBack", t.data)
             }
         };
-        var p = function(t) {
+        var p = function (t) {
             function e(e) {
                 var n = t.call(this, e) || this;
-                return n.onCardAction = function(t, e) {
+                return n.onCardAction = function (t, e) {
                     n.props.onCardAction(t, e)
                 }, n
             }
-            return i.__extends(e, t), e.prototype.onClick = function(t) {
+            return i.__extends(e, t), e.prototype.onClick = function (t) {
                 if (this.props.onClick) switch (t.target.tagName) {
                     case "A":
                     case "AUDIO":
@@ -7144,7 +7144,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     default:
                         this.props.onClick(t)
                 }
-            }, e.prototype.componentDidMount = function() {
+            }, e.prototype.componentDidMount = function () {
                 var t = this,
                     e = new l(this);
                 e.parse(o(this.props.card));
@@ -7163,21 +7163,21 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     if (r) {
                         if (this.props.onImageLoad) {
                             var s = r.querySelectorAll("img");
-                            s && s.length > 0 && Array.prototype.forEach.call(s, function(e) {
+                            s && s.length > 0 && Array.prototype.forEach.call(s, function (e) {
                                 e.addEventListener("load", t.props.onImageLoad)
                             })
                         }
                         return void this.div.appendChild(r)
                     }
                 }
-                n.length > 0 && (console.log("Error(s) rendering AdaptiveCard:"), n.forEach(function(t) {
+                n.length > 0 && (console.log("Error(s) rendering AdaptiveCard:"), n.forEach(function (t) {
                     return console.log(t.message)
                 }), this.setState({
-                    errors: n.map(function(t) {
+                    errors: n.map(function (t) {
                         return t.message
                     })
                 }))
-            }, e.prototype.render = function() {
+            }, e.prototype.render = function () {
                 var t, e = this,
                     n = this.state && this.state.errors && this.state.errors.length > 0;
 
@@ -7211,19 +7211,19 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     className: "non-adaptive-content"
                 }, this.props.children) : null, s.createElement("div", {
                     className: c.classList("wc-card", "wc-adaptive-card", this.props.className, n && "error"),
-                    ref: function(t) {
+                    ref: function (t) {
                         return e.div = t
                     },
                     onClick: function (t) {
                         return e.onClick(t)
                     }
                 }, t, timeDiv)
-            }, e.prototype.componentDidUpdate = function() {
+            }, e.prototype.componentDidUpdate = function () {
                 this.props.onImageLoad && this.props.onImageLoad()
             }, e
         }(s.Component);
         e.AdaptiveCardContainer = p, a.setHostConfig(u)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
@@ -7232,7 +7232,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         e.App = r.App;
         var o = n(21);
         e.Chat = o.Chat,
-            function(t) {
+            function (t) {
                 for (var n in t) e.hasOwnProperty(n) || (e[n] = t[n])
             }(n(53));
         var i = n(52);
@@ -7241,13 +7241,13 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         e.SpeechOptions = s.SpeechOptions;
         var a = n(39);
         e.Speech = a.Speech, n(177), n(176), n(175)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
         });
         var r = n(11),
-            o = function() {
+            o = function () {
                 function t() {
                     this.container = {
                         type: "Container",
@@ -7258,11 +7258,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         body: [this.container]
                     }
                 }
-                return t.prototype.addColumnSet = function(t, e) {
+                return t.prototype.addColumnSet = function (t, e) {
                     void 0 === e && (e = this.container);
                     var n = {
                         type: "ColumnSet",
-                        columns: t.map(function(t) {
+                        columns: t.map(function (t) {
                             return {
                                 type: "Column",
                                 size: t.toString(),
@@ -7271,9 +7271,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         })
                     };
                     return e.items.push(n), n.columns
-                }, t.prototype.addItems = function(t, e) {
+                }, t.prototype.addItems = function (t, e) {
                     void 0 === e && (e = this.container), e.items.push.apply(e.items, t)
-                }, t.prototype.addTextBlock = function(t, e, n) {
+                }, t.prototype.addTextBlock = function (t, e, n) {
                     if (void 0 === n && (n = this.container), void 0 !== t) {
                         var o = r.__assign({
                             type: "TextBlock",
@@ -7281,8 +7281,8 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         }, e);
                         n.items.push(o)
                     }
-                }, t.prototype.addButtons = function(t) {
-                    t && (this.card.actions = t.map(function(t) {
+                }, t.prototype.addButtons = function (t) {
+                    t && (this.card.actions = t.map(function (t) {
                         var e = r.__assign({
                             __isBotFrameworkCardAction: !0
                         }, t);
@@ -7292,7 +7292,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             data: e
                         }
                     }))
-                }, t.prototype.addCommon = function(t) {
+                }, t.prototype.addCommon = function (t) {
                     this.addTextBlock(t.title, {
                         size: "medium",
                         weight: "bolder"
@@ -7303,7 +7303,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     }), this.addTextBlock(t.text, {
                         wrap: !0
                     }), this.addButtons(t.buttons)
-                }, t.prototype.addImage = function(t, e) {
+                }, t.prototype.addImage = function (t, e) {
                     void 0 === e && (e = this.container);
                     var n = {
                         type: "Image",
@@ -7313,12 +7313,12 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     e.items.push(n)
                 }, t
             }();
-        e.AdaptiveCardBuilder = o, e.buildCommonCard = function(t) {
+        e.AdaptiveCardBuilder = o, e.buildCommonCard = function (t) {
             if (!t) return null;
             var e = new o;
             return e.addCommon(t), e.card
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
@@ -7329,19 +7329,19 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             i = n(52),
             s = n(87),
             a = n(29),
-            c = function(t) {
+            c = function (t) {
                 function e(e) {
                     return t.call(this, e) || this
                 }
-                return r.__extends(e, t), e.prototype.updateContentWidth = function() {
+                return r.__extends(e, t), e.prototype.updateContentWidth = function () {
                     //var t = this.props.size.width - this.props.format.carouselMargin;
                     var t = parseInt($('.wc-message-groups').css('width')) - this.props.format.carouselMargin - 30; //KSO 줄였을때 carousel 크기 조정
                     this.root.style.width = "", this.root.offsetWidth > t && (this.root.style.width = t.toString() + "px", this.hscroll.updateScrollButtons())
-                }, e.prototype.componentDidMount = function() {
+                }, e.prototype.componentDidMount = function () {
                     this.updateContentWidth()
-                }, e.prototype.componentDidUpdate = function() {
+                }, e.prototype.componentDidUpdate = function () {
                     this.updateContentWidth()
-                }, e.prototype.render = function() {
+                }, e.prototype.render = function () {
                     var t = this;
 
                     /*KSO carousel 부분*/
@@ -7363,11 +7363,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
 
                     return o.createElement("div", {
                         className: "wc-carousel",
-                        ref: function(e) {
+                        ref: function (e) {
                             return t.root = e
                         }
                     }, o.createElement(s.HScroll, {
-                        ref: function(e) {
+                        ref: function (e) {
                             return t.hscroll = e
                         },
                         prevSvgPathData: "M 16.5 22 L 19 19.5 L 13.5 14 L 19 8.5 L 16.5 6 L 8.5 14 L 16.5 22 Z",
@@ -7377,15 +7377,15 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }, e
             }(o.PureComponent);
         e.Carousel = c;
-        var u = function(t) {
+        var u = function (t) {
             function e() {
                 return null !== t && t.apply(this, arguments) || this
             }
-            return r.__extends(e, t), e.prototype.render = function() {
+            return r.__extends(e, t), e.prototype.render = function () {
                 a.log("rendering CarouselAttachments");
                 var t = this.props,
                     e = (t.attachments, r.__rest(t, ["attachments"]));
-                return o.createElement("ul", null, this.props.attachments.map(function(t, n) {
+                return o.createElement("ul", null, this.props.attachments.map(function (t, n) {
                     return o.createElement("li", {
                         key: n,
                         className: "wc-carousel-item"
@@ -7398,14 +7398,14 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }))
             }, e
         }(o.PureComponent)
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
         });
         var r = n(100),
             o = n(9);
-        e.FormattedText = function(t) {
+        e.FormattedText = function (t) {
             if (!t.text || "" === t.text) return null;
             switch (t.format) {
                 case "xml":
@@ -7415,48 +7415,48 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     return c(t.text, t.onImageLoad)
             }
         };
-        var i = function(t) {
-                var e = t.replace("\r", "").split("\n"),
-                    n = e.map(function(t, e) {
-                        return o.createElement("span", {
-                            key: e
-                        }, t, o.createElement("br", null))
+        var i = function (t) {
+            var e = t.replace("\r", "").split("\n"),
+                n = e.map(function (t, e) {
+                    return o.createElement("span", {
+                        key: e
+                    }, t, o.createElement("br", null))
                 });
-                /*KSO*/
-                var msgMinutes = new Date().getMinutes();
-                var tempMinutes = msgMinutes;
-                if (msgMinutes < 10) {
-                    tempMinutes = "0" + tempMinutes.toString();
-                }
-                var getHour = new Date().getHours();
-                var ampm = '오전';
-                if (getHour > 12) {
-                    getHour = getHour - 12
-                    ampm = '오후';
-                }
-                var writeTime = ampm + " " + getHour + ":" + tempMinutes;
-                var timeDiv = "";
-                timeDiv = o.createElement("p", { className: "timeStampUser" }, writeTime);
-                return o.createElement("span", {
-                    className: "format-plain"
-                }, n, timeDiv)	//KSO
-            },
+            /*KSO*/
+            var msgMinutes = new Date().getMinutes();
+            var tempMinutes = msgMinutes;
+            if (msgMinutes < 10) {
+                tempMinutes = "0" + tempMinutes.toString();
+            }
+            var getHour = new Date().getHours();
+            var ampm = '오전';
+            if (getHour > 12) {
+                getHour = getHour - 12
+                ampm = '오후';
+            }
+            var writeTime = ampm + " " + getHour + ":" + tempMinutes;
+            var timeDiv = "";
+            timeDiv = o.createElement("p", { className: "timeStampUser" }, writeTime);
+            return o.createElement("span", {
+                className: "format-plain"
+            }, n, timeDiv)	//KSO
+        },
             s = new r({
                 html: !1,
                 linkify: !0,
                 typographer: !0
             }),
-            a = s.renderer.rules.link_open || function(t, e, n, r, o) {
+            a = s.renderer.rules.link_open || function (t, e, n, r, o) {
                 return o.renderToken(t, e, n)
             };
-        s.renderer.rules.link_open = function(t, e, n, r, o) {
+        s.renderer.rules.link_open = function (t, e, n, r, o) {
             var i = t[e].attrIndex("target");
             return i < 0 ? t[e].attrPush(["target", "_blank"]) : t[e].attrs[i][1] = "_blank", a(t, e, n, r, o)
         };
-        var c = function(t, e) {
-            var n = t.replace(/<br\s*\/?>/gi, "\r\n\r\n").replace(/\[(.*?)\]\((.*?)\)/gi, function(t, e, n) {
-                    return "[" + e + "](" + s.normalizeLink(n) + ")"
-                }),
+        var c = function (t, e) {
+            var n = t.replace(/<br\s*\/?>/gi, "\r\n\r\n").replace(/\[(.*?)\]\((.*?)\)/gi, function (t, e, n) {
+                return "[" + e + "](" + s.normalizeLink(n) + ")"
+            }),
                 r = s.render(n);
             return o.createElement("div", {
                 className: "format-markdown",
@@ -7465,7 +7465,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
             })
         }
-    }, function(t, e, n) {
+    }, function (t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
             value: !0
@@ -7477,12 +7477,12 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
             a = n(21),
             c = n(29),
             u = n(40),
-            l = function(t) {
+            l = function (t) {
                 function e(e) {
                     var n = t.call(this, e) || this;
-                    return n.scrollToBottom = !0, n.measurableCarousel = function() {
+                    return n.scrollToBottom = !0, n.measurableCarousel = function () {
                         return o.createElement(m, {
-                            ref: function(t) {
+                            ref: function (t) {
                                 return n.carouselActivity = t
                             },
                             activity: {
@@ -7506,9 +7506,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         }, "Â "))
                     }, n
                 }
-                return r.__extends(e, t), e.prototype.componentWillUpdate = function() {
+                return r.__extends(e, t), e.prototype.componentWillUpdate = function () {
                     this.scrollToBottom = Math.abs(this.scrollMe.scrollHeight - this.scrollMe.scrollTop - this.scrollMe.offsetHeight) <= 1
-                }, e.prototype.componentDidUpdate = function() {
+                }, e.prototype.componentDidUpdate = function () {
                     if (void 0 == this.props.format.carouselMargin) {
                         var t = f(this.carouselActivity.messageDiv) - this.largeWidth,
                             e = this.carouselActivity.messageDiv.offsetParent.offsetWidth - t,
@@ -7516,19 +7516,19 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         c.log("history measureMessage " + n), this.props.setMeasurements(n), this.carouselActivity = null
                     }
                     this.autoscroll()
-                }, e.prototype.autoscroll = function() {
+                }, e.prototype.autoscroll = function () {
                     var t = Math.max(0, h(this.scrollMe) - this.scrollContent.offsetHeight);
                     this.scrollContent.style.marginTop = t + "px";
                     var e = this.props.activities[this.props.activities.length - 1],
                         n = e && this.props.isFromMe && this.props.isFromMe(e);
                     (this.scrollToBottom || n) && (this.scrollMe.scrollTop = this.scrollMe.scrollHeight - this.scrollMe.offsetHeight)
-                }, e.prototype.doCardAction = function(t, e) {
+                }, e.prototype.doCardAction = function (t, e) {
                     return this.props.onClickCardAction(), this.props.doCardAction(t, e)
-                }, e.prototype.render = function() {
+                }, e.prototype.render = function () {
                     var t = this;
                     c.log("History props", this);
                     var e;
-                    void 0 !== this.props.size.width && (void 0 === this.props.format.carouselMargin ? (this.largeWidth = 2 * this.props.size.width, e = o.createElement(this.measurableCarousel, null)) : e = this.props.activities.map(function(e, n) {
+                    void 0 !== this.props.size.width && (void 0 === this.props.format.carouselMargin ? (this.largeWidth = 2 * this.props.size.width, e = o.createElement(this.measurableCarousel, null)) : e = this.props.activities.map(function (e, n) {
                         return o.createElement(m, {
                             format: t.props.format,
                             key: "message" + n,
@@ -7537,17 +7537,17 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             selected: t.props.isSelected(e),
                             fromMe: t.props.isFromMe(e),
                             onClickActivity: t.props.onClickActivity(e),
-                            onClickRetry: function(n) {
+                            onClickRetry: function (n) {
                                 n.preventDefault(), n.stopPropagation(), t.props.onClickRetry(e)
                             }
                         }, o.createElement(s.ActivityView, {
                             format: t.props.format,
                             size: t.props.size,
                             activity: e,
-                            onCardAction: function(e, n) {
+                            onCardAction: function (e, n) {
                                 return t.doCardAction(e, n)
                             },
-                            onImageLoad: function() {
+                            onImageLoad: function () {
                                 return t.autoscroll()
                             }
                         }))
@@ -7555,18 +7555,18 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     var n = a.classList("wc-message-groups", !this.props.format.options.showHeader && "no-header");
                     return o.createElement("div", {
                         className: n,
-                        ref: function(e) {
+                        ref: function (e) {
                             return t.scrollMe = e || t.scrollMe
                         }
                     }, o.createElement("div", {
                         className: "wc-message-group-content",
-                        ref: function(e) {
+                        ref: function (e) {
                             e && (t.scrollContent = e)
                         }
                     }, e))
                 }, e
             }(o.Component);
-        e.HistoryView = l, e.History = i.connect(function(t) {
+        e.HistoryView = l, e.History = i.connect(function (t) {
             return {
                 format: t.format,
                 size: t.size,
@@ -7577,71 +7577,71 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 user: t.connection.user
             }
         }, {
-            setMeasurements: function(t) {
-                return {
-                    type: "Set_Measurements",
-                    carouselMargin: t
-                }
-            },
-            onClickRetry: function(t) {
-                return {
-                    type: "Send_Message_Retry",
-                    clientActivityId: t.channelData.clientActivityId
-                }
-            },
-            onClickCardAction: function() {
-                return {
-                    type: "Card_Action_Clicked"
-                }
-            },
-            sendMessage: u.sendMessage
-        }, function(t, e, n) {
-            return {
-                format: t.format,
-                size: t.size,
-                activities: t.activities,
-                setMeasurements: e.setMeasurements,
-                onClickRetry: e.onClickRetry,
-                onClickCardAction: e.onClickCardAction,
-                doCardAction: a.doCardAction(t.botConnection, t.user, t.format.locale, e.sendMessage),
-                isFromMe: function(e) {
-                    return e.from.id === t.user.id
+                setMeasurements: function (t) {
+                    return {
+                        type: "Set_Measurements",
+                        carouselMargin: t
+                    }
                 },
-                isSelected: function(e) {
-                    return e === t.selectedActivity
+                onClickRetry: function (t) {
+                    return {
+                        type: "Send_Message_Retry",
+                        clientActivityId: t.channelData.clientActivityId
+                    }
                 },
-                onClickActivity: function(e) {
-                    return t.connectionSelectedActivity && function() {
-                        return t.connectionSelectedActivity.next({
-                            activity: e
-                        })
+                onClickCardAction: function () {
+                    return {
+                        type: "Card_Action_Clicked"
+                    }
+                },
+                sendMessage: u.sendMessage
+            }, function (t, e, n) {
+                return {
+                    format: t.format,
+                    size: t.size,
+                    activities: t.activities,
+                    setMeasurements: e.setMeasurements,
+                    onClickRetry: e.onClickRetry,
+                    onClickCardAction: e.onClickCardAction,
+                    doCardAction: a.doCardAction(t.botConnection, t.user, t.format.locale, e.sendMessage),
+                    isFromMe: function (e) {
+                        return e.from.id === t.user.id
+                    },
+                    isSelected: function (e) {
+                        return e === t.selectedActivity
+                    },
+                    onClickActivity: function (e) {
+                        return t.connectionSelectedActivity && function () {
+                            return t.connectionSelectedActivity.next({
+                                activity: e
+                            })
+                        }
                     }
                 }
-            }
-        })(l);
-        var p = function(t, e) {
-                var n = window.getComputedStyle(t),
-                    r = {};
-                return e.forEach(function(t) {
-                    return r[t] = parseInt(n.getPropertyValue(t))
-                }), r
-            },
-            h = function(t) {
+            })(l);
+        var p = function (t, e) {
+            var n = window.getComputedStyle(t),
+                r = {};
+            return e.forEach(function (t) {
+                return r[t] = parseInt(n.getPropertyValue(t))
+            }), r
+        },
+            h = function (t) {
                 var e = p(t, ["padding-top", "padding-bottom"]);
                 return t.offsetHeight - e["padding-top"] - e["padding-bottom"]
             },
-            f = function(t) {
+            f = function (t) {
                 var e = p(t, ["padding-left", "padding-right"]);
                 return t.offsetWidth + e["padding-left"] + e["padding-right"]
             },
-            d = function(t, e) {
+            d = function (t, e) {
                 return Date.parse(e.timestamp) - Date.parse(t.timestamp) > 3e5
             },
-            m = function(t) {
+            m = function (t) {
                 function e(e) {
                     return t.call(this, e) || this
                 }
-                return r.__extends(e, t), e.prototype.render = function() {
+                return r.__extends(e, t), e.prototype.render = function () {
                     var t, e = this;
                     switch (this.props.activity.id) {
                         case void 0:
@@ -7670,9 +7670,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             onClick: this.props.onClickActivity
                         }, o.createElement("div", {
                             className: "wc-message wc-message-from-" + r,
-                                ref: function (t) {
+                            ref: function (t) {
                                 //tts
-                                    //lfn_speakTTS(t);
+                                //lfn_speakTTS(t);
                                 return e.messageDiv = t
                             }
                         }, o.createElement("div", {
@@ -7681,10 +7681,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             className: "wc-message-from wc-message-from-" + r
                         }))
                     } else {
-                        if (startFlag == '0') {
-                            var activityId = this.props.activity.id;
-                            var activityNum = activityId.split('|');
-                        }
+                        //KSO First DLG HIDE 
+                        var activityId = this.props.activity.id;
+                        var activityNum = activityId.split('|');
 
                         if (activityNum[1] == '0000000' &&
                             (location.href == defaultUrl
