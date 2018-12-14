@@ -53,13 +53,13 @@ if (isMobile()) {   //모바일 환경
 	//	location.href = "index_m.html";
     //});
 
-    consoel.log($('#cjworld_id').val());
+    console.log('value = '+ $('#cjworld_id').val());
 
     //2. 로딩시 표출
     
 
     if ($('#cjworld_id').val() != '') {
-        location.href = "default_m.asp?cjworld_id=$('#cjworld_id').val()";
+        location.href = "default_m.asp?cjworld_id="+$('#cjworld_id').val();
     } else {
         location.href = "default_m.asp";
     }
