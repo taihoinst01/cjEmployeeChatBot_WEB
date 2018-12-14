@@ -3469,13 +3469,6 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
                         var mobileGetId = $('#cjworld_id').val();
-                        console.log("1 ::: " + location.href);
-                        console.log("2 ::: " + defaultUrl_m + "?cjworld_id=" + mobileGetId);
-                        if (deviceChk == 'M') {
-                        } else {
-                            console.log('false');
-                        }
-
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
