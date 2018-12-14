@@ -7685,11 +7685,11 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         //KSO First DLG HIDE 
                         var activityId = this.props.activity.id;
                         var activityNum = activityId.split('|');
-
+                        var mobileGetId = $('#cjworld_id').val();
                         if (activityNum[1] == '0000000' &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
-                            || location.href == defaultUrl_m)) {
+                            /*|| location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)*/) {
                             return o.createElement("div", {
                                 "data-activity-id": this.props.activity.id,
                                 className: i + " dpN",
@@ -20960,11 +20960,11 @@ function removeLoadingDiv(f) {
 
 function ssoConnection() {
     //sso form 값
-    console.log($("#cjworld_id_get").val());
+    console.log($("#cjworld_id").val());
     console.log($('#conversationId').val());
     //var pos = { key: $("#key").val(), cjworld_id: $("#cjworld_id").val(), lang: $("#lang").val() };
     //var pos = "sso:" + $("#key").val() + ":" + $("#cjworld_id").val() + ":" + $("#lang").val();
-    var pos = deviceChk +  " :: SSO 테스트 중입니다.";
+    var pos = deviceChk + " :: SSO 테스트 중입니다. ::: id : " + $("#cjworld_id").val();
 
     //var directLineUrl = "https://directline.botframework.com";
     //var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
