@@ -3469,7 +3469,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
                         console.log("1 ::: " + location.href);
-                        console.log("2 ::: " + defaultUrl_m + "?cjworld_id=" + $('#cjworld_id').val());
+                        console.log("2 ::: " + defaultUrl_m + "?cjworld_id=" + $('#cjworld_id_get').val());
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                                 || location.href == defaultUrl_pc
@@ -20961,7 +20961,7 @@ function removeLoadingDiv(f) {
 
 function ssoConnection() {
     //sso form 값
-    console.log($("#cjworld_id").val());
+    console.log($("#cjworld_id_get").val());
     console.log($('#conversationId').val());
     //var pos = { key: $("#key").val(), cjworld_id: $("#cjworld_id").val(), lang: $("#lang").val() };
     //var pos = "sso:" + $("#key").val() + ":" + $("#cjworld_id").val() + ":" + $("#lang").val();
