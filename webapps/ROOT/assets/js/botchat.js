@@ -3468,17 +3468,18 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
-                        var mobileGetid;
+                        var mobileGetid = $('#cjworld_id').val();
+                        console.log("1 ::: " + location.href);
+                        console.log("2 ::: " + defaultUrl_m + "?cjworld_id=" + mobileGetId);
                         if (deviceChk == 'M') {
-                            mobileGetId = $('#cjworld_id').val();
-                            console.log("1 ::: " + location.href);
-                            console.log("2 ::: " + defaultUrl_m + "?cjworld_id=" + mobileGetId);
+                        } else {
+                            console.log('false');
                         }
 
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                                 || location.href == defaultUrl_pc
-                            || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
+                                || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
                             console.log("SSO Connect");
                             ssoConnection();
                             startFlag = 1;
