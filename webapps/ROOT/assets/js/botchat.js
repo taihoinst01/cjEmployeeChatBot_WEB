@@ -20965,8 +20965,6 @@ function ssoConnection() {
     //var pos = "sso:" + $("#key").val() + ":" + $("#cjworld_id").val() + ":" + $("#lang").val();
     var pos = deviceChk +  " :: SSO 테스트 중입니다.";
 
-    $("#cjworld_id").attr('value', 'test1234');
-
     //var directLineUrl = "https://directline.botframework.com";
     //var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
 
