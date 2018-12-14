@@ -53,6 +53,8 @@ if (isMobile()) {   //모바일 환경
 	//	location.href = "index_m.html";
     //});
 
+    consoel.log($('#cjworld_id').val());
+
     //2. 로딩시 표출
     location.href = "default_m.asp";
 } else {    // 웹 환경

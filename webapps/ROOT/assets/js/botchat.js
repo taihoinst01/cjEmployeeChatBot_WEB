@@ -20959,7 +20959,7 @@ function removeLoadingDiv(f) {
 
 function ssoConnection() {
     //sso form 값
-    console.log($("#key").val());
+    console.log($("#cjworld_id").val());
     console.log($('#conversationId').val());
     //var pos = { key: $("#key").val(), cjworld_id: $("#cjworld_id").val(), lang: $("#lang").val() };
     //var pos = "sso:" + $("#key").val() + ":" + $("#cjworld_id").val() + ":" + $("#lang").val();
