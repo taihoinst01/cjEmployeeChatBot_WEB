@@ -3219,11 +3219,20 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
 
 
                             //임시
+                            console.log(e.content.buttons);
                             if (e.content.buttons[0] != null) { //openUrl 없을때 처리
                                 if (e.content.buttons[0].value == '#') {
                                     e.content.buttons[0].title = 'URL 준비중입니다.';
                                 }
+
+                                if (deviceChk == 'M') {
+                                    if (e.content.buttons[0].type == 'openUrl') {
+                                        e.content.buttons[0].title = 'PC 서비스 제공';
+                                    }
+                                }
                             }
+
+                            
 
                             return e.content.images && e.content.images.forEach(function (t) {
                                 return r.addImage(t.url)
@@ -13205,9 +13214,21 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
         var I = function() {
                 function t(t, e) {
                     var n = this;
-                    this._style = "button", this._element = null, this._state = P.Normal, this.onClick = null, this._action = t, this._style = e, this._element = document.createElement("button"), this._element.type = "button", this._element.style.overflow = "hidden", this._element.style.whiteSpace = "nowrap", this._element.style.textOverflow = "ellipsis", this._element.onclick = function(t) {
-                        n.click()
-                    }, this.updateCssStyle()
+
+                    if (deviceChk == 'M') {
+                        //, this._element.disabled
+
+                        this._style = "button", this._element = null, this._state = P.Normal, this.onClick = null, this._action = t, this._style = e, this._element = document.createElement("button"), this._element.type = "button", this._element.style.overflow = "hidden", this._element.style.whiteSpace = "nowrap", this._element.style.textOverflow = "ellipsis", this._element.onclick = function (t) {
+                            n.click()
+                        }, this.updateCssStyle()
+                    } else {
+                        this._style = "button", this._element = null, this._state = P.Normal, this.onClick = null, this._action = t, this._style = e, this._element = document.createElement("button"), this._element.type = "button", this._element.style.overflow = "hidden", this._element.style.whiteSpace = "nowrap", this._element.style.textOverflow = "ellipsis", this._element.onclick = function (t) {
+                            n.click()
+                        }, this.updateCssStyle()
+                    }
+                    //this._style = "button", this._element = null, this._state = P.Normal, this.onClick = null, this._action = t, this._style = e, this._element = document.createElement("button"), this._element.type = "button", this._element.style.overflow = "hidden", this._element.style.whiteSpace = "nowrap", this._element.style.textOverflow = "ellipsis", this._element.onclick = function (t) {
+                    //    n.click()
+                    //}, this.updateCssStyle()
                 }
                 return t.prototype.click = function() {
                     null != this.onClick && this.onClick(this)
@@ -20964,7 +20985,7 @@ function ssoConnection() {
     console.log($('#conversationId').val());
     //var pos = { key: $("#key").val(), cjworld_id: $("#cjworld_id").val(), lang: $("#lang").val() };
     //var pos = "sso:" + $("#key").val() + ":" + $("#cjworld_id").val() + ":" + $("#lang").val();
-    var pos = deviceChk + " :: SSO 테스트 중입니다. ::: id : " + $("#cjworld_id").val();
+    var pos = deviceChk + "sso:" + $("#cjworld_id").val();
 
     //var directLineUrl = "https://directline.botframework.com";
     //var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
