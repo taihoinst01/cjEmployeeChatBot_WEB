@@ -3219,7 +3219,6 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
 
 
                             //임시
-                            console.log(e.content.buttons);
                             if (e.content.buttons[0] != null) { //openUrl 없을때 처리
                                 if (e.content.buttons[0].value == '#') {
                                     e.content.buttons[0].title = 'URL 준비중입니다.';
@@ -13215,10 +13214,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 function t(t, e) {
                     var n = this;
 
-                    if (deviceChk == 'M') {
-                        //, this._element.disabled
-
-                        this._style = "button", this._element = null, this._state = P.Normal, this.onClick = null, this._action = t, this._style = e, this._element = document.createElement("button"), this._element.type = "button", this._element.style.overflow = "hidden", this._element.style.whiteSpace = "nowrap", this._element.style.textOverflow = "ellipsis", this._element.onclick = function (t) {
+                    //KSO mobile openurl일 경우 버튼 disable
+                    if (deviceChk == 'M' && t.data.type == 'openUrl') {
+                        this._style = "button", this._element = null, this._state = P.Normal, this.onClick = null, this._action = t, this._style = e, this._element = document.createElement("button"), this._element.type = "button", this._element.style.overflow = "hidden", this._element.style.whiteSpace = "nowrap", this._element.style.textOverflow = "ellipsis", this._element.onclick, this._element.disabled = function (t) {
                             n.click()
                         }, this.updateCssStyle()
                     } else {
@@ -13226,6 +13224,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             n.click()
                         }, this.updateCssStyle()
                     }
+                    //origin
                     //this._style = "button", this._element = null, this._state = P.Normal, this.onClick = null, this._action = t, this._style = e, this._element = document.createElement("button"), this._element.type = "button", this._element.style.overflow = "hidden", this._element.style.whiteSpace = "nowrap", this._element.style.textOverflow = "ellipsis", this._element.onclick = function (t) {
                     //    n.click()
                     //}, this.updateCssStyle()
