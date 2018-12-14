@@ -56,7 +56,13 @@ if (isMobile()) {   //모바일 환경
     consoel.log($('#cjworld_id').val());
 
     //2. 로딩시 표출
-    location.href = "default_m.asp";
+    
+
+    if ($('#cjworld_id').val() != '') {
+        location.href = "default_m.asp?cjworld_id=$('#cjworld_id').val()";
+    } else {
+        location.href = "default_m.asp";
+    }
 } else {    // 웹 환경
 
     // 1. 처음 로딩시 표출
