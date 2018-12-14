@@ -14,9 +14,8 @@ function isMobile() {
 
 if (isMobile()) {   //모바일 환경
     //2. 로딩시 표출
-    console.log('value = '+ $('#cjworld_id_get').val());
     var cjworld_id = $('#cjworld_id_get').val();
-    if ($('#cjworld_id_get').val() != '') {
+    if (cjworld_id != '') {
         location.href = "default_m.asp?cjworld_id=" + cjworld_id;
     } else {
         location.href = "default_m.asp";
