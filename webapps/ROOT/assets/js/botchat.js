@@ -7689,7 +7689,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         if (activityNum[1] == '0000000' &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
-                            /*|| location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)*/) {
+                            /*|| location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId*/)) {
                             return o.createElement("div", {
                                 "data-activity-id": this.props.activity.id,
                                 className: i + " dpN",
