@@ -38,10 +38,10 @@
 <body>
     <input type="hidden" id="conversationId" />
     <input type="hidden" id="key"  value="<%=request.form("key") %>"/>
-    <!--<input type="hidden" id="cjworld_id_post" value="<%=request.form("cjworld_id") %>"/>-->
-    <!--<input type="hidden" id="cjworld_id_get" value="<%=request("cjworld_id") %>"/>-->
-    <input type="hidden" id="cjworld_id_post" value="test1234_PC"/>
-    <input type="hidden" id="cjworld_id_get" value="test1234_Mobile"/>
+    <input type="hidden" id="cjworld_id_post" value="<%=request.form("cjworld_id") %>"/>
+    <input type="hidden" id="cjworld_id_get" value="<%=request("cjworld_id") %>"/>
+    <!--<input type="hidden" id="cjworld_id_post" value="test1234_PC"/>
+    <input type="hidden" id="cjworld_id_get" value="test1234_Mobile"/>-->
     <input type="hidden" id="lang"  value="<%=request.form("lang") %>"/>
     <div class="mainBG">
         <!--<img src="assets/image/chatbotStyle/psa_background.png" />-->
