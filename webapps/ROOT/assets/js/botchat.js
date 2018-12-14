@@ -1,6 +1,7 @@
 //초기 한번 Flag
 var startFlag = 0;
-var deviceChk = '';
+//device check(PC, Mobile)
+var deviceChk;
 
 ! function (t, e) {
     "object" == typeof exports && "object" == typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define([], e) : "object" == typeof exports ? exports.BotChat = e() : t.BotChat = e()
@@ -1328,7 +1329,7 @@ var deviceChk = '';
                     var r;
 
                     //KSO :: DeviceChk(P-PC, M-Mobile)
-                    //isMobile();
+                    isMobile();
                     //console.log(deviceChk);
 
 
@@ -7667,7 +7668,7 @@ var deviceChk = '';
                         }, o.createElement("div", {
                             className: "wc-message wc-message-from-" + r,
                                 ref: function (t) {
-                                    //tts
+                                //tts
                                     //lfn_speakTTS(t);
                                 return e.messageDiv = t
                             }
@@ -7677,83 +7678,36 @@ var deviceChk = '';
                             className: "wc-message-from wc-message-from-" + r
                         }))
                     } else {
-                        if (startFlag == 0) {
-                            var _activityId = this.props.activity.id;
-                            //var _activityIdNum = _activityId.split('|');
-                            console.log(_activityId);
-                        }
-                        //KSO 초기 ASP connect value dlg hide
-                        //if (_activityIdNum[1] == '0000000') {
-                        //    return o.createElement("div", {
-                        //        "data-activity-id": this.props.activity.id,
-                        //        className: i + " dpN",
-                        //        onClick: this.props.onClickActivity
-                        //    }, o.createElement("div", {
-                        //        className: "wc-message wc-message-from-" + r,
-                        //        ref: function (t) {
-                        //            return e.messageDiv = t
-                        //        }
-                        //    }, o.createElement("div", {
-                        //        className: s
-                        //    },
-                        //        o.createElement("img", {
-                        //            src: "assets/image/chatbotStyle/ico_profi_80.png", className: "wc-message-callout"
-                        //        }
-                        //        ), this.props.children)), o.createElement("div", {
-                        //            className: "wc-message-from wc-message-from-" + r
-                        //        }))
-                        //} else {
-                        //    return o.createElement("div", {
-                        //        "data-activity-id": this.props.activity.id,
-                        //        className: i,
-                        //        onClick: this.props.onClickActivity
-                        //    }, o.createElement("div", {
-                        //        className: "wc-message wc-message-from-" + r,
-                        //        ref: function (t) {
-                        //            return e.messageDiv = t
-                        //        }
-                        //    }, o.createElement("div", {
-                        //        className: s
-                        //    },
-                        //        o.createElement("img", {
-                        //            src: "assets/image/chatbotStyle/ico_profi_80.png", className: "wc-message-callout"
-                        //        }
-                        //        ), this.props.children)), o.createElement("div", {
-                        //            className: "wc-message-from wc-message-from-" + r
-                        //        }))
-                        //}
-
-                        //origin
                         return o.createElement("div", {
                             "data-activity-id": this.props.activity.id,
                             className: i,
                             onClick: this.props.onClickActivity
                         }, o.createElement("div", {
                             className: "wc-message wc-message-from-" + r,
-                            ref: function (t) {
-                                //tts
-                                //lfn_speakTTS(t);
+                                ref: function (t) {
+                                    //tts
+                                    //lfn_speakTTS(t);
                                 return e.messageDiv = t
                             }
                         }, o.createElement("div", {
                             className: s
                         },
                             o.createElement("img", {
-                                src: "assets/image/chatbotStyle/ico_profi_80.png", className: "wc-message-callout"
-                            }
-                                //    o.createElement("svg", {
-                                //    className: "wc-message-callout"
-                                //}
-                                //                o.createElement("path", {
-                                //    className: "point-left",
-                                //    d: "m0,6 l6 6 v-12 z"
-                                //}), o.createElement("path", {
-                                //    className: "point-right",
-                                //    d: "m6,6 l-6 6 v-12 z"
-                                //                })
-                            ), this.props.children)), o.createElement("div", {
-                                className: "wc-message-from wc-message-from-" + r
-                            }))
+                                src: "assets/image/chatbotStyle/ico_profi_80.png", className:"wc-message-callout"
+                        }
+                        //    o.createElement("svg", {
+                        //    className: "wc-message-callout"
+                        //}
+                            //                o.createElement("path", {
+                            //    className: "point-left",
+                            //    d: "m0,6 l6 6 v-12 z"
+                            //}), o.createElement("path", {
+                            //    className: "point-right",
+                            //    d: "m6,6 l-6 6 v-12 z"
+                            //                })
+                        ), this.props.children)), o.createElement("div", {
+                            className: "wc-message-from wc-message-from-" + r
+                        }))
                     }
                 }, e
             }(o.Component);
@@ -20953,15 +20907,12 @@ function removeLoadingDiv(f) {
 }
 
 function ssoConnection() {
-    //PC와 Mobile구분
-    isMobile();
-
     //sso form 값
     console.log($("#key").val());
     console.log($('#conversationId').val());
     //var pos = { key: $("#key").val(), cjworld_id: $("#cjworld_id").val(), lang: $("#lang").val() };
     //var pos = "sso:" + $("#key").val() + ":" + $("#cjworld_id").val() + ":" + $("#lang").val();
-    var pos = deviceChk + " :: SSO 테스트 중입니다.";
+    var pos = deviceChk +  " :: SSO 테스트 중입니다.";
 
     //var directLineUrl = "https://directline.botframework.com";
     //var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
