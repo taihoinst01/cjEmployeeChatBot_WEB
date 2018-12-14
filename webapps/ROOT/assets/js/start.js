@@ -53,16 +53,17 @@ if (isMobile()) {   //모바일 환경
 	//	location.href = "index_m.html";
     //});
 
-    console.log('value = '+ $('#cjworld_id_get').val());
 
     //2. 로딩시 표출
-    
+    //console.log('value = '+ $('#cjworld_id_get').val());
+    //var cjworld_id = $('#cjworld_id_get').val();
+    //if ($('#cjworld_id_get').val() != '') {
+    //    location.href = "default_m.asp?cjworld_id=" + cjworld_id;
+    //} else {
+    //    location.href = "default_m.asp";
+    //}
 
-    if ($('#cjworld_id_get').val() != '') {
-        location.href = "default_m.asp?cjworld_id="+$('#cjworld_id_get').val();
-    } else {
-        location.href = "default_m.asp";
-    }
+    //3. CJ mobile Connect문제로 mobile일 경우 호출부분을 뒤로 바꿈(ssoConnection)
 } else {    // 웹 환경
 
     // 1. 처음 로딩시 표출
