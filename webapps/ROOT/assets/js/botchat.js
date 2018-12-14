@@ -7679,7 +7679,7 @@ var deviceChk = '';
                     } else {
                         if (startFlag == 0) {
                             var _activityId = this.props.activity.id;
-                            var _activityIdNum = _activityId.split('|');
+                            //var _activityIdNum = _activityId.split('|');
                             console.log(_activityId);
                         }
                         //KSO 초기 ASP connect value dlg hide
