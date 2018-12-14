@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="assets/css/jquery-ui.css" />
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/pc/botchat.css" />
     <link rel="stylesheet" href="assets/css/pc/style.css" />
 

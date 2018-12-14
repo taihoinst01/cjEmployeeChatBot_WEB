@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="assets/css/jquery-ui.css" />
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/mobile/m_botchat.css" />
     <link rel="stylesheet" href="assets/css/mobile/m_style.css" />
 
@@ -34,7 +35,8 @@
     <title>CJ Employee</title>
 </head>
 <body>
-    <input type="hidden" id="conversationId">
+    <input type="hidden" id="conversationId" />
+    <input type="hidden" id="cjworld_id" value="<%=request("cjworld_id") %>"/>
     <div class="mainBG">
         <!-- 여기서 부터 -->
         <div class="bot-wrap chatOn">

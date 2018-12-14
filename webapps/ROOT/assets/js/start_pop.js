@@ -33,7 +33,7 @@ if (isMobile()) {   //모바일 환경
     //});
 
     //2. 로딩시 표출
-    location.href = "index_m.html";
+    location.href = "default_m.asp";
 } else {    // 웹 환경
 
     // 1. 처음 로딩시 표출
