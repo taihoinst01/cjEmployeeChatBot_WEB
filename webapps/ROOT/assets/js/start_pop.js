@@ -75,7 +75,7 @@ if (isMobile()) {   //모바일 환경
         //window.open('default.asp', '', popupOption);
         var frmPop = document.frm;
         var url = 'default.asp';
-        window.open('', '', popupOption);
+        window.open('', '_blank', popupOption);
 
         frmPop.action = url;
         frmPop.target = '';
