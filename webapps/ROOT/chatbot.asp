@@ -38,7 +38,8 @@
     <form name="frm" method="post" action="default.asp">
         <input type="hidden" id="conversationId" />
         <input type="hidden" id="key"  value="<%=request.form("key") %>"/>
-        <input type="hidden" id="cjworld_id" value="<%=request("cjworld_id") %>"/>
+        <!--<input type="hidden" id="cjworld_id" value="<%=request("cjworld_id") %>"/>-->
+        <input type="hidden" name="cjworld_id" value="<%=request("cjworld_id") %>"/>
         <!--<input type="hidden" id="cjworld_id_post" value="<%=request.form("cjworld_id") %>"/>-->
         <input type="hidden" id="lang"  value="<%=request.form("lang") %>"/>
     </form>
