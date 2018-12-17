@@ -57,9 +57,27 @@ if (isMobile()) {   //모바일 환경
     var popLeft = (fullWidth - popWidth) / 2;
     var popTop = (fullHeight - popHeight) / 2;
 
+    var _key = $('#key').val();
+    var _cjworld_id_get = $('#cjworld_id_get').val();
+    var _cjworld_id_post = $('#cjworld_id_post').val();
+    var _lang = $('#lang').val();
+
     var popupOption = "width = " + popWidth + ", height = " + popHeight + ", top = " + popTop+", left = " + popLeft+", resizable = no, fullscreen = no, toolbar = no, menubar = no, channelmode = no, scrollbars = no, location = no";
-    $(document).on('click', '#botChatBtn', function () {
+    $(document).on('click', '#botChatBtn', function (arg1, arg2, arg3, arg4) {
+
+
         //window.open('chatbot.html', '', popupOption);
-        window.open('default.asp', '', popupOption);
+        //window.open('default.asp', '', popupOption);
+        var frmPop = document.frm;
+        var url = 'default.asp';
+        window.open('', '', popupOption);
+
+        frmPop.action = url;
+        frmPop.target = '';
+        frmPop.arg1.value = _key;
+        frmPop.arg2.value = _cjworld_id_get;
+        frmPop.arg3.value = _cjworld_id_post;
+        frmPop.arg4.value = _lang;
+        frmPop.submit();
     });
 }
