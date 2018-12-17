@@ -63,7 +63,7 @@ if (isMobile()) {   //모바일 환경
     var _lang = $('#lang').val();
 
     var popupOption = "width = " + popWidth + ", height = " + popHeight + ", top = " + popTop+", left = " + popLeft+", resizable = no, fullscreen = no, toolbar = no, menubar = no, channelmode = no, scrollbars = no, location = no";
-    $(document).on('click', '#botChatBtn', function (arg1, arg2, arg3, arg4) {
+    $(document).on('click', '#botChatBtn', function (_key, _cjworld_id_get, _cjworld_id_post, _lang) {
 
 
         //window.open('chatbot.html', '', popupOption);
@@ -74,10 +74,10 @@ if (isMobile()) {   //모바일 환경
 
         frmPop.action = url;
         frmPop.target = '';
-        frmPop.arg1.value = _key;
-        frmPop.arg2.value = _cjworld_id_get;
-        frmPop.arg3.value = _cjworld_id_post;
-        frmPop.arg4.value = _lang;
+        frmPop.key.value = _key;
+        frmPop.cjworld_id_get.value = _cjworld_id_get;
+        frmPop.cjworld_id_post.value = _cjworld_id_post;
+        frmPop.lang.value = _lang;
         frmPop.submit();
     });
 }
