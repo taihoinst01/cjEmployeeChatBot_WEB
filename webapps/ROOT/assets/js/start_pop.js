@@ -57,13 +57,13 @@ if (isMobile()) {   //모바일 환경
     var popLeft = (fullWidth - popWidth) / 2;
     var popTop = (fullHeight - popHeight) / 2;
 
-    var _key = $('#key').val();
-    var _cjworld_id_get = $('#cjworld_id_get').val();
-    var _cjworld_id_post = $('#cjworld_id_post').val();
-    var _lang = $('#lang').val();
+    //var _key = $('#key').val();
+    //var _cjworld_id_get = $('#cjworld_id_get').val();
+    //var _cjworld_id_post = $('#cjworld_id_post').val();
+    //var _lang = $('#lang').val();
 
     var popupOption = "width = " + popWidth + ", height = " + popHeight + ", top = " + popTop+", left = " + popLeft+", resizable = no, fullscreen = no, toolbar = no, menubar = no, channelmode = no, scrollbars = no, location = no";
-    $(document).on('click', '#botChatBtn', function (_key, _cjworld_id_get, _cjworld_id_post, _lang) {
+    $(document).on('click', '#botChatBtn', function () {
 
 
         
