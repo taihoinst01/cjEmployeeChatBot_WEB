@@ -72,18 +72,20 @@ if (isMobile()) {   //모바일 환경
         //window.open('default.asp', '', popupOption);
         //var frmPop = document.frm;
         //var url = 'default.asp';
-        window.open('default.asp', '', popupOption);
+        window.open('', 'target', popupOption);
 
-        $('#key').val(_key); 
-        $('#cjworld_id_get').val(_cjworld_id_get);
-        $('#cjworld_id_post').val(_cjworld_id_post);
-        $('#lang').val(_lang);
+        //$('#key').val(_key); 
+        //$('#cjworld_id_get').val(_cjworld_id_get);
+        //$('#cjworld_id_post').val(_cjworld_id_post);
+        //$('#lang').val(_lang);
 
+        document.frm.target = 'target';
+        document.frm.submit();
 
-        console.log($('#key').val());
-        console.log($('#cjworld_id_get').val());
-        console.log($('#cjworld_id_post').val());
-        console.log($('#lang').val());
+        //console.log($('#key').val());
+        //console.log($('#cjworld_id_get').val());
+        //console.log($('#cjworld_id_post').val());
+        //console.log($('#lang').val());
 
         //frmPop.action = url;
         //frmPop.target = '_blank';

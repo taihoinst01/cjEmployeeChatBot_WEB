@@ -35,7 +35,7 @@
     <title>CJ Employee</title>
 </head>
 <body>
-    <form name="frm" method="post">
+    <form name="frm" method="post" action="default.asp">
         <input type="hidden" id="conversationId" />
         <input type="hidden" id="key"  value="<%=request.form("key") %>"/>
         <input type="hidden" id="cjworld_id_get" value="<%=request("cjworld_id") %>"/>
