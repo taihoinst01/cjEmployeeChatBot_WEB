@@ -7693,7 +7693,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         //KSO First DLG HIDE 
                         var activityId = this.props.activity.id;
                         var activityNum = activityId.split('|');
-                        var mobileGetId = $('#cjworld_id').val();
+                        var mobileGetId = $('#cjworld_id_get').val();
                         if (activityNum[1] == '0000000' &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
@@ -20980,11 +20980,13 @@ function removeLoadingDiv(f) {
 
 function ssoConnection() {
     //sso form 값
-    console.log($("#cjworld_id").val());
-    console.log($('#conversationId').val());
-    //var pos = { key: $("#key").val(), cjworld_id: $("#cjworld_id").val(), lang: $("#lang").val() };
-    //var pos = "sso:" + $("#key").val() + ":" + $("#cjworld_id").val() + ":" + $("#lang").val();
-    var pos = deviceChk + "sso:" + $("#cjworld_id").val();
+    var pos;
+
+    if (deviceChk == 'P') {
+        pos = deviceChk + "sso:" + $("#cjworld_id_post").val();
+    } else if (deviceChk == 'M') {
+        pos = deviceChk + "sso:" + $("#cjworld_id_get").val();
+    }
 
     //var directLineUrl = "https://directline.botframework.com";
     //var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
