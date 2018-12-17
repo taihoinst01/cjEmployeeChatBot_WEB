@@ -66,6 +66,11 @@ if (isMobile()) {   //모바일 환경
     $(document).on('click', '#botChatBtn', function (_key, _cjworld_id_get, _cjworld_id_post, _lang) {
 
 
+        console.log(_key);
+        console.log(_cjworld_id_get);
+        console.log(_cjworld_id_post);
+        console.log(_lang);
+
         //window.open('chatbot.html', '', popupOption);
         //window.open('default.asp', '', popupOption);
         var frmPop = document.frm;
