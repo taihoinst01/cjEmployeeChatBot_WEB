@@ -3476,7 +3476,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
-                        var mobileGetId = $('#cjworld_id').val();
+                        var mobileGetId = $('#cjworld_id_get').val();
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
