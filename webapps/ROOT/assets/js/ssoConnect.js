@@ -13,6 +13,7 @@ function isMobile() {
 }
 
 if (isMobile()) {   //모바일 환경
+    console.log('mobile');
     //2. 로딩시 표출
     var cjworld_id_get = $('#cjworld_id_get').val();
     location.href = "default_m.asp?cjworld_id=" + cjworld_id_get;
@@ -22,6 +23,7 @@ if (isMobile()) {   //모바일 환경
     //    location.href = "default_m.asp?cjworld_id=" + cjworld_id_get;
     //}
 } else {    // 웹 환경
+    console.log('pc');
     var cjworld_id_post = $('#cjworld_id_post').val();
     $('.wc-chatview-panel').css('bottom', 0).show();
     $('.bot-wrap').show();
