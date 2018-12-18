@@ -1,5 +1,5 @@
 ﻿$(function () {
-    $('.bot-wrap').hide();
+    //$('.bot-wrap').hide();
 });
 
 function isMobile() {
