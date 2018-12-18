@@ -53,6 +53,7 @@
                     resize: 'detect'
                 }, document.getElementById("bot"));
             </script>
+            <script src="assets/js/ssoConnect.js"></script>
         </div>
         <!-- ³¡ -->
     </div>
