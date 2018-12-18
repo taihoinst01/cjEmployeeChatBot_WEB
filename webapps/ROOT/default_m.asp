@@ -36,7 +36,7 @@
 </head>
 <body>
     <input type="hidden" id="conversationId" />
-    <input type="hidden" id="cjworld_id" value="<%=request("cjworld_id") %>"/>
+    <input type="hidden" id="cjworld_id_get" value="<%=request("cjworld_id") %>"/>
     <div class="mainBG">
         <!-- 여기서 부터 -->
         <div class="bot-wrap chatOn">
