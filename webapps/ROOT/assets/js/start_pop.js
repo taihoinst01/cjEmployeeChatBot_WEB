@@ -33,7 +33,8 @@ if (isMobile()) {   //모바일 환경
     //});
 
     //2. 로딩시 표출
-    location.href = "default_m.asp";
+    //location.href = "default_m.asp";
+    location.href = "error.html";
 } else {    // 웹 환경
 
     // 1. 처음 로딩시 표출
@@ -57,42 +58,10 @@ if (isMobile()) {   //모바일 환경
     var popLeft = (fullWidth - popWidth) / 2;
     var popTop = (fullHeight - popHeight) / 2;
 
-    //var _key = $('#key').val();
-    //var _cjworld_id_get = $('#cjworld_id_get').val();
-    //var _cjworld_id_post = $('#cjworld_id_post').val();
-    //var _lang = $('#lang').val();
-
     var popupOption = "width = " + popWidth + ", height = " + popHeight + ", top = " + popTop+", left = " + popLeft+", resizable = no, fullscreen = no, toolbar = no, menubar = no, channelmode = no, scrollbars = no, location = no";
     $(document).on('click', '#botChatBtn', function () {
-
-
-        
-
-        //window.open('chatbot.html', '', popupOption);
-        //window.open('default.asp', '', popupOption);
-        //var frmPop = document.frm;
-        //var url = 'default.asp';
         window.open('', 'target', popupOption);
-
-        //$('#key').val(_key); 
-        //$('#cjworld_id_get').val(_cjworld_id_get);
-        //$('#cjworld_id_post').val(_cjworld_id_post);
-        //$('#lang').val(_lang);
-
         document.frm.target = 'target';
         document.frm.submit();
-
-        //console.log($('#key').val());
-        //console.log($('#cjworld_id_get').val());
-        //console.log($('#cjworld_id_post').val());
-        //console.log($('#lang').val());
-
-        //frmPop.action = url;
-        //frmPop.target = '_blank';
-        //frmPop.key.value = _key;
-        //frmPop.cjworld_id_get.value = _cjworld_id_get;
-        //frmPop.cjworld_id_post.value = _cjworld_id_post;
-        //frmPop.lang.value = _lang;
-        //frmPop.submit();
     });
 }

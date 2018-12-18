@@ -1,5 +1,8 @@
 ﻿$(function () {
+    console.log('connectscript');
 
+    console.log("get :: " + $('#cjworld_id_get'));
+    console.log("post :: " + $('#cjworld_id_post'));
 });
 
 function isMobile() {
@@ -18,6 +21,10 @@ if (isMobile()) {   //모바일 환경
     if (cjworld_id != '') {
         location.href = "default_m.asp?cjworld_id=" + cjworld_id;
     } else {
-        location.href = "default_m.asp";
+        location.href = "error.html";
     }
+} else {    // 웹 환경
+    // 1. 처음 로딩시 표출
+    $('.wc-chatview-panel').css('bottom', 0).show();
+    $('.bot-wrap').show();
 }
