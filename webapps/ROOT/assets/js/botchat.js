@@ -7344,7 +7344,13 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                 }
                 return r.__extends(e, t), e.prototype.updateContentWidth = function () {
                     //var t = this.props.size.width - this.props.format.carouselMargin;
-                    var t = parseInt($('.wc-message-groups').css('width')) - this.props.format.carouselMargin - 30; //KSO 줄였을때 carousel 크기 조정
+                    //KSO 줄였을때 carousel 크기 조정
+                    var carouselMargin = this.props.format.carouselMargin;
+                    var subMargin = 30;
+                    if (deviceChk == 'M') {
+                        carouselMargin = 44;    //모바일일때 동일하나(아이폰 플러스의 경우 마진 오류로 인한 조정)
+                    }
+                    var t = parseInt($('.wc-message-groups').css('width')) - carouselMargin - subMargin; 
                     this.root.style.width = "", this.root.offsetWidth > t && (this.root.style.width = t.toString() + "px", this.hscroll.updateScrollButtons())
                 }, e.prototype.componentDidMount = function () {
                     this.updateContentWidth()
