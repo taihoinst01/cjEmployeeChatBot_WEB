@@ -1,5 +1,5 @@
 ﻿$(function () {
-	$('.bot-wrap').hide();    //처음에 숨기기
+	//$('.bot-wrap').hide();    //처음에 숨기기
 
 	var ie = (function (){
 		if (window.ActiveXObject === undefined) return null;
