@@ -38,7 +38,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   left: 0;
   letter-spacing: 0.5px;
   padding: 16px 8px 0 8px;
-  position: absolute;
+  /*position: absolute;*/
+  position: fixed;
   right: 0;
   top: 0;
   z-index: 1; 
@@ -135,7 +136,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     box-sizing: border-box;
     height: 50px;
     left: 10px;
-    position: absolute;
+    /*position: absolute;*/
+    position: fixed;
     right: 10px;
     border-radius: 20px
 }
@@ -379,7 +381,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   .wc-carousel button.scroll.previous {
     left: 0 }
   .wc-carousel button.scroll.next {
-    right: 4px; }
+    right: 0 }
   .wc-carousel .wc-hscroll > ul {
     margin-left: -4px; }
   .wc-carousel .wc-hscroll > ul > li {
