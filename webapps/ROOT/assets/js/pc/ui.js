@@ -93,15 +93,21 @@ $(function () {
         "</div > ").appendTo(".wc-chatview-panel");
 
     //챗봇 MENU BTN
-    //$(".wc-chatview-panel > div").add(
-    //    "<div class='menuBox off'>" +
-    //        "<p class='menuReStartBtn'><span> Menu </span></p>" +
-    //        "<ul>" +
-    //        //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu('Accident analysis')'> Accident analysis </span></a></li>" +
-    //        //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu('Accident trends')'> Accident trends </span></a></li>" +
-    //        "<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
-    //        "</ul>" +
-    //    "</div > ").appendTo(".wc-chatview-panel");
+    $(".wc-chatview-panel > div").add(
+        "<div class='menuBox off'>" +
+            //"<p class='menuReStartBtn'><span> Menu </span></p>" +
+            "<ul type='none'>" +
+            "<li class='menuSelectBtn'> 총무 </li>" +
+            "<li class='menuSelectBtn'> 인사 </li>" +
+            "<li class='menuSelectBtn'> 재무 </li>" +
+            "<li class='menuSelectBtn'> IT </li>" +
+            "<li class='menuSelectBtn'> 법무 </li>" +
+            "<li class='menuSelectBtn'> CSV </li>" +
+            "<li class='menuSelectBtn'> 블로썸파크 </li>" +
+            "<li class='menuSelectBtn'> 하고싶은말 </li>" +
+            //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
+            "</ul>" +
+        "</div > ").appendTo(".wc-chatview-panel");
 
     //챗봇 마이크 생성
     //$(".wc-console > div").add(
@@ -141,26 +147,84 @@ $(function () {
         }
     });
 
-    //챗봇 메뉴 버튼 동작
-    $('.sapIcon').click(function () {
-        if ($('.sapBtn').hasClass("off")) {
-            $('.sapBtn').removeClass('off').addClass('on');
-            $('.sapIcon').css({ 'background-color': '#00aad2' });
-        } else {
-            $('.sapBtn').removeClass('on').addClass('off');
-            $('.sapIcon').css({ 'background-color': '#302f35' });
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    //챗봇 menu 선택
+    $('.menuSelectBtn').click(function () {
+        var v = $(this).html() + " 선택";
+        $('div.wc-console').addClass('has-text');
+        $('input[type="text"].wc-shellinput').attr('value', v);
+        $('input[type="text"].wc-shellinput').val(v);
+        $('label.wc-send').trigger('click');
+        $('input[type="text"].wc-shellinput').attr('value', '');
+        $('input[type="text"].wc-shellinput').val('').focus();
+        $('.wc-console').removeClass('has-text').css({ 'bottom': 10 + 'px' });
+        $('.menuBox').removeClass('on').addClass('off');
+        $('.menuBox').css({ 'display': 'none' });
+        $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
+        $('.wc-message-groups').css({ 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+    });
+    //menu 이외의 다른 영역 선택시 닫힘
+    $('.wc-message-groups, .wc-textbox').click(function () {
+        if ($('.menuBox').hasClass('on')) {
+            $('.wc-console').css({ 'bottom': 10 + 'px' });
+            $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+            $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
+            $('.wc-message-groups').css({ 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
         }
     });
-    //$('.menuIcon').click(function () {
-    //    if ($('.menuBox').hasClass("off")) {
-    //        $('.menuBox').removeClass('off').addClass('on');
-    //        $('.menuBox').css({ 'display': 'block' });
-    //    } else {
-    //        $('.menuBox').removeClass('on').addClass('off');
-    //        $('.menuBox').css({ 'display': 'none' });
-    //    }
-    //});
-    
+
+    //SAP 버튼 동작
+    $('.sapIcon').click(function () {
+        $('.wc-console').css({ 'bottom': 10 + 'px' });
+        $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+        $('.menuIcon').removeClass('menuIcon').addClass('sapIcon-close');
+        $('.menuIcon_active').removeClass('menuIcon_active').addClass('sapIcon-close');
+        $('.wc-shellinput').attr('placeholder', 'SAP 용어검색').focus();
+        $('.sapIcon').removeClass('sapIcon').addClass('sapIcon-search');
+        $('.wc-sap').removeClass('off').addClass('on').css({ 'display': 'block' });
+        $('.sapBtn').removeClass('off').addClass('on');
+        $('.wc-textbox').css({ 'left': 50 + 'px' });
+        $('.wc-message-groups').css({ 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+    });
+    //챗봇 MENU + SAP 버튼 동작
+    $('.wc-menu > div').click(function () {
+        $('.wc-shellinput').attr('value', '').attr('placeholder', '궁금한 것을 물어보세요!').val('').focus();
+        if ($(this).hasClass('menuIcon')) {     //MENU 열기
+            $('.wc-console').css({ 'bottom': 115 + 'px'});
+            $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
+            $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
+            $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+            $('.wc-message-groups').css({ 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
+            $('.wc-console').css({ 'bottom': 10 + 'px'});
+            $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+            $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
+            $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+            $('.wc-message-groups').css({ 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        } else if ($(this).hasClass('sapIcon-close')) {    //SAP 닫기
+            $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+            $('.sapIcon-close').removeClass('sapIcon-close').addClass('menuIcon');
+            $('.wc-sap').removeClass('on').addClass('off').css({ 'display': 'none' });
+            $('.sapIcon-search').removeClass('sapIcon-search').addClass('sapIcon');
+            $('.sapBtn').removeClass('on').addClass('off');
+            $('.wc-textbox').css({ 'left': 30 + 'px' });
+        }
+    });
+
+    //SAP 아니고 문자 입력시 SEND버튼
+    $('.wc-shellinput').keyup(function () {
+        $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+        $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
+        if ($('.sapBtn').hasClass("off") && $(this).val() != '') {
+            $('.sapIcon').removeClass('sapIcon').addClass('sendIcon');
+            $('.wc-shellinput').css({ 'color': '#555' });
+        } else {
+            $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+            $('.wc-shellinput').css({ 'color': '#326E9B' });
+        }
+    });
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+
     //챗봇 제스처 동작
     var startGesture = 0;
     $('.topGestureArea').click(function () {
@@ -247,7 +311,6 @@ $(function () {
     //팝업 영역 호출
     $(document).on('click', '.ac-image', function () {
         var popType = $(this).parent().parent().parent().children().eq(0).children().eq(0).attr('alt');
-        console.log("popType :: " + popType);
 
         $("#video").attr('src', '');
 
@@ -322,15 +385,29 @@ $(function () {
 });
 
 //챗봇 메뉴 처음으로 돌아가기
-function viewMenu() {
-    var returnText = "return home";     // 처음으로 돌아가는 텍스트
-    $('div.wc-console').addClass('has-text');
-    $('input[type="text"].wc-shellinput').attr('value', returnText);
-    $('input[type="text"].wc-shellinput').val(returnText);
-    $('label.wc-send').trigger('click');
-    $('input[type="text"].wc-shellinput').attr('value', '');
-    $('input[type="text"].wc-shellinput').val('');
-    $('.wc-console').removeClass('has-text');
-    $('.menuBox').removeClass('on').addClass('off');
-    $('.menuBox').css({ 'display': 'none' });
-}
+//function viewMenu(v) {
+//    console.log($('input[type="text"].wc-shellinput').val());
+//    var returnText = "return home";     // 처음으로 돌아가는 텍스트
+//    $('div.wc-console').addClass('has-text');
+//    $('input[type="text"].wc-shellinput').attr('value', returnText);
+//    $('input[type="text"].wc-shellinput').val(returnText);
+//    $('label.wc-send').trigger('click');
+//    $('input[type="text"].wc-shellinput').attr('value', '');
+//    $('input[type="text"].wc-shellinput').val('');
+//    $('.wc-console').removeClass('has-text');
+//    $('.menuBox').removeClass('on').addClass('off');
+//    $('.menuBox').css({ 'display': 'none' });
+//}
+
+//function viewMenu(v) {
+//    console.log($('input[type="text"].wc-shellinput').val());
+//    $('div.wc-console').addClass('has-text');
+//    $('input[type="text"].wc-shellinput').attr('value', v);
+//    $('input[type="text"].wc-shellinput').val(v);
+//    $('label.wc-send').trigger('click');
+//    $('input[type="text"].wc-shellinput').attr('value', '');
+//    $('input[type="text"].wc-shellinput').val('');
+//    $('.wc-console').removeClass('has-text');
+//    $('.menuBox').removeClass('on').addClass('off');
+//    $('.menuBox').css({ 'display': 'none' });
+//}

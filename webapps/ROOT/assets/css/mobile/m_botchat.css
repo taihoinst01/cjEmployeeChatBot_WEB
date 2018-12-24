@@ -135,7 +135,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     bottom: 10px;
     box-sizing: border-box;
     height: 50px;
-    left: 10px;
+    left: 50px;
     /*position: absolute;*/
     position: fixed;
     right: 10px;
@@ -494,8 +494,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-textbox {
   bottom: 0;
   /*left: 60px;*/
-  left:40px;
-  right: 60px; }
+  left:30px;
+  right: 50px; }
 
 .wc-send {
   right: 0; }
