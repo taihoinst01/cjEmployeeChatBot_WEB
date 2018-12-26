@@ -192,7 +192,7 @@ $(function () {
         $('.sapBtn').removeClass('off').addClass('on');
         $('.wc-textbox').css({ 'left': 50 + 'px' });
         $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
-        $('.wc-shellinput').attr('placeholder', 'SAP 용어검색').focus();
+        $('.wc-shellinput').attr('placeholder', '용어검색').focus();
     });
     //챗봇 MENU + SAP 버튼 동작
     $('.wc-menu > div').click(function () {
@@ -201,11 +201,11 @@ $(function () {
             $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
-            if (initGroupHeight == $('.wc-message-groups').height() + 20) {
-                $('.wc-message-groups').css({ 'height': initGroupHeight - 104 + 'px', 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
-            } else {
-                $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
-            }
+            $('.wc-message-groups').css({ 'height': initGroupHeight - 104 + 'px', 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+            //if (initGroupHeight == $('.wc-message-groups').height() + 20) {
+            //} else {
+            //    $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+            //}
             $('.wc-console').css({ 'bottom': 115 + 'px' });
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
