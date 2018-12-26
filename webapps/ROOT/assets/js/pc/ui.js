@@ -215,6 +215,8 @@ $(function () {
     $('.wc-shellinput').keyup(function () {
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
+        $('.wc-console').css({ 'bottom': 10 + 'px' });
+        $('.wc-message-groups').css({ 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
         if ($('.sapBtn').hasClass("off") && $(this).val() != '') {
             $('.sapIcon').removeClass('sapIcon').addClass('sendIcon');
             $('.wc-shellinput').css({ 'color': '#555' });
