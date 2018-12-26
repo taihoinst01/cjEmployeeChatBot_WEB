@@ -201,9 +201,8 @@ $(function () {
             $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
-
-            if (initGroupHeight == $('.wc-message-groups').height()) {
-                $('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 96 + 'px', 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+            if (initGroupHeight == $('.wc-message-groups').height() + 20) {
+                $('.wc-message-groups').css({ 'height': initGroupHeight - 104 + 'px', 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
             } else {
                 $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
             }
