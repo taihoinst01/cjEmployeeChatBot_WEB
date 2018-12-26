@@ -202,14 +202,14 @@ $(function () {
             //console.log(initGroupHeight);
             //console.log($('.wc-message-groups').height() + 20);
 
-            if (initGroupHeight == $('.wc-message-groups').height() + 20) {
-                $('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 90 + 'px' });
-            } else {
-                $('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 165 + 'px' });
-            }
+            //if (initGroupHeight == $('.wc-message-groups').height() + 20) {
+            //    $('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 90 + 'px' });
+            //} else {
+            //    $('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 165 + 'px' });
+            //}
             //$('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
 
-            //$('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 90 + 'px'});
+            $('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 90 + 'px'});
             $('.wc-console').css({ 'bottom': 115 + 'px' });
             $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
