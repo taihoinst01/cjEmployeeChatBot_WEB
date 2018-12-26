@@ -196,10 +196,10 @@ $(function () {
     });
     //챗봇 MENU + SAP 버튼 동작
     $('.wc-menu > div').click(function () {
-        $('.wc-message-groups').trigger('click');
         $('.wc-shellinput').attr('value', '').attr('placeholder', '궁금한 것을 물어보세요!').val('');
 
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
+            $('.wc-message-groups').trigger('click');
             //console.log(initGroupHeight);
             //console.log($('.wc-message-groups').height() + 20);
 
