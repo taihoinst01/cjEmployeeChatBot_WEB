@@ -227,7 +227,7 @@ $(function () {
             $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
-            $('.wc-message-groups').css({ 'height': initGroupHeight - 115 + 'px' });
+            $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, !important);
             $('.wc-console').css({ 'bottom': 115 + 'px' });
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
