@@ -1,6 +1,8 @@
 $(function () {
     //mobile 기종별 높이
     var initGroupHeight = $('.wc-message-groups').height() + 32;
+    var consoleBtnHeight = $('.wc-console').height();
+    var menuBtnHeight = $('.wc-menuBox').height();
     //console.log(initGroupHeight);
 
     $('#wrapper').css({ 'height': ($(document).height()) + 'px' });
@@ -211,23 +213,10 @@ $(function () {
 
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
             $('.wc-message-groups').trigger('click');
-            //console.log(initGroupHeight);
-            console.log($('.wc-message-groups').height() + 20);
-
-            //if (initGroupHeight == $('.wc-message-groups').height() + 20) {
-            //    $('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 90 + 'px' });
-            //} else {
-            //    $('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 165 + 'px' });
-            //}
-            //$('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
-
-            //$('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 90 + 'px' });
-            
-            
             $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
-            $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, !important);
+            $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
             $('.wc-console').css({ 'bottom': 115 + 'px' });
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
