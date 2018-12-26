@@ -183,10 +183,10 @@ $(function () {
 
     //SAP 버튼 동작
     $('.sapIcon').click(function () {
-        //if (!$('.wc-send > div').hasClass('sapIcon-search')) {
-        //    $('.wc-console').css({ 'bottom': 10 + 'px' });
-        //    $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
-        //}
+        if ($('.menuBox').hasClass('on')) {
+            $('.wc-console').css({ 'bottom': 10 + 'px' });
+            $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        }
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.menuIcon').removeClass('menuIcon').addClass('sapIcon-close');
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('sapIcon-close');
@@ -222,11 +222,15 @@ $(function () {
             //$('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
 
             //$('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 90 + 'px' });
-            $('.wc-message-groups').css({ 'height': initGroupHeight - 115 + 'px' });
-            $('.wc-console').css({ 'bottom': 115 + 'px' });
-            $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
-            $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
-            $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+            
+
+            if ($('.wc-console').css('bottom') == 10) {
+                $('.wc-message-groups').css({ 'height': initGroupHeight - 115 + 'px' });
+                $('.wc-console').css({ 'bottom': 115 + 'px' });
+                $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
+                $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
+                $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+            }
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
