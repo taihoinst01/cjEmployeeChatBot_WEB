@@ -196,17 +196,26 @@ $(function () {
     });
     //챗봇 MENU + SAP 버튼 동작
     $('.wc-menu > div').click(function () {
-        $('.wc-shellinput').attr('value', '').attr('placeholder', '궁금한 것을 물어보세요!').val('');
+        $('.wc-shellinput').attr('value', '').attr('placeholder', '궁금한 것을 물어보세요!').val('').focus();
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
-            $('.wc-message-groups').css({ 'height': initGroupHeight - 104 + 'px', 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+            
+            
             $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
-            //if (initGroupHeight == $('.wc-message-groups').height() + 20) {
-            //} else {
-            //    $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
-            //}
-            $('.wc-console').css({ 'bottom': 115 + 'px' });
+            //$('.wc-message-groups').css({ 'height': initGroupHeight - 104 + 'px', 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+            //$('.wc-console').css({ 'bottom': 115 + 'px' });
+
+            console.log(initGroupHeight);
+            console.log($('.wc-message-groups').height());
+            if (initGroupHeight == $('.wc-message-groups').height() + 20) {
+                $('.wc-message-groups').css({ 'height': initGroupHeight - 104 + 'px', 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+                //$('.wc-console').css({ 'bottom': 115 + 'px' });
+            } else {
+                $('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 90 + 'px', 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+            }
+                $('.wc-console').css({ 'bottom': 115 + 'px' });
+
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' }, 'slow');
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
