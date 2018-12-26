@@ -183,10 +183,10 @@ $(function () {
 
     //SAP 버튼 동작
     $('.sapIcon').click(function () {
-        if (!$('.wc-send > div').hasClass('sapIcon-search')) {
-            $('.wc-console').css({ 'bottom': 10 + 'px' });
-            $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
-        }
+        //if (!$('.wc-send > div').hasClass('sapIcon-search')) {
+        //    $('.wc-console').css({ 'bottom': 10 + 'px' });
+        //    $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        //}
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.menuIcon').removeClass('menuIcon').addClass('sapIcon-close');
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('sapIcon-close');
