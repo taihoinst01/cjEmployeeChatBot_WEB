@@ -225,6 +225,14 @@ $(function () {
             $('.wc-shellinput').css({ 'color': '#326E9B' });
         }
     });
+    $('.wc-shellinput').click(function () {
+        $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+    });
+    $('.wc-send > div').click(function () {
+        if ($(this).hasClass('sendIcon')) {
+            $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //챗봇 제스처 동작
