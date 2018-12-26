@@ -223,14 +223,12 @@ $(function () {
 
             //$('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() - 90 + 'px' });
             
-
-            if ($('.wc-console').css('bottom') == 10) {
-                $('.wc-message-groups').css({ 'height': initGroupHeight - 115 + 'px' });
-                $('.wc-console').css({ 'bottom': 115 + 'px' });
-                $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
-                $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
-                $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
-            }
+            
+            $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
+            $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
+            $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+            $('.wc-message-groups').css({ 'height': initGroupHeight - 115 + 'px' });
+            $('.wc-console').css({ 'bottom': 115 + 'px' });
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
