@@ -187,12 +187,12 @@ $(function () {
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.menuIcon').removeClass('menuIcon').addClass('sapIcon-close');
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('sapIcon-close');
-        $('.wc-shellinput').attr('placeholder', 'SAP 용어검색').focus();
         $('.sapIcon').removeClass('sapIcon').addClass('sapIcon-search');
         $('.wc-sap').removeClass('off').addClass('on').css({ 'display': 'block' });
         $('.sapBtn').removeClass('off').addClass('on');
         $('.wc-textbox').css({ 'left': 50 + 'px' });
-        $('.wc-message-groups').css({ 'height': initGroupHeight + 'px' , 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        $('.wc-shellinput').attr('placeholder', 'SAP 용어검색').focus();
     });
     //챗봇 MENU + SAP 버튼 동작
     $('.wc-menu > div').click(function () {
