@@ -3214,7 +3214,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             // KSO 2018.06.21 gesture loading 여부 확인 후 해당 gesture 번호 실행, gesture 로딩 이후에 실행 됨
                             // gesture num( 0 ~ 19 ) 까지 있음
                             if ($('#animationDiv').hasClass('gOn')) {
-                                playAction(e.content.gesture);
+                                //playAction(e.content.gesture);
                             }
 
 
@@ -3225,8 +3225,13 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                                 }
 
                                 if (deviceChk == 'M') {
-                                    if (e.content.buttons[0].type == 'openUrl') {
+                                    //console.log(e.content.buttons[0]);
+                                    if (e.content.buttons[0].type == 'openUrl' && e.content.buttons[0].value == '') {
                                         e.content.buttons[0].title = 'PC 서비스 제공';
+                                    }
+                                } else {
+                                    if (e.content.buttons[0].type == 'openUrl' && e.content.buttons[0].value == '') {
+                                        e.content.buttons[0].title = 'Mobile 서비스 제공';
                                     }
                                 }
                             }
@@ -13294,7 +13299,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     var n = this;
 
                     //KSO mobile openurl일 경우 버튼 disable
-                    if (deviceChk == 'M' && t.data.type == 'openUrl') {
+                    if (t.data.value == '') {
                         this._style = "button", this._element = null, this._state = P.Normal, this.onClick = null, this._action = t, this._style = e, this._element = document.createElement("button"), this._element.type = "button", this._element.style.overflow = "hidden", this._element.style.whiteSpace = "nowrap", this._element.style.textOverflow = "ellipsis", this._element.onclick, this._element.disabled = function (t) {
                             n.click()
                         }, this.updateCssStyle()
