@@ -213,7 +213,7 @@ $(function () {
         $('.wc-shellinput').attr('value', '').attr('placeholder', '궁금한 것을 물어보세요!').val('');
 
         tempHeight = parseInt($('.wc-message-groups').height()) + 20;
-        console.log(typeof(tempHeight));
+        //console.log(typeof(tempHeight));
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
 
 
@@ -222,8 +222,8 @@ $(function () {
                 tempHeight = initGroupHeight - 50;
             }
 
-            console.log("firstHeight :: " + initGroupHeight);
-            console.log("tempHeight :: " + tempHeight);
+            //console.log("firstHeight :: " + initGroupHeight);
+            //console.log("tempHeight :: " + tempHeight);
             
 
 
@@ -249,10 +249,6 @@ $(function () {
                 }
             }
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
-
-
-            console.log("Height :: " + $('.wc-message-groups').height());
-
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
             $('.wc-console').animate({ 'bottom': 10 + 'px' },'fast');
@@ -278,8 +274,8 @@ $(function () {
         $('.menuBox').removeClass('on').addClass('off');
         //$('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
-        $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
-        $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        //$('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
+        //$('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
         if ($('.sapBtn').hasClass("off") && $(this).val() != '') {
             $('.sapIcon').removeClass('sapIcon').addClass('sendIcon');
             $('.wc-shellinput').css({ 'color': '#555' });
