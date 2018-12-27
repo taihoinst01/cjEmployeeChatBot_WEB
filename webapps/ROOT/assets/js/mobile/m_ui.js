@@ -237,12 +237,16 @@ $(function () {
             //$('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
 
             if (isIOS()) {
+                console.log('1');
                 $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
             } else {
                 if (initGroupHeight != tempHeight) {
-                    tempHeight = initGroupHeight - 50;
+                    console.log('2');
+                    tempHeight = initGroupHeight - 136;
                     $('.wc-message-groups').css({ 'height': tempHeight - 116 + 'px' }, '!important');
+                    console.log($('.wc-message-groups').height());
                 } else {
+                    console.log('3');
                     $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
                 }
             }
