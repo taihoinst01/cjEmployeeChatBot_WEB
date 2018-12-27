@@ -11,8 +11,6 @@
     </form>
 </body>
 <script>
-    var inputId = document.getElementById("cjworld_id");
-    alert(inputId.value);
     document.frm.submit();
 </script>
 </html>
