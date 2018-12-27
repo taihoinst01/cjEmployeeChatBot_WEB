@@ -302,6 +302,7 @@ $(function () {
         } else if ($(this).hasClass('sapIcon-search') && v != '') { //SAP단어 설정해서 보내기
             $('input[type="text"].wc-shellinput').attr('value', v).val('SAP#' + v);
         }
+        $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     
