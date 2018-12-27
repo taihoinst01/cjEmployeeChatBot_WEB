@@ -236,15 +236,11 @@ $(function () {
             //$('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
             //$('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
 
-
-
-
-
-            if (initGroupHeight != tempHeight && !isIOS) {
+            if (isIOS()) {
+                $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+            } else {
                 tempHeight = initGroupHeight - 50;
                 $('.wc-message-groups').css({ 'height': tempHeight - 116 + 'px' }, '!important');
-            } else {
-                $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
             }
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
 
