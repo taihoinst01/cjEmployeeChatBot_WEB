@@ -5,7 +5,7 @@
 
 <body>
     <form name="frm" action="<%=request("url") %>" method="post">
-        <input type="text" name="cjworld_id" value="<%=request("cjworld_id") %>">
+        <input type="hidden" name="cjworld_id" value="<%=request("cjworld_id") %>">
     </form>
 </body>
 <script>
