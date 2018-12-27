@@ -229,8 +229,17 @@ $(function () {
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     $('.wc-send > div').click(function () {
+        var v = $('input[type="text"].wc-shellinput').val();
         if ($(this).hasClass('sendIcon')) {
+            $('.wc-shellinput').attr('placeholder', '궁금한 것을 물어보세요!');
+            $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+            $('.sapIcon-close').removeClass('sapIcon-close').addClass('menuIcon');
+            $('.wc-sap').removeClass('on').addClass('off').css({ 'display': 'none' });
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+            $('.sapBtn').removeClass('on').addClass('off');
+            $('.wc-textbox').css({ 'left': 30 + 'px' });
+        } else if ($(this).hasClass('sapIcon-search') && v != '') { //SAP단어 설정해서 보내기
+            $('input[type="text"].wc-shellinput').attr('value', v).val('SAP#' + v);
         }
     });
     //////////////////////////////////////////////////////////////////////////////////////////////////////
