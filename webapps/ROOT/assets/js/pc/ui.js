@@ -93,35 +93,20 @@ $(function () {
         "</div > ").appendTo(".wc-chatview-panel");
 
     //챗봇 MENU BTN
-    //$(".wc-chatview-panel > div").add(
-    //    "<div class='menuBox off'>" +
-    //        //"<p class='menuReStartBtn'><span> Menu </span></p>" +
-    //        "<ul type='none'>" +
-    //        "<li class='menuSelectBtn'> 총무 </li>" +
-    //        "<li class='menuSelectBtn'> 인사 </li>" +
-    //        "<li class='menuSelectBtn'> 재무 </li>" +
-    //        "<li class='menuSelectBtn'> IT </li>" +
-    //        "<li class='menuSelectBtn'> 법무 </li>" +
-    //        "<li class='menuSelectBtn'> CSV </li>" +
-    //        "<li class='menuSelectBtn'> 블로썸파크 </li>" +
-    //        "<li class='menuSelectBtn'> 하고싶은말 </li>" +
-    //        //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
-    //        "</ul>" +
-    //    "</div > ").appendTo(".wc-chatview-panel");
     $(".wc-console > div").add(
         "<div class='menuBox off'>" +
-        //"<p class='menuReStartBtn'><span> Menu </span></p>" +
-        "<ul type='none'>" +
-        "<li class='menuSelectBtn'> 총무 </li>" +
-        "<li class='menuSelectBtn'> 인사 </li>" +
-        "<li class='menuSelectBtn'> 재무 </li>" +
-        "<li class='menuSelectBtn'> IT </li>" +
-        "<li class='menuSelectBtn'> 법무 </li>" +
-        "<li class='menuSelectBtn'> CSV </li>" +
-        "<li class='menuSelectBtn'> 블로썸파크 </li>" +
-        "<li class='menuSelectBtn'> 하고싶은말 </li>" +
-        //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
-        "</ul>" +
+            //"<p class='menuReStartBtn'><span> Menu </span></p>" +
+            "<ul type='none'>" +
+            "<li class='menuSelectBtn'> 총무 </li>" +
+            "<li class='menuSelectBtn'> 인사 </li>" +
+            "<li class='menuSelectBtn'> 재무 </li>" +
+            "<li class='menuSelectBtn'> IT </li>" +
+            "<li class='menuSelectBtn'> 법무 </li>" +
+            "<li class='menuSelectBtn'> CSV </li>" +
+            "<li class='menuSelectBtn'> 블로썸파크 </li>" +
+            "<li class='menuSelectBtn'> 하고싶은말 </li>" +
+            //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
+            "</ul>" +
         "</div > ").appendTo(".wc-console");
 
 

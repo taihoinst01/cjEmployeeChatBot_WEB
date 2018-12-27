@@ -49,9 +49,7 @@
 /*.sendIcon:hover{background: url("../../image/chatbotStyle/btn_send_h.png") no-repeat; width:35px;height:35px;margin:8px}*/ 
 
 .wc-menu{display: inline-block;width:50px;height: 50px;margin-left:-50px}
-/*origin*/
-/*.menuBox{background-color:#fff;width:100%;height:100px;position:fixed;bottom:10px;display:none;text-align:center; border-radius: 4px;}*/
-.menuBox{background-color:#fff;width:100%;position:absolute;top:55px;left:-20px;text-align:center;/*box-shadow: 0 1px 10px 0 rgba(0,0,0,0.30);border: 1px solid #CCC;*/ border-radius: 4px;}
+.menuBox{background-color:#fff;width:115%;position:absolute;top:55px;left:-40px;text-align:center;/*box-shadow: 0 1px 10px 0 rgba(0,0,0,0.30);border: 1px solid #CCC;*/ border-radius: 4px;}
 .menuIcon{background: url("../../image/chatbotStyle/plus02.png") no-repeat; width:35px;height:35px;position:absolute;top:10px;left:10px;cursor:pointer} /*이미지용*/
 /*.menuIcon:hover{background: url("../../image/chatbotStyle/plus02h.png") no-repeat; width:35px;height:35px;position:absolute;top:10px;left:10px;cursor:pointer}*/ /*이미지용*/
 .menuIcon_active{background: url("../../image/chatbotStyle/close03.png") no-repeat; width:35px;height:35px;position:absolute;top:10px;left:10px;cursor:pointer} /*이미지용*/
