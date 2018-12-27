@@ -33,6 +33,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   box-shadow: 0 1px rgba(0, 0, 0, 0.2);
   box-sizing: content-box;
   color: #ffffff;*/
+  background-color:#fff;
   font-weight: 500;
   height: 50px;
   left: 0;

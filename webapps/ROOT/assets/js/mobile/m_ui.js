@@ -1,9 +1,8 @@
 $(function () {
     //mobile 기종별 높이
     var initGroupHeight = $('.wc-message-groups').height() + 32;
-    var consoleBtnHeight = $('.wc-console').height();
-    var menuBtnHeight = $('.wc-menuBox').height();
-    //console.log(initGroupHeight);
+    //var consoleBtnHeight = $('.wc-console').height();
+    //var menuBtnHeight = $('.wc-menuBox').height();
 
     $('#wrapper').css({ 'height': ($(document).height()) + 'px' });
     //$('.wc-chatview-panel').css({ 'height': ($(document).height()) + 'px' });
@@ -213,6 +212,24 @@ $(function () {
         $('.wc-shellinput').attr('value', '').attr('placeholder', '궁금한 것을 물어보세요!').val('');
 
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
+
+            if (document.hasFocus()) {
+                console.log('true');
+            } else{
+                console.log('false');
+            }
+            //function isMobile() {
+            //	var UserAgent = navigator.userAgent;
+
+            //	if (UserAgent.match(/iPhone|iPad|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
+            //		return true;
+            //	} else {
+            //		return false;
+            //	}
+            //}
+
+
+
             $('.wc-message-groups').trigger('click');
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
