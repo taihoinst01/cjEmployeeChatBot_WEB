@@ -1,6 +1,7 @@
 $(function () {
     //mobile 기종별 높이
-    var initGroupHeight = $('.wc-message-groups').height() + 32;
+    var initGroupHeight = parseInt($('.wc-message-groups').height()) + 32;
+    var tempHeight = initGroupHeight;
     //var consoleBtnHeight = $('.wc-console').height();
     //var menuBtnHeight = $('.wc-menuBox').height();
 
@@ -211,22 +212,19 @@ $(function () {
     $('.wc-menu > div').click(function () {
         $('.wc-shellinput').attr('value', '').attr('placeholder', '궁금한 것을 물어보세요!').val('');
 
+        tempHeight = parseInt($('.wc-message-groups').height()) + 20;
+        console.log(typeof(tempHeight));
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
 
-            if (document.hasFocus()) {
-                console.log('true');
-            } else{
-                console.log('false');
-            }
-            //function isMobile() {
-            //	var UserAgent = navigator.userAgent;
 
-            //	if (UserAgent.match(/iPhone|iPad|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
-            //		return true;
-            //	} else {
-            //		return false;
-            //	}
-            //}
+
+            if (initGroupHeight != tempHeight) {
+                tempHeight = initGroupHeight - 50;
+            }
+
+            console.log("firstHeight :: " + initGroupHeight);
+            console.log("tempHeight :: " + tempHeight);
+            
 
 
 
@@ -236,8 +234,23 @@ $(function () {
             $('.wc-console').animate({ 'bottom': 115 + 'px' },'fast');
             $('.menuBox').removeClass('off').addClass('on');
             //$('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
-            $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+            //$('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+
+
+
+
+
+            if (initGroupHeight != tempHeight && !isIOS) {
+                tempHeight = initGroupHeight - 50;
+                $('.wc-message-groups').css({ 'height': tempHeight - 116 + 'px' }, '!important');
+            } else {
+                $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+            }
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
+
+
+            console.log("Height :: " + $('.wc-message-groups').height());
+
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
             $('.wc-console').animate({ 'bottom': 10 + 'px' },'fast');
@@ -466,3 +479,13 @@ $(function () {
 //    $('.menuBox').removeClass('on').addClass('off');
 //    $('.menuBox').css({ 'display': 'none' });
 //}
+
+function isIOS() {
+	var UserAgent = navigator.userAgent;
+
+	if (UserAgent.match(/iPhone|iPad|iPod/i) != null) {
+		return true;
+	} else {
+		return false;
+	}
+}
