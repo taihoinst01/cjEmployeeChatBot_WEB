@@ -7973,11 +7973,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             //KSO (menu 부분 현재 사용x)
                             if (e.key == 'Enter') {
                                 if ($('.wc-sap').hasClass("on") && t.textInput.value != '') {   //sap value
-                                    console.log('enter 1');
                                     $('.sapIcon-close').trigger('click');
                                     t.props.inputText = 'SAP#' + t.props.inputText;
                                 } else {    //value 초기화
-                                    console.log('enter 2');
                                     t.props.inputText = t.textInput.value;
                                 }
                                 t.textInput.value = '';
@@ -7997,6 +7995,8 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                             //    console.log('a');
                             //    t.props.inputText = t.textInput.value;
                             //}
+                            
+
                             return t.onKeyPress(e)
                         },
                         onFocus: function () {
