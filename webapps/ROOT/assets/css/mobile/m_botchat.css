@@ -46,8 +46,8 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   z-index: 1; 
   text-align:center;
   border-bottom:4px solid #ddd;
-
   transform: translate3d(0,0,0);
+  -webkit-overflow-scrolling:touch;
 }
 
 .wc-time {
