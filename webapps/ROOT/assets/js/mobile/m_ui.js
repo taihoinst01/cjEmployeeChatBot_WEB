@@ -178,6 +178,7 @@ $(function () {
         $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
         //$('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() + 136 + 'px',  'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+        $('.wc-message-groups').trigger('click');
     });
     //menu 이외의 다른 영역 선택시 닫힘
     $('.wc-message-groups').click(function () {
