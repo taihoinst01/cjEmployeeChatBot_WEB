@@ -21033,11 +21033,13 @@ function removeLoadingDiv(f) {
             var removeElement = document.getElementById('loading');
             if (removeElement != null) {
                 parent.removeChild(removeElement);
+                if (deviceChk == 'M') {
+                    $('.wc-message-groups').trigger('click');
+                    alert('1');
+                }
             }
         }
-        if (deviceChk == 'M') {
-            $('.wc-message-groups').trigger('click');
-        }
+        
     }
     if (f.node.className !== '') {
         if (f.node.className.toString() === 'wc-message-wrapper carousel') {
