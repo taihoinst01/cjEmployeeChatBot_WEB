@@ -370,7 +370,7 @@ $(function () {
         var v = $('input[type="text"].wc-shellinput').val();
         if ($(this).hasClass('sendIcon')) {
             $('.wc-shellinput').attr('placeholder', '궁금한 것을 물어보세요!');
-            $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
+            //$('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
             $('.sapIcon-close').removeClass('sapIcon-close').addClass('menuIcon');
             $('.wc-sap').removeClass('on').addClass('off').css({ 'display': 'none' });
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
