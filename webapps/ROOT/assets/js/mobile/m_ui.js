@@ -106,21 +106,21 @@ $(function () {
             //"</ul>" +
         "</div > ").appendTo(".wc-chatview-panel");
 
-    $(".wc-console > div").add(
+    $(".wc-chatview-panel > div").add(
         "<div class='menuBox off'>" +
             //"<p class='menuReStartBtn'><span> Menu </span></p>" +
-            //"<ul type='none'>" +
-            //"<li class='menuSelectBtn'> 총무 </li>" +
-            //"<li class='menuSelectBtn'> 인사 </li>" +
-            //"<li class='menuSelectBtn'> 재무 </li>" +
-            //"<li class='menuSelectBtn'> IT </li>" +
-            //"<li class='menuSelectBtn'> 법무 </li>" +
-            //"<li class='menuSelectBtn'> CSV </li>" +
-            //"<li class='menuSelectBtn'> 블로썸파크 </li>" +
-            //"<li class='menuSelectBtn'> 하고싶은말 </li>" +
+            "<ul type='none'>" +
+            "<li class='menuSelectBtn'> 총무 </li>" +
+            "<li class='menuSelectBtn'> 인사 </li>" +
+            "<li class='menuSelectBtn'> 재무 </li>" +
+            "<li class='menuSelectBtn'> IT </li>" +
+            "<li class='menuSelectBtn'> 법무 </li>" +
+            "<li class='menuSelectBtn'> CSV </li>" +
+            "<li class='menuSelectBtn'> 블로썸파크 </li>" +
+            "<li class='menuSelectBtn'> 하고싶은말 </li>" +
             //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
-            //"</ul>" +
-        "</div > ").appendTo(".wc-console");
+            "</ul>" +
+        "</div > ").appendTo(".wc-chatview-panel");
 
     //챗봇 마이크 생성
     //$(".wc-console > div").add(
@@ -233,22 +233,6 @@ $(function () {
         tempHeight = parseInt($('.wc-message-groups').height()) + 20;
         //console.log(typeof(tempHeight));
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
-
-            $(".wc-console > div.menuBox").add(
-                "<ul type='none'>" +
-                "<li class='menuSelectBtn'> 총무 </li>" +
-                "<li class='menuSelectBtn'> 인사 </li>" +
-                "<li class='menuSelectBtn'> 재무 </li>" +
-                "<li class='menuSelectBtn'> IT </li>" +
-                "<li class='menuSelectBtn'> 법무 </li>" +
-                "<li class='menuSelectBtn'> CSV </li>" +
-                "<li class='menuSelectBtn'> 블로썸파크 </li>" +
-                "<li class='menuSelectBtn'> 하고싶은말 </li>" +
-                //"<li class='menuSelectBtn'><span><a href='#' onclick='viewMenu()'> return home </span></a></li>" +
-                "</ul>").appendTo(".menuBox");
-
-
-
             //$('.wc-message-groups').trigger('click');
             $('.wc-console').animate({ 'bottom': 115 + 'px' }, 'fast');
             $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
@@ -323,11 +307,6 @@ $(function () {
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
             $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
-
-
-            $(".menuBox > ul").remove();
-
-
             //$('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         } else if ($(this).hasClass('sapIcon-close')) {    //SAP 닫기
