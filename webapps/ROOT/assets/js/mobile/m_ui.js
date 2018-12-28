@@ -323,6 +323,7 @@ $(function () {
     });
     $('.wc-shellinput').click(function () {
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        $('.wc-shellinput').trigger('click');
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
