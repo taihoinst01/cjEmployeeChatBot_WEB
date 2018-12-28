@@ -344,7 +344,8 @@ $(function () {
             tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
             $('.wc-message-group-content').css({ 'margin-top': 0 });
         }
-        $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
+        $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
