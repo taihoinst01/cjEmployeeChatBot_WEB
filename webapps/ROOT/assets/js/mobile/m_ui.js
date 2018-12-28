@@ -7,13 +7,13 @@ $(function () {
 
     $('#wrapper').css({ 'height': ($(document).height()) + 'px' });
     //$('.wc-chatview-panel').css({ 'height': ($(document).height()) + 'px' });
-    $('.wc-message-groups').css({ 'height': $(window).height() - 98 + 'px' });
-    $(window).resize(function () {
-        //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
-        $('#wrapper').css({ 'height': $(window).height() - 86 + 'px' });
-        $('.wc-message-groups').css({ 'height': $(window).height() - 98 + 'px' });
-        $(".wc-message-groups").scrollTop($(".wc-message-groups")[0].scrollHeight);
-    });
+    //$('.wc-message-groups').css({ 'height': $(window).height() - 98 + 'px' });
+    //$(window).resize(function () {
+    //    //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
+    //    $('#wrapper').css({ 'height': $(window).height() - 86 + 'px' });
+    //    $('.wc-message-groups').css({ 'height': $(window).height() - 98 + 'px' });
+    //    $(".wc-message-groups").scrollTop($(".wc-message-groups")[0].scrollHeight);
+    //});
 
     $(document).on('click', '#botChatBtn', function () {
 		$('.wc-chatview-panel').css('bottom', 0).show();
