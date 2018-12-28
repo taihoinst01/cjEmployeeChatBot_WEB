@@ -216,6 +216,9 @@ $(function () {
         //    console.log('2');
         //}
 
+        if (tempMargin != 0) {
+            $('.wc-message-group-content').css({ 'margin-top': tempMargin });
+        }
     });
     //챗봇 MENU + SAP 버튼 동작
     $('.wc-menu > div').click(function () {
@@ -307,6 +310,11 @@ $(function () {
             $('.sapIcon-search').removeClass('sapIcon-search').addClass('sapIcon');
             $('.sapBtn').removeClass('on').addClass('off');
             $('.wc-textbox').animate({ 'left': 30 + 'px' }, 'fast');
+
+            if (parseInt($('.wc-message-group-content').css('margin-top')) > 0 && $('.menuBox').hasClass('off')) {
+                tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
+                $('.wc-message-group-content').css({ 'margin-top': 0 });
+            }
         }
 
 
@@ -331,7 +339,8 @@ $(function () {
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     $('.wc-shellinput').click(function () {
-        if (parseInt($('.wc-message-group-content').css('margin-top')) > 0 && $('.menuBox').hasClass('off')) {
+        $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+        if (parseInt($('.wc-message-group-content').css('margin-top')) > 0) {
             tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
             $('.wc-message-group-content').css({ 'margin-top': 0 });
         }
