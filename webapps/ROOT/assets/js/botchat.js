@@ -21034,8 +21034,7 @@ function removeLoadingDiv(f) {
             if (removeElement != null) {
                 parent.removeChild(removeElement);
                 if (deviceChk == 'M') {
-                    $('.wc-message-groups').trigger('click');
-                    alert('1');
+                    $('.wc-header').css({'position':'fixed', 'top':0});
                 }
             }
         }
