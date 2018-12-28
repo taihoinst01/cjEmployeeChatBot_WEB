@@ -194,6 +194,10 @@ $(function () {
 
     //SAP 버튼 동작
     $('.sapIcon').click(function () {
+        if (parseInt($('.wc-message-group-content').css('margin-top')) > 0) {
+            tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
+            $('.wc-message-group-content').css({ 'margin-top': 0 });
+        }
         if ($('.menuBox').hasClass('on')) {
             $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
             $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
@@ -215,10 +219,6 @@ $(function () {
         //} else {
         //    console.log('2');
         //}
-
-        if (tempMargin != 0) {
-            $('.wc-message-group-content').css({ 'margin-top': tempMargin });
-        }
     });
     //챗봇 MENU + SAP 버튼 동작
     $('.wc-menu > div').click(function () {
@@ -314,6 +314,8 @@ $(function () {
             if (parseInt($('.wc-message-group-content').css('margin-top')) > 0 && $('.menuBox').hasClass('off')) {
                 tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
                 $('.wc-message-group-content').css({ 'margin-top': 0 });
+            } else {
+                $('.wc-message-group-content').css({ 'margin-top': tempMargin });
             }
         }
 
