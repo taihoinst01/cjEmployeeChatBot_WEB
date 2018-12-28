@@ -90,4 +90,5 @@
     width: 100%;
     top: 16px;
     left: 0;
+    -webkit-backface-visibility:hidden
 }
