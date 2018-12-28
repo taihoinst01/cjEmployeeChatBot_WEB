@@ -21035,6 +21035,9 @@ function removeLoadingDiv(f) {
                 parent.removeChild(removeElement);
             }
         }
+        if (deviceChk == 'M') {
+            $('.wc-message-groups').trigger('click');
+        }
     }
     if (f.node.className !== '') {
         if (f.node.className.toString() === 'wc-message-wrapper carousel') {
@@ -21056,8 +21059,9 @@ function removeLoadingDiv(f) {
                     //focus
                     parent.focus();
                     parent.removeChild(removeElement);
+
                 }
-            }
+            }   
         }
     }
 }

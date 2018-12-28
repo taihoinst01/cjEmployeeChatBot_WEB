@@ -171,14 +171,13 @@ $(function () {
         $('input[type="text"].wc-shellinput').val(v);
         $('label.wc-send').trigger('click');
         $('input[type="text"].wc-shellinput').attr('value', '');
-        $('input[type="text"].wc-shellinput').val('').focus();
+        $('input[type="text"].wc-shellinput').val('');
         $('.wc-console').removeClass('has-text').animate({ 'bottom': 10 + 'px' }, 'fast');
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
 
         $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
         //$('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() + 136 + 'px',  'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
-        $('.wc-message-groups').trigger('click');
     });
     //menu 이외의 다른 영역 선택시 닫힘
     $('.wc-message-groups').click(function () {
