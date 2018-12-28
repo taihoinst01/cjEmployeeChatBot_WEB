@@ -40,8 +40,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   letter-spacing: 0.5px;
   padding: 16px 8px 0 8px;
   /*position: absolute;*/
-  /*position: fixed;*/
-  position: sticky;
+  position: fixed;
   right: 0;
   top: 0;
   z-index: 1; 
@@ -65,6 +64,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   top: 50px;
   transition: transform 0.2s cubic-bezier(0, 0, 0.5, 1); 
   /*background-color:#F2F3F7*/
+  height:calc(100% - 110px);
 }
   .wc-message-groups.no-header {
     top: 0; }

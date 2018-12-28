@@ -82,3 +82,6 @@
 .gestureHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 250px; position: relative;}
 .gestureBody{background-color: #fbfbfb;height:490px; position: relative;}
 
+.wc-message-groups.menuboxOn {
+    height: calc(100% - 220px);
+}

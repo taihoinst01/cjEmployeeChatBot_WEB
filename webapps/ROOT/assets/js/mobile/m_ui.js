@@ -215,42 +215,69 @@ $(function () {
         tempHeight = parseInt($('.wc-message-groups').height()) + 20;
         //console.log(typeof(tempHeight));
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
-            
-            if (initGroupHeight != tempHeight) {
-                tempHeight = initGroupHeight - 50;
-            }
-            //console.log("firstHeight :: " + initGroupHeight);
-            //console.log("tempHeight :: " + tempHeight);
-
+            $('.wc-message-groups').removeClass('menuboxOff').addClass('menuboxOn');
             $('.wc-message-groups').trigger('click');
-
             $('.wc-console').animate({ 'bottom': 115 + 'px' }, 'fast');
             $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
-
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
-            
-            //$('.menuBox').removeClass('off').addClass('on');
-            //$('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
-            //$('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+            //if (isIOS()) {
+            //    console.log('ios');
+            //    $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+            //} else {
 
-            if (isIOS()) {
-                $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
-            } else {
-                if (initGroupHeight != tempHeight) {
-                    //tempHeight = initGroupHeight - 136;
-                    //$('.wc-message-groups').css({ 'height': tempHeight - 116 + 'px' }, '!important');
-                    //console.log($('.wc-message-groups').height());
-                    $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
-                } else {
-                    $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
-                }
-            }
+            //    if (initGroupHeight != tempHeight) {
+            //        console.log('and1');
+            //        //tempHeight = initGroupHeight - 136;
+            //        //$('.wc-message-groups').css({ 'height': tempHeight - 116 + 'px' }, '!important');
+            //        $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+            //    } else {
+            //        console.log('and2');
+            //        $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+            //    }
+            //}
+
+
+
+            //if (initGroupHeight != tempHeight) {
+            //    tempHeight = initGroupHeight - 50;
+            //}
+            //$('.wc-message-groups').trigger('click');
+
+            //$('.wc-console').animate({ 'bottom': 115 + 'px' }, 'fast');
+            //$('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
+
+            //$('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
+            //$('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+            
+            ////$('.menuBox').removeClass('off').addClass('on');
+            ////$('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
+            ////$('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+
+            //if (isIOS()) {
+            //    console.log('ios');
+            //    $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+
+
+            //} else {
+
+            //    if (initGroupHeight != tempHeight) {
+            //        console.log('and1');
+            //        tempHeight = initGroupHeight - 136;
+            //        $('.wc-message-groups').css({ 'height': tempHeight - 116 + 'px' }, '!important');
+            //        //console.log($('.wc-message-groups').height());
+            //        //$('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+            //    } else {
+            //        console.log('and2');
+            //        $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+            //    }
+            //}
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
+            $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff');
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
             $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
-            $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+            //$('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         } else if ($(this).hasClass('sapIcon-close')) {    //SAP 닫기
             //$('.menuBox').removeClass('on').addClass('off');
