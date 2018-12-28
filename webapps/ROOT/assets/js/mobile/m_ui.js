@@ -2,6 +2,9 @@ $(function () {
     //mobile 기종별 높이
     var initGroupHeight = parseInt($('.wc-message-groups').height()) + 32;
     var tempHeight = initGroupHeight;
+
+    var tempMargin = $('.wc-message-group-content').css('margin-top');
+    console.log(tempMargin);
     //var consoleBtnHeight = $('.wc-console').height();
     //var menuBtnHeight = $('.wc-menuBox').height();
 
@@ -169,7 +172,9 @@ $(function () {
         $('input[type="text"].wc-shellinput').val('').focus();
         $('.wc-console').removeClass('has-text').animate({ 'bottom': 10 + 'px' }, 'fast');
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
-        $('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() + 136 + 'px',  'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+
+        $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff');
+        //$('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() + 136 + 'px',  'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
     });
     //menu 이외의 다른 영역 선택시 닫힘
@@ -177,7 +182,9 @@ $(function () {
         if ($('.menuBox').hasClass('on')) {
             $('.wc-console').animate({ 'bottom': 10 + 'px' });
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
-            $('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() + 136 + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+
+            $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff');
+            //$('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() + 136 + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
             //$('.menuBox').removeClass('on').addClass('off');
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         }
