@@ -347,9 +347,6 @@ $(function () {
         $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
         $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
 
-        $('body').css({ 'position': 'fixed' });
-        $('.wc-header').css({ 'position': 'absolute' });
-
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
