@@ -169,11 +169,11 @@ $(function () {
         $('input[type="text"].wc-shellinput').val(v);
         $('label.wc-send').trigger('click');
         $('input[type="text"].wc-shellinput').attr('value', '');
-        $('input[type="text"].wc-shellinput').val('').focus();
+        $('input[type="text"].wc-shellinput').val('');
         $('.wc-console').removeClass('has-text').animate({ 'bottom': 10 + 'px' }, 'fast');
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
 
-        $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff');
+        $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
         //$('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() + 136 + 'px',  'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
     });
@@ -183,7 +183,7 @@ $(function () {
             $('.wc-console').animate({ 'bottom': 10 + 'px' });
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
 
-            $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff');
+            $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
             //$('.wc-message-groups').css({ 'height': $('.wc-message-groups').height() + 136 + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
             //$('.menuBox').removeClass('on').addClass('off');
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
@@ -222,12 +222,12 @@ $(function () {
         tempHeight = parseInt($('.wc-message-groups').height()) + 20;
         //console.log(typeof(tempHeight));
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
-            $('.wc-message-groups').removeClass('menuboxOff').addClass('menuboxOn');
             $('.wc-message-groups').trigger('click');
             $('.wc-console').animate({ 'bottom': 115 + 'px' }, 'fast');
             $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+            $('.wc-message-groups').removeClass('menuboxOff').addClass('menuboxOn');
             //if (isIOS()) {
             //    console.log('ios');
             //    $('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
@@ -260,6 +260,10 @@ $(function () {
             ////$('.menuBox').removeClass('off').addClass('on');
             ////$('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
             ////$('.wc-message-groups').css({ 'height': initGroupHeight - 116 + 'px' }, '!important');
+
+
+
+
 
             //if (isIOS()) {
             //    console.log('ios');
@@ -315,6 +319,7 @@ $(function () {
         //$('.menuBox').removeClass('on').addClass('off');
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
+        $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     $('.wc-shellinput').click(function () {
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
