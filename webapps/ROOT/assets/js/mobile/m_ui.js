@@ -161,6 +161,8 @@ $(function () {
     });
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
     //챗봇 menu 선택
     $('.menuSelectBtn').click(function () {
         var v = $(this).html() + " 선택";
@@ -190,7 +192,7 @@ $(function () {
 
         }
 
-        $('.wc-message-group-content').css({ 'margin-top': tempMargin});
+        //$('.wc-message-group-content').css({ 'margin-top': tempMargin});
 
     });
 
@@ -347,6 +349,13 @@ $(function () {
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     $('.wc-shellinput').click(function () {
+
+
+        if (isIOS() && document.hasFocus()) {
+            $('wc-header').css({ 'position': 'fixed' });
+        }
+
+
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         //if (parseInt($('.wc-message-group-content').css('margin-top')) > 0 && !isIOS()) {
         //    tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
