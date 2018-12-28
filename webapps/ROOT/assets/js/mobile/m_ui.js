@@ -171,7 +171,7 @@ $(function () {
         $('input[type="text"].wc-shellinput').val(v);
         $('label.wc-send').trigger('click');
         $('input[type="text"].wc-shellinput').attr('value', '');
-        $('input[type="text"].wc-shellinput').val('');
+        $('input[type="text"].wc-shellinput').val('').focus();
         $('.wc-console').removeClass('has-text').animate({ 'bottom': 10 + 'px' }, 'fast');
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
 
