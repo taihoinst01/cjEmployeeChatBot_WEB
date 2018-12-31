@@ -21033,9 +21033,6 @@ function removeLoadingDiv(f) {
             var removeElement = document.getElementById('loading');
             if (removeElement != null) {
                 parent.removeChild(removeElement);
-                if (deviceChk == 'M') {
-                    $('.wc-header').css({'position':'fixed', 'top':0});
-                }
             }
         }
         
