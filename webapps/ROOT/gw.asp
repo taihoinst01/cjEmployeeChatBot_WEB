@@ -2,7 +2,12 @@
 <html>
 <meta content="text/html" charset="utf-8">
 <title></title>
+<%
+    response.write("url =" + request("url") +"<br>")
+    response.write("cjworld_id =" + request("cjworld_id"))
 
+    response.End   
+%>
 <body>
     <form name="frm" action="<%=request("url") %>" method="post">
         <input type="hidden" name="cjworld_id" id="cjworld_id" value="<%=request("cjworld_id") %>">
