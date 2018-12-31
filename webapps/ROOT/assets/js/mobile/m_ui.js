@@ -273,7 +273,6 @@ $(function () {
     });
     $('.wc-shellinput').click(function () {
 
-
         //if (isIOS() && document.hasFocus()) {
         //    $('wc-header').css({ 'position': 'fixed' });
         //}
@@ -292,6 +291,7 @@ $(function () {
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
 
+        $('.wc-send > div').trigger('click');
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
