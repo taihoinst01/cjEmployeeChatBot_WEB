@@ -7557,8 +7557,12 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                     this.autoscroll()
                 }, e.prototype.autoscroll = function () {
                     var t = Math.max(0, h(this.scrollMe) - this.scrollContent.offsetHeight);
+
                     //KSO 다이얼로그 위에서부터 표출하기위에 margin 주석
-                    //this.scrollContent.style.marginTop = t + "px";
+                    if (isIOS) {
+                        this.scrollContent.style.marginTop = t + "px";
+                    }
+
                     var e = this.props.activities[this.props.activities.length - 1],
                         n = e && this.props.isFromMe && this.props.isFromMe(e);
                     (this.scrollToBottom || n) && (this.scrollMe.scrollTop = this.scrollMe.scrollHeight - this.scrollMe.offsetHeight)
@@ -20980,6 +20984,16 @@ function isMobile() {
         return true;
     } else {
         deviceChk = 'P';
+        return false;
+    }
+}
+
+function isIOS() {
+    var UserAgent = navigator.userAgent;
+
+    if (UserAgent.match(/iPhone|iPad|iPod/i) != null) {
+        return true;
+    } else {
         return false;
     }
 }
