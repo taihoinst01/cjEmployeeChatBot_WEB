@@ -200,7 +200,7 @@ $(function () {
         //}
         if ($('.menuBox').hasClass('on')) {
             $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
-            $('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
+            //$('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
         }
         
         $('.menuIcon').removeClass('menuIcon').addClass('sapIcon-close');
@@ -286,7 +286,7 @@ $(function () {
 
         if ($('.menuBox').hasClass('on')) {
             $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
-            $('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
+            //$('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
         }
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
