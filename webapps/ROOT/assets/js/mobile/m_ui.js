@@ -198,10 +198,10 @@ $(function () {
         //    tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
         //    $('.wc-message-group-content').css({ 'margin-top': 0 });
         //}
-        if ($('.menuBox').hasClass('on')) {
-            $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
-            $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' });
-        }
+        //if ($('.menuBox').hasClass('on')) {
+        //    $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
+        //    $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' });
+        //}
         
         $('.menuIcon').removeClass('menuIcon').addClass('sapIcon-close');
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('sapIcon-close');
@@ -277,13 +277,15 @@ $(function () {
         //if (isIOS() && document.hasFocus()) {
         //    $('wc-header').css({ 'position': 'fixed' });
         //}
-        $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+        
         //if (parseInt($('.wc-message-group-content').css('margin-top')) > 0 && !isIOS()) {
         //    tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
         //    $('.wc-message-group-content').css({ 'margin-top': 0 });
         //}
         //subMargin();
-        $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
+
+        //$('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
+        $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
 
     });
