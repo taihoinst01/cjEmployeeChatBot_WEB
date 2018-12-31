@@ -211,7 +211,7 @@ $(function () {
         $('.wc-textbox').animate({ 'left': 40 + 'px' }, 'fast');
         $('.wc-shellinput').attr('placeholder', '용어검색').focus();
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
-        $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
 
     });
     //챗봇 MENU + SAP 버튼 동작
