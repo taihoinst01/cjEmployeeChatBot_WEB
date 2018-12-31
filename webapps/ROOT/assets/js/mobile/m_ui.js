@@ -304,10 +304,14 @@ $(function () {
             $('.sapBtn').removeClass('on').addClass('off');
             $('.wc-textbox').animate({ 'left': 5 + 'px' }, 'fast');
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
+            $('input[type="text"].wc-shellinput').blur();
         } else if ($(this).hasClass('sapIcon-search') && v != '') { //SAP단어 설정해서 보내기
             $('input[type="text"].wc-shellinput').attr('value', v).val('SAP#' + v);
+            $('input[type="text"].wc-shellinput').blur();
         }
+        
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+
     });
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     
