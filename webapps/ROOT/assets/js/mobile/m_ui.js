@@ -1,10 +1,13 @@
 var tempMargin = 0;
+var deviceHeight = 0;
 $(function () {
+    //mobile margin 초기화
+    $('.wc-message-group-content').css({ 'margin-top': 0 });
     //mobile 기종별 높이
     var initGroupHeight = parseInt($('.wc-message-groups').height()) + 32;
     var tempHeight = initGroupHeight;
     tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
-
+    deviceHeight = parseInt($('.wc-message-groups').height());
     //var consoleBtnHeight = $('.wc-console').height();
     //var menuBtnHeight = $('.wc-menuBox').height();
 
@@ -473,10 +476,37 @@ function isIOS() {
 
 //android의 경우만
 function subMargin() {
-    if (parseInt($('.wc-message-group-content').css('margin-top')) > 0 && $('.menuBox').hasClass('off') && !isIOS()) {
-        tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
-        $('.wc-message-group-content').css({ 'margin-top': 0 });
-    } else if ($('.menuBox').hasClass('off') && !isIOS()) {
-        $('.wc-message-group-content').css({ 'margin-top': tempMargin });
-    }
+    console.log("margin-top : " +parseInt($('.wc-message-group-content').css('margin-top')));
+    console.log("height : " +parseInt($('.wc-message-group-content').css('height')));
+    console.log("tempMargin : " +tempMargin);
+    console.log("deviceHeight : " +deviceHeight);
+
+
+
+    //if (parseInt($('.wc-message-group-content').css('height')) < deviceHeight && $('.menuBox').hasClass('off') && !isIOS()) {
+    //    tempMargin = parseInt($('.wc-message-group-content').css('height')) + 26;
+    //    if (parseInt($('.wc-message-group-content').css('margin-top')) == 0 && parseInt($('.wc-message-group-content').css('height')) < deviceHeight) {
+    //        $('.wc-message-group-content').css({ 'margin-top': tempMargin });
+    //    } else {
+    //        $('.wc-message-group-content').css({ 'margin-top': 0 });
+    //    }
+    //}
+
+
+    //if (parseInt($('.wc-message-group-content').css('margin-top')) > 0 && $('.menuBox').hasClass('off') && !isIOS()) {
+    //    tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
+    //    $('.wc-message-group-content').css({ 'margin-top': 0 });
+    //} else if ($('.menuBox').hasClass('off') && !isIOS()) {
+    //    $('.wc-message-group-content').css({ 'margin-top': tempMargin });
+    //}
+
+
+    
+
+
+    //if (parseInt($('.wc-message-group-content').css('margin-top')) > 0) {
+    //    firstmargin = parseInt($('.wc-message-group-content').css('margin-top'));
+    //    tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
+
+    //}
 }
