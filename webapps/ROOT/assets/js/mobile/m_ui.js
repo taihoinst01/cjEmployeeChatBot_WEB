@@ -313,6 +313,7 @@ $(function () {
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
 
     });
+
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     
     //챗봇 제스처 동작
@@ -472,6 +473,8 @@ $(function () {
             $('.ttsMic').addClass('ttsMicBlack');
         }
     });
+
+    
 });
 
 function isIOS() {
