@@ -285,6 +285,7 @@ $(function () {
         //subMargin();
 
         if ($('.menuBox').hasClass('on')) {
+            $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
             $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
             //$('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
         }
