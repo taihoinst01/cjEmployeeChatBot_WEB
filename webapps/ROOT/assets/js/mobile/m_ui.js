@@ -186,15 +186,15 @@ $(function () {
             $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
 
         }
-        subMargin();
+        //subMargin();
     });
 
     //SAP 버튼 동작
     $('.sapIcon').click(function () {
-        if (parseInt($('.wc-message-group-content').css('margin-top')) > 0 && !isIOS()) {
-            tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
-            $('.wc-message-group-content').css({ 'margin-top': 0 });
-        }
+        //if (parseInt($('.wc-message-group-content').css('margin-top')) > 0 && !isIOS()) {
+        //    tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
+        //    $('.wc-message-group-content').css({ 'margin-top': 0 });
+        //}
         if ($('.menuBox').hasClass('on')) {
             $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
             $('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' });
@@ -237,7 +237,7 @@ $(function () {
             $('.sapIcon-search').removeClass('sapIcon-search').addClass('sapIcon');
             $('.sapBtn').removeClass('on').addClass('off');
             $('.wc-textbox').animate({ 'left': 5 + 'px' }, 'fast');
-            subMargin();
+           // subMargin();
             //if (parseInt($('.wc-message-group-content').css('margin-top')) > 0 && !isIOS()) {
             //    tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
             //    $('.wc-message-group-content').css({ 'margin-top': 0 });
@@ -281,7 +281,7 @@ $(function () {
         //    tempMargin = parseInt($('.wc-message-group-content').css('margin-top'));
         //    $('.wc-message-group-content').css({ 'margin-top': 0 });
         //}
-        subMargin();
+        //subMargin();
         $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
         $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
 
