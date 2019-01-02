@@ -288,11 +288,13 @@ $(function () {
         }
         //$('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
+    //안드로이드 포커스시 스크롤 최상단으로
     $(".wc-shellinput").focus(function (e) {
-        setTimeout((function () {
-            $('.wc-message-groups').animate({scrollTop: $('.wc-message-group-content')[0].scrollHeight});
-        }), 500);
-
+        if (!isIOS()) {
+            setTimeout((function () {
+                $('.wc-message-groups').animate({scrollTop: $('.wc-message-group-content')[0].scrollHeight});
+            }), 200);
+        }
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
