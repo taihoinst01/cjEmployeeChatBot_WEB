@@ -254,7 +254,6 @@ $(function () {
 
     //SAP 아니고 문자 입력시 SEND버튼
     $('.wc-shellinput').keyup(function () {
-        
         //$('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
         //$('.wc-message-groups').css({ 'height': initGroupHeight + 'px', 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
         if ($('.sapBtn').hasClass("off") && $(this).val() != '') {
@@ -270,9 +269,6 @@ $(function () {
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     $('.wc-shellinput').click(function () {
-        //if ($('.wc-shellinput').attr('onpaste') != "pasteFnc(this);") {
-        //    $('.wc-shellinput').attr('onpaste', 'pasteFnc(this);');
-        //}
 
         //if (isIOS() && document.hasFocus()) {
         //    $('wc-header').css({ 'position': 'fixed' });
@@ -292,11 +288,10 @@ $(function () {
             //$('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
         }
 
-        //var e = $.Event('keypress');
-        //e.keycode = 13;
-        //$('.wc-shellinput').trigger(e);
-        //event.preventDefault();
+        $('.wc-shellinput').focus();
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+
+        $('.wc-shellinput').focus();
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
