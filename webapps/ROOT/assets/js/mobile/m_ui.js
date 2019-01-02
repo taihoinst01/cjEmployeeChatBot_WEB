@@ -286,11 +286,11 @@ $(function () {
             $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff');
             //$('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
         }
-        $('.wc-message-content').eq($('.wc-message-content').length - 1).focus();
+        //$('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
 
-        $(this).focus();
-
-        $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        $('.wc-shellinput').mouseup(function () {
+            $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        });
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
@@ -313,6 +313,8 @@ $(function () {
 
     });
 
+
+    //복사 붙여넣기 check하여 send아이콘 변경
     $('.wc-shellinput').on('input', function (e) {
         if ($('.sapBtn').hasClass("off")) {
             $('.sapIcon').removeClass('sapIcon').addClass('sendIcon');
@@ -322,11 +324,6 @@ $(function () {
             $('.wc-shellinput').css({'color':'#326E9B'});
         }
     });
-
-
-    //$('.wc-textbox input[value]').change(function () {
-    //    console.log('change');
-    //});
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     
