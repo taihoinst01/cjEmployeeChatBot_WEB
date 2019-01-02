@@ -188,7 +188,7 @@ $(function () {
             $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
         }
         //subMargin();
-        $('.wc-message-groups').removeClass('focusOn');
+        $('.wc-message-groups').removeClass('defaultHeight');
     });
 
     //SAP 버튼 동작
@@ -289,7 +289,7 @@ $(function () {
         }
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
-        $('.wc-message-groups').addClass('focusOn');
+        $('.wc-message-groups').addClass('defaultHeight');
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
