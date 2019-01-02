@@ -165,7 +165,6 @@ $(function () {
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
     //챗봇 menu 선택
     $('.menuSelectBtn').click(function () {
         var v = $(this).html() + " 선택";
@@ -186,10 +185,10 @@ $(function () {
             $('.wc-console').animate({ 'bottom': 10 + 'px' });
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
-            $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
-
+            $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff');
         }
         //subMargin();
+        $('.wc-message-groups').removeClass('focusOn').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
 
     //SAP 버튼 동작
@@ -289,7 +288,8 @@ $(function () {
             //$('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
         }
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
-        $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff focusOn').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
@@ -311,6 +311,11 @@ $(function () {
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
 
     });
+
+    
+    //$('.wc-textbox input[value]').change(function () {
+    //    console.log('change');
+    //});
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     

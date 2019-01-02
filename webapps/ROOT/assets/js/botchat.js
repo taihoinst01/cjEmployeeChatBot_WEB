@@ -21033,7 +21033,6 @@ function removeLoadingDiv(f) {
         if (childClassName == 'wc-message wc-message-from-bot') {
             var parent = document.getElementsByClassName('wc-message-group-content')[0];
             var removeElement = document.getElementById('loading');
-            console.log('1');
             if (removeElement != null) {
                 parent.removeChild(removeElement);
             }
