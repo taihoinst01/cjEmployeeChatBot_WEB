@@ -30,6 +30,8 @@ $(function () {
       $('.bot-wrap').show();
 	});
 
+    $('.wc-shellinput').blur();
+
     //360 팝업창 생성(cardDivision : reel)
     $("#bot > div").add(
         "<div class='reel-wrapper popupArea'>" +
@@ -190,6 +192,12 @@ $(function () {
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
             $('.wc-message-groups').css({ 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
         }
+
+        if ($('.sapBtn').hasClass('off')) {
+            $('.wc-shellinput').css({ 'color': '#555' });
+        } else {
+            $('.wc-shellinput').css({ 'color': '#326E9B' });
+        }
     });
 
     //SAP 버튼 동작
@@ -210,6 +218,7 @@ $(function () {
         $('.wc-shellinput').attr('value', '').attr('placeholder', '궁금한 것을 물어보세요!').val('').focus();
 
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
+            $('.wc-shellinput').blur();
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
             $('.wc-console').animate({ 'bottom': 115 + 'px' }, 'fast');
