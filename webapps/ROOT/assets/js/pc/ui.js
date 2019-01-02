@@ -153,11 +153,9 @@ $(function () {
     $('.menuSelectBtn').click(function () {
         var v = $(this).html() + " 선택";
         $('div.wc-console').addClass('has-text');
-        $('input[type="text"].wc-shellinput').attr('value', v);
-        $('input[type="text"].wc-shellinput').val(v);
+        $('input[type="text"].wc-shellinput').attr('value', v).val(v);
         $('label.wc-send').trigger('click');
-        $('input[type="text"].wc-shellinput').attr('value', '');
-        $('input[type="text"].wc-shellinput').val('').focus();
+        $('input[type="text"].wc-shellinput').attr('value', '').val('').focus();
         $('.wc-console').removeClass('has-text').animate({ 'bottom': 10 + 'px' }, 'fast');
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
@@ -195,13 +193,13 @@ $(function () {
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
             $('.wc-console').animate({ 'bottom': 115 + 'px' }, 'fast');
             $('.menuBox').removeClass('off').addClass('on').css({ 'display': 'block' });
-            $('.wc-message-groups').css({ 'bottom': 165 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+            $('.wc-message-groups').css({ 'bottom': 165 + 'px' });
         } else if ($(this).hasClass('menuIcon_active')) {   //MENU 닫기
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
             $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
-            $('.wc-message-groups').css({ 'bottom': 60 + 'px' }).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+            $('.wc-message-groups').css({ 'bottom': 60 + 'px' });
         } else if ($(this).hasClass('sapIcon-close')) {    //SAP 닫기
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
             $('.sapIcon-close').removeClass('sapIcon-close').addClass('menuIcon');
@@ -210,6 +208,7 @@ $(function () {
             $('.sapBtn').removeClass('on').addClass('off');
             $('.wc-textbox').animate({ 'left': 30 + 'px' }, 'fast');
         }
+        $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
 
     //SAP 아니고 문자 입력시 SEND버튼
@@ -242,6 +241,18 @@ $(function () {
             $('.wc-textbox').animate({ 'left': 30 + 'px' }, 'fast');
         } else if ($(this).hasClass('sapIcon-search') && v != '') { //SAP단어 설정해서 보내기
             $('input[type="text"].wc-shellinput').attr('value', v).val('SAP#' + v);
+        }
+        $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+    });
+
+    //복사 붙여넣기 check하여 send아이콘 변경
+    $('.wc-shellinput').on('input', function (e) {
+        if ($('.sapBtn').hasClass("off")) {
+            $('.sapIcon').removeClass('sapIcon').addClass('sendIcon');
+            $('.wc-shellinput').css({ 'color': '#555' });
+        } else {
+            $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+            $('.wc-shellinput').css({ 'color': '#326E9B' });
         }
     });
     //////////////////////////////////////////////////////////////////////////////////////////////////////

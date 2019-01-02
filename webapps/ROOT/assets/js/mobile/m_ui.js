@@ -286,7 +286,7 @@ $(function () {
             $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff');
             //$('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
         }
-        //$('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     //안드로이드 포커스시 스크롤 최상단으로
     $(".wc-shellinput").focus(function (e) {
