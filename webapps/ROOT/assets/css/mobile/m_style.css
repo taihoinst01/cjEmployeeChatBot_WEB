@@ -88,6 +88,6 @@
 .wc-message-groups.menuboxOn {
     height: calc(100% - 215px);
 }
-.wc-message-groups.focusOn {
+.wc-message-group-content.focusOn {
     height: calc(100% - 350px);
 }

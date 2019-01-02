@@ -188,7 +188,7 @@ $(function () {
             $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff');
         }
         //subMargin();
-        $('.wc-message-groups').removeClass('focusOn').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        $('.wc-message-group-content').removeClass('focusOn').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
 
     //SAP 버튼 동작
@@ -288,8 +288,8 @@ $(function () {
             //$('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
         }
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
-        $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff focusOn').scrollTop($('.wc-message-group-content')[0].scrollHeight);
-
+        $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        $('.wc-message-group-content').addClass('focusOn');
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
