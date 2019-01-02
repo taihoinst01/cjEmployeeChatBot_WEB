@@ -7963,6 +7963,16 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         onChange: function(e) {
                             return t.props.onChangeText(t.textInput.value)
                         },
+                        //붙여넣기 Catch
+                        onPaste: function (e) {
+                            if ($('.sapBtn').hasClass("off")) {
+                                $('.sapIcon').removeClass('sapIcon').addClass('sendIcon');
+                                $('.wc-shellinput').css({ 'color': '#555' });
+                            } else {
+                                $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+                                $('.wc-shellinput').css({ 'color': '#326E9B' });
+                            }
+                        },
                         onKeyPress: function (e) {
                             //KSO (autocomplete)
                             //if (($('.hiddenText').attr('value') != '') && (t.textInput.value !== '') && (e.key == 'Enter')) {

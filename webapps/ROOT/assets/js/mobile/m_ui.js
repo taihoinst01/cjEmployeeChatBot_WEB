@@ -270,6 +270,9 @@ $(function () {
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     $('.wc-shellinput').click(function () {
+        //if ($('.wc-shellinput').attr('onpaste') != "pasteFnc(this);") {
+        //    $('.wc-shellinput').attr('onpaste', 'pasteFnc(this);');
+        //}
 
         //if (isIOS() && document.hasFocus()) {
         //    $('wc-header').css({ 'position': 'fixed' });
@@ -293,7 +296,7 @@ $(function () {
         //e.keycode = 13;
         //$('.wc-shellinput').trigger(e);
         //event.preventDefault();
-        $('.wc-message-groups').delay(600).scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
