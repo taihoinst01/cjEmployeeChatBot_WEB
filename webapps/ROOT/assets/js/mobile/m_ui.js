@@ -289,7 +289,11 @@ $(function () {
             //$('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
         }
 
-        $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+        //var e = $.Event('keypress');
+        //e.keycode = 13;
+        //$('.wc-shellinput').trigger(e);
+        //event.preventDefault();
+        $('.wc-message-groups').delay(600).scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();

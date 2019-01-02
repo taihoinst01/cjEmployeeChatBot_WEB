@@ -63,7 +63,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   position: absolute;
   right: 0;
   top: 50px;
-  /*transition: transform 0.2s cubic-bezier(0, 0, 0.5, 1);*/ 
+  transition: transform 0.2s cubic-bezier(0, 0, 0.5, 1); 
   /*background-color:#F2F3F7*/
   height:calc(100% - 110px);
 }
