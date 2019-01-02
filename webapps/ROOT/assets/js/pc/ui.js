@@ -1,3 +1,24 @@
+// Opera 8.0+
+var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+// Firefox 1.0+
+var isFirefox = typeof InstallTrigger !== 'undefined';
+
+// Safari 3.0+ "[object HTMLElementConstructor]" 
+var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+
+// Internet Explorer 6-11
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+// Edge 20+
+var isEdge = !isIE && !!window.StyleMedia;
+
+// Chrome 1 - 68
+var isChrome = !!window.chrome && !!window.chrome.webstore;
+
+// Blink engine detection
+var isBlink = (isChrome || isOpera) && !!window.CSS;
+
 $(function () {
     $('#wrapper').css({ 'height': ($(document).height()) + 'px'});
     $(window).resize(function () {
@@ -245,16 +266,6 @@ $(function () {
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
 
-    //복사 붙여넣기 check하여 send아이콘 변경
-    $('.wc-shellinput').on('input', function (e) {
-        if ($('.sapBtn').hasClass("off")) {
-            $('.sapIcon').removeClass('sapIcon').addClass('sendIcon');
-            $('.wc-shellinput').css({ 'color': '#555' });
-        } else {
-            $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
-            $('.wc-shellinput').css({ 'color': '#326E9B' });
-        }
-    });
     //////////////////////////////////////////////////////////////////////////////////////////////////////
 
     //챗봇 제스처 동작
