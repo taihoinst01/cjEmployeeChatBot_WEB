@@ -169,11 +169,9 @@ $(function () {
     $('.menuSelectBtn').click(function () {
         var v = $(this).html() + " 선택";
         $('div.wc-console').addClass('has-text');
-        $('input[type="text"].wc-shellinput').attr('value', v);
-        $('input[type="text"].wc-shellinput').val(v);
+        $('input[type="text"].wc-shellinput').attr('value', v).val(v);
         $('label.wc-send').trigger('click');
-        $('input[type="text"].wc-shellinput').attr('value', '');
-        $('input[type="text"].wc-shellinput').val('');
+        $('input[type="text"].wc-shellinput').attr('value', '').val('');
         $('.wc-console').removeClass('has-text').animate({ 'bottom': 10 + 'px' }, 'fast');
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
@@ -182,7 +180,7 @@ $(function () {
     //menu 이외의 다른 영역 선택시 닫힘
     $('.wc-message-groups').click(function () {
         if ($('.menuBox').hasClass('on')) {
-            $('.wc-console').animate({ 'bottom': 10 + 'px' });
+            $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
             $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff');
@@ -288,6 +286,10 @@ $(function () {
             $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff');
             //$('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
         }
+        $('.wc-message-content').eq($('.wc-message-content').length - 1).focus();
+
+        $(this).focus();
+
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     $('.wc-send > div').click(function () {
@@ -311,7 +313,17 @@ $(function () {
 
     });
 
-    
+    $('.wc-shellinput').on('input', function (e) {
+        if ($('.sapBtn').hasClass("off")) {
+            $('.sapIcon').removeClass('sapIcon').addClass('sendIcon');
+            $('.wc-shellinput').css({'color':'#555'});
+        } else {
+            $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
+            $('.wc-shellinput').css({'color':'#326E9B'});
+        }
+    });
+
+
     //$('.wc-textbox input[value]').change(function () {
     //    console.log('change');
     //});
