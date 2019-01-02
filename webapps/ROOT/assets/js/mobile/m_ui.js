@@ -287,10 +287,12 @@ $(function () {
             //$('.wc-message-groups').css({ 'height': parseInt($('.wc-message-group-content').css('height')) + 'px', 'bottom': 60 + 'px' });
         }
         //$('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
+    });
+    $(".wc-shellinput").focus(function (e) {
+        setTimeout((function () {
+            $('.wc-message-groups').animate({scrollTop: $('.wc-message-group-content')[0].scrollHeight});
+        }), 500);
 
-        $('.wc-shellinput').mouseup(function () {
-            $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
-        });
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
