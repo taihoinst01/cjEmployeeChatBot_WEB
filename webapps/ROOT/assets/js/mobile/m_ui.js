@@ -185,10 +185,9 @@ $(function () {
             $('.wc-console').animate({ 'bottom': 10 + 'px' });
             $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
-            $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff');
+            $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
         }
         //subMargin();
-        $('.wc-message-group-content').removeClass('focusOn').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
 
     //SAP 버튼 동작
@@ -289,7 +288,6 @@ $(function () {
         }
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
-        $('.wc-message-group-content').addClass('focusOn');
     });
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
