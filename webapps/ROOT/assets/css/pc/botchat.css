@@ -38,7 +38,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   height: 50px;
   left: 0;
   letter-spacing: 0.5px;
-  padding: 16px 8px 0 8px;
+  /*padding: 16px 8px 0 8px;*/
   position: absolute;
   right: 0;
   top: 0;
