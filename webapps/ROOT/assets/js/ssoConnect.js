@@ -16,11 +16,7 @@ if (isMobile()) {   //모바일 환경
     //2. 로딩시 표출
     var cjworld_id_get = $('#cjworld_id_get').val();
 
-    console.log("aaa:" + cjworld_id_get.length + ":aaa");
-    console.log("aaa:" + cjworld_id_get + ":aaa");
-    console.log("aaa:" + typeof (cjworld_id_get) + ":aaa");
-
-    if (cjworld_id_get != '' || cjworld_id_get != null || cjworld_id_get.length > 0) {
+    if (cjworld_id_get.length > 0) {
         cjworld_id_get.split(" ").join("");
         location.href = "default_m.asp?cjworld_id=" + cjworld_id_get;
     } else {
