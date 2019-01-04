@@ -21155,7 +21155,6 @@ function ssoConnection() {
         "processData": false,
         "data": "{\n    \"type\": \"message\",\n    \"from\": {\n        \"id\": \"cjEmployeeChatBot\"\n    },\n    \"text\": \"" + pos +"\"\n}"
     }
-    console.log(settings);
     $.ajax(settings).done(function (response) {
         //console.log(response);
     });
