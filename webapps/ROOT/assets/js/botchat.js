@@ -3492,6 +3492,8 @@ if ($('#cjworld_id_get').val().length == 0) {
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
                         var mobileGetId = $('#cjworld_id_get').val();
+                        mobileGetId.split("&").join("%26");
+                        mobileGetId.split("+").join("%2B");
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
