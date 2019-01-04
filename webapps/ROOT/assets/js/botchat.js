@@ -7748,7 +7748,7 @@ if ($('#cjworld_id_get').val().length == 0) {
                         //KSO First DLG HIDE 
                         var activityId = this.props.activity.id;
                         var activityNum = activityId.split('|');
-                        var mobileGetId = $('#cjworld_id_get').val();
+                        //var mobileGetId = $('#cjworld_id_get').val();
                         if (activityNum[1] == '0000000' &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
