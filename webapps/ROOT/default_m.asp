@@ -41,7 +41,10 @@
         <!-- 여기서 부터 -->
         <div class="bot-wrap chatOn">
             <div id="bot" />
-            <script>alert("a : " + $('#cjworld_id_get').val());</script>
+            <script>
+                alert("a : " + $('#cjworld_id_get').val());
+
+            </script>
             <script src="assets/js/botchat.js"></script>
             <script>
                 BotChat.App({
