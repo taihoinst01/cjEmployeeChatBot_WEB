@@ -3491,7 +3491,13 @@ if ($('#cjworld_id_get').val().length == 0) {
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
-                        var mobileGetId = $('#cjworld_id_get').val();
+                        alert("1:" + $('#cjworld_id_get').val());
+                        var mobileGetId = $('#cjworld_id_get').val().replace("%2B", "+");
+                        alert("2:" + mobileGetId);
+                        $('#cjworld_id_get').val(mobileGetId);
+
+
+
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
