@@ -3487,6 +3487,7 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
                         var mobileGetId = $('#cjworld_id_get').val();
+                        alert(mobileGetId);
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
@@ -21090,7 +21091,9 @@ function ssoConnection() {
     } else if (deviceChk == 'M') {
         pos = deviceChk + "sso:" + $("#cjworld_id_get").val();
     }
-    alert(pos);
+
+
+    
     //var directLineUrl = "https://directline.botframework.com";
     //var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
 

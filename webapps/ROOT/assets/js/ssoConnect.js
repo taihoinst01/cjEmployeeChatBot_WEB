@@ -1,7 +1,9 @@
 ﻿$(function () {
     //$('.bot-wrap').hide();
 
-
+    if (window.location.href != 'https://cjemployeechatbot-web.azurewebsites.net') {
+        location.href = "error.html";
+    }
 });
 
 function isMobile() {
