@@ -14,16 +14,6 @@
             } else {
                 $('#deviceBtn').add("<button type='button' class='btnClick' onclick='javascript:window.close()'>닫기</button>").appendTo("#deviceBtn");
             }
-
-            //$('.btnClick').click(function(){
-            //    if(isMobile()){
-            //        alert('1');
-            //        history.back(-1);
-            //    }else {
-            //        alert('2');
-            //        window.close();
-            //    }
-            //});
         });
 
         function isMobile() {
@@ -48,9 +38,7 @@
 			비정상적인 접근으로 페이지 로딩에 실패하였습니다.<br>
 			정상적인 경로를 이용해 주세요.
 		</p>
-		<div id="deviceBtn">
-			<!--<button type="button" onclick='javascript:window.close()'>닫기</button>-->
-		</div>
+		<div id="deviceBtn"></div>
 	</div>
 </section>
 
