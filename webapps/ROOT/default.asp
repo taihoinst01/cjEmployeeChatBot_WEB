@@ -51,8 +51,10 @@
         <!-- ���⼭ ���� -->
         <div class="bot-wrap chatOn">
                 <script > 
+                /*//두연
                     var a = encodeURIComponent($('#cjworld_id_get').val());
                     $('#cjworld_id_get').val(a);
+                */
                 </script>
             <div id="bot" />
             <script src="assets/js/botchat.js"></script>

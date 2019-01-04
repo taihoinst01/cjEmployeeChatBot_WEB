@@ -7,6 +7,8 @@ var defaultUrl = 'https://cjemployeechatbot-web.azurewebsites.net/';
 var defaultUrl_pc = 'https://cjemployeechatbot-web.azurewebsites.net/default.asp';
 var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.asp';
 
+var mobileGetId = $('#cjworld_id_get').val();
+
 if ($('#cjworld_id_get').val().length == 0) {
     location.href = "error.html";
 }
@@ -21101,7 +21103,7 @@ function ssoConnection() {
     if (deviceChk == 'P') {
         pos = deviceChk + "sso:" + $("#cjworld_id_post").val();
     } else if (deviceChk == 'M') {
-        pos = deviceChk + "sso:" + $("#cjworld_id_get").val();
+        pos = deviceChk + "sso:" + mobileGetId;
     }
 
     alert("pos : " +pos);
