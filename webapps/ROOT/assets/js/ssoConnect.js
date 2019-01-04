@@ -15,8 +15,12 @@ function isMobile() {
 if (isMobile()) {   //모바일 환경
     //2. 로딩시 표출
     var cjworld_id_get = $('#cjworld_id_get').val();
+
+    console.log("a : " + cjworld_id_get);
+    console.log("a : " + typeof(cjworld_id_get));
+
     if (cjworld_id_get != '' || cjworld_id_get != null) {
-        cjworld_id_get.replace(/(\s*)/g, "");
+        cjworld_id_get.split(" ").join("");
         location.href = "default_m.asp?cjworld_id=" + cjworld_id_get;
     } else {
         location.href = "error.html";
