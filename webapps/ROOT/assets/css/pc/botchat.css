@@ -473,6 +473,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   width: 100%; 
   background-color:#e0e0e0; /*input 색상 변경*/
   /*margin-left:10px*/
+  border-radius:15px;
 }
 
 .wc-send svg {
@@ -489,7 +490,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-textbox {
   bottom: 0;
   /*left: 60px;*/
-  left: 30px;
+  left: 15px;
   right: 50px; }
 
 .wc-send {

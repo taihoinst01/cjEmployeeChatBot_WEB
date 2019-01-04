@@ -3,6 +3,7 @@ $(function () {
     $('.wc-message-group-content').css({ 'margin-top': 0 });
 
     $('#wrapper').css({ 'height': ($(document).height()) + 'px' });
+    $('.wc-chatview-panel').css({ 'height': ($(document).height()) + 'px' });
     //$(window).resize(function () {
     //    //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
     //    $('#wrapper').css({ 'height': $(window).height() - 86 + 'px' });

@@ -20,7 +20,11 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
 var isBlink = (isChrome || isOpera) && !!window.CSS;
 
 $(function () {
-    $('#wrapper').css({ 'height': ($(document).height()) + 'px'});
+    //mobile margin 초기화
+    $('.wc-message-group-content').css({ 'margin-top': 0 });
+
+    $('#wrapper').css({ 'height': ($(document).height()) + 'px' });
+    $('.wc-chatview-panel').css({ 'height': ($(document).height()) + 'px' });
     $(window).resize(function () {
         //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
     });

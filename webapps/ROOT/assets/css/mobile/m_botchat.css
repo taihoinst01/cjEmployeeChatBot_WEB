@@ -150,7 +150,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     overflow: hidden;
     /*background: #34373c;*/
     width: 100%;
-    max-width: 380px;
+    /*max-width: 380px;*/
     height: 100%;
     position: inherit;
     /*border: 0px;
@@ -481,7 +481,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     width: 100%;
     background-color: #e0e0e0; /*input 색상 변경*/
     padding-left:10px;
-    border-radius:15px
+    border-radius:15px;
 }
 
 .wc-send svg {
