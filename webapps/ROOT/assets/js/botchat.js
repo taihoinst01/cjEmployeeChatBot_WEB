@@ -21102,13 +21102,15 @@ function removeLoadingDiv(f) {
 function ssoConnection() {
     //sso form 값
     var pos;
-
+    
     if (deviceChk == 'P') {
         pos = deviceChk + "sso:" + $("#cjworld_id_post").val();
     } else if (deviceChk == 'M') {
         pos = deviceChk + "sso:" + decodeURIComponent(mobileGetId);
+        $("#cjworld_id_get").val(decodeURIComponent(mobileGetId));
     }
 
+    
     alert("pos : " +pos);
     
     //var directLineUrl = "https://directline.botframework.com";
