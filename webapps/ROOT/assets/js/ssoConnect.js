@@ -20,7 +20,7 @@ if (isMobile()) {   //모바일 환경
         alert(cjworld_id_get);
         //cjworld_id_get.split("&").join("%26");
 
-        cjworld_id_get.replace("S", "=plus=");
+        cjworld_id_get = cjworld_id_get.replace("+", "%2B");
         //cjworld_id_get.split("+").join("%2B");
 
         alert(cjworld_id_get);
