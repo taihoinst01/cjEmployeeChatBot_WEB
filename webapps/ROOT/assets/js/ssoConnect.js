@@ -1,7 +1,7 @@
 ﻿$(function () {
     //$('.bot-wrap').hide();
 
-    if (window.location.href != 'https://cjemployeechatbot-web.azurewebsites.net') {
+    if (window.location.href == 'https://cjemployeechatbot-web.azurewebsites.net/default_m.asp') {
         location.href = "error.html";
     }
 });
