@@ -1,5 +1,7 @@
 ﻿$(function () {
     //$('.bot-wrap').hide();
+
+
 });
 
 function isMobile() {
