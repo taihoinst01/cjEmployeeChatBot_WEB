@@ -48,8 +48,12 @@
                 <div class="banner" id="botChatBtn"></div>
             </div>
         </div>-->
-        <!-- ¿©±â¼­ ºÎÅÍ -->
+        <!-- ï¿½ï¿½ï¿½â¼­ ï¿½ï¿½ï¿½ï¿½ -->
         <div class="bot-wrap chatOn">
+                <script > 
+                    var a = encodeURIComponent($('#cjworld_id_get').val());
+                    $('#cjworld_id_get').val(a);
+                </script>
             <div id="bot" />
             <script src="assets/js/botchat.js"></script>
             <script>
@@ -65,7 +69,7 @@
             </script>
             <script src="assets/js/ssoConnect.js"></script>
         </div>
-        <!-- ³¡ -->
+        <!-- ï¿½ï¿½ -->
     </div>
 </body>
 </html>

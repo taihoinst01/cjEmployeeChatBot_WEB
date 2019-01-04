@@ -38,10 +38,13 @@
     <input type="hidden" id="conversationId" />
     <input type="hidden" id="cjworld_id_get" value="<%=request("cjworld_id") %>"/>
     <div class="mainBG">
-        <!-- ¿©±â¼­ ºÎÅÍ -->
+        <!-- ï¿½ï¿½ï¿½â¼­ ï¿½ï¿½ï¿½ï¿½ -->
         <div class="bot-wrap chatOn">
             <div id="bot" />
             <script>
+                
+                var a = encodeURIComponent($('#cjworld_id_get').val());
+                $('#cjworld_id_get').val(a);
                 alert("a : " + $('#cjworld_id_get').val());
 
             </script>
@@ -59,7 +62,7 @@
             </script>
             <!--<script src="assets/js/ssoConnect.js"></script>-->
         </div>
-        <!-- ³¡ -->
+        <!-- ï¿½ï¿½ -->
     </div>
 </body>
 </html>
