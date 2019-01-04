@@ -17,8 +17,8 @@ if (isMobile()) {   //모바일 환경
     var cjworld_id_get = $('#cjworld_id_get').val();
     //location.href = "default_m.asp?cjworld_id=" + cjworld_id_get;
     if (cjworld_id_get == '' || cjworld_id_get == null) {
-        //location.href = "error.html";
-        location.href = "index_m.html";
+        location.href = "error.html";
+        //location.href = "index_m.html";
     } else {
         location.href = "default_m.asp?cjworld_id=" + cjworld_id_get;
     }
