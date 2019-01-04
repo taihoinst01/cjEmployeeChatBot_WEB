@@ -42,10 +42,10 @@
         <div class="bot-wrap chatOn">
             <div id="bot" />
             <script>
-                /*//두연
+                //두연
                 var a = encodeURIComponent($('#cjworld_id_get').val());
                 $('#cjworld_id_get').val(a);
-                */
+                
                 alert("a : " + $('#cjworld_id_get').val());
 
             </script>

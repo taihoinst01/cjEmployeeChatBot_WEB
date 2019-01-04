@@ -3500,12 +3500,14 @@ if ($('#cjworld_id_get').val().length == 0) {
                         $('#cjworld_id_get').val(mobileGetId);
                         */
 
-                        alert(location.href);
-                        alert(mobileGetId);
+
+                       alert(location.href);
+                       alert(mobileGetId);
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
                             || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
+                            //|| location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
                             //console.log("SSO Connect");
 
                             ssoConnection();
@@ -21104,7 +21106,7 @@ function ssoConnection() {
     if (deviceChk == 'P') {
         pos = deviceChk + "sso:" + $("#cjworld_id_post").val();
     } else if (deviceChk == 'M') {
-        pos = deviceChk + "sso:" + mobileGetId;
+        pos = deviceChk + "sso:" + decodeURIComponent(mobileGetId);;
     }
 
     alert("pos : " +pos);
