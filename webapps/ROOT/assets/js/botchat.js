@@ -3492,7 +3492,6 @@ if ($('#cjworld_id_get').val().length == 0) {
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
                         var mobileGetId = $('#cjworld_id_get').val();
-                        alert(mobileGetId);
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
@@ -21156,7 +21155,7 @@ function ssoConnection() {
         "processData": false,
         "data": "{\n    \"type\": \"message\",\n    \"from\": {\n        \"id\": \"cjEmployeeChatBot\"\n    },\n    \"text\": \"" + pos +"\"\n}"
     }
-
+    console.log(settings);
     $.ajax(settings).done(function (response) {
         //console.log(response);
     });
