@@ -21097,7 +21097,7 @@ function ssoConnection() {
         pos = deviceChk + "sso:" + $("#cjworld_id_get").val();
     }
 
-
+    alert("pos : " +pos);
     
     //var directLineUrl = "https://directline.botframework.com";
     //var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
