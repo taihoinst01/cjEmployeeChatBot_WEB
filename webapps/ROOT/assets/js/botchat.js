@@ -6,6 +6,11 @@ var deviceChk;
 var defaultUrl = 'https://cjemployeechatbot-web.azurewebsites.net/';
 var defaultUrl_pc = 'https://cjemployeechatbot-web.azurewebsites.net/default.asp';
 var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.asp';
+
+if ($('#cjworld_id_get').val().length == 0) {
+    location.href = "error.html";
+}
+
 ! function (t, e) {
     "object" == typeof exports && "object" == typeof module ? module.exports = e() : "function" == typeof define && define.amd ? define([], e) : "object" == typeof exports ? exports.BotChat = e() : t.BotChat = e()
 }(this, function() {
@@ -21083,20 +21088,8 @@ function removeLoadingDiv(f) {
 }
 
 function ssoConnection() {
-
-
-    if (typeof ($("#cjworld_id_get").val()) == 'undefiend') {
-        location.href = "error.html";
-    }
-    if ($("#cjworld_id_get").val().length == 0) {
-        location.href = "error.html";
-    }
-
     //sso form 값
     var pos;
-
-    
-
 
     if (deviceChk == 'P') {
         pos = deviceChk + "sso:" + $("#cjworld_id_post").val();
