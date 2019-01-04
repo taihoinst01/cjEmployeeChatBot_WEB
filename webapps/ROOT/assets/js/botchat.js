@@ -21083,8 +21083,20 @@ function removeLoadingDiv(f) {
 }
 
 function ssoConnection() {
+
+
+    if (typeof ($("#cjworld_id_get").val()) == 'undefiend') {
+        location.href = "error.html";
+    }
+    if ($("#cjworld_id_get").val().length == 0) {
+        location.href = "error.html";
+    }
+
     //sso form 값
     var pos;
+
+    
+
 
     if (deviceChk == 'P') {
         pos = deviceChk + "sso:" + $("#cjworld_id_post").val();
