@@ -47,7 +47,7 @@
                 var a = encodeURIComponent(aa);
                 $('#cjworld_id_get').val(a);
                 
-                alert("a : " + $('#cjworld_id_get').val());
+                //alert("a : " + $('#cjworld_id_get').val());
 
             </script>
             <script src="assets/js/botchat.js"></script>

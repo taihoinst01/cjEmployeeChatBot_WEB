@@ -3246,7 +3246,7 @@ if ($('#cjworld_id_get').val().length == 0) {
 
                             if (deviceChk == 'M') {
                                 var a = $("#cjworld_id_get").val();
-                                e.content.text = a + " :: " + e.content.text;
+                                //e.content.text = a + " :: " + e.content.text;
 
                             }                            
 
@@ -3501,8 +3501,8 @@ if ($('#cjworld_id_get').val().length == 0) {
                         */
 
 
-                       alert(location.href);
-                       alert(mobileGetId);
+                       //alert(location.href);
+                       //alert(mobileGetId);
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
@@ -21111,7 +21111,7 @@ function ssoConnection() {
     }
 
     
-    alert("pos : " +pos);
+    //alert("pos : " +pos);
     
     //var directLineUrl = "https://directline.botframework.com";
     //var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
