@@ -21106,7 +21106,7 @@ function ssoConnection() {
     if (deviceChk == 'P') {
         pos = deviceChk + "sso:" + $("#cjworld_id_post").val();
     } else if (deviceChk == 'M') {
-        pos = deviceChk + "sso:" + decodeURIComponent(mobileGetId);;
+        pos = deviceChk + "sso:" + decodeURIComponent(mobileGetId);
     }
 
     alert("pos : " +pos);

@@ -43,7 +43,8 @@
             <div id="bot" />
             <script>
                 //두연
-                var a = encodeURIComponent($('#cjworld_id_get').val());
+                var aa = decodeURIComponent($('#cjworld_id_get').val());;
+                var a = encodeURIComponent(aa);
                 $('#cjworld_id_get').val(a);
                 
                 alert("a : " + $('#cjworld_id_get').val());
