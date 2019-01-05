@@ -48,7 +48,6 @@
 /*.sendIcon{background: url("../../image/chatbotStyle/btn_red.png") no-repeat; width:35px;height:35px;margin:8px}*/ /*이미지용*/
 .sendIcon{background: url("../../image/chatbotStyle/btn_send.png") no-repeat;background-size:35px 35px; width:35px;height:35px;margin:8px}
 .sendIcon:hover{background: url("../../image/chatbotStyle/btn_send_h.png") no-repeat;background-size:35px 35px; width:35px;height:35px;margin:8px} 
-.wc-shellinput{ime-mode:active} /*기본 한글 입력*/
 
 .wc-menu{display: inline-block;width:50px;height: 50px;margin-left:-50px}
 /*origin*/

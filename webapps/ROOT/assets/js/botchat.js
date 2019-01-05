@@ -8,9 +8,9 @@ var defaultUrl_pc = 'https://cjemployeechatbot-web.azurewebsites.net/default.asp
 var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.asp';
 
 var mobileGetId = $('#cjworld_id_get').val();
-console.log(mobileGetId);
-//mobile id 길이체크
-if (mobileGetId.length < 24) {
+if(typeof(mobileGetId) == 'undefined'){
+    location.href = "error.html";
+}else if (mobileGetId.length < 24) {
     location.href = "error.html";
 }
 
