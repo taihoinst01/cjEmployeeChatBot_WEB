@@ -48,7 +48,7 @@
                 <div class="banner" id="botChatBtn"></div>
             </div>
         </div>-->
-        <!-- ���⼭ ���� -->
+        <!-- 여기서 부터 -->
         <div class="bot-wrap chatOn">
                 <script > 
                 
@@ -73,7 +73,7 @@
             </script>
             <script src="assets/js/ssoConnect.js"></script>
         </div>
-        <!-- �� -->
+        <!-- 끝 -->
     </div>
 </body>
 </html>
