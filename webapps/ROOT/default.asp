@@ -50,13 +50,10 @@
         </div>-->
         <!-- 여기서 부터 -->
         <div class="bot-wrap chatOn">
-                <script > 
-                
-                //두연
-                    
-                    var a = encodeURIComponent($('#cjworld_id_get').val());
-                    $('#cjworld_id_get').val(a);
-                
+                <script> 
+                    //두연(get방식으로 넘길때 (+) 특수기호의 경우 삭제 되기 때문에 이 방식으로 다시 값 설정을 해준다.)
+                    var encodeVal = encodeURIComponent($('#cjworld_id_get').val()); //get방식으로 넘기기 전에 encode
+                    $('#cjworld_id_get').val(encodeVal);
                 </script>
             <div id="bot" />
             <script src="assets/js/botchat.js"></script>
