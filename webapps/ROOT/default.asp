@@ -53,6 +53,8 @@
                 <script > 
                 
                 //두연
+                    alert($('#cjworld_id_get').val());
+                    
                     var a = encodeURIComponent($('#cjworld_id_get').val());
                     $('#cjworld_id_get').val(a);
                 
