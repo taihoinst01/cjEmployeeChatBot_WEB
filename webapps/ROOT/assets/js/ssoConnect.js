@@ -16,17 +16,10 @@ if (isMobile()) {   //모바일 환경
     //2. 로딩시 표출
     var cjworld_id_get = $('#cjworld_id_get').val();
 
-    if (cjworld_id_get.length > 1) {
-        //alert("abc:" + cjworld_id_get);
-        //cjworld_id_get.split("&").join("%26");
-
-        //cjworld_id_get = cjworld_id_get.replace("+", "%2B");
-        //cjworld_id_get.split("+").join("%2B");
-
+    if (cjworld_id_get != '' || cjworld_id_get != null) {
         location.href = "default_m.asp?cjworld_id=" + cjworld_id_get;
     } else {
         location.href = "error.html";
-        //location.href = "index_m.html";
     }
 } else {    // 웹 환경
     var cjworld_id_post = $('#cjworld_id_post').val();

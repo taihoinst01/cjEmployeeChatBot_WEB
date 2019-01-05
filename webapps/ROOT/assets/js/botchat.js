@@ -8,9 +8,9 @@ var defaultUrl_pc = 'https://cjemployeechatbot-web.azurewebsites.net/default.asp
 var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.asp';
 
 var mobileGetId = $('#cjworld_id_get').val();
-
+console.log(mobileGetId);
 //mobile id 길이체크
-if ($('#cjworld_id_get').val().length == 24) {
+if (mobileGetId.length < 24) {
     location.href = "error.html";
 }
 
@@ -3494,23 +3494,12 @@ if ($('#cjworld_id_get').val().length == 24) {
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
-                        /*
-                        alert("1:" + $('#cjworld_id_get').val());
-                        var mobileGetId = $('#cjworld_id_get').val().replace("%2B", "+");
-                        alert("2:" + mobileGetId);
-                        $('#cjworld_id_get').val(mobileGetId);
-                        */
-
-
-                       //alert(location.href);
-                       //alert(mobileGetId);
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
                             || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
                             //|| location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
                             //console.log("SSO Connect");
-
                             ssoConnection();
                             startFlag = 1;
                         }
