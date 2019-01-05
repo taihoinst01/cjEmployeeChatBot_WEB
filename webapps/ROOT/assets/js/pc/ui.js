@@ -260,7 +260,7 @@ $(function () {
         }
     });
     $('.wc-shellinput').click(function () {
-        $('.wc-shellinput').css('ime-mode:active');
+        $('.wc-shellinput').css({'ime-mode':'active'});
         $('.wc-message-groups').scrollTop($('.wc-message-group-content')[0].scrollHeight);
     });
     $('.wc-send > div').click(function () {
