@@ -43,8 +43,8 @@
             <div id="bot" />
             <script>
                 //두연(get방식으로 넘길때 (+) 특수기호의 경우 삭제 되기 때문에 이 방식으로 다시 값 설정을 해준다.)
-                var decodeVal = decodeURIComponent($('#cjworld_id_get').val()); //get방식으로 넘어온부분을 다시 해제
-                var encodeVal = encodeURIComponent(decodeVal);
+                var decodeVal = decodeURIComponent($('#cjworld_id_get').val()); //get방식으로 넘어온부분을 decode
+                var encodeVal = encodeURIComponent(decodeVal);  // value에 넣기 위해 encode
                 $('#cjworld_id_get').val(encodeVal);  // 원래대로 돌려 value에 다시 넣는다.
             </script>
             <script src="assets/js/botchat.js"></script>
