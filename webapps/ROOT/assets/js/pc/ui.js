@@ -36,8 +36,9 @@ $(function () {
 
     $('.wc-shellinput').blur();
 
-    //용어검색(SAP) tooltip
-    $('.wc-send > div').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','용어 검색').tooltip('show');
+    //tooltip
+    $('.wc-send').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','용어 검색').tooltip('show');
+    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','바로 가기').tooltip('show');
 
     //360 팝업창 생성(cardDivision : reel)
     $("#bot > div").add(
@@ -225,6 +226,7 @@ $(function () {
         $('.wc-shellinput').attr('value', '').attr('placeholder', '궁금한 것을 물어보세요!').val('').focus();
 
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
+            $('.wc-menu').tooltip('destroy'); //메뉴 선택시 tooptip삭제
             $('.wc-shellinput').blur();
             $('.menuIcon').removeClass('menuIcon').addClass('menuIcon_active');
             $('.sendIcon').removeClass('sendIcon').addClass('sapIcon');
@@ -250,7 +252,7 @@ $(function () {
 
     //SAP 아니고 문자 입력시 SEND버튼
     $('.wc-shellinput').keyup(function () {
-        $('.wc-send > div').tooltip('destroy'); //key입력시 tooptip삭제
+        $('.wc-send').tooltip('destroy'); //key입력시 tooptip삭제
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
         $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
