@@ -1,5 +1,7 @@
 //초기 한번 Flag
 var startFlag = 0;
+var connectFlag = 0;
+
 //device check(PC, Mobile)
 var deviceChk;
 
@@ -9,9 +11,9 @@ var defaultUrl_m = 'https://cjemployeechatbot-web.azurewebsites.net/default_m.as
 
 var mobileGetId = $('#cjworld_id_get').val();
 if(typeof(mobileGetId) == 'undefined'){
-    location.href = "error.html";
+    location.href = "error_route.html";
 }else if (mobileGetId.length < 24) {
-    location.href = "error.html";
+    location.href = "error_route.html";
 }
 
 ! function (t, e) {
@@ -3634,7 +3636,8 @@ if(typeof(mobileGetId) == 'undefined'){
                     if (403 === t.status) this.expiredToken();
                     else if (t.status >= 400 && t.status < 500) return i.Observable.throw(t);
                     //KSO
-                    //else if (502 === t.status) {
+                    else if (502 === t.status) {
+                        location.href='error.server.html';  // 서버 반영 중일때 error page
                     //    return i.Observable.ajax({
                     //        method: "POST",
                     //        url: t.request.url,
@@ -3644,7 +3647,7 @@ if(typeof(mobileGetId) == 'undefined'){
                     //    }).catch(function (t) {
                     //        $('#loading').remove();
                     //    });
-                    //}
+                    }
                     return i.Observable.of("retry")
                 }, t.prototype.catchExpiredToken = function (t) {
                     return t === a ? i.Observable.of("retry") : i.Observable.throw(t)
@@ -7738,7 +7741,6 @@ if(typeof(mobileGetId) == 'undefined'){
                         //KSO First DLG HIDE 
                         var activityId = this.props.activity.id;
                         var activityNum = activityId.split('|');
-                        //var mobileGetId = $('#cjworld_id_get').val();
                         if (activityNum[1] == '0000000' &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
@@ -8010,23 +8012,6 @@ if(typeof(mobileGetId) == 'undefined'){
                                 }
                                 t.textInput.value = '';
                             }
-
-                            
-                            //if (e.key == 'Enter'
-                            //    && (t.props.inputText == '총무 선택'
-                            //    || t.props.inputText == '인사 선택'
-                            //    || t.props.inputText == '재무 선택'
-                            //    || t.props.inputText == 'IT 선택'
-                            //    || t.props.inputText == '법무 선택'
-                            //    || t.props.inputText == 'CSV 선택'
-                            //    || t.props.inputText == '블로썸파크 선택'
-                            //    || t.props.inputText == '하고싶은말 선택'
-                            //    )) {
-                            //    console.log('a');
-                            //    t.props.inputText = t.textInput.value;
-                            //}
-                            
-
                             return t.onKeyPress(e)
                         },
                         onFocus: function () {

@@ -19,11 +19,11 @@ if (isMobile()) {   //모바일 환경
     if (cjworld_id_get != '' || cjworld_id_get != null) {
         location.href = "default_m.asp?cjworld_id=" + cjworld_id_get;
     } else {
-        location.href = "error.html";
+        location.href = "error_route.html";
     }
 } else {    // 웹 환경
     var cjworld_id_post = $('#cjworld_id_post').val();
     if (cjworld_id_post == '' || cjworld_id_post == null) {
-        location.href = "error.html";
+        location.href = "error_route.html";
     }
 }
