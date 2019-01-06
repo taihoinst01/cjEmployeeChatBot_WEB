@@ -37,9 +37,15 @@ $(function () {
     $('.wc-shellinput').blur();
 
     //tooltip
-    $('.wc-send').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','용어 검색').tooltip('show');
-    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','바로 가기').tooltip('show');
-
+    $('.wc-send').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','용어검색')
+    .attr('data-template','<div class="tooltip tool1" role="tooltip"><div class="tooltip-arrow arrow1"></div><div class="tooltip-inner"></div></div>').tooltip('show');
+    $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','바로가기')
+    .attr('data-template','<div class="tooltip tool2" role="tooltip"><div class="tooltip-arrow arrow2"></div><div class="tooltip-inner"></div></div>').tooltip('show');
+    var tooltip1_menu = parseInt($('.tool1').css('left'));
+    var tooltip1_top = parseInt($('.tool1').css('top'));
+    $('.tool1').css({'left': tooltip1_menu - 12 + 'px', 'top': tooltip1_top + 16 + 'px'});
+    $('.arrow1').css({'left': 70 + '%'});
+    
     //360 팝업창 생성(cardDivision : reel)
     $("#bot > div").add(
         "<div class='reel-wrapper popupArea'>" +
