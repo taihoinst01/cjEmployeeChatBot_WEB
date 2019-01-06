@@ -36,6 +36,9 @@ $(function () {
 
     $('.wc-shellinput').blur();
 
+    //용어검색(SAP) tooltip
+    $('.wc-send > div').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','용어검색').tooltip('show');
+
     //360 팝업창 생성(cardDivision : reel)
     $("#bot > div").add(
         "<div class='reel-wrapper popupArea'>" +
@@ -247,6 +250,7 @@ $(function () {
 
     //SAP 아니고 문자 입력시 SEND버튼
     $('.wc-shellinput').keyup(function () {
+        $('.wc-send > div').tooltip('destroy'); //key입력시 tooptip삭제
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('menuIcon');
         $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
