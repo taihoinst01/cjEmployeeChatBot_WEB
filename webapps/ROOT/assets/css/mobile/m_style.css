@@ -95,3 +95,8 @@
 .wc-message-groups.focusOn {
     height: calc(100% - 300px);
 }
+
+/* tooltip */
+.tooltip{font-family:'CJONLYONENEWbodyRegular'}
+.tooltip.top .tooltip-arrow{border-top-color:#326E9B}
+.tooltip-inner{background-color:#326E9B;}

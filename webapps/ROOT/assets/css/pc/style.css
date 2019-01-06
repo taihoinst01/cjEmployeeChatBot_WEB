@@ -88,3 +88,7 @@
 .gestureHeader{background-color:#4b4f57; background-size: 100%;height: 38px;width: 250px; position: relative;}
 .gestureBody{background-color: #fbfbfb;height:490px; position: relative;}
 
+/* tooltip */
+.tooltip{font-family:'CJONLYONENEWbodyRegular'}
+.tooltip.top .tooltip-arrow{border-top-color:#326E9B}
+.tooltip-inner{background-color:#326E9B;}

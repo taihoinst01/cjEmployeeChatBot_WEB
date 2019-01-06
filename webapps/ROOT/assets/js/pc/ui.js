@@ -37,7 +37,7 @@ $(function () {
     $('.wc-shellinput').blur();
 
     //용어검색(SAP) tooltip
-    $('.wc-send > div').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','용어검색').tooltip('show');
+    $('.wc-send > div').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','용어 검색').tooltip('show');
 
     //360 팝업창 생성(cardDivision : reel)
     $("#bot > div").add(
