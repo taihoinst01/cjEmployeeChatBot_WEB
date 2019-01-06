@@ -99,4 +99,5 @@
 /* tooltip */
 .tooltip{font-family:'CJONLYONENEWbodyRegular'}
 .tooltip.top .tooltip-arrow{border-top-color:#326E9B}
-.tooltip-inner{background-color:#326E9B;padding:8px}
+.tooltip-inner{background-color:#326E9B;padding:8px 5px}
+.tool1{top:-42px !important}
