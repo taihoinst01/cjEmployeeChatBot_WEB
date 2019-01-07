@@ -4,12 +4,16 @@ $(function () {
 
     $('#wrapper').css({ 'height': ($(document).height()) + 'px' });
     $('.wc-chatview-panel').css({ 'height': ($(document).height()) + 'px' });
-    //$(window).resize(function () {
-    //    //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
-    //    $('#wrapper').css({ 'height': $(window).height() - 86 + 'px' });
-    //    $('.wc-message-groups').css({ 'height': $(window).height() - 98 + 'px' });
-    //    $(".wc-message-groups").scrollTop($(".wc-message-groups")[0].scrollHeight);
-    //});
+    var documentWidth = $(document).width();
+    $(window).resize(function () {
+        if($('.wc-chatview-panel').height() == $(document).height()){
+            $('.wc-chatview-panel').css({ 'height': documentWidth + 'px'});
+        }else{
+            $('.wc-chatview-panel').css({ 'height': $(document).height() + 'px'});
+        }
+        $('.wc-carousel').css({ 'width': ($(document).width()-74) + 'px' });
+        $('.tooltip').tooltip('show');
+    });
 
     $(document).on('click', '#botChatBtn', function () {
 		$('.wc-chatview-panel').css('bottom', 0).show();
