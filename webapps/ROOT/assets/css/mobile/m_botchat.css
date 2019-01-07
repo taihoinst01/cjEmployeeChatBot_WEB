@@ -459,13 +459,12 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   vertical-align: middle; }
 
 .wc-console label {
-    cursor: pointer;
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    background-color: #e0e0e0;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px
+  cursor: pointer;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-color: #e0e0e0;
+  border-radius:20px
 }
 
 .wc-console svg {
