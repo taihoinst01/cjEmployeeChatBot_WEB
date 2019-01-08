@@ -1,6 +1,4 @@
 ﻿$(function () {
-	//$('.bot-wrap').hide();    //처음에 숨기기
-
     //IE Version Check
 	var ie = (function (){
 		if (window.ActiveXObject === undefined) return null;
@@ -15,81 +13,4 @@
 		$('.bot-wrap').remove();
 		$(".banner").remove();
     }
-
-    //ex) Sample
-    //$.ajax({
-    //    botName: 'cjEmployeeChatBot',
-    //    url: 'http://52.90.211.109:3000/apiServer/getChatTemplate?chat_name=TIIZChatBotV3',
-    //    dataType: 'json',
-    //    type: 'POST',
-    //    success: function (data) {
-    //        //mngData = data.lang;
-    //        console.log(data);
-    //        //"dog": [
-    //        //  "웰시코기",
-    //        //  "포메라니안",
-    //        //  "푸들"
-    //        //  "background-color: #000000",
-    //        //  "color: blue"
-    //        //]
-    //    }
-    //});
-
-    //$('.wc-message-groups').css({ 'background-color': '#000'});
 });
-
-//function isMobile() {
-//	var UserAgent = navigator.userAgent;
-
-//	if (UserAgent.match(/iPhone|iPad|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null) {
-//		return true;
-//	} else {
-//		return false;
-//	}
-//}
-
-//if (isMobile()) {   //모바일 환경
-//    1. Click 호출
-//    $(document).on('click', '#botChatBtn', function () {
-//		location.href = "index_m.html";
-//    });
-
-
-//    2. 로딩시 표출
-//    console.log('value = '+ $('#cjworld_id_get').val());
-//    var cjworld_id = $('#cjworld_id_get').val();
-//    if ($('#cjworld_id_get').val() != '') {
-//        location.href = "default_m.asp?cjworld_id=" + cjworld_id;
-//    } else {
-//        location.href = "default_m.asp";
-//    }
-
-//    3. CJ mobile Connect문제로 mobile일 경우 호출부분을 뒤로 바꿈(ssoConnection)
-//} else {    // 웹 환경
-
-//     1. 처음 로딩시 표출
-//    $('.wc-chatview-panel').css('bottom', 0).show();
-//    $('.bot-wrap').show();
-
-//     2. 클릭시 챗봇 표출 (사용하려면 위에 숨기기 부분 주석 제거 해줘야함)
-//    $(document).on('click', '#botChatBtn', function () {
-//        $('.wc-chatview-panel').css('bottom', 0).show();
-//        $('.bot-wrap').show();
-//    });
-
-//     3. 클릭시 챗봇 팝업 표출
-//    스크린크기
-//    var fullWidth = screen.availWidth;
-//    var fullHeight = screen.availHeight;
-//    //팝업크기
-//    var popWidth = 480;
-//    var popHeight = 660;
-//    //팝업위치
-//    var popLeft = (fullWidth - popWidth) / 2;
-//    var popTop = (fullHeight - popHeight) / 2;
-
-//    var popupOption = "width = " + popWidth + ", height = " + popHeight + ", top = " + popTop+", left = " + popLeft+", resizable = no, fullscreen = no, toolbar = no, menubar = no, channelmode = no, scrollbars = no, location = no";
-//    $(document).on('click', '#botChatBtn', function () {
-//        window.open('chatbot.html', '', popupOption);
-//    });
-//}
