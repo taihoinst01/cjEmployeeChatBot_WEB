@@ -3492,8 +3492,8 @@ if(typeof(mobileGetId) == 'undefined'){
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
-                            //|| location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_pc.html'
-                            //|| location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html' + "?cjworld_id=" + mobileGetId
+                            || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_pc.html'
+                            || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html' + "?cjworld_id=" + mobileGetId
                             || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
                             console.log("SSO Connect");
                             ssoConnection();
@@ -7744,8 +7744,8 @@ if(typeof(mobileGetId) == 'undefined'){
                         if (ssoFlag == 1 && ssoIdCheck != '' &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
-                            //|| location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_pc.html'
-                            //|| location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html' + "?cjworld_id=" + mobileGetId
+                            || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_pc.html'
+                            || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html' + "?cjworld_id=" + mobileGetId
                             || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
                             return o.createElement("div", {
                                 "data-activity-id": this.props.activity.id,
@@ -8178,7 +8178,7 @@ if(typeof(mobileGetId) == 'undefined'){
                 messageFailed: "couldn't send",
                 messageSending: "sending",
                 timeSent: " at %1",
-                consolePlaceholder: "궁금한 것을 물어보세요!",
+                consolePlaceholder: "궁금한 것을 물어보세요! (용어는 #에게)",
                 listeningIndicator: "Listening..."
             },
             ja: {

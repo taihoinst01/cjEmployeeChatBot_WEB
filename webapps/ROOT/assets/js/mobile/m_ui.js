@@ -16,8 +16,6 @@ $(function () {
     });
 
     //tooltip
-    $('.wc-send').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','용어검색')
-    .attr('data-template','<div class="tooltip tool1" role="tooltip"><div class="tooltip-arrow arrow1"></div><div class="tooltip-inner"></div></div>').tooltip('show');
     $('.wc-menu').attr('data-toggle', 'tooltip').attr('data-placement','top').attr('title','바로가기')
     .attr('data-template','<div class="tooltip tool2" role="tooltip"><div class="tooltip-arrow arrow2"></div><div class="tooltip-inner"></div></div>').tooltip('show');
 
@@ -90,7 +88,7 @@ $(function () {
     });
     //챗봇 MENU + SAP 버튼 동작
     $('.wc-menu > div').click(function () {
-        $('.wc-shellinput').attr('value', '').attr('placeholder', '궁금한 것을 물어보세요!').val('');
+        $('.wc-shellinput').attr('value', '').attr('placeholder', '궁금한 것을 물어보세요! (용어는 #에게)').val('');
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
             $('.wc-menu').tooltip('destroy'); //메뉴 선택시 tooptip삭제
             $('.wc-console').animate({ 'bottom': 115 + 'px' }, 'fast');
