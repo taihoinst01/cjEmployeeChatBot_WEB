@@ -53,21 +53,23 @@ $(function () {
     $(".wc-console > div").add(
         "<div class='menuBox off'>" +
             "<ul type='none'>" +
-            "<li class='menuSelectBtn'> 총무 </li>" +
-            "<li class='menuSelectBtn'> 인사 </li>" +
-            "<li class='menuSelectBtn'> 재무 </li>" +
-            "<li class='menuSelectBtn'> IT </li>" +
-            "<li class='menuSelectBtn'> 법무 </li>" +
-            "<li class='menuSelectBtn'> CSV </li>" +
-            "<li class='menuSelectBtn'> 블로썸파크 </li>" +
-            "<li class='menuSelectBtn'> 하고싶은말 </li>" +
+            "<li class='menuSelectBtn'>총무</li>" +
+            "<li class='menuSelectBtn'>인사</li>" +
+            "<li class='menuSelectBtn'>재무</li>" +
+            "<li class='menuSelectBtn'>IT</li>" +
+            "<li class='menuSelectBtn'>법무</li>" +
+            "<li class='menuSelectBtn'>CSV</li>" +
+            "<li class='menuSelectBtn'>블로썸파크</li>" +
+            "<li class='menuSelectBtn'>하고싶은말</li>" +
             "</ul>" +
         "</div > ").appendTo(".wc-console");
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     //챗봇 menu 선택
     $('.menuSelectBtn').click(function () {
-        var v = $(this).html() + " 선택";
+        var v = $(this).html();
+        if(v == '하고싶은말'){v = '건의사항 입력';}
+        else{v = v + ' 선택';}
         $('div.wc-console').addClass('has-text');
         $('input[type="text"].wc-shellinput').attr('value', v).val(v);
         $('label.wc-send').trigger('click');
