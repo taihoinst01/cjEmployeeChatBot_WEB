@@ -1,5 +1,6 @@
 //초기 한번 Flag
 var startFlag = 0;
+var ssoFlag = 0;
 
 //device check(PC, Mobile)
 var deviceChk;
@@ -3243,14 +3244,7 @@ if(typeof(mobileGetId) == 'undefined'){
                                         e.content.buttons[0].title = 'Mobile 서비스 제공';
                                     }
                                 }
-                            }
-
-
-                            if (deviceChk == 'M') {
-                                var a = $("#cjworld_id_get").val();
-                                //e.content.text = a + " :: " + e.content.text;
-
-                            }                            
+                            }                          
 
                             return e.content.images && e.content.images.forEach(function (t) {
                                 return r.addImage(t.url)
@@ -3498,9 +3492,10 @@ if(typeof(mobileGetId) == 'undefined'){
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
+                            //|| location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_pc.html'
+                            //|| location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html' + "?cjworld_id=" + mobileGetId
                             || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
-                            //|| location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
-                            //console.log("SSO Connect");
+                            console.log("SSO Connect");
                             ssoConnection();
                             startFlag = 1;
                         }
@@ -7739,10 +7734,18 @@ if(typeof(mobileGetId) == 'undefined'){
                     } else {
                         //KSO First DLG HIDE 
                         var activityId = this.props.activity.id;
-                        var activityNum = activityId.split('|');
-                        if (activityNum[1] == '0000000' &&
+                        //var activityNum = activityId.split('|');
+                        var ssoIdCheck = this.props.activity.text;
+                        if(typeof(ssoIdCheck) != 'undefined'){
+                            ssoIdCheck = ssoIdCheck.substr(0, 5);
+                            ssoFlag = 1;
+                        }
+
+                        if (ssoFlag == 1 && ssoIdCheck != '' &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
+                            //|| location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_pc.html'
+                            //|| location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html' + "?cjworld_id=" + mobileGetId
                             || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
                             return o.createElement("div", {
                                 "data-activity-id": this.props.activity.id,
@@ -7755,13 +7758,9 @@ if(typeof(mobileGetId) == 'undefined'){
                                 }
                             }, o.createElement("div", {
                                 className: s
-                            },
-                                o.createElement("img", {
-                                    src: "assets/image/chatbotStyle/ico_profi_80.png", className: "wc-message-callout"
-                                }
-                                ), this.props.children)), o.createElement("div", {
+                            },this.props.children)), o.createElement("div", {
                                     className: "wc-message-from wc-message-from-" + r
-                                }))
+                            }))
                         } else {
                             return o.createElement("div", {
                                 "data-activity-id": this.props.activity.id,
