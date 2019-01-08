@@ -28,6 +28,7 @@ $(function () {
     $(window).resize(function () {
         //$('#wrapper').css({ 'height': ($(document).height()) + 'px' });
         $('.wc-carousel').css({ 'width': ($(document).width()-74) + 'px' });
+        $('.tooltip').tooltip('show');
     });
 
     $('.wc-shellinput').blur();
