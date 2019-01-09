@@ -13710,7 +13710,7 @@ if(typeof(mobileGetId) == 'undefined'){
                     if(_fontTextChk == '<bold>'){
                         originText = originText.split('&lt;bold&gt;').join('');    // <bold> 자르기
                         //console.log(originText);
-                        //this._element.innerHTML = originText.split(' color: rgb(0, 0, 0);').join(' color: red;');     //색깔
+                        originText = originText.split(' color: rgb(0, 0, 0);').join(' color: #326E9B !important;');     //색깔
                         this._element.innerHTML = originText.split(' font-weight: 400;').join(' font-weight: bold;');   //강조
                     }
                 }
