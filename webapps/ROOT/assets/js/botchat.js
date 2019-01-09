@@ -13706,7 +13706,7 @@ if(typeof(mobileGetId) == 'undefined'){
                 var _fontTextChk = t._items[0].text;
                 var originText = this._element.innerHTML;
                 if(typeof(_fontTextChk) != 'undefined'){
-                    _fontTextChk = _fontTextChk.substr(0,7);
+                    _fontTextChk = _fontTextChk.substr(0,6);
                     if(_fontTextChk == '<bold>'){
                         originText = originText.split('&lt;bold&gt;').join('');    // <bold> 자르기
                         //console.log(originText);
