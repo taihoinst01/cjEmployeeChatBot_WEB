@@ -3,14 +3,8 @@ $(function () {
     $('.wc-message-group-content').css({ 'margin-top': 0 });
 
     $('#wrapper').css({ 'height': ($(document).height()) + 'px' });
-    $('.wc-chatview-panel').css({ 'height': ($(document).height()) + 'px' });
-    var documentWidth = $(document).width();
+    
     $(window).resize(function () {
-        if($('.wc-chatview-panel').height() == $(document).height()){
-            $('.wc-chatview-panel').css({ 'height': documentWidth + 'px'});
-        }else{
-            $('.wc-chatview-panel').css({ 'height': $(document).height() + 'px'});
-        }
         $('.wc-carousel').css({ 'width': ($(document).width()-74) + 'px' });
         $('.tooltip').tooltip('show');
     });

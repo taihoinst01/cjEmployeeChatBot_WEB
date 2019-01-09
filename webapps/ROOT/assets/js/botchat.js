@@ -3489,16 +3489,11 @@ if(typeof(mobileGetId) == 'undefined'){
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
-                        console.log(location.href);
-                        if(location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html'){
-                            location.href = 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html' + "?cjworld_id=" + mobileGetId;
-                        }
-
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
                             || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_pc.html'
-                            || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html' + "?cjworld_id=" + mobileGetId
+                            || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html'
                             || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
                             console.log("SSO Connect");
                             ssoConnection();
@@ -7750,7 +7745,7 @@ if(typeof(mobileGetId) == 'undefined'){
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
                             || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_pc.html'
-                            || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html' + "?cjworld_id=" + mobileGetId
+                            || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html'
                             || location.href == defaultUrl_m + "?cjworld_id=" + mobileGetId)) {
                             return o.createElement("div", {
                                 "data-activity-id": this.props.activity.id,
@@ -13707,6 +13702,18 @@ if(typeof(mobileGetId) == 'undefined'){
                             d.appendChild(this._element, o), n++
                         }
                     }
+                //KSO :: 특정 DLG 강조 (db 맨 앞에 <bold>가 붙은거 찾아서 색 바꿈)
+                var _fontTextChk = t._items[0].text;
+                var originText = this._element.innerHTML;
+                if(typeof(_fontTextChk) != 'undefined'){
+                    _fontTextChk = _fontTextChk.substr(0,7);
+                    if(_fontTextChk == '<bold>'){
+                        originText = originText.split('&lt;bold&gt;').join('');    // <bold> 자르기
+                        //console.log(originText);
+                        //this._element.innerHTML = originText.split(' color: rgb(0, 0, 0);').join(' color: red;');     //색깔
+                        this._element.innerHTML = originText.split(' font-weight: 400;').join(' font-weight: bold;');   //강조
+                    }
+                }
                 //개행추가 20181113
                 this._element.innerHTML = this._element.innerHTML.split("/n").join("</br>");
                 return this._element
@@ -21088,8 +21095,10 @@ function ssoConnection() {
         $("#cjworld_id_get").val(decodeURIComponent(mobileGetId));
     }
 
-    
-    //alert("pos : " +pos);
+    if(location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_pc.html'
+    || location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html'){
+        pos = deviceChk + "sso:" + $("#cjworld_id_get_test").val();
+    }
     
     //var directLineUrl = "https://directline.botframework.com";
     //var secretKey = "jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0";	//USWEST
