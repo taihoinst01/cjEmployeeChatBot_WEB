@@ -81,7 +81,7 @@ $(function () {
         $('.wc-sap').removeClass('off').addClass('on').css({ 'display': 'block' });
         $('.sapBtn').removeClass('off').addClass('on');
         $('.wc-textbox').animate({ 'left': 40 + 'px' }, 'fast');
-        $('.wc-shellinput').attr('placeholder', '용어검색').focus();
+        $('.wc-shellinput').attr('placeholder', '용어검색 (일반문의는 x표)').focus();
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.wc-message-groups').removeClass('menuboxOn').addClass('menuboxOff').scrollTop($('.wc-message-group-content')[0].scrollHeight);
 

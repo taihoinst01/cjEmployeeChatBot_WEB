@@ -99,7 +99,7 @@ $(function () {
         $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
         $('.menuIcon').removeClass('menuIcon').addClass('sapIcon-close');
         $('.menuIcon_active').removeClass('menuIcon_active').addClass('sapIcon-close');
-        $('.wc-shellinput').attr('placeholder', '용어검색').focus();
+        $('.wc-shellinput').attr('placeholder', '용어검색 (일반문의는 x표)').focus();
         $('.sapIcon').removeClass('sapIcon').addClass('sapIcon-search');
         $('.wc-sap').removeClass('off').addClass('on').css({ 'display': 'block' });
         $('.sapBtn').removeClass('off').addClass('on');

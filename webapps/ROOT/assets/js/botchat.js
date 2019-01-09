@@ -3489,6 +3489,11 @@ if(typeof(mobileGetId) == 'undefined'){
                         //conversationId 추가
                         $('#conversationId').val(e.conversationId);
                         //KSO ssoConnection
+                        console.log(location.href);
+                        if(location.href == 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html'){
+                            location.href = 'file:///C:/Users/User/source/repos/cjEmployeeChatBot_WEB/webapps/ROOT/index_m.html' + "?cjworld_id=" + mobileGetId;
+                        }
+
                         if (typeof (e.conversationId) == 'string' && startFlag == 0 &&
                             (location.href == defaultUrl
                             || location.href == defaultUrl_pc
