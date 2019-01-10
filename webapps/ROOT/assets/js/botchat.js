@@ -13702,17 +13702,27 @@ if(typeof(mobileGetId) == 'undefined'){
                             d.appendChild(this._element, o), n++
                         }
                     }
-                //KSO :: 특정 DLG 강조 (db 맨 앞에 <bold>가 붙은거 찾아서 색 바꿈)
-                var _fontTextChk = t._items[0].text;
-                var originText = this._element.innerHTML;
+                //KSO :: 특정 DLG 강조 (db 맨 앞에 <bold>가 붙은거 찾아서 색 바꿈) + HTML TAG 씌우기
+                var originText = this._element.innerHTML;   //original Data
+                var htmlCnt = 0;                            //치환할 카운트 초기값
+                var _fontTextChk = t._items[0].text;        //
                 if(typeof(_fontTextChk) != 'undefined'){
+
+                    // Welcome bold랑 color 치환
                     _fontTextChk = _fontTextChk.substr(0,6);
                     if(_fontTextChk == '<bold>'){
                         originText = originText.split('&lt;bold&gt;').join('');    // <bold> 자르기
-                        //console.log(originText);
                         originText = originText.split(' color: rgb(0, 0, 0);').join(' color: #326E9B !important;');     //색깔
-                        this._element.innerHTML = originText.split(' font-weight: 400;').join(' font-weight: bold;');   //강조
+                        originText = originText.split(' font-weight: 400;').join(' font-weight: bold;');                //강조
                     }
+
+                    // HTML TAG로 작성된 부분 적용하기  ex) <sub>아래첨자</sub>
+                    htmlCnt = originText.split('&lt;').length;  //꺽쇠를 자른수 만큼의 Count : 없으면 1, 있으면 1이상
+                    if(htmlCnt > 1){
+                        originText = originText.replace(/&lt;/g, '<');
+                        originText = originText.replace(/&gt;/g, '>');
+                    }
+                    this._element.innerHTML = originText;
                 }
                 //개행추가 20181113
                 this._element.innerHTML = this._element.innerHTML.split("/n").join("</br>");
