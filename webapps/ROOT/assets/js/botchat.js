@@ -13703,9 +13703,14 @@ if(typeof(mobileGetId) == 'undefined'){
                 //KSO :: 특정 DLG 강조 (db 맨 앞에 <bold>가 붙은거 찾아서 색 바꿈) + HTML TAG 씌우기
                 var originText = this._element.innerHTML;   //original Data
                 var htmlCnt = 0;                            //치환할 카운트 초기값
-                var _fontTextChk = t._items[0].text;        //
-                if(typeof(_fontTextChk) != 'undefined'){
+                var _fontTextChk;                           //치환할 텍스트(이미지가 있을시 텍스트가 [1]에 들어있고 없으면 [0]에 들어있음)
+                if(t._items.length > 1){
+                    _fontTextChk = t._items[1].text;
+                }else{
+                    _fontTextChk = t._items[0].text;
+                }
 
+                if(typeof(_fontTextChk) != 'undefined'){
                     // Welcome bold랑 color 치환
                     _fontTextChk = _fontTextChk.substr(0,6);
                     if(_fontTextChk == '<bold>'){
