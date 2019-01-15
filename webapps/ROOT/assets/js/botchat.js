@@ -3161,7 +3161,7 @@ if(typeof(mobileGetId) == 'undefined'){
                             if (!e.content) return null;
                             var r = new i.AdaptiveCardBuilder;
                             //TTS 적용 
-                            lfn_speakTTS(e.content.text);
+                            //lfn_speakTTS(e.content.text);
                             return e.content.images && e.content.images.forEach(function (t) {
                                 return r.addImage(t.url)
                             }), r.addCommon(e.content), o.createElement(s.AdaptiveCardContainer, {
