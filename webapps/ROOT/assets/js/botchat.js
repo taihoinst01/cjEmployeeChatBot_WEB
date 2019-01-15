@@ -3227,7 +3227,6 @@ if(typeof(mobileGetId) == 'undefined'){
                                 //playAction(e.content.gesture);
                             }
 
-
                             //임시
                             if (e.content.buttons[0] != null) { //openUrl 없을때 처리
                                 if (e.content.buttons[0].value == '#') {
@@ -3244,8 +3243,7 @@ if(typeof(mobileGetId) == 'undefined'){
                                         e.content.buttons[0].title = 'Mobile 서비스 제공';
                                     }
                                 }
-                            }                          
-
+                            }
                             return e.content.images && e.content.images.forEach(function (t) {
                                 return r.addImage(t.url)
                             }), r.addCommon(e.content), o.createElement(s.AdaptiveCardContainer, {
@@ -13024,11 +13022,11 @@ if(typeof(mobileGetId) == 'undefined'){
                     "person" == this.style && (n.style.borderRadius = "50%", n.style.backgroundPosition = "50% 50%", n.style.backgroundRepeat = "no-repeat"), n.src = this.url, e.appendChild(n)
 
                     //KSO imgIcon 추가
-                    var imgIcon = document.createElement("div");
-                    var imgIconType = t.parent.parent.adaptiveCardContainer.props.children[0].props.alt + "Img";    // img, play, map, reel
-                    imgIcon.classList.add(imgIconType);
-                    e.appendChild(imgIcon);
-                    e.style.cursor = "pointer";
+                    // var imgIcon = document.createElement("div");
+                    // var imgIconType = t.parent.parent.adaptiveCardContainer.props.children[0].props.alt + "Img";    // img, play, map, reel
+                    // imgIcon.classList.add(imgIconType);
+                    // e.appendChild(imgIcon);
+                    // e.style.cursor = "pointer";
                 }
                 return e
             }, e.prototype.getJsonTypeName = function() {
