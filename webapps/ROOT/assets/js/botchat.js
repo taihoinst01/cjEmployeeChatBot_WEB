@@ -13020,6 +13020,8 @@ if(typeof(mobileGetId) == 'undefined'){
                             n.style.maxWidth = Z.imageSizes.medium + "px"
                     }
                     "person" == this.style && (n.style.borderRadius = "50%", n.style.backgroundPosition = "50% 50%", n.style.backgroundRepeat = "no-repeat"), n.src = this.url, e.appendChild(n)
+                    //KSO :: IMG 윗부분 깍기
+                    n.style.borderTopLeftRadius='5px', n.style.borderTopRightRadius='5px';
 
                     //KSO imgIcon 추가
                     // var imgIcon = document.createElement("div");
