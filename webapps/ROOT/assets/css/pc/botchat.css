@@ -6,16 +6,18 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 }
 
 .wc-app button {
-  /*background-color: #0063b1;
+    /*background-color: #0063b1;
   border: none;*/
-  background-color:#326E9B;
-  border:none;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  outline: none;
-  transition: color .2s ease, background-color .2s ease; }
+    /*background-color:#326E9B;*/
+    background-color: #656565;
+    border: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: color .2s ease, background-color .2s ease;
+}
 
 .wc-app h1, .wc-app h2, .wc-app h3, .wc-app h4, .wc-app p, .wc-app ul, .wc-app ol {
   margin: 0;
