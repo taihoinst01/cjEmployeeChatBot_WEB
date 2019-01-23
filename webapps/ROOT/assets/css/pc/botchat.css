@@ -413,7 +413,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   right: -6px; }
 
 .wc-message-from-me .wc-message-content span{font-size:14px;color:#fff;line-height:15px;}
-.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;border-radius:5px;border:1px solid #555;background:#326E9B;/*box-shadow: 3px 3px 5px 0px #424242;*/}
+.wc-message-from-me .wc-message-content span > span{display: block;padding:10px;border-radius:5px;border:1px solid #555;background:#656565;/*box-shadow: 3px 3px 5px 0px #424242;*/}
 
 /* from bot */
 .wc-message-from-bot {
