@@ -37,7 +37,7 @@
                 BotChat.App({
                     directLine: {
                         secret: 'jt6NZTQ2L_I.cwA.-jQ.IXCzB8cgG5veNTf2hJMFoVSrvewUuI7RfgHujyyK1q0'   //cjEmployeeChatBot
-                        ,domain: 'https://northamerica.directline.botframework.com/v3/directline'
+                        //,domain: 'https://northamerica.directline.botframework.com/v3/directline'
                     },
                     user: { id: 'userid' },
                     bot: { id: 'botid' },
