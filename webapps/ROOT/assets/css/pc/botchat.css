@@ -227,7 +227,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
   .wc-card button {
     /*background-color: transparent;
     color: #3a96dd;*/
-    background-color: #326E9B;
+    background-color: #3a3a3a;
     color: #fff;
     min-height: 32px;
     width: 100%;
@@ -237,10 +237,10 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
     border-color: #3a96dd;*/
     border-bottom-left-radius:5px;
     border-bottom-right-radius:5px;
-    background-color: #024468;
+    background-color: #232323;
     color: #fff; }
   .wc-card button:active {
-    background-color: #326E9B;
+    background-color: #3a3a3a;
     color: #ffffff; }
   .wc-card.receipt table {
     border-collapse: collapse;
