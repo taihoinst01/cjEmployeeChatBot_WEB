@@ -8176,7 +8176,7 @@ if(typeof(mobileGetId) == 'undefined'){
                 messageFailed: "couldn't send",
                 messageSending: "sending",
                 timeSent: " at %1",
-                consolePlaceholder: "궁금한 것을 물어보세요! (용어는 #에게)",
+                consolePlaceholder: '용어검색은 "#"을 눌러 질문하세요 →',
                 listeningIndicator: "Listening..."
             },
             ja: {

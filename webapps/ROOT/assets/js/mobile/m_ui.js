@@ -82,7 +82,7 @@ $(function () {
     });
     //챗봇 MENU + SAP 버튼 동작
     $('.wc-menu > div').click(function () {
-        $('.wc-shellinput').attr('value', '').attr('placeholder', '궁금한 것을 물어보세요! (용어는 #에게)').val('');
+        $('.wc-shellinput').attr('value', '').attr('placeholder', '용어검색은 "#"을 눌러 질문하세요 →').val('');
         if ($(this).hasClass('menuIcon')) {     //MENU 열기
             $('.wc-menu').tooltip('destroy'); //메뉴 선택시 tooptip삭제
             $('.wc-console').animate({ 'bottom': 115 + 'px' }, 'fast');
