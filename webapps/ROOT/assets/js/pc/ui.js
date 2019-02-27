@@ -157,7 +157,7 @@ $(function () {
     $('.wc-send > div').click(function () {
         var v = $('input[type="text"].wc-shellinput').val();
         if ($(this).hasClass('sendIcon')) {
-            $('.wc-shellinput').attr('placeholder', '궁금한 것을 물어보세요!');
+            $('.wc-shellinput').attr('placeholder', '용어검색은 " # " 을 눌러 질문하세요 →');
             $('.menuBox').removeClass('on').addClass('off').css({ 'display': 'none' });
             $('.wc-console').animate({ 'bottom': 10 + 'px' }, 'fast');
             $('.sapIcon-close').removeClass('sapIcon-close').addClass('menuIcon');

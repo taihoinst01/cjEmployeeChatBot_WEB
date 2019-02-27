@@ -499,7 +499,7 @@ body .wc-app, .wc-app button, .wc-app input, .wc-app textarea div {
 .wc-textbox {
   bottom: 0;
   /*left: 60px;*/
-  left:5px;
+  left:15px;
   right: 50px; }
 
 .wc-send {
